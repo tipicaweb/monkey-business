@@ -8,7 +8,8 @@ module.exports = {
             component: '#181A19',
             main_text: '#00EBB0',
             header: '#181A19',
-            button_hover: '#C5F6E2'
+            button_hover: '#C5F6E2',
+            text_hover: '#292926'
         }
     }
   },
