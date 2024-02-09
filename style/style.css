@@ -16,4 +16,8 @@
         @apply hover:bg-button_hover;
         @apply hover:text-text_hover;
     }
+
+    .navbar-button:hover svg {
+        @apply text-text_hover;
+    }
 }
