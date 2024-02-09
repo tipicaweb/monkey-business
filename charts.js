@@ -200,5 +200,3 @@ let areaOptions = {
 
 const areaChart = new ApexCharts(document.getElementById("area-chart"), areaOptions);
 areaChart.render();
-
-console.log(areaChart);
