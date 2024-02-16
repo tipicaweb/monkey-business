@@ -19,7 +19,7 @@ var donutOptions = {
                     name: {
                         show: true,
                         offsetY: 20,
-                        fontWeight: 100
+                        fontWeight: 200
                     },
                     total: {
                         showAlways: true,

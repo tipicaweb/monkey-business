@@ -3,6 +3,9 @@ module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily: {
+        custom: "CircularStd"
+      },
         colors: {
             main: '#262928',
             component: '#181A19',
