@@ -1,10 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    @font-face {
+        font-family: "CircularStd";
+        font-weight: 200;
+        src: url("/fonts/CircularStd-Book.otf");
+    }
+
+    @font-face {
+        font-family: "CircularStd";
+        font-weight: 500;
+        src: url("/fonts/CircularStd-Medium.otf");
+    }
+
+    @font-face {
+        font-family: "CircularStd";
+        font-weight: 800;
+        src: url("/fonts/CircularStd-Bold.otf");
+    }
+}
+
 @layer components {
+    .navbar-item {
+        @apply flex;
+        @apply w-full;
+        @apply h-14;
+    }
+
     .navbar-button {
         @apply gap-3;
         @apply p-3;
@@ -15,16 +39,115 @@
         @apply justify-start; 
         @apply items-center; 
         @apply font-semibold;
-        @apply hover:bg-button_hover;
-        @apply hover:text-text_hover;
+        @apply transition-all;
+
+        &:hover:not(.active) {
+            @apply bg-terciary_black;
+            @apply rounded-full;
+        }
+
+        &.active {
+            @apply bg-secondary_green;
+            @apply text-text_hover;
+    
+            .navbar-icon {
+                @apply bg-text_hover;
+            }
+        }
     }
 
-    .navbar-button:hover svg {
-        @apply text-text_hover;
+    .component {
+        @apply grid;
+        @apply rounded-2xl;
+        @apply bg-primary_black;
+    }
+
+    .icon-grid {
+        mask: url('/assets/grid_view.svg');
+    }
+
+    .icon-bolt {
+        mask: url('/assets/bolt.svg');
+    }
+
+    .icon-event {
+        mask: url('/assets/event.svg');
+    }
+
+    .icon-list {
+        mask: url('/assets/list_alt.svg');
+    }
+
+    .icon-map {
+        mask: url('/assets/map.svg');
+    }
+
+    .icon-group {
+        mask: url('/assets/group.svg');
+    }
+
+    .icon-campaign {
+        mask: url('/assets/campaign.svg');
+    }
+
+    .icon-fact {
+        mask: url('/assets/fact_check.svg');
+    }
+
+    .icon-settings {
+        mask: url('/assets/settings.svg');
+    }
+
+    .icon-logout {
+        mask: url('/assets/logout.svg');
+    }
+
+    .icon-add {
+        mask: url('/assets/add_b.svg');
+    }
+
+    .navbar-icon {
+        @apply flex;
+        @apply w-6;
+        @apply h-6;
+        @apply bg-white;
+        mask-position: center;
+    }
+
+    .header-icon {
+        @apply h-4;
+        @apply w-4;
+        @apply bg-text_hover;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+
+    .title-component {
+        @apply px-6;
+        @apply pt-4;
+    }
+
+    .donut-component {
+        @apply w-full;
+        @apply h-full;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply gap-2;
+    }
+
+    .donut-labels {
+        @apply flex;
+        @apply flex-col;
+        @apply text-sm;
+        @apply gap-2;
+        @apply font-bold;
+        @apply pb-4;
+        @apply leading-4;
     }
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    @apply font-custom;
 }

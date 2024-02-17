@@ -10,142 +10,132 @@
     <title>MonkeyBusiness TEST</title>
 </head>
 
-<body class="flex h-full bg-header">
-    <nav class="bg-header w-96 h-full">
-        <div class="flex pl-8 items-center w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
-        <ul class="flex flex-col items-center w-full max-h-full px-8 text-white gap-1">
-            <li class="flex w-full h-14">
+<body class="flex h-full bg-primary_black">
+    <nav class="bg-primary_black min-w-96 h-full">
+        <div class="flex pl-8 items-center min-w-96 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
+        <ul class="flex flex-col items-center min-w-96 max-w-full max-h-full px-8 text-white gap-1">
+            <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.1 4H5c-.5 0-.9.4-.9.9V9c0 .5.4.9.9.9h4c.5 0 .9-.4.9-.9V5c0-.5-.4-.9-.9-.9Zm10 0H15c-.5 0-.9.4-.9.9V9c0 .5.4.9.9.9h4c.5 0 .9-.4.9-.9V5c0-.5-.4-.9-.9-.9Zm-10 10H5c-.5 0-.9.4-.9.9V19c0 .5.4.9.9.9h4c.5 0 .9-.4.9-.9v-4c0-.5-.4-.9-.9-.9Zm10 0H15c-.5 0-.9.4-.9.9V19c0 .5.4.9.9.9h4c.5 0 .9-.4.9-.9v-4c0-.5-.4-.9-.9-.9Z"/></svg> 
+                    <span class="navbar-icon icon-grid"></span>
                     Home
                 </a>
             </li>
-            <li class="flex w-full h-14">
+            <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M12 2a7 7 0 0 0-7 7 3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1c.6 0 1-.4 1-1V9a5 5 0 1 1 10 0v7a3 3 0 0 1-3 3 2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v1c0 1.1.9 2 2 2h1a2 2 0 0 0 1.7-1h.4a5 5 0 0 0 4.8-4h.1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3 7 7 0 0 0-7-7Zm1.5 3.3a4 4 0 0 0-4.4 1 1 1 0 0 0 1.4 1.3 2 2 0 0 1 2.9 0A1 1 0 1 0 14.8 6a4 4 0 0 0-1.3-.8Z" clip-rule="evenodd"/>
-                    </svg>
+                    <span class="navbar-icon icon-bolt"></span>
                     Create express ticket
                 </a>
             </li>
-            <li class="flex w-full h-14">
-                <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M5 5c.6 0 1-.4 1-1a1 1 0 1 1 2 0c0 .6.4 1 1 1h1c.6 0 1-.4 1-1a1 1 0 1 1 2 0c0 .6.4 1 1 1h1c.6 0 1-.4 1-1a1 1 0 1 1 2 0c0 .6.4 1 1 1a2 2 0 0 1 2 2v1c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1V7c0-1.1.9-2 2-2ZM3 19v-7c0-.6.4-1 1-1h16c.6 0 1 .4 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6-6c0-.6-.4-1-1-1a1 1 0 1 0 0 2c.6 0 1-.4 1-1Zm2 0a1 1 0 1 1 2 0c0 .6-.4 1-1 1a1 1 0 0 1-1-1Zm6 0c0-.6-.4-1-1-1a1 1 0 1 0 0 2c.6 0 1-.4 1-1ZM7 17a1 1 0 1 1 2 0c0 .6-.4 1-1 1a1 1 0 0 1-1-1Zm6 0c0-.6-.4-1-1-1a1 1 0 1 0 0 2c.6 0 1-.4 1-1Zm2 0a1 1 0 1 1 2 0c0 .6-.4 1-1 1a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                    </svg>                    
+            <li class="navbar-item">
+                <a href="#" class="navbar-button active">
+                    <span class="navbar-icon icon-event"></span>
                     Event
                 </a>
             </li>
-            <li class="flex w-full h-14">
+            <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 9h6m-6 3h6m-6 3h6M7 9h0m0 3h0m0 3h0M4 5h16c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1V6c0-.6.4-1 1-1Z"/>
-                    </svg>
+                    <span class="navbar-icon icon-list"></span>
                     Products
                 </a>
             </li>
-            <li class="flex w-full h-14">
+            <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.3-.6-1-1-1.6-1H7.6c-.7 0-1.3.4-1.6 1M4 5h16c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1V6c0-.6.4-1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
-                      </svg>
+                    <span class="navbar-icon icon-map"></span>
                     Map
                 </a>
             </li>
-            <li class="flex w-full h-14">
+            <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H6Zm7.3-2a6 6 0 0 0 0-6A4 4 0 0 1 20 8a4 4 0 0 1-6.7 3Zm2.2 9a4 4 0 0 0 .5-2v-1a6 6 0 0 0-1.5-4H18a4 4 0 0 1 4 4v1a2 2 0 0 1-2 2h-4.5Z" clip-rule="evenodd"/>
-                    </svg>
+                    <span class="navbar-icon icon-group"></span>
                     Guest lists
                 </a>
             </li>
-            <li class="flex w-full h-14">
+            <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 9H5a1 1 0 0 0-1 1v4c0 .6.4 1 1 1h6m0-6v6m0-6 5.4-3.9A1 1 0 0 1 18 6v12.2a1 1 0 0 1-1.6.8L11 15m7 0a3 3 0 0 0 0-6M6 15h3v5H6v-5Z"/>
-                    </svg>
-                    Home
+                    <span class="navbar-icon icon-campaign"></span>
+                    Marketing
                 </a>
             </li>
-            <li class="flex w-full h-14">
+            <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M2 6c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm5 2a1 1 0 0 0 0 2 1 1 0 1 0 0-2Zm4 0a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-6Zm-4 3a1 1 0 1 0 0 2 1 1 0 1 0 0-2Zm4 0a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-6Zm-4 3a1 1 0 1 0 0 2 1 1 0 1 0 0-2Zm4 0a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-6Z" clip-rule="evenodd"/>
-                      </svg>                    
+                    <span class="navbar-icon icon-fact"></span>
                     My guests
                 </a>
             </li>
-            <li class="flex w-full h-14">
+            <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13v-2a1 1 0 0 0-1-1h-.8l-.7-1.7.6-.5a1 1 0 0 0 0-1.5L17.7 5a1 1 0 0 0-1.5 0l-.5.6-1.7-.7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v.8l-1.7.7-.5-.6a1 1 0 0 0-1.5 0L5 6.3a1 1 0 0 0 0 1.5l.6.5-.7 1.7H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.8l.7 1.7-.6.5a1 1 0 0 0 0 1.5L6.3 19a1 1 0 0 0 1.5 0l.5-.6 1.7.7v.8a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.8l1.7-.7.5.6a1 1 0 0 0 1.5 0l1.4-1.4a1 1 0 0 0 0-1.5l-.6-.5.7-1.7h.8a1 1 0 0 0 1-1Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                    </svg>
+                    <span class="navbar-icon icon-settings"></span>
                     Settings
                 </a>
             </li>
-            <li class="flex w-full h-14">
+            <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
-                    </svg>
+                    <span class="navbar-icon icon-logout"></span>
                     Log out
                 </a>
             </li>
         </ul>
     </nav>
-    <div class="flex flex-col w-full pr-6">
-        <header class="bg-header">
+    <div class="flex flex-col pr-8 w-full">
+        <header class="bg-primary_black">
             <div class="flex justify-between items-center h-32 pl-10">
-                <h2 class="text-white text-5xl font-semibold">Event</h2>
-                <div class="flex justify-center items-center gap-4 h-10">
-                    
-                    <!-- DEEBERIA SER UN APPLY PORQUE LO VAMOS A USAR VARIAS-->
-                    <a href="#" class="flex justify-center items-center gap-2 bg-main_text pr-6 pl-4 rounded-full h-full text-text_hover font-medium">
-                        <img src="./assets/add_b.svg" alt="Add">
+                <h2 class="text-white text-[45px] font-semibold">Event</h2>
+                <div class="flex justify-center items-center gap-6 h-10">
+                    <a href="#" class="flex justify-center items-center gap-2 bg-primary_green px-5 rounded-full h-full text-text_hover font-medium">
+                        <span class="header-icon icon-add"></span>
                         Create
                     </a>
-
-                    <a href="#" class="flex justify-center items-center gap-10 pr-4 pl-1 rounded-full h-full text-white font-medium bg-main">
-                        <div class="flex justify-center items-center gap-4">
-                            <div class="bg-main_text rounded-full">
-                                <img src="./assets/client_logo.svg" alt="Vip Monkey" class="h-8 w-8">
-                            </div>
-                            Vip Monkey
+                    <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-medium">
+                        <div class="flex justify-center items-center gap-2 max-w-60">
+                            <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                            VIP Monkey
                         </div>
                         <img src="./assets/arrow_down_w.svg" alt="Arrow down">
                     </a>
 
                     <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
-                        <img src="./assets/user_img.png" alt="User">
+                        <img src="./assets/user_img.png" alt="User image">
                     </a>
                 </div>
             </div>
         </header>
-        <main class="flex h-full w-full">
-            <section class="flex flex-wrap gap-6 p-6 bg-main rounded-3xl text-2xl font-bold text-white w-full">
-                <article class="flex flex-col p-6 pt-4 w-[355px] h-60 rounded-3xl bg-component">
-                    <h3 class="mb-2 text-2xl">Sail channels</h3>
-                    <div class="w-full h-full flex justify-center items-center gap-4">
-                        <div id="donut-chart"></div>
-                        <div id="donut-labels" class="text-sm gap-2 font-bold"></div>
+        <main class="h-full w-full bg-secondary_black rounded-t-2xl">
+            <section class="grid grid-cols-4 gap-6 p-10 text-2xl font-bold text-white w-full">
+                <article class="component">
+                    <h3 class="title-component">Sail channels</h3>
+                    <div class="donut-component">
+                        <div id="donut-chart" class="w-[50%]"></div>
+                        <div id="donut-labels" class="donut-labels"></div>
                     </div>
                 </article>
-                <article class="flex flex-col p-6 pt-4 w-[355px] h-60 rounded-3xl bg-component">
-                    <h3 class="mb-2 text-2xl">Age distribution</h3>
-                    <div id="column-chart"></div>
+                <article class="component">
+                    <h3 class="title-component">Age distribution</h3>
+                    <div class="flex justify-end px-6 mt-2 gap-4" id="column-labels"></div>
+                    <div id="column-chart" class="w-full h-full"></div>
                 </article>
-                <article class="flex flex-col p-6 pt-4 w-[355px] h-60 rounded-3xl bg-component">
-                    <h3 class="mb-2 text-2xl">Locations future events</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6567.748435051549!2d-58.445537073137935!3d-34.60734202521839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1707485798623!5m2!1ses-419!2sar" width="100%" height="100%" style="border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </article>
-                <article class="flex flex-col p-6 pt-4 w-[355px] h-60 rounded-3xl bg-component">
-                    <div class="flex justify-between">
-                        <h3 class="mb-2 text-2xl">Trend</h3>
-                        <p class="w-12 h-8 px-8 rounded-lg bg-primary_02 text-primary ml-2 text-sm flex justify-center items-center">+12%</p>
+                <article class="component">
+                    <h3 class="title-component">Locations future events</h3>
+                    <div class="px-6 pb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6567.748435051549!2d-58.445537073137935!3d-34.60734202521839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1707485798623!5m2!1ses-419!2sar" width="100%" height="100%" style="border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <h3 class="text-main_text text-5xl" id="area-total"></h3>
-                    <div id="area-chart" style="width: 100%; height: 100%;"></div>
+                </article>
+                <article class="component">
+                    <h3 class="title-component">Returning guests</h3>
+                    <div class="donut-component">
+                        <div id="guests-chart" class="w-[50%]"></div>
+                        <div id="guests-labels" class="donut-labels"></div>
+                    </div>
+                </article>
+                <article class="component">
+                    <div class="flex justify-between w-full title-component">
+                        <h3>Trend</h3>
+                        <h3 class="w-12 h-6 rounded bg-primary_green bg-opacity-20 text-primary_green ml-2 text-sm flex justify-center items-center">+12%</h3>
+                    </div>
+                    <div class="flex justify-between px-6 mt-2">
+                        <span class="text-primary_green text-3xl" id="area-total"></span>
+                        <span class="text-white text-sm">Tickets sold this week</span>
+                    </div>
+                    <div id="area-chart" class="w-full h-full flex justify-center items-center"></div>
                 </article>
             </section>
         </main>
