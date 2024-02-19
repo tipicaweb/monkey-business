@@ -1,4 +1,4 @@
-const ticketsChart = createDonut("Average ticketprice", ["Lorem", "Lorem", "Lorem", "Lorem", "Lorem"], [5207, 3988, 3696, 1647, 862], ['#00EBB0', '#FFA65E', '#E86987', '#85A7FF', '#FD85FF'], 'tickets-chart');
+let ticketsChart = createDonut("Average ticketprice", ["Lorem", "Lorem", "Lorem", "Lorem", "Lorem"], [5207, 3988, 3696, 1647, 862], ['#00EBB0', '#FFA65E', '#E86987', '#85A7FF', '#FD85FF'], 'tickets-chart');
 
 renderDonutLabels('tickets-labels', ticketsChart);
 
@@ -14,3 +14,5 @@ const barCharts = [
 barCharts.forEach(chart => {
     chart.renderChart();
 })
+
+// console.log(document.querySelector('#tickets-chart .apexcharts-datalabel-label'))

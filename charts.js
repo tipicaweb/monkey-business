@@ -57,16 +57,13 @@ const createDonut = (title = "", labels = [""], values = [0], colors = [""], ele
                             showAlways: true,
                             show: true,
                             label: title,
-                            color: '#fff',
-                            style: {
-                                cssClass: 'opacity-60',
-                            },
+                            color: 'rgba(255, 255, 255, 0.6)',
                             fontWeight: 500
                         },
                         value: {
                             show: true,
                             offsetY: -20,
-                            color: '#fff',
+                            color: 'rgba(255, 255, 255, 0.87)',
                             fontWeight: 700
                         },
                     },

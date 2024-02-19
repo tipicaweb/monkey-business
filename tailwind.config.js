@@ -18,9 +18,11 @@ export default {
         top_second: '#D2D0D1',
         top_third: '#FFA65E',
         primary_gray: '#8F9997',
+        secondary_gray: '#BFC9C2',
       }
     }
   },
   plugins: [],
+
 }
 

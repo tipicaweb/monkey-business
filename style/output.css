@@ -2416,6 +2416,11 @@ video {
   padding-right: 2rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -2619,6 +2624,16 @@ video {
   color: rgb(0 235 176 / var(--tw-text-opacity));
 }
 
+.text-primary_orange {
+  --tw-text-opacity: 1;
+  color: rgb(255 166 94 / var(--tw-text-opacity));
+}
+
+.text-secondary_gray {
+  --tw-text-opacity: 1;
+  color: rgb(191 201 194 / var(--tw-text-opacity));
+}
+
 .text-text_hover {
   --tw-text-opacity: 1;
   color: rgb(41 41 38 / var(--tw-text-opacity));
@@ -2673,10 +2688,6 @@ video {
 .subpixel-antialiased {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-}
-
-.opacity-60 {
-  opacity: 0.6;
 }
 
 .bg-blend-normal {
