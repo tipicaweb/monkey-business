@@ -20,13 +20,17 @@
         font-weight: 800;
         src: url("/fonts/CircularStd-Bold.otf");
     }
+
+    * {
+        box-sizing: border-box;
+        @apply font-custom;
+    }
 }
 
 @layer components {
     .navbar-item {
         @apply flex;
         @apply w-full;
-        @apply h-14;
     }
 
     .navbar-button {
@@ -54,12 +58,29 @@
                 @apply bg-text_hover;
             }
         }
+
+        .active .navbar-icon {
+            transform: rotate(-180deg);
+        }
     }
 
-    .component {
-        @apply grid;
-        @apply rounded-2xl;
-        @apply bg-primary_black;
+    .navbar-dropdown-list {
+        @apply flex;
+        @apply flex-col;
+        @apply items-center;
+        @apply max-w-full;
+        @apply max-h-full;
+        @apply pl-8;
+        @apply text-white;
+        @apply gap-1;
+    }
+
+    .base-icon {
+        @apply flex;
+        @apply w-6;
+        @apply h-6;
+        @apply bg-white;
+        @apply transition-all;
     }
 
     .icon-grid {
@@ -72,6 +93,18 @@
 
     .icon-event {
         mask: url('/assets/event.svg');
+    }
+
+    .icon-avaible {
+        mask: url('/assets/event_available.svg');
+    }
+
+    .icon-past {
+        mask: url('/assets/event_past.svg');
+    }
+
+    .icon-future {
+        mask: url('/assets/event_future.svg');
     }
 
     .icon-list {
@@ -106,12 +139,18 @@
         mask: url('/assets/add_b.svg');
     }
 
+    .icon-arrowD {
+        mask: url('/assets/arrow_down_w.svg');
+    }
+
     .navbar-icon {
         @apply flex;
         @apply w-6;
         @apply h-6;
         @apply bg-white;
+        @apply transition-all;
         mask-position: center;
+        mask-repeat: no-repeat;
     }
 
     .header-icon {
@@ -120,6 +159,13 @@
         @apply bg-text_hover;
         mask-repeat: no-repeat;
         mask-position: center;
+    }
+
+    
+    .component {
+        @apply grid;
+        @apply rounded-2xl;
+        @apply bg-primary_black;
     }
 
     .title-component {
@@ -145,9 +191,40 @@
         @apply pb-4;
         @apply leading-4;
     }
-}
 
-* {
-    box-sizing: border-box;
-    @apply font-custom;
+    .table-container {
+        @apply p-6;
+        @apply w-full;
+        @apply h-full;
+    }
+
+    .table-component {
+
+        @apply text-base;
+        @apply h-full;
+        @apply w-full;
+
+        .labels-table {
+            @apply text-primary_orange;
+            @apply text-sm;
+
+            td {
+                padding: 6px;
+            }
+        }
+
+        .table-row {
+            @apply py-2;
+
+            td {
+                padding: 6px 16px 6px 6px;
+                @apply font-light;
+            }
+        }
+    }
+
+    .component-note {
+        @apply text-sm;
+        @apply opacity-60;
+    }
 }

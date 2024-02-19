@@ -13,6 +13,11 @@ export default {
         secondary_black: '#262928',
         text_hover: '#292926',
         terciary_black: '#FEF7FF14',
+        primary_orange: '#FFA65E',
+        top_first: '#FFD75E',
+        top_second: '#D2D0D1',
+        top_third: '#FFA65E',
+        primary_gray: '#8F9997',
       }
     }
   },

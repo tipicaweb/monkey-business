@@ -1,3 +1,33 @@
+class BarChart {
+    constructor(value = 0, label = "", colors = [""], elementId = "") {
+        this.value = value;
+        this.label = label;
+        this.colors = colors;
+        this.elementId = elementId;
+    }
+
+    renderChart() {
+        let element = document.getElementById(this.elementId);
+
+        const chartContainer = document.createElement('div');
+
+        chartContainer.setAttribute('style', `width: 100%; background: ${this.colors[0]};height: 100%; overflow: hidden; border-radius: 10px; position: relative; display: flex; justify-content: center; align-items: center`);
+
+        const chartValueBar = document.createElement('div');
+
+        chartValueBar.setAttribute('style', `width: ${this.value}%; position: absolute; left: 0; top: 0; height: 100%; background: ${this.colors[1]}; transition: all 0.3s ease 0s;`);
+
+        const chartLabel = document.createElement('span');
+
+        chartLabel.setAttribute('style', `z-index: 10; color: ${this.colors[2]}; font-weight:700;`);
+        chartLabel.innerText = `${this.value}% ${this.label}`;
+
+        chartContainer.append(chartValueBar, chartLabel);
+
+        element.append(chartContainer);
+    }
+}
+
 // 
 // DONUT CHART
 //
@@ -28,6 +58,9 @@ const createDonut = (title = "", labels = [""], values = [0], colors = [""], ele
                             show: true,
                             label: title,
                             color: '#fff',
+                            style: {
+                                cssClass: 'opacity-60',
+                            },
                             fontWeight: 500
                         },
                         value: {
@@ -37,7 +70,7 @@ const createDonut = (title = "", labels = [""], values = [0], colors = [""], ele
                             fontWeight: 700
                         },
                     },
-                    size: "65%",
+                    size: "70%",
                 },
             },
         },
@@ -188,4 +221,50 @@ const createArea = (title = "", dates = [], values = [], color = "", elementId =
     newChart.render();
 
     return newChart;
+}
+
+
+function renderDonutLabels(elementId, chart) {
+
+    let element = document.getElementById(elementId);
+
+    chart.w.globals.labels.forEach((label, i) => {
+        let labelEl = document.createElement('div');
+
+        labelEl.className = 'flex flex-col justify-center min-w-24'
+
+        let labelName = document.createElement('h3');
+        let labelPercentage = document.createElement('h3');
+        
+        labelName.innerText = label;
+        let percentage = Number(chart.w.globals.seriesPercent[i]).toFixed(1);
+        labelPercentage.innerText = `${percentage}%`
+
+        labelPercentage.style.color = chart.w.globals.colors[i];
+        labelPercentage.className = 'text-2xl'
+
+        labelEl.append(labelName, labelPercentage);
+        element.append(labelEl);
+    })
+}
+
+function renderColumnLabels(elementId, chart) {
+
+    let element = document.getElementById(elementId);
+
+    chart.w.globals.seriesNames.forEach((name, i) => {
+        let labelEl = document.createElement('h4');
+
+        labelEl.className = "flex items-center gap-2 text-white text-xs";
+
+        let labelColor = document.createElement('span');
+        labelColor.className = "rounded-full w-4 h-4 inline-block";
+        labelColor.style.backgroundColor = chart.w.globals.colors[i];
+
+        labelEl.append(labelColor);
+        labelEl.innerHTML += name;
+
+        element.append(labelEl);
+    })
+
 }
