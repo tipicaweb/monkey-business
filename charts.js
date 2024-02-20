@@ -40,8 +40,8 @@ const createDonut = (title = "", labels = [""], values = [0], colors = [""], ele
         colors: colors,
         chart: {
             type: 'donut',
-            width: '100%',
             height: '100%',
+            width: '75%'
         },
         plotOptions: {
             pie: {
@@ -58,6 +58,7 @@ const createDonut = (title = "", labels = [""], values = [0], colors = [""], ele
                             show: true,
                             label: title,
                             color: 'rgba(255, 255, 255, 0.6)',
+                            fontSize: '14px',
                             fontWeight: 500
                         },
                         value: {
@@ -67,13 +68,13 @@ const createDonut = (title = "", labels = [""], values = [0], colors = [""], ele
                             fontWeight: 700
                         },
                     },
-                    size: "70%",
+                    size: "70%"
                 },
             },
         },
         stroke: {
             colors: ["transparent"],
-            lineCap: "",
+            lineCap: ""
         },
         dataLabels: {
             enabled: false,

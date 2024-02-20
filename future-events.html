@@ -11,7 +11,7 @@
 </head>
 
 <body class="flex min-h-full bg-primary_black">
-    <nav class="bg-primary_black min-w-96 h-full">
+    <nav class="sidebar">
         <div class="flex pl-8 items-center min-w-96 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
         <ul class="flex flex-col items-center min-w-96 max-w-full max-h-full px-8 text-white gap-1">
             <li class="navbar-item">
@@ -89,99 +89,102 @@
         </ul>
     </nav>
     <div class="flex flex-col pr-8 w-full">
-        <header class="flex justify-between items-center h-32 pl-10 bg-primary_black">
+        <header class="header">
             <div>
-                <span class="flex gap-2 text-secondary_gray">Event <span class="base-icon icon-arrowD -rotate-90"></span> <strong class="text-primary_orange font-medium">Future events</strong></span>
+                <span class="flex gap-2 text-secondary_gray">
+                    Event
+                    <span class="base-icon icon-arrowD -rotate-90"></span>
+                    <strong class="text-primary_orange font-medium">Future events</strong>
+                </span>
                 <h2 class="text-white text-[45px] font-semibold">Future events</h2>
             </div>
-            <div class="flex justify-center items-center gap-6 h-10">
-                <a href="#" class="flex justify-center items-center gap-2 bg-primary_green px-5 rounded-full h-full text-text_hover font-medium">
-                    <span class="header-icon icon-add"></span>Create
+            <div class="header-navbar">
+                <a href="#" class="navbar-create">
+                    <span class="header-icon icon-add"></span>
+                    Create
                 </a>
                 <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-medium">
-                    <div class="flex justify-center items-center gap-2 max-w-60">
-                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">VIP Monkey
+                    <div class="flex justify-center items-center gap-2">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
                     </div>
                     <img src="./assets/arrow_down_w.svg" alt="Arrow down">
                 </a>
-
                 <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
                     <img src="./assets/user_img.png" alt="User image">
                 </a>
             </div>
         </header>
-        <main class="w-full bg-secondary_black rounded-t-2xl">
-            <section class="flex flex-col gap-6 p-10 text-2xl font-bold text-white w-full">
-                <div class="flex w-full gap-6 justify-between">
-                    <article class="component w-1/2">
-                        <h3 class="title-component">Average ticketprice</h3>
-                        <div class="donut-component">
-                            <div id="tickets-chart" class="w-2/3 h-64"></div>
-                            <div class="w-1/2 flex flex-col justify-around h-full">
-                                <div id="tickets-labels" class="donut-labels p-0 gap-x-12 justify-start flex-row flex-wrap"></div>
-                                <p class="component-note pr-4">Shows each event's share of the total average ticket price</p>
-                            </div>
+        <main class="main">
+            <section class="components-container grid-cols-2">
+                <article class="component col-start-1">
+                    <h3 class="title-component">Average ticketprice</h3>
+                    <div class="donut-component">
+                        <div id="tickets-chart" class="donut-chart"></div>
+                        <div class="w-1/2 flex flex-col justify-around h-full">
+                            <div id="tickets-labels" class="donut-labels p-0 gap-x-12 justify-start flex-row flex-wrap"></div>
+                            <p class="component-note pr-4">Shows each event's share of the total average ticket price</p>
                         </div>
-                    </article>
-                    <article class="component flex flex-col w-1/2">
-                        <div class="flex title-component justify-between">
-                            <h3>Best selling products</h3>
-                            <select name="products-select" class="bg-primary_black border-primary_gray text-sm px-5" id="products-select">
-                                <option selected value="monthly">Monthly</option>
-                            </select>
-                        </div>
-                        <div class="table-container">
-                            <table class="table-component">
-                                <thead class="labels-table">
-                                    <td></td>
-                                    <td>Event</td>
-                                    <td>Product</td>
-                                    <td>Sold</td>
-                                </thead>
-                                <tbody>
-                                    <tr class="table-row">
-                                        <td>
-                                            <img class="bg-top_first p-2 rounded-2xl" src="/assets/first.svg" alt="Top 1 Logo">
-                                        </td>
-                                        <td>Lorem ipsum</td>
-                                        <td>Lorem ipsum dolor sit amet</td>
-                                        <td>
-                                            <div class="flex items-center">
-                                                <span class="text-primary_green text-2xl font-bold mr-2">68%</span> (2070/3022)
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="table-row">
-                                        <td>
-                                            <img class="bg-top_second p-2 rounded-2xl" src="/assets/second.svg" alt="Top 1 Logo">
-                                        </td>
-                                        <td>Lorem ipsum</td>
-                                        <td>Lorem ipsum dolor sit amet</td>
-                                        <td>
-                                            <div class="flex items-center">
-                                                <span class="text-primary_green text-2xl font-bold mr-2">68%</span> (2070/3022)
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="table-row">
-                                        <td>
-                                            <img class="bg-top_third p-2 rounded-2xl" src="/assets/second.svg" alt="Top 1 Logo">
-                                        </td>
-                                        <td>Lorem ipsum</td>
-                                        <td>Lorem ipsum dolor sit amet</td>
-                                        <td>
-                                            <div class="flex items-center">
-                                                <span class="text-primary_green text-2xl font-bold mr-2">68%</span> (2070/3022)
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <span class="component-note pb-4 pl-6">Best-selling product here means the product that sold the most in relation to available tickets.</span>
-                    </article>
-                </div>
-                <article class="component">
+                    </div>
+                </article>
+                <article class="component col-start-2">
+                    <div class="flex title-component justify-between">
+                        <h3>Best selling products</h3>
+                        <select name="products-select" class="bg-primary_black border-primary_gray text-sm px-5" id="products-select">
+                            <option selected value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                    <div class="table-container">
+                        <table class="table-component">
+                            <thead class="labels-table">
+                                <td></td>
+                                <td>Event</td>
+                                <td>Product</td>
+                                <td>Sold</td>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td>
+                                        <img class="bg-top_first p-2 rounded-2xl" src="/assets/first.svg" alt="Top 1 Logo">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>
+                                        <div class="flex items-center">
+                                            <span class="text-primary_green text-2xl font-bold mr-2">68%</span> (2070/3022)
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img class="bg-top_second p-2 rounded-2xl" src="/assets/second.svg" alt="Top 1 Logo">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>
+                                        <div class="flex items-center">
+                                            <span class="text-primary_green text-2xl font-bold mr-2">68%</span> (2070/3022)
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img class="bg-top_third p-2 rounded-2xl" src="/assets/second.svg" alt="Top 1 Logo">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>
+                                        <div class="flex items-center">
+                                            <span class="text-primary_green text-2xl font-bold mr-2">68%</span> (2070/3022)
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <span class="component-note pb-4 pl-6">Best-selling product here means the product that sold the most in relation to available tickets.</span>
+                </article>
+                <article class="component col-span-full">
                     <h3 class="title-component">Future events</h3>
                     <div class="table-container">
                         <table class="table-component">
@@ -212,7 +215,7 @@
                                     <td>
                                         <div class="flex items-center gap-4">
                                             <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -233,7 +236,7 @@
                                     <td>
                                         <div class="flex items-center gap-4">
                                             <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -254,7 +257,7 @@
                                     <td>
                                         <div class="flex items-center gap-4">
                                             <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -275,7 +278,7 @@
                                     <td>
                                         <div class="flex items-center gap-4">
                                             <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -296,7 +299,7 @@
                                     <td>
                                         <div class="flex items-center gap-4">
                                             <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -317,7 +320,7 @@
                                     <td>
                                         <div class="flex items-center gap-4">
                                             <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>

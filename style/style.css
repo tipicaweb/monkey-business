@@ -28,6 +28,14 @@
 }
 
 @layer components {
+    .sidebar {
+        @apply bg-primary_black;
+        @apply w-96;
+        @apply sticky;
+        @apply top-0;
+        @apply h-screen;
+    }
+
     .navbar-item {
         @apply flex;
         @apply w-full;
@@ -73,6 +81,39 @@
         @apply pl-8;
         @apply text-white;
         @apply gap-1;
+    }
+
+    .header {
+        @apply flex;
+        @apply justify-between;
+        @apply items-center;
+        @apply h-32;
+        @apply pl-10;
+        @apply bg-primary_black;
+        @apply sticky;
+        @apply top-0;
+        @apply z-50;
+    }
+
+    .header-navbar {
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply gap-6;
+        @apply h-10;
+    }
+
+    .navbar-create {
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply gap-2;
+        @apply bg-primary_green;
+        @apply px-5;
+        @apply rounded-full;
+        @apply h-full;
+        @apply text-text_hover;
+        @apply font-medium;
     }
 
     .base-icon {
@@ -161,9 +202,26 @@
         mask-position: center;
     }
 
-    
-    .component {
+    .main {
+        @apply w-full;
+        @apply bg-secondary_black;
+        @apply rounded-3xl;
+        @apply mb-6;
+    }
+
+    .components-container {
         @apply grid;
+        @apply gap-6;
+        @apply p-10; 
+        @apply text-2xl; 
+        @apply font-bold; 
+        @apply text-white; 
+        @apply w-full;
+    }
+
+    .component {
+        @apply flex;
+        @apply flex-col;
         @apply rounded-2xl;
         @apply bg-primary_black;
     }
@@ -180,6 +238,14 @@
         @apply justify-center;
         @apply items-center;
         @apply gap-2;
+    }
+
+    .donut-chart {
+        @apply w-7/12;
+        @apply h-full;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
     }
 
     .donut-labels {
@@ -223,8 +289,132 @@
         }
     }
 
+    .table-center {
+        @apply flex;
+        @apply gap-2;
+        @apply items-center;
+        @apply h-full;
+    }
+
+    .table-dropdown {
+        @apply table-center;
+        @apply rounded-full;
+        @apply font-medium;
+        @apply transition-all;
+        @apply p-2;
+        @apply h-10;
+        @apply hover:bg-[#CAC4D01F];
+
+    }
+
+    .event-component {
+        @apply p-6;
+        @apply pt-4;
+        @apply h-full;
+        @apply w-full;
+        @apply flex;
+        @apply flex-col;
+        @apply gap-6;
+    }
+
+    .component-input {
+        @apply border-b;
+        @apply border-input_border;
+        @apply resize-none;
+        @apply w-full;
+        @apply h-full;
+        @apply text-white;
+        @apply bg-input_bg;
+        @apply text-base;
+        @apply px-4;
+        @apply pt-8;
+        @apply pb-1;
+        transition: all .3s ease 0s;
+
+        &:focus {
+            outline: none;
+            @apply border-input_focus;
+        }
+
+        &:disabled {
+            @apply border-input_border_disabled;
+            @apply text-[#E0E9E7];
+            @apply bg-input_bg_disabled;
+        }
+    }
+
+    .input-container {
+        @apply relative;
+    }
+
+    .component-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @apply text-xs;
+        @apply px-4;
+        @apply pt-2;
+        @apply font-medium;
+        @apply text-[#E0E9E7];
+    }
+
     .component-note {
         @apply text-sm;
         @apply opacity-60;
+    }
+
+    .switch-container {
+        @apply flex;
+        @apply w-[52px];
+        @apply h-8;
+        @apply relative;
+    }
+    
+    .switch-input {
+        @apply inline-block;
+        @apply w-full;
+        @apply h-full;
+        @apply absolute;
+        @apply left-0;
+        @apply top-0;
+        @apply opacity-0;
+    }
+    
+    .switch-span {
+        @apply w-full;
+        @apply h-full;
+        @apply bg-[#343B39];
+        @apply border-solid;
+        @apply border-2;
+        @apply border-primary_gray;
+        @apply rounded-2xl;
+        transition: all .3s ease 0s;
+    }
+    
+    .switch-span::after {
+        content: '';
+        @apply w-4;
+        @apply h-4;
+        @apply bg-primary_gray;
+        @apply rounded-full;
+        @apply absolute;
+        @apply top-0;
+        @apply left-0;
+        @apply pointer-events-none;
+        @apply m-2;
+        transition: all .3s ease 0s;
+    }
+    
+    .switch-input:checked ~ .switch-span {
+        @apply bg-primary_green;
+        @apply border-0;
+    }
+    
+    .switch-input:checked ~ .switch-span::after {
+        @apply left-5;
+        @apply bg-text_hover;
+        @apply w-6;
+        @apply h-6;
+        @apply m-1;
     }
 }

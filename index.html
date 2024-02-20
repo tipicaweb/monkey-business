@@ -10,8 +10,8 @@
     <title>MonkeyBusiness TEST</title>
 </head>
 
-<body class="flex h-full bg-primary_black">
-    <nav class="bg-primary_black min-w-96 h-full">
+<body class="flex min-h-full bg-primary_black">
+    <nav class="sidebar">
         <div class="flex pl-8 items-center min-w-96 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
         <ul class="flex flex-col items-center min-w-96 max-w-full max-h-full px-8 text-white gap-1">
             <li class="navbar-item">
@@ -77,34 +77,32 @@
         </ul>
     </nav>
     <div class="flex flex-col pr-8 w-full">
-        <header class="bg-primary_black">
-            <div class="flex justify-between items-center h-32 pl-10">
-                <h2 class="text-white text-[45px] font-semibold">Event</h2>
-                <div class="flex justify-center items-center gap-6 h-10">
-                    <a href="#" class="flex justify-center items-center gap-2 bg-primary_green px-5 rounded-full h-full text-text_hover font-medium">
-                        <span class="header-icon icon-add"></span>
-                        Create
-                    </a>
-                    <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-medium">
-                        <div class="flex justify-center items-center gap-2 max-w-60">
-                            <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
-                            VIP Monkey
-                        </div>
-                        <img src="./assets/arrow_down_w.svg" alt="Arrow down">
-                    </a>
+        <header class="header">
+            <h2 class="text-white text-[45px] font-semibold">Event</h2>
+            <div class="header-navbar">
+                <a href="#" class="navbar-create">
+                    <span class="header-icon icon-add"></span>
+                    Create
+                </a>
+                <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-medium">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
+                    </div>
+                    <img src="./assets/arrow_down_w.svg" alt="Arrow down">
+                </a>
 
-                    <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
-                        <img src="./assets/user_img.png" alt="User image">
-                    </a>
-                </div>
+                <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
+                    <img src="./assets/user_img.png" alt="User image">
+                </a>
             </div>
         </header>
-        <main class="h-full w-full bg-secondary_black rounded-t-2xl">
-            <section class="grid grid-cols-4 gap-6 p-10 text-2xl font-bold text-white w-full">
+        <main class="main">
+            <section class="components-container grid-cols-4">
                 <article class="component">
                     <h3 class="title-component">Sail channels</h3>
                     <div class="donut-component">
-                        <div id="donut-chart" class="w-[50%]"></div>
+                        <div id="donut-chart" class="donut-chart"></div>
                         <div id="donut-labels" class="donut-labels"></div>
                     </div>
                 </article>
@@ -115,14 +113,14 @@
                 </article>
                 <article class="component">
                     <h3 class="title-component">Locations future events</h3>
-                    <div class="px-6 pb-4">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6567.748435051549!2d-58.445537073137935!3d-34.60734202521839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1707485798623!5m2!1ses-419!2sar" width="100%" height="100%" style="border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="px-6 py-4 h-full">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6567.748435051549!2d-58.445537073137935!3d-34.60734202521839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1707485798623!5m2!1ses-419!2sar" width="100%" height="100%" style="border-radius: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </article>
                 <article class="component">
                     <h3 class="title-component">Returning guests</h3>
                     <div class="donut-component">
-                        <div id="guests-chart" class="w-[50%]"></div>
+                        <div id="guests-chart" class="donut-chart"></div>
                         <div id="guests-labels" class="donut-labels"></div>
                     </div>
                 </article>
