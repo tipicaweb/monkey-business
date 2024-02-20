@@ -1,19 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ["./**/*.{html,js}"],
   theme: {
     extend: {
       fontFamily: {
         custom: "CircularStd"
       },
-        colors: {
-            main: '#262928',
-            component: '#181A19',
-            main_text: '#00EBB0',
-            header: '#181A19',
-            button_hover: '#C5F6E2',
-            text_hover: '#292926'
-        }
+      colors: {
+        primary_green: '#00EBB0',
+        secondary_green: '#C5F6E2',
+        primary_black: '#181A19',
+        secondary_black: '#262928',
+        text_hover: '#292926',
+        terciary_black: '#FEF7FF14',
+      }
     }
   },
   plugins: [],
