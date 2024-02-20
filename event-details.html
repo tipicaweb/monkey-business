@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Future events - MonkeyBusiness</title>
+</head>
+
+<body class="flex min-h-full bg-primary_black">
+    <nav class="sidebar">
+        <div class="flex pl-8 items-center min-w-96 max-w-full h-32">
+            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo">
+        </div>
+        <ul class="flex flex-col items-center min-w-96 max-w-full max-h-full px-8 text-white gap-1">
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-grid"></span>Home
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-bolt"></span>Create express ticket
+                </a>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="#" class="navbar-button p-0 gap-0">
+                    <div class="flex gap-3 p-3 w-full">
+                        <span class="navbar-icon icon-event"></span>Event
+                    </div>
+                    <div class="p-3 active" id="events-arrow">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul id="events-dropdown" class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Present
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button active">
+                            <span class="navbar-icon icon-future"></span>Future
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Past
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-list"></span>Products
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-map"></span>Map
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-group"></span>Guest lists
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-campaign"></span>Marketing
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-fact"></span>My guests
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-settings"></span>Settings
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-logout"></span>Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex flex-col pr-8 w-full">
+        <header class="header">
+            <div>
+                <span class="flex gap-2 text-secondary_gray">
+                    Event
+                    <span class="base-icon icon-arrowD -rotate-90"></span>
+                    Future events
+                    <span class="base-icon icon-arrowD -rotate-90"></span>
+                    <strong class="text-primary_orange font-medium">[Event name]</strong>
+                </span>
+                <h2 class="text-white text-[45px] font-semibold flex gap-4">
+                    <img src="./assets/event_img.svg" alt="">
+                    [Event name]
+                </h2>
+            </div>
+            <div class="header-navbar">
+                <a href="#" class="navbar-create">
+                    <span class="header-icon icon-add"></span>
+                    Create
+                </a>
+                <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-medium">
+                    <div class="flex justify-center items-center gap-2">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
+                    </div>
+                    <img src="./assets/arrow_down_w.svg" alt="Arrow down">
+                </a>
+                <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
+                    <img src="./assets/user_img.png" alt="User image">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="components-container grid-cols-6">
+                <article class="component col-start-1 col-end-5">
+                    <h3 class="title-component">Event details</h3>
+                    <div class="event-component">
+                        <div class="input-container">                                   
+                            <label for="event_description" class="component-label">Description</label>
+                            <textarea class="component-input" name="event_description" id="event_description" rows="5" disabled></textarea>
+                        </div>
+                        <div class="flex gap-6 w-full h-full">
+                            <div class="flex flex-col w-1/2 h-full gap-6">
+                                <div class="input-container">   
+                                    <label for="event_location" class="component-label">Location</label>
+                                    <input id="event_location" class="component-input" value="Yostton" type="text" disabled>
+                                </div>
+                                <div class="input-container">  
+                                    <label for="event_startDate" class="component-label">Start date</label>                                 
+                                    <input id="event_startDate" class="component-input" value="2024-03-24" type="date" disabled>
+                                </div>
+                                <div class="input-container">
+                                    <label for="event_endDate" class="component-label">End date</label>
+                                    <input id="event_endDate" class="component-input" value="2024-03-24" type="date" disabled>
+                                </div>
+                            </div>
+                            <div class="flex flex-col w-1/4 h-full gap-6">
+                                <div class="input-container"> 
+                                    <label for="event_ageFormMin" class="component-label">Age form</label>
+                                    <input id="event_ageFormMin" class="component-input" value="18" type="number" disabled>
+                                </div>
+                                <div class="input-container"> 
+                                    <label for="event_startTime" class="component-label">Start time</label>
+                                    <input id="event_startTime" class="component-input" value="16:00" type="time" disabled>
+                                </div>
+                                <div class="input-container"> 
+                                    <label for="event_endTime" class="component-label">End time</label>
+                                    <input id="event_endTime" class="component-input" value="22:00" type="time" disabled>
+                                </div>
+                            </div>
+                            <div class="flex flex-col w-1/4 h-full gap-6">
+                                <div class="input-container"> 
+                                    <label for="event_ageFormMax" class="component-label">Age form</label>
+                                    <input id="event_ageFormMax" class="component-input" value="40" type="number" disabled>
+                                </div>
+                                <div class="bg-primary_orange text-primary_orange bg-opacity-15 flex flex-col items-center justify-center rounded-2xl h-3/4 text-sm font-medium">
+                                    <span class="text-2xl font-bold">6hs</span>
+                                    <span>Event duration</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <a href="#" class="px-6 py-3 bg-secondary_green rounded-3xl text-[#1D192B] text-sm font-medium">Edit</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="component col-start-5 col-end-7">
+                    <h3 class="title-component">Cards</h3>
+                    <div class="table-container">
+                        <table class="table-component">
+                            <thead class="labels-table">
+                                <td></td>
+                                <td>Name</td>
+                                <td>Number of</td>
+                                <td></td>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event image">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td>1</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event image">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td>2</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event image">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td>3</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event image">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td>4</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event image">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td>5</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event image">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td>6</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+                <article class="component col-span-full">
+                    <h3 class="title-component">Future events</h3>
+                    <div class="table-container">
+                        <table class="table-component">
+                            <thead class="labels-table">
+                                <td></td>
+                                <td>Name</td>
+                                <td>Campgains</td>
+                                <td>Quantity</td>
+                                <td>Price (Guest)</td>
+                                <td>Avaible</td>
+                                <td>From / To</td>
+                                <td>Mobile</td>
+                                <td>Desktop</td>
+                                <td>Flash</td>
+                                <td>Actions</td>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event logo">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td class="table-center">
+                                        <img src="./assets/sms.svg" alt="">
+                                        <img src="./assets/mail.svg" alt="">
+                                    </td>
+                                    <td>52</td>
+                                    <td>52</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>from 3/23/2024</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table-center dropdown-container">
+                                            <button class="table-dropdown">
+                                                <img src="./assets/dots.svg" alt="Dropdown menu">
+                                            </button>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item">
+                                                    <img src="./assets/link.svg" alt="Link icon">
+                                                    Navigate to product link
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <img src="./assets/qr_code.svg" alt="Qr code icon">
+                                                    Show qr code
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <span class="base-icon icon-campaign"></span>
+                                                    Navigate to Marketing
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="-rotate-90 p-2">
+                                                <span class="base-icon icon-arrowD"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event logo">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td class="table-center">
+                                        <img src="./assets/notification.svg" alt="">
+                                    </td>
+                                    <td>40</td>
+                                    <td>40</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>from 3/23/2024</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table-center">
+                                            <button class="table-dropdown">
+                                                <img src="./assets/dots.svg" alt="Dropdown menu">
+                                            </button>
+                                            <a href="#" class="-rotate-90 p-2">
+                                                <span class="base-icon icon-arrowD"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event logo">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td class="table-center">
+                                        <img src="./assets/gift.svg" alt="">
+                                    </td>
+                                    <td>52</td>
+                                    <td>52</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>from 3/23/2024</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table-center">
+                                            <button class="table-dropdown">
+                                                <img src="./assets/dots.svg" alt="Dropdown menu">
+                                            </button>
+                                            <a href="#" class="-rotate-90 p-2">
+                                                <span class="base-icon icon-arrowD"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event logo">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td class="table-center">
+                                        <img src="./assets/card.svg" alt="">
+                                    </td>
+                                    <td>40</td>
+                                    <td>40</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>from 3/23/2024</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked>
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table-center">
+                                            <button class="table-dropdown">
+                                                <img src="./assets/dots.svg" alt="Dropdown menu">
+                                            </button>
+                                            <a href="#" class="-rotate-90 p-2">
+                                                <span class="base-icon icon-arrowD"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event logo">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td class="table-center">
+                                        <img src="./assets/sms.svg" alt="">
+                                        <img src="./assets/mail.svg" alt="">
+                                    </td>
+                                    <td>52</td>
+                                    <td>52</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>from 3/23/2024</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table-center">
+                                            <button class="table-dropdown">
+                                                <img src="./assets/dots.svg" alt="Dropdown menu">
+                                            </button>
+                                            <a href="#" class="-rotate-90 p-2">
+                                                <span class="base-icon icon-arrowD"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>
+                                        <img src="./assets/event_img.svg" alt="Event logo">
+                                    </td>
+                                    <td>Lorem ipsum</td>
+                                    <td class="table-center">
+                                        <img src="./assets/notification.svg" alt="">
+                                    </td>
+                                    <td>40</td>
+                                    <td>40</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked="true">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>from 3/23/2024</td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked="true">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked="true">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="switch-container">
+                                            <input type="checkbox" class="switch-input" checked="true">
+                                            <span class="switch-span"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table-center">
+                                            <button class="table-dropdown">
+                                                <img src="./assets/dots.svg" alt="Dropdown Menu">
+                                            </button>
+                                            <a href="#" class="-rotate-90 p-2">
+                                                <span class="base-icon icon-arrowD"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+                <article class="component col-start-1 col-end-5">
+                    <h3 class="title-component">Guest lists</h3>
+                    <div class="table-container">
+                        <table class="table-component">
+                            <thead class="labels-table">
+                                <td>Name</td>
+                                <td>Paying</td>
+                                <td>Free</td>
+                                <td>Total</td>
+                                <td></td>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>95</td>
+                                    <td>48</td>
+                                    <td>143</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>95</td>
+                                    <td>48</td>
+                                    <td>143</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>95</td>
+                                    <td>48</td>
+                                    <td>143</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>95</td>
+                                    <td>48</td>
+                                    <td>143</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>95</td>
+                                    <td>48</td>
+                                    <td>143</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>95</td>
+                                    <td>48</td>
+                                    <td>143</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/trash.svg" alt="Delete button">
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+                <article class="component col-start-5 col-end-7">
+                    <h3 class="title-component">Authorization</h3>
+                    <div class="table-container">
+                        <table class="table-component">
+                            <thead class="labels-table">
+                                <td>Role</td>
+                                <td>Name</td>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>Lorem ipsum</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>Lorem ipsum</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>Lorem ipsum</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>Lorem ipsum</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>Lorem ipsum</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>Lorem ipsum</td>
+                                    <td>Lorem ipsum</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./charts.js"></script>
+    <script src="./future-events.js"></script>
+</body>
+
+</html>

@@ -13,9 +13,22 @@ export default {
         secondary_black: '#262928',
         text_hover: '#292926',
         terciary_black: '#FEF7FF14',
+        primary_orange: '#FFA65E',
+        top_first: '#FFD75E',
+        top_second: '#D2D0D1',
+        top_third: '#FFA65E',
+        primary_gray: '#8F9997',
+        secondary_gray: '#BFC9C2',
+        terciary_gray: '#E0E9E7',
+        input_bg: '#343B39',
+        input_border: '#C4D0CD',
+        input_border_disabled: '#49454F',
+        input_bg_disabled: '#E6E0E90A',
+        input_focus: '#00ECAE'
       }
     }
   },
   plugins: [],
+
 }
 
