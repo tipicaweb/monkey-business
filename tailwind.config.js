@@ -19,6 +19,7 @@ export default {
         top_third: '#FFA65E',
         primary_gray: '#8F9997',
         secondary_gray: '#BFC9C2',
+        terciary_gray: '#E0E9E7',
         input_bg: '#343B39',
         input_border: '#C4D0CD',
         input_border_disabled: '#49454F',
