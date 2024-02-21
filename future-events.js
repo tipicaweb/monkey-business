@@ -1,6 +1,10 @@
-let ticketsChart = createDonut("Average ticketprice", ["Lorem", "Lorem", "Lorem", "Lorem", "Lorem"], [5207, 3988, 3696, 1647, 862], ['#00EBB0', '#FFA65E', '#E86987', '#85A7FF', '#FD85FF'], 'tickets-chart');
+// let ticketsChart = createDonut("Average ticketprice", ["Lorem", "Lorem", "Lorem", "Lorem", "Lorem"], [5207, 3988, 3696, 1647, 862], ['#00EBB0', '#FFA65E', '#E86987', '#85A7FF', '#FD85FF'], 'tickets-chart');
 
-renderDonutLabels('tickets-labels', ticketsChart);
+// renderDonutLabels('tickets-labels', ticketsChart);
+
+const donut = new DonutChart("Average ticketprice", ["Lorem", "Lorem", "Lorem", "Lorem", "Lorem"], ['#00EBB0', '#FFA65E', '#E86987', '#85A7FF', '#FD85FF'], [26.026, 19.943, 18.48, 8.239, 4.312], 'tickets-chart', (total, length) => `$${(total / length).toFixed(1)}`);
+donut.render();
+donut.renderLabels('tickets-labels')
 
 const barCharts = [
     new BarChart(56, "Sold", ["#F6DBC5", "#FFA65E", "#292926"], "bar-chart1"),

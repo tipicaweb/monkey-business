@@ -28,66 +28,120 @@ class BarChart {
     }
 }
 
-// 
-// DONUT CHART
-//
-
-const createDonut = (title = "", labels = [""], values = [0], colors = [""], elementId = "") => {
-
-    const options = {
-        labels: labels,
-        series: values,
-        colors: colors,
-        chart: {
-            type: 'donut',
-            height: '100%',
-            width: '75%'
-        },
-        plotOptions: {
-            pie: {
-                donut: {
-                    labels: {
-                        show: true,
-                        name: {
-                            show: true,
-                            offsetY: 20,
-                            fontWeight: 200
-                        },
-                        total: {
-                            showAlways: true,
-                            show: true,
-                            label: title,
-                            color: 'rgba(255, 255, 255, 0.6)',
-                            fontSize: '14px',
-                            fontWeight: 500
-                        },
-                        value: {
-                            show: true,
-                            offsetY: -20,
-                            color: 'rgba(255, 255, 255, 0.87)',
-                            fontWeight: 700
-                        },
-                    },
-                    size: "70%"
-                },
-            },
-        },
-        stroke: {
-            colors: ["transparent"],
-            lineCap: ""
-        },
-        dataLabels: {
-            enabled: false,
-        },
-        legend: {
-            show: false,
-        }
+class DonutChart {
+    constructor(title = "", labels = [""], colors = [""], values = [0], elementId = "", valueFormmater = (total, length) => { return total}) {
+        this.title = title;
+        this.labels = labels;
+        this.colors = colors;
+        this.values = values;
+        this.elementId = elementId;
+        this.total = values.reduce((acc, value) => acc += value, 0);
+        this.percentages = this.getPercentages();
+        this.value = valueFormmater(this.total, this.values.length);
     }
 
-    let newChart = new ApexCharts(document.getElementById(elementId), options);
-    newChart.render();
+    getPercentages() {
+        return this.values.map(value => ((100 * value) / this.total));
+    }
 
-    return newChart;
+    getGradient() {
+        let gradientCss = "";
+        let totalPercentage = 0;
+
+        for(let i = 0; i < this.percentages.length; i++) {
+            gradientCss += `${this.colors[i]} ${totalPercentage}% ${totalPercentage + this.percentages[i]}%,`;
+
+            totalPercentage += this.percentages[i];
+        }
+
+        return gradientCss.slice(0, -1);
+    }
+
+    render() {
+        const element = document.getElementById(this.elementId);
+
+        const donutEl = document.createElement('div');
+        donutEl.style.cssText = `
+            width: 100%;
+            padding: 0;
+            padding-top: 100%;
+            border-radius: 100%;
+            background: inherit;
+            position: relative;
+            overflow: hidden;
+        `;
+
+        const donutArea = document.createElement('div');
+        donutArea.style.cssText = `
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: conic-gradient(
+                ${this.getGradient()}
+            )
+        `;
+
+        const donutCenter = document.createElement('div');
+        donutCenter.style.cssText = `
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            right: 15%;
+            bottom: 15%;
+            background: inherit;
+            border-radius: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        `;
+
+        const donutValue = document.createElement('div');
+        donutValue.style.cssText = `
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+        `;
+
+        const donutTitle = document.createElement('div');
+        donutTitle.style.cssText = `
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            opacity: .6;
+        `;
+
+        donutValue.innerText = this.value;
+        donutTitle.innerText = this.title;
+        
+        donutCenter.append(donutValue, donutTitle);
+        donutEl.append(donutArea, donutCenter);
+        element.append(donutEl);
+    }
+
+    renderLabels(labelsId) {
+        let element = document.getElementById(labelsId);
+
+        this.labels.forEach((label, i) => {
+            let labelEl = document.createElement('div');
+            labelEl.className = 'flex flex-col justify-center min-w-24'
+
+            let labelName = document.createElement('h3');
+            let labelPercentage = document.createElement('h3');
+            
+            labelName.innerText = label;
+            let percentage = Number(this.percentages[i]).toFixed(1);
+            labelPercentage.innerText = `${percentage}%`
+
+            labelPercentage.style.color = this.colors[i];
+            labelPercentage.className = 'text-2xl font-bold';
+
+            labelEl.append(labelName, labelPercentage);
+            element.append(labelEl);
+        })
+    }
 }
 
 //
@@ -100,7 +154,7 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
         colors: colors,
         chart: {
             type: "bar",
-            height: "80%",
+            height: "75%",
             width: "100%",
             toolbar: {
                 show: false,
@@ -219,31 +273,6 @@ const createArea = (title = "", dates = [], values = [], color = "", elementId =
     newChart.render();
 
     return newChart;
-}
-
-
-function renderDonutLabels(elementId, chart) {
-
-    let element = document.getElementById(elementId);
-
-    chart.w.globals.labels.forEach((label, i) => {
-        let labelEl = document.createElement('div');
-
-        labelEl.className = 'flex flex-col justify-center min-w-24'
-
-        let labelName = document.createElement('h3');
-        let labelPercentage = document.createElement('h3');
-        
-        labelName.innerText = label;
-        let percentage = Number(chart.w.globals.seriesPercent[i]).toFixed(1);
-        labelPercentage.innerText = `${percentage}%`
-
-        labelPercentage.style.color = chart.w.globals.colors[i];
-        labelPercentage.className = 'text-2xl'
-
-        labelEl.append(labelName, labelPercentage);
-        element.append(labelEl);
-    })
 }
 
 function renderColumnLabels(elementId, chart) {
