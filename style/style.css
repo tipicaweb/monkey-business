@@ -5,20 +5,20 @@
 @layer base {
     @font-face {
         font-family: "CircularStd";
-        font-weight: 200;
-        src: url("/fonts/CircularStd-Book.otf");
+        font-weight: 400;
+        src: url("../fonts/CircularStd-Book.otf");
     }
 
     @font-face {
         font-family: "CircularStd";
         font-weight: 500;
-        src: url("/fonts/CircularStd-Medium.otf");
+        src: url("../fonts/CircularStd-Medium.otf");
     }
 
     @font-face {
         font-family: "CircularStd";
-        font-weight: 800;
-        src: url("/fonts/CircularStd-Bold.otf");
+        font-weight: 700;
+        src: url("../fonts/CircularStd-Bold.otf");
     }
 
     * {
@@ -30,7 +30,7 @@
 @layer components {
     .sidebar {
         @apply bg-primary_black;
-        @apply w-96;
+        @apply w-72;
         @apply sticky;
         @apply top-0;
         @apply h-screen;
@@ -43,7 +43,7 @@
 
     .navbar-button {
         @apply gap-3;
-        @apply p-3;
+        @apply p-4;
         @apply h-full;
         @apply w-full;
         @apply rounded-xl;
@@ -55,7 +55,7 @@
 
         &:hover:not(.active) {
             @apply bg-terciary_black;
-            @apply rounded-full;
+            @apply rounded-xl;
         }
 
         &.active {
@@ -99,11 +99,17 @@
         @apply flex;
         @apply justify-center;
         @apply items-center;
-        @apply gap-6;
+        @apply gap-4;
         @apply h-10;
     }
 
-    .navbar-create {
+    .header-title {
+        @apply text-white;
+        @apply text-5xl;
+        @apply font-bold;
+    }
+
+    .btn {
         @apply flex;
         @apply justify-center;
         @apply items-center;
@@ -116,6 +122,14 @@
         @apply font-medium;
     }
 
+    .btn-icon {
+        @apply h-4;
+        @apply w-4;
+        @apply bg-text_hover;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+
     .base-icon {
         @apply flex;
         @apply w-6;
@@ -125,63 +139,63 @@
     }
 
     .icon-grid {
-        mask: url('/assets/grid_view.svg');
+        mask: url('../assets/grid_view.svg');
     }
 
     .icon-bolt {
-        mask: url('/assets/bolt.svg');
+        mask: url('../assets/bolt.svg');
     }
 
     .icon-event {
-        mask: url('/assets/event.svg');
+        mask: url('../assets/event.svg');
     }
 
     .icon-avaible {
-        mask: url('/assets/event_available.svg');
+        mask: url('../assets/event_available.svg');
     }
 
     .icon-past {
-        mask: url('/assets/event_past.svg');
+        mask: url('../assets/event_past.svg');
     }
 
     .icon-future {
-        mask: url('/assets/event_future.svg');
+        mask: url('../assets/event_future.svg');
     }
 
     .icon-list {
-        mask: url('/assets/list_alt.svg');
+        mask: url('../assets/list_alt.svg');
     }
 
     .icon-map {
-        mask: url('/assets/map.svg');
+        mask: url('../assets/map.svg');
     }
 
     .icon-group {
-        mask: url('/assets/group.svg');
+        mask: url('../assets/group.svg');
     }
 
     .icon-campaign {
-        mask: url('/assets/campaign.svg');
+        mask: url('../assets/campaign.svg');
     }
 
     .icon-fact {
-        mask: url('/assets/fact_check.svg');
+        mask: url('../assets/fact_check.svg');
     }
 
     .icon-settings {
-        mask: url('/assets/settings.svg');
+        mask: url('../assets/settings.svg');
     }
 
     .icon-logout {
-        mask: url('/assets/logout.svg');
+        mask: url('../assets/logout.svg');
     }
 
     .icon-add {
-        mask: url('/assets/add_b.svg');
+        mask: url('../assets/add_b.svg');
     }
 
     .icon-arrowD {
-        mask: url('/assets/arrow_down_w.svg');
+        mask: url('../assets/arrow_down_w.svg');
     }
 
     .navbar-icon {
@@ -194,13 +208,7 @@
         mask-repeat: no-repeat;
     }
 
-    .header-icon {
-        @apply h-4;
-        @apply w-4;
-        @apply bg-text_hover;
-        mask-repeat: no-repeat;
-        mask-position: center;
-    }
+    
 
     .main {
         @apply w-full;
@@ -212,8 +220,8 @@
     .components-container {
         @apply grid;
         @apply gap-6;
-        @apply p-10; 
-        @apply text-2xl; 
+        @apply p-6; 
+        @apply text-3xl; 
         @apply font-bold; 
         @apply text-white; 
         @apply w-full;
@@ -222,13 +230,17 @@
     .component {
         @apply flex;
         @apply flex-col;
-        @apply rounded-2xl;
+        @apply rounded-3xl;
+        @apply px-6; 
+        @apply pt-4; 
+        @apply pb-6; 
+        @apply gap-3;
         @apply bg-primary_black;
     }
 
     .title-component {
-        @apply px-6;
-        @apply pt-4;
+        @apply text-2xl; 
+        @apply font-bold;
     }
 
     .donut-component {
@@ -254,14 +266,11 @@
         @apply text-sm;
         @apply gap-2;
         @apply font-bold;
-        @apply pb-4;
         @apply leading-4;
     }
 
     .table-container {
-        @apply p-6;
         @apply w-full;
-        @apply h-full;
     }
 
     .table-component {
@@ -273,17 +282,17 @@
         .labels-table {
             @apply text-primary_orange;
             @apply text-sm;
+            @apply font-normal;
 
             td {
-                padding: 6px;
             }
         }
 
         .table-row {
             @apply py-2;
+            @apply h-14;
 
             td {
-                padding: 6px 16px 6px 6px;
                 @apply font-light;
             }
         }
@@ -335,27 +344,26 @@
     }
 
     .event-component {
-        @apply p-6;
-        @apply pt-4;
         @apply h-full;
         @apply w-full;
         @apply flex;
         @apply flex-col;
-        @apply gap-6;
+        @apply gap-8;
     }
 
     .component-input {
         @apply border-b;
         @apply border-input_border;
         @apply resize-none;
+        @apply font-normal;
         @apply w-full;
         @apply h-full;
         @apply text-white;
         @apply bg-input_bg;
         @apply text-base;
         @apply px-4;
-        @apply pt-8;
-        @apply pb-1;
+        @apply pt-7;
+        @apply pb-2;
         transition: all .3s ease 0s;
 
         &:focus {
@@ -372,6 +380,7 @@
 
     .input-container {
         @apply relative;
+        @apply h-14;
     }
 
     .component-label {
@@ -381,13 +390,14 @@
         @apply text-xs;
         @apply px-4;
         @apply pt-2;
-        @apply font-medium;
+        @apply font-normal;
         @apply text-terciary_gray;
     }
 
     .component-note {
         @apply text-sm;
         @apply opacity-60;
+        @apply font-normal;
     }
 
     .switch-container {

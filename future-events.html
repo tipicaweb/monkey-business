@@ -10,10 +10,10 @@
     <title>Future events - MonkeyBusiness</title>
 </head>
 
-<body class="flex min-h-full bg-primary_black">
+<body class="flex min-h-full bg-primary_black px-8 gap-8">
     <nav class="sidebar">
-        <div class="flex pl-8 items-center min-w-96 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
-        <ul class="flex flex-col items-center min-w-96 max-w-full max-h-full px-8 text-white gap-1">
+        <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
+        <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
                     <span class="navbar-icon icon-grid"></span>Home
@@ -25,11 +25,11 @@
                 </a>
             </li>
             <li class="navbar-item flex-col gap-1">
-                <a href="#" class="navbar-button p-0 gap-0">
-                    <div class="flex gap-3 p-3 w-full">
+                <a href="#" class="navbar-button gap-0">
+                    <div class="flex gap-3 w-full">
                         <span class="navbar-icon icon-event"></span>Event
                     </div>
-                    <div class="p-3 active" id="events-arrow">
+                    <div class="pr-3 active" id="events-arrow">
                         <span class="navbar-icon icon-arrowD"></span>
                     </div>
                 </a>
@@ -88,28 +88,29 @@
             </li>
         </ul>
     </nav>
-    <div class="flex flex-col pr-8 w-full">
+    <div class="flex flex-col w-full">
         <header class="header">
             <div>
-                <span class="flex gap-2 text-secondary_gray">
+                <span class="flex gap-4 text-secondary_gray font-normal">
                     Event
                     <span class="base-icon icon-arrowD -rotate-90"></span>
-                    <strong class="text-primary_orange font-medium">Future events</strong>
+                    <span class="text-primary_orange font-normal">Future events</span>
                 </span>
-                <h2 class="text-white text-[45px] font-semibold">Future events</h2>
+                <h2 class="header-title">Future events</h2>
             </div>
             <div class="header-navbar">
-                <a href="#" class="navbar-create">
-                    <span class="header-icon icon-add"></span>
+                <a href="#" class="btn">
+                    <span class="btn-icon icon-add"></span>
                     Create
                 </a>
-                <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-medium">
-                    <div class="flex justify-center items-center gap-2">
+                <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-normal">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
                         <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
                         VIP Monkey
                     </div>
                     <img src="./assets/arrow_down_w.svg" alt="Arrow down">
                 </a>
+
                 <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
                     <img src="./assets/user_img.png" alt="User image">
                 </a>
@@ -123,7 +124,7 @@
                         <div id="tickets-chart" class="donut-chart"></div>
                         <div class="w-1/2 flex flex-col justify-around h-full">
                             <div id="tickets-labels" class="donut-labels p-0 gap-x-12 justify-start flex-row flex-wrap"></div>
-                            <p class="component-note pr-4">Shows each event's share of the total average ticket price</p>
+                            <p class="component-note">Shows each event's share of the total average ticket price</p>
                         </div>
                     </div>
                 </article>
@@ -145,7 +146,7 @@
                             <tbody>
                                 <tr class="table-row">
                                     <td>
-                                        <img class="bg-top_first p-2 rounded-2xl" src="/assets/first.svg" alt="Top 1 Logo">
+                                        <img class="bg-top_first p-2 rounded-2xl" src="./assets/first.svg" alt="Top 1 Logo">
                                     </td>
                                     <td>Lorem ipsum</td>
                                     <td>Lorem ipsum dolor sit amet</td>
@@ -157,7 +158,7 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td>
-                                        <img class="bg-top_second p-2 rounded-2xl" src="/assets/second.svg" alt="Top 1 Logo">
+                                        <img class="bg-top_second p-2 rounded-2xl" src="./assets/second.svg" alt="Top 1 Logo">
                                     </td>
                                     <td>Lorem ipsum</td>
                                     <td>Lorem ipsum dolor sit amet</td>
@@ -169,7 +170,7 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td>
-                                        <img class="bg-top_third p-2 rounded-2xl" src="/assets/second.svg" alt="Top 1 Logo">
+                                        <img class="bg-top_third p-2 rounded-2xl" src="./assets/second.svg" alt="Top 1 Logo">
                                     </td>
                                     <td>Lorem ipsum</td>
                                     <td>Lorem ipsum dolor sit amet</td>
@@ -182,10 +183,10 @@
                             </tbody>
                         </table>
                     </div>
-                    <span class="component-note pb-4 pl-6">Best-selling product here means the product that sold the most in relation to available tickets.</span>
+                    <span class="component-note">Best-selling product here means the product that sold the most in relation to available tickets.</span>
                 </article>
                 <article class="component col-span-full">
-                    <h3 class="title-component">Future events</h3>
+                    <h3 class="title-component">Products</h3>
                     <div class="table-container">
                         <table class="table-component">
                             <thead class="labels-table">
@@ -202,12 +203,12 @@
                             <tbody>
                                 <tr class="table-row">
                                     <td>
-                                        <img src="/assets/event_img.svg" alt="Event logo">
+                                        <img src="./assets/event_img.svg" alt="Event logo">
                                     </td>
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart1" class="h-full py-1"></div>
+                                        <div id="bar-chart1" class="h-full py-2 pr-4"></div>
                                     </td>
                                     <td>52</td>
                                     <td>17-29</td>
@@ -223,12 +224,12 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td>
-                                        <img src="/assets/event_img.svg" alt="Event logo">
+                                        <img src="./assets/event_img.svg" alt="Event logo">
                                     </td>
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart2" class="h-full py-1"></div>
+                                        <div id="bar-chart2" class="h-full py-2 pr-4"></div>
                                     </td>
                                     <td>40</td>
                                     <td>17-29</td>
@@ -244,12 +245,12 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td>
-                                        <img src="/assets/event_img.svg" alt="Event logo">
+                                        <img src="./assets/event_img.svg" alt="Event logo">
                                     </td>
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart3" class="h-full py-1"></div>
+                                        <div id="bar-chart3" class="h-full py-2 pr-4"></div>
                                     </td>
                                     <td>52</td>
                                     <td>17-29</td>
@@ -265,12 +266,12 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td>
-                                        <img src="/assets/event_img.svg" alt="Event logo">
+                                        <img src="./assets/event_img.svg" alt="Event logo">
                                     </td>
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart4" class="h-full py-1"></div>
+                                        <div id="bar-chart4" class="h-full py-2 pr-4"></div>
                                     </td>
                                     <td>40</td>
                                     <td>17-29</td>
@@ -286,12 +287,12 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td>
-                                        <img src="/assets/event_img.svg" alt="Event logo">
+                                        <img src="./assets/event_img.svg" alt="Event logo">
                                     </td>
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart5" class="h-full py-1"></div>
+                                        <div id="bar-chart5" class="h-full py-2 pr-4"></div>
                                     </td>
                                     <td>52</td>
                                     <td>17-29</td>
@@ -307,12 +308,12 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td>
-                                        <img src="/assets/event_img.svg" alt="Event logo">
+                                        <img src="./assets/event_img.svg" alt="Event logo">
                                     </td>
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart6" class="h-full py-1"></div>
+                                        <div id="bar-chart6" class="h-full py-2 pr-4"></div>
                                     </td>
                                     <td>40</td>
                                     <td>17-29</td>

@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/output.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>Future events - MonkeyBusiness</title>
+    <title>[Event name] - MonkeyBusiness</title>
 </head>
 
-<body class="flex min-h-full bg-primary_black">
+<body class="flex min-h-full bg-primary_black px-8 gap-8">
     <nav class="sidebar">
-        <div class="flex pl-8 items-center min-w-96 max-w-full h-32">
-            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo">
-        </div>
-        <ul class="flex flex-col items-center min-w-96 max-w-full max-h-full px-8 text-white gap-1">
+        <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
+        <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
                     <span class="navbar-icon icon-grid"></span>Home
@@ -27,11 +25,11 @@
                 </a>
             </li>
             <li class="navbar-item flex-col gap-1">
-                <a href="#" class="navbar-button p-0 gap-0">
-                    <div class="flex gap-3 p-3 w-full">
+                <a href="#" class="navbar-button gap-0">
+                    <div class="flex gap-3 w-full">
                         <span class="navbar-icon icon-event"></span>Event
                     </div>
-                    <div class="p-3 active" id="events-arrow">
+                    <div class="pr-3 active" id="events-arrow">
                         <span class="navbar-icon icon-arrowD"></span>
                     </div>
                 </a>
@@ -90,33 +88,31 @@
             </li>
         </ul>
     </nav>
-    <div class="flex flex-col pr-8 w-full">
+    <div class="flex flex-col w-full">
         <header class="header">
             <div>
-                <span class="flex gap-2 text-secondary_gray">
+                <span class="flex gap-4 text-secondary_gray font-normal">
                     Event
                     <span class="base-icon icon-arrowD -rotate-90"></span>
                     Future events
                     <span class="base-icon icon-arrowD -rotate-90"></span>
-                    <strong class="text-primary_orange font-medium">[Event name]</strong>
+                    <strong class="text-primary_orange font-normal">[Event name]</strong>
                 </span>
-                <h2 class="text-white text-[45px] font-semibold flex gap-4">
-                    <img src="./assets/event_img.svg" alt="">
-                    [Event name]
-                </h2>
+                <h2 class="header-title">[Event name]</h2>
             </div>
             <div class="header-navbar">
-                <a href="#" class="navbar-create">
-                    <span class="header-icon icon-add"></span>
+                <a href="#" class="btn">
+                    <span class="btn-icon icon-add"></span>
                     Create
                 </a>
-                <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-medium">
-                    <div class="flex justify-center items-center gap-2">
+                <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-normal">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
                         <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
                         VIP Monkey
                     </div>
                     <img src="./assets/arrow_down_w.svg" alt="Arrow down">
                 </a>
+
                 <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
                     <img src="./assets/user_img.png" alt="User image">
                 </a>
@@ -127,12 +123,12 @@
                 <article class="component col-start-1 col-end-5">
                     <h3 class="title-component">Event details</h3>
                     <div class="event-component">
-                        <div class="input-container">                                   
+                        <div class="input-container h-full">                                   
                             <label for="event_description" class="component-label">Description</label>
-                            <textarea class="component-input" name="event_description" id="event_description" rows="5" disabled></textarea>
+                            <textarea class="component-input" name="event_description" id="event_description" rows="5" disabled>daadgsdagsadgds</textarea>
                         </div>
-                        <div class="flex gap-6 w-full h-full">
-                            <div class="flex flex-col w-1/2 h-full gap-6">
+                        <div class="flex gap-8 w-full h-full">
+                            <div class="flex flex-col w-1/2 h-full gap-8">
                                 <div class="input-container">   
                                     <label for="event_location" class="component-label">Location</label>
                                     <input id="event_location" class="component-input" value="Yostton" type="text" disabled>
@@ -146,7 +142,7 @@
                                     <input id="event_endDate" class="component-input" value="2024-03-24" type="date" disabled>
                                 </div>
                             </div>
-                            <div class="flex flex-col w-1/4 h-full gap-6">
+                            <div class="flex flex-col w-1/4 h-full gap-8">
                                 <div class="input-container"> 
                                     <label for="event_ageFormMin" class="component-label">Age form</label>
                                     <input id="event_ageFormMin" class="component-input" value="18" type="number" disabled>
@@ -160,13 +156,13 @@
                                     <input id="event_endTime" class="component-input" value="22:00" type="time" disabled>
                                 </div>
                             </div>
-                            <div class="flex flex-col w-1/4 h-full gap-6">
+                            <div class="flex flex-col w-1/4 h-full gap-8">
                                 <div class="input-container"> 
                                     <label for="event_ageFormMax" class="component-label">Age form</label>
                                     <input id="event_ageFormMax" class="component-input" value="40" type="number" disabled>
                                 </div>
-                                <div class="bg-primary_orange text-primary_orange bg-opacity-15 flex flex-col items-center justify-center rounded-2xl h-3/4 text-sm font-medium">
-                                    <span class="text-2xl font-bold">6hs</span>
+                                <div class="bg-primary_orange text-primary_orange bg-opacity-15 flex flex-col items-center justify-center rounded-3xl h-3/4 text-sm font-medium">
+                                    <span class="text-3xl font-bold">6hs</span>
                                     <span>Event duration</span>
                                 </div>
                             </div>

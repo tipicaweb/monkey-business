@@ -51,7 +51,7 @@ const createDonut = (title = "", labels = [""], values = [0], colors = [""], ele
                         name: {
                             show: true,
                             offsetY: 20,
-                            fontWeight: 200
+                            fontWeight: 400,
                         },
                         total: {
                             showAlways: true,
@@ -59,13 +59,14 @@ const createDonut = (title = "", labels = [""], values = [0], colors = [""], ele
                             label: title,
                             color: 'rgba(255, 255, 255, 0.6)',
                             fontSize: '14px',
-                            fontWeight: 500
+                            fontWeight: 400,
                         },
                         value: {
                             show: true,
                             offsetY: -20,
                             color: 'rgba(255, 255, 255, 0.87)',
-                            fontWeight: 700
+                            fontSize: '24px',
+                            fontWeight: 700,
                         },
                     },
                     size: "70%"
