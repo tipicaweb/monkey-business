@@ -264,6 +264,7 @@
         @apply pb-6; 
         @apply gap-3;
         @apply bg-primary_black;
+        @apply overflow-hidden;
     }
 
     .title-component {
@@ -283,18 +284,21 @@
     .donut-component {
         @apply w-full;
         @apply h-full;
-        @apply flex;
-        @apply justify-center;
-        @apply items-center;
         @apply gap-2;
+        @apply flex;
+        @apply justify-between;
+        @apply items-center;
+        @apply px-6;
+        @apply pb-4;
     }
 
     .donut-chart {
-        @apply w-7/12;
+        @apply w-full;
         @apply h-full;
         @apply flex;
         @apply justify-center;
         @apply items-center;
+        @apply bg-primary_black;
     }
 
     .donut-labels {
