@@ -235,6 +235,7 @@
     .donut-component {
         @apply w-full;
         @apply h-full;
+        @apply gap-2;
         @apply flex;
         @apply justify-between;
         @apply items-center;
@@ -243,9 +244,8 @@
     }
 
     .donut-chart {
-        @apply max-w-[60%];
         @apply w-full;
-        @apply p-2;
+        @apply h-full;
         @apply flex;
         @apply justify-center;
         @apply items-center;

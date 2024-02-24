@@ -64,7 +64,7 @@ class DonutChart {
         donutEl.style.cssText = `
             width: 100%;
             padding: 0;
-            padding-top: 100%;
+            aspect-ratio: 1 / 1;
             border-radius: 100%;
             background: inherit;
             position: relative;
