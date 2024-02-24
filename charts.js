@@ -236,6 +236,7 @@ function renderDonutLabels(elementId, chart) {
         let labelPercentage = document.createElement('h3');
         
         labelName.innerText = label;
+        labelName.className = "font-medium";
         let percentage = Number(chart.w.globals.seriesPercent[i]).toFixed(1);
         labelPercentage.innerText = `${percentage}%`
 
@@ -265,5 +266,12 @@ function renderColumnLabels(elementId, chart) {
 
         element.append(labelEl);
     })
-
 }
+
+let events_dropdownBtn = document.getElementById('events-arrow');
+
+events_dropdownBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    
+    events_dropdownBtn.classList.toggle('active');
+})
