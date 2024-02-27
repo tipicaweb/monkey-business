@@ -111,6 +111,7 @@ class DonutChart {
             font-size: 14px;
             font-weight: 500;
             opacity: .6;
+            line-height: 1rem;
         `;
 
         donutValue.innerText = this.value;

@@ -10,7 +10,7 @@
     <title>[Product name] - MonkeyBusiness</title>
 </head>
 
-<body class="flex min-h-full bg-primary_black px-8 gap-8">
+<body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
     <nav class="sidebar">
         <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
         <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
@@ -125,7 +125,7 @@
                 <article class="component col-start-1 col-end-5 gap-6">
                     <div class="items-container">
                         <ul class="details-list">
-                            <li class="details-item" aria-valuetext="info-tab">
+                            <li class="details-item active" aria-valuetext="info-tab">
                                 <button class="list-btn">
                                     <span class="base-icon icon-info"></span>
                                     Basic information
@@ -155,7 +155,7 @@
                                     Validity
                                 </button>
                             </li>
-                            <li class="details-item active" aria-valuetext="text-tab">
+                            <li class="details-item" aria-valuetext="text-tab">
                                 <button class="list-btn">
                                     <span class="base-icon icon-playlist"></span>
                                     Additional text fields
@@ -164,7 +164,7 @@
                         </ul>
                     </div>
 
-                    <div id="info-tab" class="details-tab">
+                    <div id="info-tab" class="details-tab active">
                         <div class="w-1/2 flex flex-col gap-6">
                             <div class="input-container">
                                 <input id="product_name" class="component-input" value="Lorem" type="text">
@@ -346,21 +346,25 @@
                                     <thead class="labels-table">
                                         <td>Type</td>
                                         <td>Target group</td>
-                                        <td></td>
+                                        <td class="w-10"></td>
                                     </thead>
                                     <tbody>
                                         <tr class="table-row h-10">
                                             <td>Lorem ipsum</td>
                                             <td>Lorem ipsum</td>
                                             <th>
-                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                                <button class="table-button">
+                                                    <img src="./assets/trash.svg" alt="Delete icon">
+                                                </button>
                                             </th>
                                         </tr>
                                         <tr class="table-row h-10">
                                             <td>Lorem ipsum</td>
                                             <td>Lorem ipsum</td>
-                                            <th class="w-10">
-                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            <th>
+                                                <button class="table-button">
+                                                    <img src="./assets/trash.svg" alt="Delete icon">
+                                                </button>
                                             </th>
                                         </tr>
                                     </tbody>
@@ -398,7 +402,7 @@
                         </div>
                     </div>
 
-                    <div id="text-tab" class="details-tab active">
+                    <div id="text-tab" class="details-tab">
                         <div class="flex flex-col h-full w-full gap-6">
                             <h5 class="tab-title">Add text to the product</h5>
                             <div class="flex w-full gap-6">
@@ -426,21 +430,25 @@
                                     <thead class="labels-table">
                                         <td>Header</td>
                                         <td>Text</td>
-                                        <td></td>
+                                        <td class="w-10"></td>
                                     </thead>
                                     <tbody>
                                         <tr class="table-row h-10">
                                             <td>Lorem ipsum</td>
                                             <td>Lorem ipsum</td>
                                             <th>
-                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                                <button class="table-button">
+                                                    <img src="./assets/trash.svg" alt="Delete icon">
+                                                </button>
                                             </th>
                                         </tr>
                                         <tr class="table-row h-10">
                                             <td>Lorem ipsum</td>
                                             <td>Lorem ipsum</td>
-                                            <th class="w-10">
-                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            <th>
+                                                <button class="table-button">
+                                                    <img src="./assets/trash.svg" alt="Delete icon">
+                                                </button>
                                             </th>
                                         </tr>
                                     </tbody>

@@ -264,7 +264,6 @@
         @apply pb-6; 
         @apply gap-3;
         @apply bg-primary_black;
-        @apply overflow-hidden;
     }
 
     .title-component {
@@ -288,8 +287,6 @@
         @apply flex;
         @apply justify-between;
         @apply items-center;
-        @apply px-6;
-        @apply pb-4;
     }
 
     .donut-chart {
@@ -306,7 +303,7 @@
         @apply flex-col;
         @apply text-sm;
         @apply gap-2;
-        @apply font-bold;
+        @apply font-light;
         @apply leading-4;
     }
 
@@ -342,6 +339,12 @@
         @apply gap-2;
         @apply items-center;
         @apply h-full;
+    }
+
+    .table-button {
+        @apply table-center;
+        @apply w-full;
+        @apply justify-center;
     }
 
     .dropdown-container {
@@ -661,6 +664,10 @@
         @apply gap-2;
         @apply rounded-full;
         @apply font-medium;
+    }
+
+    #tickets-chart {
+        @apply px-4;
     }
 }
 
