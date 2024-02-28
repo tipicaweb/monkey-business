@@ -177,6 +177,12 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
         grid: {
             show: true,
             strokeDashArray: 0,
+            padding: {
+                right: 0,
+                left: 0,
+                top: 0,
+                bottom: 0,
+            }
         },
         dataLabels: {
             enabled: false,
@@ -202,6 +208,13 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
         },
         yaxis: {
             show: true,
+            labels: {
+                show: true,
+                style: {
+                    cssClass: 'text-xs fill-gray-500 dark:fill-gray-400'
+                },
+                offsetX: -15
+            },
         },
         fill: {
             opacity: 1,
@@ -221,9 +234,12 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
 const createArea = (title = "", dates = [], values = [], color = "", elementId = "") => {
     const options = {
         chart: {
-          height: "70%",
+          height: "65%",
           width: "100%",
           type: "area",
+          sparkline: {
+            enabled: true,
+          },
           toolbar: {
             show: false,
           },
@@ -264,6 +280,7 @@ const createArea = (title = "", dates = [], values = [], color = "", elementId =
         },
         yaxis: {
           show: false,
+          min: 620,
         },
         tooltip: {
             theme: "dark"
