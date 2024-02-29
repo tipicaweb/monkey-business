@@ -29,6 +29,7 @@ export default {
         input_bg_disabled: '#E6E0E90A',
         input_focus: '#00ECAE',
         img_border: '#D9D9D9',
+        table_hover: "#E6E0E914",
       }
     }
   },

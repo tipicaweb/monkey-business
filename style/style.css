@@ -329,9 +329,26 @@
     }
 
     .table-row {
-        @apply py-2;
         @apply h-14;
+    }
 
+    .hover-table .table-row {
+        td {
+            @apply transition-all;
+        }
+
+        td:first-child {
+            @apply pl-2;
+            @apply rounded-l-xl;
+        }
+        
+        td:last-child {
+            @apply rounded-r-xl;
+        }
+
+        &:hover td {
+            @apply bg-table_hover;
+        }
     }
 
     .table-center {

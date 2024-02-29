@@ -1063,9 +1063,29 @@ video {
 }
 
 .table-row {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   height: 3.5rem;
+}
+
+.hover-table .table-row {
+  td {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  td:first-child {
+    padding-left: 0.5rem;
+  }
+  td:first-child {
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+  }
+  td:last-child {
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+  }
+  &:hover td {
+    background-color: #E6E0E914;
+  }
 }
 
 .table-center {
