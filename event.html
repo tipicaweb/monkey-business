@@ -10,68 +10,80 @@
     <title>MonkeyBusiness TEST</title>
 </head>
 
-<body class="flex min-h-full bg-primary_black px-8 gap-8">
+<body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
     <nav class="sidebar">
         <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
         <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-grid"></span>
-                    Home
+                    <span class="navbar-icon icon-grid"></span>Home
                 </a>
             </li>
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-bolt"></span>
-                    Create express ticket
+                    <span class="navbar-icon icon-bolt"></span>Create express ticket
                 </a>
             </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./event.html" class="navbar-button active gap-0">
+                    <div class="flex gap-3 w-full">
+                        <span class="navbar-icon icon-event"></span>Event
+                    </div>
+                    <div class="pointer-events-auto" id="events-arrow">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul id="events-dropdown" class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Present
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./future-events.html" class="navbar-button">
+                            <span class="navbar-icon icon-future"></span>Future
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Past
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="navbar-item">
-                <a href="#" class="navbar-button active">
-                    <span class="navbar-icon icon-event"></span>
-                    Event
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-list"></span>Products
                 </a>
             </li>
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-list"></span>
-                    Products
+                    <span class="navbar-icon icon-map"></span>Map
                 </a>
             </li>
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-map"></span>
-                    Map
+                    <span class="navbar-icon icon-group"></span>Guest lists
                 </a>
             </li>
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-group"></span>
-                    Guest lists
+                    <span class="navbar-icon icon-campaign"></span>Marketing
                 </a>
             </li>
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-campaign"></span>
-                    Marketing
+                    <span class="navbar-icon icon-fact"></span>My guests
                 </a>
             </li>
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-fact"></span>
-                    My guests
+                    <span class="navbar-icon icon-settings"></span>Settings
                 </a>
             </li>
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-settings"></span>
-                    Settings
-                </a>
-            </li>
-            <li class="navbar-item">
-                <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-logout"></span>
-                    Log out
+                    <span class="navbar-icon icon-logout"></span>Log out
                 </a>
             </li>
         </ul>
@@ -107,7 +119,13 @@
                     </div>
                 </article>
                 <article class="component">
-                    <h3 class="title-component">Age distribution</h3>
+                    <div class="flex title-component justify-between">
+                        Age distribution
+                        <select name="age-select" class="component-select" id="age-select">
+                            <option selected value="monthly">Monthly</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </div>
                     <div class="flex justify-end gap-6" id="column-labels"></div>
                     <div id="column-chart" class="w-full h-full"></div>
                 </article>

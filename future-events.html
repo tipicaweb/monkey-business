@@ -10,7 +10,7 @@
     <title>Future events - MonkeyBusiness</title>
 </head>
 
-<body class="flex min-h-full bg-primary_black px-8 gap-8">
+<body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
     <nav class="sidebar">
         <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
         <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
@@ -25,11 +25,11 @@
                 </a>
             </li>
             <li class="navbar-item flex-col gap-1">
-                <a href="#" class="navbar-button gap-0">
+                <a href="./event.html" class="navbar-button gap-0">
                     <div class="flex gap-3 w-full">
                         <span class="navbar-icon icon-event"></span>Event
                     </div>
-                    <div class="pr-3 active" id="events-arrow">
+                    <div class="active" id="events-arrow">
                         <span class="navbar-icon icon-arrowD"></span>
                     </div>
                 </a>
@@ -40,7 +40,7 @@
                         </a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="navbar-button active">
+                        <a href="./future-events.html" class="navbar-button active">
                             <span class="navbar-icon icon-future"></span>Future
                         </a>
                     </li>
@@ -122,26 +122,31 @@
                     <h3 class="title-component">Average ticketprice</h3>
                     <div class="donut-component">
                         <div id="tickets-chart" class="donut-chart"></div>
-                        <div class="w-1/2 flex flex-col justify-around h-full">
-                            <div id="tickets-labels" class="donut-labels p-0 gap-x-12 justify-start flex-row flex-wrap"></div>
-                            <p class="component-note">Shows each event's share of the total average ticket price</p>
+                        <div class="flex flex-col justify-between h-full">
+                            <div class="flex items-center h-full">
+                                <div id="tickets-labels" class="donut-labels p-0 gap-x-12 justify-start flex-row flex-wrap"></div>
+                            </div>
+                            <div>
+                                <p class="component-note">Shows each event's share of the total average ticket price</p>
+                            </div>
                         </div>
                     </div>
                 </article>
-                <article class="component col-start-2">
+                <article class="component gap-8 col-start-2">
                     <div class="flex title-component justify-between">
                         <h3>Best selling products</h3>
-                        <select name="products-select" class="bg-primary_black border-primary_gray text-sm px-5" id="products-select">
+                        <select name="products-select" class="component-select" id="products-select">
                             <option selected value="monthly">Monthly</option>
+                            <option value="weekly">Weekly</option>
                         </select>
                     </div>
-                    <div class="table-container">
+                    <div class="table-container h-full">
                         <table class="table-component">
                             <thead class="labels-table">
                                 <td></td>
                                 <td>Event</td>
                                 <td>Product</td>
-                                <td>Sold</td>
+                                <td class="w-32">Sold</td>
                             </thead>
                             <tbody>
                                 <tr class="table-row">
@@ -190,14 +195,16 @@
                     <div class="table-container">
                         <table class="table-component">
                             <thead class="labels-table">
-                                <td></td>
-                                <td>Name</td>
-                                <td>Start date</td>
-                                <td>Total amount of tickets</td>
-                                <td>Number of invited</td>
-                                <td>Age</td>
-                                <td>Location</td>
-                                <td>Actions</td>
+                                <tr>
+                                    <th></th>
+                                    <td>Name</td>
+                                    <td>Start date</td>
+                                    <td>Total amount of tickets</td>
+                                    <td class="w-32">Number of invited</td>
+                                    <td>Age</td>
+                                    <td>Location</td>
+                                    <td class="w-32">Actions</td>
+                                </tr>
 
                             </thead>
                             <tbody>
@@ -208,14 +215,17 @@
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart1" class="h-full py-2 pr-4"></div>
+                                        <div id="bar-chart1" class="h-full w-full py-2 pr-4"></div>
                                     </td>
                                     <td>52</td>
                                     <td>17-29</td>
                                     <td>Lorem ipsum</td>
                                     <td>
                                         <div class="flex items-center gap-4">
-                                            <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
+                                            <button class="add-btn">
+                                                Add
+                                                <span class="base-icon icon-arrowD bg-primary_black"></span>
+                                            </button>
                                             <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
@@ -229,14 +239,17 @@
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart2" class="h-full py-2 pr-4"></div>
+                                        <div id="bar-chart2" class="h-full w-full py-2 pr-4"></div>
                                     </td>
                                     <td>40</td>
                                     <td>17-29</td>
                                     <td>Lorem ipsum</td>
                                     <td>
                                         <div class="flex items-center gap-4">
-                                            <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
+                                            <button class="add-btn">
+                                                Add
+                                                <span class="base-icon icon-arrowD bg-primary_black"></span>
+                                            </button>
                                             <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
@@ -250,14 +263,17 @@
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart3" class="h-full py-2 pr-4"></div>
+                                        <div id="bar-chart3" class="h-full w-full py-2 pr-4"></div>
                                     </td>
                                     <td>52</td>
                                     <td>17-29</td>
                                     <td>Lorem ipsum</td>
                                     <td>
                                         <div class="flex items-center gap-4">
-                                            <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
+                                            <button class="add-btn">
+                                                Add
+                                                <span class="base-icon icon-arrowD bg-primary_black"></span>
+                                            </button>
                                             <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
@@ -271,14 +287,17 @@
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart4" class="h-full py-2 pr-4"></div>
+                                        <div id="bar-chart4" class="h-full w-full py-2 pr-4"></div>
                                     </td>
                                     <td>40</td>
                                     <td>17-29</td>
                                     <td>Lorem ipsum</td>
                                     <td>
                                         <div class="flex items-center gap-4">
-                                            <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
+                                            <button class="add-btn">
+                                                Add
+                                                <span class="base-icon icon-arrowD bg-primary_black"></span>
+                                            </button>
                                             <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
@@ -292,14 +311,17 @@
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart5" class="h-full py-2 pr-4"></div>
+                                        <div id="bar-chart5" class="h-full w-full py-2 pr-4"></div>
                                     </td>
                                     <td>52</td>
                                     <td>17-29</td>
                                     <td>Lorem ipsum</td>
                                     <td>
                                         <div class="flex items-center gap-4">
-                                            <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
+                                            <button class="add-btn">
+                                                Add
+                                                <span class="base-icon icon-arrowD bg-primary_black"></span>
+                                            </button>
                                             <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
@@ -313,14 +335,17 @@
                                     <td>Lorem ipsum</td>
                                     <td>4/13/2024</td>
                                     <td>
-                                        <div id="bar-chart6" class="h-full py-2 pr-4"></div>
+                                        <div id="bar-chart6" class="h-full w-full py-2 pr-4"></div>
                                     </td>
                                     <td>40</td>
                                     <td>17-29</td>
                                     <td>Lorem ipsum</td>
                                     <td>
                                         <div class="flex items-center gap-4">
-                                            <button class="flex justify-center items-center bg-secondary_green text-primary_black h-10 pl-6 pr-4 gap-2 rounded-full font-medium">Add <span class="base-icon icon-arrowD bg-primary_black"></span></button>
+                                            <button class="add-btn">
+                                                Add
+                                                <span class="base-icon icon-arrowD bg-primary_black"></span>
+                                            </button>
                                             <a href="./event-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
@@ -329,6 +354,40 @@
                                 </tr>
                             </tbody>
                         </table>
+
+                        <!-- <section class="table-component w-full grid grid-cols-[repeat(auto-fit, minmax(140px, 1fr))]">
+                            <tr class="">
+                                <span class="text-primary_orange text-sm font-normal"></span>
+                                <span class="text-primary_orange text-sm font-normal">Name</span>
+                                <span class="text-primary_orange text-sm font-normal">Start date</span>
+                                <span class="text-primary_orange text-sm font-normal">Total amount of tickets</span>
+                                <span class="text-primary_orange text-sm font-normal">Number of invited</span>
+                                <span class="text-primary_orange text-sm font-normal">Age</span>
+                                <span class="text-primary_orange text-sm font-normal">Location</span>
+                                <span class="text-primary_orange text-sm font-normal">Actions</span>
+                            </tr>
+
+                            <tr class="">
+                                <div class="">AA</div>
+                                <div class="">AAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                            </tr>
+                            <tr class="">
+                                <div class="">AA</div>
+                                <div class="">AAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                                <div class="">AAAAAAAAAAaaaaaaaaaaaaaaaaaa</div>
+                                <div class="">AAAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                                <div class="">AAAAAAAAAA</div>
+                            </tr>
+                        </section> -->
                     </div>
                 </article>
             </section>

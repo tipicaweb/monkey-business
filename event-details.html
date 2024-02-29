@@ -10,7 +10,7 @@
     <title>[Event name] - MonkeyBusiness</title>
 </head>
 
-<body class="flex min-h-full bg-primary_black px-8 gap-8">
+<body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
     <nav class="sidebar">
         <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
         <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
@@ -25,11 +25,11 @@
                 </a>
             </li>
             <li class="navbar-item flex-col gap-1">
-                <a href="#" class="navbar-button gap-0">
+                <a href="./event.html" class="navbar-button gap-0">
                     <div class="flex gap-3 w-full">
                         <span class="navbar-icon icon-event"></span>Event
                     </div>
-                    <div class="pr-3 active" id="events-arrow">
+                    <div class="active" id="events-arrow">
                         <span class="navbar-icon icon-arrowD"></span>
                     </div>
                 </a>
@@ -40,7 +40,7 @@
                         </a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="navbar-button active">
+                        <a href="./future-events.html" class="navbar-button active">
                             <span class="navbar-icon icon-future"></span>Future
                         </a>
                     </li>
@@ -130,38 +130,38 @@
                         <div class="flex gap-8 w-full h-full">
                             <div class="flex flex-col w-1/2 h-full gap-8">
                                 <div class="input-container">   
-                                    <label for="event_location" class="component-label">Location</label>
                                     <input id="event_location" class="component-input" value="Yostton" type="text" disabled>
+                                    <label for="event_location" class="component-label">Location</label>
                                 </div>
                                 <div class="input-container">  
-                                    <label for="event_startDate" class="component-label">Start date</label>                                 
                                     <input id="event_startDate" class="component-input" value="2024-03-24" type="date" disabled>
+                                    <label for="event_startDate" class="component-label">Start date</label>
                                 </div>
                                 <div class="input-container">
-                                    <label for="event_endDate" class="component-label">End date</label>
                                     <input id="event_endDate" class="component-input" value="2024-03-24" type="date" disabled>
+                                    <label for="event_endDate" class="component-label">End date</label>
                                 </div>
                             </div>
                             <div class="flex flex-col w-1/4 h-full gap-8">
                                 <div class="input-container"> 
-                                    <label for="event_ageFormMin" class="component-label">Age form</label>
                                     <input id="event_ageFormMin" class="component-input" value="18" type="number" disabled>
+                                    <label for="event_ageFormMin" class="component-label">Age form</label>
                                 </div>
                                 <div class="input-container"> 
-                                    <label for="event_startTime" class="component-label">Start time</label>
                                     <input id="event_startTime" class="component-input" value="16:00" type="time" disabled>
+                                    <label for="event_startTime" class="component-label">Start time</label>
                                 </div>
                                 <div class="input-container"> 
-                                    <label for="event_endTime" class="component-label">End time</label>
                                     <input id="event_endTime" class="component-input" value="22:00" type="time" disabled>
+                                    <label for="event_endTime" class="component-label">End time</label>
                                 </div>
                             </div>
                             <div class="flex flex-col w-1/4 h-full gap-8">
                                 <div class="input-container"> 
-                                    <label for="event_ageFormMax" class="component-label">Age form</label>
                                     <input id="event_ageFormMax" class="component-input" value="40" type="number" disabled>
+                                    <label for="event_ageFormMax" class="component-label">Age form</label>
                                 </div>
-                                <div class="bg-primary_orange text-primary_orange bg-opacity-15 flex flex-col items-center justify-center rounded-3xl h-3/4 text-sm font-medium">
+                                <div class="component-btn h-3/4">
                                     <span class="text-3xl font-bold">6hs</span>
                                     <span>Event duration</span>
                                 </div>
@@ -190,7 +190,7 @@
                                     <td>Lorem ipsum</td>
                                     <td>1</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -202,7 +202,7 @@
                                     <td>Lorem ipsum</td>
                                     <td>2</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -214,7 +214,7 @@
                                     <td>Lorem ipsum</td>
                                     <td>3</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -226,7 +226,7 @@
                                     <td>Lorem ipsum</td>
                                     <td>4</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -238,7 +238,7 @@
                                     <td>Lorem ipsum</td>
                                     <td>5</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -250,7 +250,7 @@
                                     <td>Lorem ipsum</td>
                                     <td>6</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -274,7 +274,7 @@
                                 <td>Mobile</td>
                                 <td>Desktop</td>
                                 <td>Flash</td>
-                                <td>Actions</td>
+                                <td class="w-24">Actions</td>
                             </thead>
                             <tbody>
                                 <tr class="table-row">
@@ -314,25 +314,27 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="table-center dropdown-container">
-                                            <button class="table-dropdown">
-                                                <img src="./assets/dots.svg" alt="Dropdown menu">
-                                            </button>
-                                            <ul class="dropdown-list">
-                                                <li class="dropdown-item">
-                                                    <img src="./assets/link.svg" alt="Link icon">
-                                                    Navigate to product link
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <img src="./assets/qr_code.svg" alt="Qr code icon">
-                                                    Show qr code
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <span class="base-icon icon-campaign"></span>
-                                                    Navigate to Marketing
-                                                </li>
-                                            </ul>
-                                            <a href="#" class="-rotate-90 p-2">
+                                        <div class="table-center">
+                                            <div class="table-center dropdown-container">
+                                                <button class="table-dropdown">
+                                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                                </button>
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/link.svg" alt="Link icon">
+                                                        Navigate to product link
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/qr_code.svg" alt="Qr code icon">
+                                                        Show qr code
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/campaign.svg" alt="Marketing icon">
+                                                        Navigate to Marketing
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="./product-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -375,10 +377,26 @@
                                     </td>
                                     <td>
                                         <div class="table-center">
-                                            <button class="table-dropdown">
-                                                <img src="./assets/dots.svg" alt="Dropdown menu">
-                                            </button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <div class="table-center dropdown-container">
+                                                <button class="table-dropdown">
+                                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                                </button>
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/link.svg" alt="Link icon">
+                                                        Navigate to product link
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/qr_code.svg" alt="Qr code icon">
+                                                        Show qr code
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/campaign.svg" alt="Marketing icon">
+                                                        Navigate to Marketing
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="./product-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -421,10 +439,26 @@
                                     </td>
                                     <td>
                                         <div class="table-center">
-                                            <button class="table-dropdown">
-                                                <img src="./assets/dots.svg" alt="Dropdown menu">
-                                            </button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <div class="table-center dropdown-container">
+                                                <button class="table-dropdown">
+                                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                                </button>
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/link.svg" alt="Link icon">
+                                                        Navigate to product link
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/qr_code.svg" alt="Qr code icon">
+                                                        Show qr code
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/campaign.svg" alt="Marketing icon">
+                                                        Navigate to Marketing
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="./product-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -467,10 +501,26 @@
                                     </td>
                                     <td>
                                         <div class="table-center">
-                                            <button class="table-dropdown">
-                                                <img src="./assets/dots.svg" alt="Dropdown menu">
-                                            </button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <div class="table-center dropdown-container">
+                                                <button class="table-dropdown">
+                                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                                </button>
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/link.svg" alt="Link icon">
+                                                        Navigate to product link
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/qr_code.svg" alt="Qr code icon">
+                                                        Show qr code
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/campaign.svg" alt="Marketing icon">
+                                                        Navigate to Marketing
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="./product-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -514,10 +564,26 @@
                                     </td>
                                     <td>
                                         <div class="table-center">
-                                            <button class="table-dropdown">
-                                                <img src="./assets/dots.svg" alt="Dropdown menu">
-                                            </button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <div class="table-center dropdown-container">
+                                                <button class="table-dropdown">
+                                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                                </button>
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/link.svg" alt="Link icon">
+                                                        Navigate to product link
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/qr_code.svg" alt="Qr code icon">
+                                                        Show qr code
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/campaign.svg" alt="Marketing icon">
+                                                        Navigate to Marketing
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="./product-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -560,10 +626,26 @@
                                     </td>
                                     <td>
                                         <div class="table-center">
-                                            <button class="table-dropdown">
-                                                <img src="./assets/dots.svg" alt="Dropdown Menu">
-                                            </button>
-                                            <a href="#" class="-rotate-90 p-2">
+                                            <div class="table-center dropdown-container">
+                                                <button class="table-dropdown">
+                                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                                </button>
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/link.svg" alt="Link icon">
+                                                        Navigate to product link
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/qr_code.svg" alt="Qr code icon">
+                                                        Show qr code
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <img src="./assets/campaign.svg" alt="Marketing icon">
+                                                        Navigate to Marketing
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="./product-details.html" class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
                                             </a>
                                         </div>
@@ -582,7 +664,7 @@
                                 <td>Paying</td>
                                 <td>Free</td>
                                 <td>Total</td>
-                                <td></td>
+                                <td class="w-10"></td>
                             </thead>
                             <tbody>
                                 <tr class="table-row">
@@ -591,7 +673,7 @@
                                     <td>48</td>
                                     <td>143</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -602,7 +684,7 @@
                                     <td>48</td>
                                     <td>143</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -613,7 +695,7 @@
                                     <td>48</td>
                                     <td>143</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -624,7 +706,7 @@
                                     <td>48</td>
                                     <td>143</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -635,7 +717,7 @@
                                     <td>48</td>
                                     <td>143</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -646,7 +728,7 @@
                                     <td>48</td>
                                     <td>143</td>
                                     <td>
-                                        <button>
+                                        <button class="table-button">
                                             <img src="./assets/trash.svg" alt="Delete button">
                                         </button>
                                     </td>
@@ -698,7 +780,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./charts.js"></script>
-    <script src="./future-events.js"></script>
 </body>
 
 </html>
