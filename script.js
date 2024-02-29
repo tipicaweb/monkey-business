@@ -18,7 +18,7 @@ const columnChart = createColumn(['0-17', '18-24', '25-34', '35-49', '50-64', '+
     }
 ], ["#CCFFE6", "#00EBB0"], "column-chart");
 
-const areaChart = createArea("Tickets", ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February'], [650, 641, 645, 652, 635, 645], "#00EBB0", "area-chart");
+const areaChart = createArea("Tickets", ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February'], [625, 628, 630, 628, 630, 635], "#00EBB0", "area-chart");
 
 
 renderColumnLabels('column-labels', columnChart);

@@ -157,6 +157,7 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
             type: "bar",
             height: "75%",
             width: "100%",
+            parentHeightOffset: 0,
             toolbar: {
                 show: false,
             },
@@ -180,8 +181,8 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
             padding: {
                 right: 0,
                 left: 0,
-                top: 0,
-                bottom: 0,
+                top: -20,
+                bottom: -10,
             }
         },
         dataLabels: {
@@ -255,6 +256,9 @@ const createArea = (title = "", dates = [], values = [], color = "", elementId =
         },
         dataLabels: {
           enabled: false,
+        },
+        stroke: {
+            curve: 'smooth'
         },
         grid: {
           show: false,
