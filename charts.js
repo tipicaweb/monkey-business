@@ -103,13 +103,14 @@ class DonutChart {
             color: #fff;
             font-size: 28px;
             font-weight: 700;
+            opacity: .87;
         `;
 
         const donutTitle = document.createElement('div');
         donutTitle.style.cssText = `
             color: #fff;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 400;
             opacity: .6;
             line-height: 1rem;
         `;
@@ -127,7 +128,7 @@ class DonutChart {
 
         this.labels.forEach((label, i) => {
             let labelEl = document.createElement('div');
-            labelEl.className = 'flex flex-col justify-center min-w-24'
+            labelEl.className = 'flex flex-col justify-center'
 
             let labelName = document.createElement('h3');
             let labelPercentage = document.createElement('h3');
@@ -138,6 +139,7 @@ class DonutChart {
 
             labelPercentage.style.color = this.colors[i];
             labelPercentage.className = 'text-2xl font-bold';
+            labelName.className = 'font-regular opacity-85';
 
             labelEl.append(labelName, labelPercentage);
             element.append(labelEl);
@@ -197,7 +199,7 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
             labels: {
                 show: true,
                 style: {
-                    cssClass: 'text-xs fill-gray-500 dark:fill-gray-400'
+                    cssClass: 'text-xs fill-white dark:fill-white opacity-85'
                 }
             },
             axisBorder: {
@@ -212,7 +214,7 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
             labels: {
                 show: true,
                 style: {
-                    cssClass: 'text-xs fill-gray-500 dark:fill-gray-400'
+                    cssClass: 'text-xs fill-white dark:fill-white opacity-85'
                 },
                 offsetX: -15
             },
@@ -304,7 +306,7 @@ function renderColumnLabels(elementId, chart) {
     chart.w.globals.seriesNames.forEach((name, i) => {
         let labelEl = document.createElement('h4');
 
-        labelEl.className = "flex items-center gap-2 text-white text-xs";
+        labelEl.className = "flex items-center gap-2 text-white text-xs font-normal text-opacity-85";
 
         let labelColor = document.createElement('span');
         labelColor.className = "rounded-full w-4 h-4 inline-block";

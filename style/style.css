@@ -271,19 +271,21 @@
         @apply font-bold;
     }
 
-    .component-select {
+    .component-select { 
         @apply border;
-        @apply rounded-md;
+        @apply rounded-lg;
         @apply bg-primary_black;
         @apply border-primary_gray;
+        @apply text-primary_gray; 
+        @apply font-normal;
         @apply text-sm;
-        @apply px-5;
+        @apply px-3;
     }
 
     .donut-component {
         @apply w-full;
         @apply h-full;
-        @apply gap-2;
+        @apply gap-6;
         @apply flex;
         @apply justify-between;
         @apply items-center;
@@ -315,7 +317,7 @@
         @apply text-base;
         @apply h-full;
         @apply w-full;
-        @apply font-light;
+        @apply font-normal;
 
         th {
             @apply text-right;
@@ -536,7 +538,7 @@
     }
 
     .component-line {
-        @apply h-[4px];
+        @apply h-[2px];
         @apply w-full;
         @apply border-white;
         @apply border-b-2;
@@ -581,6 +583,7 @@
     }
 
     .list-btn {
+        @apply font-normal;
         @apply py-3;
         @apply flex;
         @apply items-center;
@@ -666,7 +669,7 @@
         @apply text-base;
         @apply pl-8;
         @apply mt-2;
-        @apply font-light;
+        @apply font-normal;
     }
 
     .add-btn {
@@ -682,10 +685,13 @@
         @apply rounded-full;
         @apply font-medium;
     }
+    
 
     #tickets-chart {
         @apply px-4;
     }
+
+
 }
 
 @layer utilities {
