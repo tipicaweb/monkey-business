@@ -127,6 +127,17 @@
         @apply font-medium;
     }
 
+    .btn-secondary {
+        @apply bg-secondary_green;
+        @apply text-secondary_blue;
+        @apply py-2.5;
+        @apply text-sm;
+        @apply rounded-full;
+        @apply px-6;
+        @apply text-nowrap;
+        @apply h-10;
+    }
+
     .icon-grid {
         mask: url('../assets/grid_view.svg') center no-repeat;
     }
@@ -137,6 +148,7 @@
 
     .icon-event {
         mask: url('../assets/event.svg') center no-repeat;
+        mask-size: cover;
     }
 
     .icon-avaible {
@@ -165,6 +177,17 @@
 
     .icon-campaign {
         mask: url('../assets/campaign.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-groups {
+        mask: url('../assets/groups.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-ticket {
+        mask: url('../assets/ticket.svg') center no-repeat;
+        mask-size: cover;
     }
 
     .icon-fact {
@@ -205,6 +228,7 @@
 
     .icon-task {
         mask: url('../assets/task_alt.svg') center no-repeat;
+        mask-size: cover;
     }
 
     .icon-computer {
@@ -235,6 +259,13 @@
         @apply h-6;
         @apply bg-white;
         @apply transition-all;
+    }
+
+    .logo-icon {
+        @apply flex;
+        @apply w-10;
+        @apply h-10;
+        @apply bg-primary_green;
     }
 
     .main {
@@ -309,6 +340,28 @@
         @apply leading-4;
     }
 
+    .chart-info {
+        @apply w-16;
+        @apply h-8;
+        @apply rounded-lg;
+        @apply text-base;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+
+        &.increase {
+            @apply bg-primary_green;
+            @apply text-primary_green;
+            @apply bg-opacity-20;
+        }
+
+        &.decrease {
+            @apply bg-primary_red;
+            @apply text-primary_red;
+            @apply bg-opacity-20;
+        }
+    }
+
     .table-container {
         @apply w-full;
     }
@@ -360,10 +413,17 @@
         @apply h-full;
     }
 
-    .table-button {
+    .btn-trash {
         @apply table-center;
-        @apply w-full;
+        @apply w-10;
+        @apply h-10;
         @apply justify-center;
+        @apply rounded-full;
+        @apply transition-all;
+
+        &:hover {
+            @apply bg-table_hover;
+        }
     }
 
     .dropdown-container {
@@ -422,6 +482,7 @@
     .component-input {
         @apply border-b;
         @apply border-input_border;
+        @apply rounded-t-[.25rem];
         @apply resize-none;
         @apply font-normal;
         @apply w-full;
@@ -580,6 +641,14 @@
         @apply px-4;
         @apply h-full;
         @apply cursor-pointer;
+
+        &:hover .list-btn {
+            @apply text-white;
+
+            span {
+                @apply bg-white;
+            }
+        }
     }
 
     .list-btn {
@@ -628,6 +697,47 @@
         &:has(input:checked) .base-icon {
             @apply bg-secondary_black;
         }
+    }
+
+    .device-input {
+        @apply absolute;
+        @apply top-0;
+        @apply bottom-0;
+        @apply left-0;
+        @apply right-0;
+        @apply opacity-0;
+
+        &:checked ~ .device-check {
+            @apply bg-secondary_black;
+            @apply border-0;
+
+            .check-icon {
+                @apply opacity-100;
+            }
+        }
+    }
+
+    .device-check {
+        @apply absolute;
+        @apply top-5;
+        @apply right-5;
+        @apply transition-all;
+        @apply w-6;
+        @apply h-6;
+        @apply rounded-sm;
+        @apply border-2;
+        @apply border-input_border;
+        @apply bg-transparent;
+    }
+
+    .check-icon {
+        mask: url('../assets/check.svg') center no-repeat;
+        mask-size: cover;
+        @apply bg-primary_orange;
+        @apply w-full;
+        @apply h-full;
+        @apply flex;
+        @apply opacity-0;
     }
 
     .device_icon-container {
@@ -691,7 +801,85 @@
         @apply px-4;
     }
 
+    .logo-component {
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply w-20;
+        @apply h-20;
+        @apply bg-primary_green;
+        @apply bg-opacity-15;
+        @apply rounded-full;
+    }
 
+    .action-list {
+        @apply flex;
+        @apply flex-col;
+        @apply gap-4;
+        @apply items-center;
+        @apply justify-between;
+    }
+
+    .action-item {
+        @apply w-full;
+        @apply rounded-xl;
+        @apply bg-secondary_black;
+        @apply flex;
+        @apply gap-6;
+        @apply p-6;
+    }
+
+    .action-logo {
+        @apply rounded-xl;
+        @apply min-w-10;
+        @apply h-10;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply !bg-opacity-15;
+
+        &.red {
+            @apply bg-primary_red;
+
+            .base-icon {
+                @apply bg-primary_red;
+            }
+        }
+
+        &.orange {
+            @apply bg-primary_orange;
+
+            .base-icon {
+                @apply bg-primary_orange;
+            }
+        }
+
+        &.green {
+            @apply bg-primary_green;
+
+            .base-icon {
+                @apply bg-primary_green;
+            }
+        }
+    }
+
+    .action-event {
+        @apply text-sm;
+        @apply text-primary_orange;
+        @apply font-medium;
+    }
+
+    .login-tab {
+        @apply w-[540px];
+        @apply flex;
+        @apply flex-col;
+        @apply items-center;
+        @apply bg-primary_black;
+        @apply rounded-3xl;
+        @apply p-8;
+        @apply gap-5;
+        @apply transition-all;
+    }
 }
 
 @layer utilities {

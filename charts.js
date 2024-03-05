@@ -151,13 +151,13 @@ class DonutChart {
 // COLUMN CHART
 //
 
-const createColumn = (categories = [""], namesValues = [{}], colors = [""], elementId = "") => {
+const createColumn = (categories = [""], namesValues = [{}], colors = [""], elementId = "", height = "") => {
     const options = {
         series: namesValues,
         colors: colors,
         chart: {
             type: "bar",
-            height: "75%",
+            height: height,
             width: "100%",
             parentHeightOffset: 0,
             toolbar: {

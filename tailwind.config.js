@@ -14,6 +14,7 @@ export default {
         text_hover: '#292926',
         terciary_black: '#FEF7FF14',
         primary_orange: '#FFA65E',
+        primary_red: '#E86987',
         primary_blue: '#381E72',
         secondary_blue: '#1D192B',
         secondary_white: '#FBFDF9',

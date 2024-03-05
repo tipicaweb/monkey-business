@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/output.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>MonkeyBusiness TEST</title>
+    <title>Event - MonkeyBusiness</title>
 </head>
 
 <body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
@@ -15,7 +15,7 @@
         <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
         <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
             <li class="navbar-item">
-                <a href="#" class="navbar-button">
+                <a href="./index.html" class="navbar-button">
                     <span class="navbar-icon icon-grid"></span>Home
                 </a>
             </li>
@@ -145,7 +145,7 @@
                 <article class="component">
                     <div class="flex justify-between w-full title-component">
                         <h3>Trend</h3>
-                        <h3 class="w-16 h-8 rounded-lg bg-primary_green bg-opacity-20 text-primary_green text-base flex justify-center items-center">+12%</h3>
+                        <h3 class="chart-info increase">+12%</h3>
                     </div>
                     <div class="flex justify-between gap-4">
                         <span class="text-primary_green text-5xl" id="area-total"></span>
@@ -159,7 +159,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./charts.js"></script>
-    <script src="./script.js"></script>
+    <script src="./event.js"></script>
 </body>
-
 </html>

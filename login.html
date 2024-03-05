@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Login - MonkeyBusiness</title>
+</head>
+
+<body class="min-w-[992px] h-screen bg-secondary_black">
+    <main class="w-full h-screen flex justify-center items-center">
+        <div class="login-tab" id="login-start-tab">
+            <img class="w-20" src="./assets/mini_logo.svg" alt="Mini MonkeyBusiness logo">
+            <div class="flex flex-col text-center text-white">
+                <h1 class="text-[45px] font-bold mb-2">Welcome Back</h1>
+                <h3 class="text-base font-normal">Welcome to Monkey Business!</h3>
+                <h3 class="text-base font-normal">Please enter your credentials below to proceed.</h3>
+            </div>
+
+            <div class="flex flex-col gap-8 my-3 w-full">
+                <div class="input-container">
+                    <input id="login_email" class="component-input" value="test@monkeybusiness.com" type="email">
+                    <label for="login_email" class="component-label">Email</label>
+                </div>
+                <div class="input-container">
+                    <input id="login_password" class="component-input" value="aaaaaaa" type="password">
+                    <label for="login_password" class="component-label">Password</label>
+                </div>
+            </div>
+
+            <button class="btn h-10 w-[120px] text-sm">Login</button>
+            <button class="text-base font-normal text-white" id="reset-password">Forgot password?</button>
+        </div>
+
+        <div class="login-tab hidden" id="reset-password-tab">
+            <div class="flex flex-col text-white">
+                <h2 class="text-4xl font-bold mb-2">Reset password</h2>
+                <h3 class="text-base font-normal">Enter your email address and we'll send you a link to reset your password.</h3>
+            </div>
+
+            <div class="flex flex-col gap-8 my-3 w-full">
+                <div class="input-container">
+                    <input id="login_email" class="component-input" value="test@monkeybusiness.com" type="email">
+                    <label for="login_email" class="component-label">Email</label>
+                </div>
+            </div>
+
+            <button class="btn h-10 w-[120px] text-sm" id="send-password">Send</button>
+        </div>
+
+        <div class="login-tab hidden" id="confirm-password-tab">
+            <div class="flex flex-col text-white">
+                <h2 class="text-4xl font-bold mb-2">Change password</h2>
+                <h3 class="text-base font-normal">Enter and confirm a new password. It must be at least 8 characters.</h3>
+            </div>
+
+            <div class="flex flex-col gap-8 my-3 w-full">
+                <div class="input-container">
+                    <input id="login_password" class="component-input" value="aaaaaaa" type="password">
+                    <label for="login_password" class="component-label">New password</label>
+                </div>
+                <div class="input-container">
+                    <input id="login_password-confirm" class="component-input" value="aaaaaaa" type="password">
+                    <label for="login_password-confirm" class="component-label">Confirm password</label>
+                </div>
+            </div>
+
+            <button class="btn h-10 w-[165px] text-sm" id="change-password">Change password</button>
+        </div>
+
+        <div class="login-tab hidden" id="change-password-tab">
+            <div class="bg-primary_green bg-opacity-15 p-8 rounded-[50px]">
+                <span class="flex w-20 h-20 bg-primary_green icon-task"></span>
+            </div>
+            <div class="flex flex-col text-white">
+                <h2 class="text-4xl font-bold mb-2">Password changed</h2>
+                <h3 class="text-base font-normal">Your password was changed successfully.</h3>
+            </div>
+
+            <button class="btn h-10 w-[165px] text-sm" id="back-login">Back to login</button>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./charts.js"></script>
+    <script src="./login.js"></script>
+</body>
+
+</html>
