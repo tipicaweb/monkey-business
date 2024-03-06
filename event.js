@@ -24,3 +24,13 @@ const areaChart = createArea("Tickets", ['01 February', '02 February', '03 Febru
 renderColumnLabels('column-labels', columnChart);
 
 document.querySelector('#area-total').innerText = areaChart.w.globals.seriesTotals[0];
+
+const barCharts = [
+    new BarChart(72, "Sold avg.", ["#F6DBC5", "#FFA65E", "#292926"], "bar-chart1"),
+    new BarChart(94, "Sold avg.", ["#C5F6EA", "#00EBB0", "#292926"], "bar-chart2"),
+    new BarChart(72, "Sold avg.", ["#F6DBC5", "#FFA65E", "#292926"], "bar-chart3"),
+]
+
+barCharts.forEach(chart => {
+    chart.renderChart();
+})

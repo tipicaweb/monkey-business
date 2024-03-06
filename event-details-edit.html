@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>[Event name] EDIT - MonkeyBusiness</title>
+</head>
+
+<body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
+    <nav class="sidebar">
+        <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
+        <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
+            <li class="navbar-item">
+                <a href="./index.html" class="navbar-button">
+                    <span class="navbar-icon icon-grid"></span>Home
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-bolt"></span>Create express ticket
+                </a>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./event.html" class="navbar-button gap-0">
+                    <div class="flex gap-3 w-full">
+                        <span class="navbar-icon icon-event"></span>Event
+                    </div>
+                    <div class="active" id="events-arrow">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul id="events-dropdown" class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Present
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./future-events.html" class="navbar-button active">
+                            <span class="navbar-icon icon-future"></span>Future
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Past
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-list"></span>Products
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-map"></span>Map
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-group"></span>Guest lists
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-campaign"></span>Marketing
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-fact"></span>My guests
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-settings"></span>Settings
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-logout"></span>Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex flex-col w-full">
+        <header class="header">
+            <div>
+                <span class="flex gap-4 text-secondary_gray font-normal">
+                    Event
+                    <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
+                    Future events
+                    <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
+                    [Event name]
+                    <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
+                    <strong class="text-primary_orange font-normal">Edit</strong>
+                </span>
+                <h2 class="header-title">[Event name]</h2>
+            </div>
+            <div class="header-navbar">
+                <a href="#" class="btn">
+                    <span class="btn-icon icon-add"></span>
+                    Create
+                </a>
+                <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-normal">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
+                    </div>
+                    <img src="./assets/arrow_down_w.svg" alt="Arrow down">
+                </a>
+
+                <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
+                    <img src="./assets/user_img.png" alt="User image">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="components-container grid-cols-2 grid-rows-1 h-full">
+                <article class="component w-full">
+                    <h3 class="title-component">Event details</h3>
+                    <div class="flex flex-col gap-6">
+                        <div class="input-container">
+                            <input id="event_name" class="component-input" type="text" placeholder=" ">
+                            <label for="event_name" class="component-label">Event name</label>
+                        </div>
+                        <div class="input-container h-full">
+                            <textarea id="event_description" class="component-input" rows="5" placeholder=" "></textarea>
+                            <label for="event_description" class="component-label">Description</label>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="input-container w-2/4">
+                                <input id="event_location" class="component-input" type="text" placeholder=" ">
+                                <label for="event_location" class="component-label">Location</label>
+                            </div>
+                            <div class="flex gap-6 w-2/4">
+                                <div class="input-container">
+                                    <input id="product_ageForm" class="component-input" type="number" placeholder=" ">
+                                    <label for="product_ageForm" class="component-label">Age form</label>
+                                </div>
+                                <div class="input-container">
+                                    <input id="product_ageTo" class="component-input" type="number" placeholder=" ">
+                                    <label for="product_ageTo" class="component-label">Age to</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <div class="flex gap-6 w-full">
+                                <div class="input-container w-2/4">
+                                    <input id="event_startDate" class="component-input" type="date" placeholder=" ">
+                                    <label for="event_startDate" class="component-label">Start date</label>
+                                </div>
+                                <div class="flex gap-6 w-2/4">
+                                    <div class="input-container">
+                                        <input id="event_startTime" class="component-input" type="time" placeholder=" ">
+                                        <label for="event_startTime" class="component-label">Start time</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input id="event_endTime" class="component-input" type="time" placeholder=" ">
+                                        <label for="event_endTime" class="component-label">End time</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="flex flex-col gap-6 w-2/4">
+                                    <div class="input-container">
+                                        <input id="event_endDate" class="component-input" type="date" placeholder=" ">
+                                        <label for="event_endDate" class="component-label">End date</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input id="event_marketable" class="component-input" type="date" placeholder=" ">
+                                        <label for="event_marketable" class="component-label">Marketable from</label>
+                                    </div>
+                                </div>
+                                <div class="component-btn h-full w-2/4 opacity-0">
+                                    <span class="text-3xl font-bold">1d 05hs</span>
+                                    <span>Event duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="component h-full">
+                    <h3 class="title-component">Picture</h3>
+                    <div class="flex flex-col justify-start gap-8 items-center h-full">
+                        <div class="productImg-container">
+                            <span class="text-base opacity-85 font-bold text-center">Add a picture from your device for the event.</span>
+                        </div>
+
+                        <button class="btn-secondary">Add picture</button>
+                    </div>
+                </article>
+
+                <div class="flex gap-4 justify-center items-center text-sm font-medium col-span-full">
+                    <button class="text-primary_green py-2.5 w-32">
+                        Cancel
+                    </button>
+                    <button class="btn py-2.5 w-32" disabled>
+                        Save
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./product-details.js"></script>
+    <script src="./charts.js"></script>
+</body>
+</html>

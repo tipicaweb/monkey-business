@@ -125,6 +125,11 @@
         @apply h-full;
         @apply text-text_hover;
         @apply font-medium;
+
+        &:disabled {
+            @apply bg-[#E0E9E71F];
+            @apply text-terciary_gray;
+        }
     }
 
     .btn-secondary {
@@ -521,7 +526,14 @@
         @apply pt-2;
         @apply font-normal;
         @apply text-terciary_gray;
+        @apply transition-all;
+        @apply cursor-text;
         transition: all .3s ease 0s;
+    }
+
+    .component-input:placeholder-shown:not(:focus) ~ .component-label {
+        @apply text-base;
+        @apply pt-4;
     }
 
     .component-note {
@@ -879,6 +891,125 @@
         @apply p-8;
         @apply gap-5;
         @apply transition-all;
+    }
+
+    .delete-modal {
+        @apply fixed;
+        @apply right-0;
+        @apply left-0;
+        @apply h-screen;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply bg-white;
+        @apply bg-opacity-10;
+        @apply z-50;
+    }
+
+    .modal-container {
+        @apply bg-primary_black;
+        @apply w-96;
+        @apply rounded-lg;
+        @apply p-6;
+        @apply pt-3;
+        @apply text-white;
+        @apply flex;
+        @apply flex-col;
+        @apply gap-6;
+    }
+
+    .modal-title {
+        @apply text-2xl;
+        @apply font-medium;
+        @apply mb-2;
+    }
+
+    .modal-subtitle {
+        @apply opacity-85;
+        @apply text-sm;
+        @apply font-normal;
+        @apply w-3/4;
+    }
+
+    .modal-btns {
+        @apply flex;
+        @apply justify-end;
+        @apply gap-2;
+    }
+
+    .btn-cancel {
+        @apply btn;
+        @apply bg-transparent;
+        @apply text-primary_green;
+        @apply w-[120px];
+        @apply h-10;
+    }
+
+    .btn-confirm {
+        @apply btn;
+        @apply bg-primary_red;
+        @apply text-white;
+        @apply w-[120px];
+        @apply h-10;
+    }
+
+    .event-info {
+        @apply bg-secondary_black;
+        @apply rounded-3xl;
+        @apply w-full;
+        @apply h-28;
+        @apply flex;
+        @apply px-4;
+        @apply mt-3;
+        @apply mb-2;
+    }
+
+    .info-item {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply text-center;
+        @apply w-full;
+    }
+
+    .distribution-item {
+        @apply w-full;
+        @apply h-28;
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply text-center;
+        @apply rounded-3xl;
+        @apply !bg-opacity-15;
+    }
+
+    .distribution-item.green {
+        @apply bg-primary_green;
+        @apply text-primary_green;
+    }
+
+    .distribution-item.orange {
+        @apply bg-primary_orange;
+        @apply text-primary_orange;
+    }
+
+    .distribution-item.red {
+        @apply bg-primary_red;
+        @apply text-primary_red;
+    }
+
+    .productImg-container {
+        @apply rounded-3xl;
+        @apply overflow-hidden;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply border-2;
+        @apply border-img_border;
+        @apply w-full;
+        @apply h-full;
+        @apply max-w-[518px];
+        @apply max-h-[518px];
     }
 }
 
