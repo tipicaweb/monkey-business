@@ -38,18 +38,25 @@
         @apply w-72;
         @apply sticky;
         @apply top-0;
-        @apply h-screen;
+        @apply max-h-screen;
+        @apply transition-all;
+    }
+
+    .sidebar .mini-logo {
+        @apply hidden;
     }
 
     .navbar-item {
         @apply flex;
         @apply w-full;
+        @apply transition-all;
     }
 
     .navbar-button {
         @apply gap-3;
         @apply p-4;
         @apply h-full;
+        @apply h-14;
         @apply w-full;
         @apply rounded-xl;
         @apply flex;
@@ -57,6 +64,8 @@
         @apply items-center; 
         @apply font-semibold;
         @apply transition-all;
+        @apply overflow-hidden;
+        @apply text-nowrap;
 
         &:hover:not(.active) {
             @apply bg-terciary_black;
@@ -80,6 +89,13 @@
         }
     }
 
+    .dropdown-button {
+        @apply flex;
+        @apply gap-3;
+        @apply w-full;
+        @apply transition-all;
+    }
+
     .navbar-dropdown-list {
         @apply flex;
         @apply flex-col;
@@ -90,6 +106,19 @@
         @apply pl-8;
         @apply text-white;
         @apply gap-1;
+        @apply transition-all;
+    }
+
+    .navbar-list {
+        @apply flex;
+        @apply flex-col;
+        @apply items-center;
+        @apply w-full;
+        @apply max-h-full;
+        @apply text-white;
+        @apply bg-primary_black;
+        @apply gap-1;
+        @apply transition-all;
     }
 
     .header {
@@ -98,7 +127,6 @@
         @apply items-center;
         @apply h-32;
         @apply min-h-32;
-        @apply pl-10;
         @apply bg-primary_black;
         @apply sticky;
         @apply top-0;
@@ -262,6 +290,7 @@
     .navbar-icon {
         @apply flex;
         @apply w-6;
+        @apply min-w-6;
         @apply h-6;
         @apply bg-white;
         @apply transition-all;
@@ -454,7 +483,7 @@
         position: relative;
         @apply h-10;
         
-        &:hover .dropdown-list {
+        &:hover:not(:has(.add-btn)) .dropdown-list {
             @apply block;
         }
     }
@@ -467,6 +496,10 @@
         @apply p-2;
         @apply h-10;
         @apply hover:bg-[#CAC4D01F];
+    }
+
+    .add-btn.active ~ .dropdown-list {
+        @apply block;
     }
 
     .dropdown-list {
@@ -805,6 +838,7 @@
         @apply border-2;
         @apply border-input_border;
         @apply bg-transparent;
+        @apply pointer-events-none;
     }
 
     .check-icon {
@@ -871,11 +905,19 @@
         @apply gap-2;
         @apply rounded-full;
         @apply font-medium;
+        @apply transition-all;
     }
-    
 
-    #tickets-chart {
-        @apply px-4;
+    .add-btn .base-icon {
+        @apply pointer-events-none;
+    }
+
+    .add-btn.active {
+        @apply bg-primary_green;
+
+        .base-icon {
+            @apply -rotate-180;
+        }
     }
 
     .logo-component {
@@ -1084,15 +1126,63 @@
 }
 
 @layer utilities {
-    @media (max-width: 1440px) {
+    @media (max-width: 1700px) {
+        html {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 1650px) {
         .component.col-start-1,
         .component.col-start-2,
+        .component.col-start-3,
         .component.col-start-5 {
             @apply col-span-full;
         }
 
         .components-container.grid-cols-4 {
             @apply grid-cols-2;
+        }
+    }
+
+    @media (max-width: 1440px) {
+        .sidebar {
+            @apply w-14;
+        }
+
+        .sidebar .mini-logo {
+            @apply block;
+        }
+
+        .sidebar .big-logo {
+            @apply hidden;
+        }
+
+        .sidebar:hover .navbar-list {
+            width: 19rem;
+            @apply pr-4;
+        }
+
+        .sidebar:hover .navbar-dropdown-list {
+            @apply pl-8;
+        }
+
+        .navbar-dropdown-list {
+            @apply pl-0;
+        }
+
+        .navbar-list {
+            @apply absolute;
+            @apply overflow-hidden;
+            @apply left-0;
+            @apply right-0;
+            @apply top-32;
+            @apply bottom-0;
+        }
+
+        .navbar-button,
+        .dropdown-button {
+            @apply gap-4;
         }
     }
 }
