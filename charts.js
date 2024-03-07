@@ -81,6 +81,8 @@ class DonutChart {
 
         const donutEl = document.createElement('div');
         donutEl.style.cssText = `
+            max-height: 250px;
+            max-width: 250px;
             width: 100%;
             padding: 0;
             aspect-ratio: 1 / 1;

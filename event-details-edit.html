@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/output.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>[Event name] EDIT - MonkeyBusiness</title>
+    <title>[Event name] Edit - MonkeyBusiness</title>
 </head>
 
 <body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
@@ -142,10 +142,18 @@
                                 <div class="input-container">
                                     <input id="product_ageForm" class="component-input" type="number" placeholder=" ">
                                     <label for="product_ageForm" class="component-label">Age form</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
                                 </div>
                                 <div class="input-container">
                                     <input id="product_ageTo" class="component-input" type="number" placeholder=" ">
                                     <label for="product_ageTo" class="component-label">Age to</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -154,15 +162,24 @@
                                 <div class="input-container w-2/4">
                                     <input id="event_startDate" class="component-input" type="date" placeholder=" ">
                                     <label for="event_startDate" class="component-label">Start date</label>
+                                    <div class="input-icon">
+                                        <span class="icon-calendar base-icon"></span>
+                                    </div>
                                 </div>
                                 <div class="flex gap-6 w-2/4">
                                     <div class="input-container">
                                         <input id="event_startTime" class="component-input" type="time" placeholder=" ">
                                         <label for="event_startTime" class="component-label">Start time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
                                     </div>
                                     <div class="input-container">
                                         <input id="event_endTime" class="component-input" type="time" placeholder=" ">
                                         <label for="event_endTime" class="component-label">End time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -171,13 +188,19 @@
                                     <div class="input-container">
                                         <input id="event_endDate" class="component-input" type="date" placeholder=" ">
                                         <label for="event_endDate" class="component-label">End date</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
                                     </div>
                                     <div class="input-container">
                                         <input id="event_marketable" class="component-input" type="date" placeholder=" ">
                                         <label for="event_marketable" class="component-label">Marketable from</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="component-btn h-full w-2/4 opacity-0">
+                                <div class="component-btn h-full w-2/4">
                                     <span class="text-3xl font-bold">1d 05hs</span>
                                     <span>Event duration</span>
                                 </div>
@@ -198,12 +221,8 @@
                 </article>
 
                 <div class="flex gap-4 justify-center items-center text-sm font-medium col-span-full">
-                    <button class="text-primary_green py-2.5 w-32">
-                        Cancel
-                    </button>
-                    <button class="btn py-2.5 w-32" disabled>
-                        Save
-                    </button>
+                    <button class="text-primary_green py-2.5 w-32">Cancel</button>
+                    <button class="btn py-2.5 w-32" disabled>Save</button>
                 </div>
             </section>
         </main>

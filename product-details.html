@@ -168,7 +168,7 @@
                         <div id="info-tab" class="details-tab active">
                             <div class="w-1/2 flex flex-col gap-6">
                                 <div class="input-container">
-                                    <input id="product_name" class="component-input" value="Lorem" type="text">
+                                    <input placeholder=" " id="product_name" class="component-input" value="Lorem" type="text">
                                     <label for="product_name" class="component-label">Name</label>
                                 </div>
                                 <div class="input-container h-full">
@@ -176,17 +176,25 @@
                                     <label for="product_description" class="component-label">Description</label>
                                 </div>
                                 <div class="input-container">
-                                    <input id="product_location" class="component-input" value="Lorem" type="text">
+                                    <input placeholder=" " id="product_location" class="component-input" value="Lorem" type="text">
                                     <label for="product_location" class="component-label">Location</label>
                                 </div>
                                 <div class="flex gap-6">
                                     <div class="input-container">
-                                        <input id="product_ageForm" class="component-input" value="21" type="number">
+                                        <input placeholder=" " id="product_ageForm" class="component-input" value="21" type="number">
                                         <label for="product_ageForm" class="component-label">Age form</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon rotate-180"></span>
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
                                     </div>
                                     <div class="input-container">
-                                        <input id="product_ageTo" class="component-input" value="29" type="number">
+                                        <input placeholder=" " id="product_ageTo" class="component-input" value="29" type="number">
                                         <label for="product_ageTo" class="component-label">Age to</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon rotate-180"></span>
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -202,16 +210,28 @@
                         <div id="economy-tab" class="details-tab">
                             <div class="w-1/2 flex flex-col gap-6">
                                 <div class="input-container">
-                                    <input id="product_tickets" class="component-input" value="157" type="number">
+                                    <input placeholder=" " id="product_tickets" class="component-input" value="157" type="number">
                                     <label for="product_tickets" class="component-label">Number of tickets</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
                                 </div>
                                 <div class="input-container">
-                                    <input id="product_goal" class="component-input" value="333" type="number">
+                                    <input placeholder=" " id="product_goal" class="component-input" value="333" type="number">
                                     <label for="product_goal" class="component-label">What do we want to get paid? (incl. VAT)</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
                                 </div>
                                 <div class="input-container">
-                                    <input id="product_charge" class="component-input" value="40" type="number">
+                                    <input placeholder=" " id="product_charge" class="component-input" value="40" type="number">
                                     <label for="product_charge" class="component-label">Charge</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
                                 </div>
                                 <div class="input-container">
                                     <select id="product_tax" class="component-input">
@@ -226,8 +246,8 @@
                             </div>
                             <div class="w-1/2 bg-secondary_black px-6 py-4 rounded-3xl flex flex-col gap-4">
                                 <h3 class="title-component">Compilation</h3>
-                                <table class="table-component">
-                                    <thead class="labels-table">
+                                <table class="table-component compilation">
+                                    <thead class="labels-table font-medium">
                                         <td>Item</td>
                                         <th>Per ticket</th>
                                         <th>For 157 tickets</th>
@@ -244,10 +264,10 @@
                                             <th>6280 kr</th>
                                         </tr>
                                         <tr class="component-line"></tr>
-                                        <tr class="table-row text-2xl font-bold">
-                                            <td>Total</td>
-                                            <th>373 kr</th>
-                                            <th class="text-primary_green">58561 kr</th>
+                                        <tr class="table-row">
+                                            <td class="text-2xl font-bold">Total</td>
+                                            <th class="text-2xl font-bold">373 kr</th>
+                                            <th class="text-primary_green text-2xl font-bold">58561 kr</th>
                                         </tr>
                                         <tr class="table-row h-10">
                                             <td>Includes 0% VAT</td>
@@ -263,27 +283,43 @@
                             <div class="w-1/2 flex flex-col gap-6">
                                 <div class="flex gap-6">
                                     <div class="input-container">
-                                        <input id="product_available-from" class="component-input" value="2024-03-24" type="date">
+                                        <input placeholder=" " id="product_available-from" class="component-input" value="2024-03-24" type="date">
                                         <label for="product_available-from" class="component-label">Avaible from</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
                                     </div>
                                     <div class="input-container w-2/5">
-                                        <input id="product_time-start" class="component-input" value="00:00" type="time">
+                                        <input placeholder=" " id="product_time-start" class="component-input" value="00:00" type="time">
                                         <label for="product_time-start" class="component-label">Start time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="flex gap-6">
                                     <div class="input-container">
-                                        <input id="product_available-until" class="component-input" value="2024-03-24" type="date">
+                                        <input placeholder=" " id="product_available-until" class="component-input" value="2024-03-24" type="date">
                                         <label for="product_available-until" class="component-label">Avaible until</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
                                     </div>
                                     <div class="input-container w-2/5">
-                                        <input id="product_time-end" class="component-input" value="00:00" type="time">
+                                        <input placeholder=" " id="product_time-end" class="component-input" value="00:00" type="time">
                                         <label for="product_time-end" class="component-label">End time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="input-container">
-                                    <input id="product_max-guest" class="component-input" value="8" type="number">
+                                    <input placeholder=" " id="product_max-guest" class="component-input" value="8" type="number">
                                     <label for="product_max-guest" class="component-label">Max purchase per guest</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-1/2 component-btn">
@@ -298,7 +334,7 @@
 
                                 <div class="flex gap-6">
                                     <div class="device-container">
-                                        <input type="checkbox" class="device-input">
+                                        <input placeholder=" " type="checkbox" class="device-input">
                                         <div class="device-check">
                                             <span class="check-icon"></span>
                                         </div>
@@ -308,7 +344,7 @@
                                         <h5 class="text-base font-normal">VIP Monkey App</h5>
                                     </div>
                                     <div class="device-container">
-                                        <input type="checkbox" class="device-input">
+                                        <input placeholder=" " type="checkbox" class="device-input">
                                         <div class="device-check">
                                             <span class="check-icon"></span>
                                         </div>
@@ -318,7 +354,7 @@
                                         <h5 class="text-base font-normal">VIP Monkey's webshop</h5>
                                     </div>
                                     <div class="device-container">
-                                        <input type="checkbox" class="device-input">
+                                        <input placeholder=" " type="checkbox" class="device-input">
                                         <div class="device-check">
                                             <span class="check-icon"></span>
                                         </div>
@@ -331,12 +367,19 @@
 
                                 <div class="flex w-full gap-6">
                                     <div class="input-container">
-                                        <input id="product_max-guest" class="component-input" value="8" type="number">
+                                        <input placeholder=" " id="product_max-guest" class="component-input" value="8" type="number">
                                         <label for="product_max-guest" class="component-label">Max purchaste per guest</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon rotate-180"></span>
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
                                     </div>
                                     <div class="input-container w-3/5">
-                                        <input id="product_available-to" class="component-input" value="2024-03-24" type="date">
+                                        <input placeholder=" " id="product_available-to" class="component-input" value="2024-03-24" type="date">
                                         <label for="product_available-to" class="component-label">Available to</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
                                     </div>
                                     <div class="py-2">
                                         <a href="#" class="btn px-6 text-sm font-medium">
@@ -385,22 +428,34 @@
                             <div class="w-1/2 flex flex-col gap-6">
                                 <div class="flex gap-6">
                                     <div class="input-container">
-                                        <input id="product_available-from" class="component-input" value="2024-03-24" type="date">
+                                        <input placeholder=" " id="product_available-from" class="component-input" value="2024-03-24" type="date">
                                         <label for="product_available-from" class="component-label">Valid and may be scanned from</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
                                     </div>
                                     <div class="input-container w-2/5">
-                                        <input id="product_time-start" class="component-input" value="00:00" type="time">
+                                        <input placeholder=" " id="product_time-start" class="component-input" value="00:00" type="time">
                                         <label for="product_time-start" class="component-label">Start time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="flex gap-6">
                                     <div class="input-container">
-                                        <input id="product_available-until" class="component-input" value="2024-03-24" type="date">
+                                        <input placeholder=" " id="product_available-until" class="component-input" value="2024-03-24" type="date">
                                         <label for="product_available-until" class="component-label">Avaible until</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
                                     </div>
                                     <div class="input-container w-2/5">
-                                        <input id="product_time-end" class="component-input" value="00:00" type="time">
+                                        <input placeholder=" " id="product_time-end" class="component-input" value="00:00" type="time">
                                         <label for="product_time-end" class="component-label">End time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -415,11 +470,11 @@
                                 <h5 class="tab-title">Add text to the product</h5>
                                 <div class="flex w-full gap-6">
                                     <div class="input-container w-3/5">
-                                        <input id="product_max-guest" class="component-input" value="Lorem" type="text">
+                                        <input placeholder=" " id="product_max-guest" class="component-input" value="Lorem" type="text">
                                         <label for="product_max-guest" class="component-label">Header</label>
                                     </div>
                                     <div class="input-container">
-                                        <input id="product_available-to" class="component-input" value="Lorem" type="text">
+                                        <input placeholder=" " id="product_available-to" class="component-input" value="Lorem" type="text">
                                         <label for="product_available-to" class="component-label">Text</label>
                                     </div>
                                     <div class="py-2">
