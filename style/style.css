@@ -48,6 +48,7 @@
         @apply sticky;
         @apply top-0;
         @apply max-h-screen;
+        width: 20rem;
         @apply transition-all;
         @apply pl-8;
         @apply z-20;
@@ -185,6 +186,7 @@
         @apply px-6;
         @apply text-nowrap;
         @apply h-10;
+        @apply text-center;
     }
 
     .icon-grid {

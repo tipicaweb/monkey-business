@@ -665,10 +665,10 @@ th,
 .sidebar {
   --tw-bg-opacity: 1;
   background-color: rgb(24 26 25 / var(--tw-bg-opacity));
-  width: 18rem;
   position: sticky;
   top: 0px;
   max-height: 100vh;
+  width: 20rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -897,6 +897,7 @@ th,
   padding-right: 1.5rem;
   text-wrap: nowrap;
   height: 2.5rem;
+  text-align: center;
 }
 
 .icon-grid {
@@ -2512,6 +2513,10 @@ th,
   width: 100%;
 }
 
+.w-\[7\.5rem\] {
+  width: 7.5rem;
+}
+
 .min-w-40 {
   min-width: 10rem;
 }
@@ -3606,11 +3611,6 @@ th,
   background-color: rgb(38 41 40 / var(--tw-bg-opacity));
 }
 
-.bg-secondary_green {
-  --tw-bg-opacity: 1;
-  background-color: rgb(197 246 226 / var(--tw-bg-opacity));
-}
-
 .bg-top_first {
   --tw-bg-opacity: 1;
   background-color: rgb(255 215 94 / var(--tw-bg-opacity));
@@ -3779,11 +3779,6 @@ th,
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .py-4 {
@@ -3992,11 +3987,6 @@ th,
 .text-primary_orange {
   --tw-text-opacity: 1;
   color: rgb(255 166 94 / var(--tw-text-opacity));
-}
-
-.text-secondary_blue {
-  --tw-text-opacity: 1;
-  color: rgb(29 25 43 / var(--tw-text-opacity));
 }
 
 .text-secondary_gray {
