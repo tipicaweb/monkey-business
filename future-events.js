@@ -17,6 +17,7 @@ barCharts.forEach(chart => {
 
 
 const dropdownClick = (event) => {
+    console.log('click');
     event.preventDefault();
 
     if(event.target.classList.contains('active')) return event.target.classList.remove('active');

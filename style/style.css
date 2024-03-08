@@ -33,6 +33,15 @@
 }
 
 @layer components {
+    .body {
+        @apply min-w-[992px];
+        @apply flex;
+        @apply min-h-full;
+        @apply bg-primary_black;
+        @apply pr-8;
+        @apply gap-8;
+    }
+
     .sidebar {
         @apply bg-primary_black;
         @apply w-72;
@@ -40,6 +49,8 @@
         @apply top-0;
         @apply max-h-screen;
         @apply transition-all;
+        @apply pl-8;
+        @apply z-20;
     }
 
     .sidebar .mini-logo {
@@ -63,10 +74,10 @@
         @apply justify-start; 
         @apply items-center; 
         @apply font-semibold;
-        @apply transition-all;
         @apply overflow-hidden;
         @apply text-nowrap;
-
+        @apply transition-all;
+        
         &:hover:not(.active) {
             @apply bg-terciary_black;
         }
@@ -420,10 +431,7 @@
         @apply h-full;
         @apply w-full;
         @apply font-normal;
-
-        th {
-            @apply text-right;
-        }
+        @apply table;
     }
 
     .table-component.compilation tbody tr {
@@ -434,33 +442,50 @@
         @apply text-primary_orange;
         @apply text-sm;
         @apply font-normal;
+        @apply table-header-group;
+        @apply font-medium;
+    }
+
+    .labels-table div {
+        @apply table-cell;
+    }
+
+    .table-body {
+        @apply table-row-group;
     }
 
     .table-row {
         @apply h-14;
     }
 
-    .hover-table .table-row {
-        td {
-            @apply transition-all;
-        }
+    .table-cell {
+        vertical-align: middle;
+    }
 
-        td:first-child {
+    .table-row > div {
+        vertical-align: middle;
+        @apply table-cell;
+    }
+
+    .hover-table .table-row:hover > div {
+        @apply bg-table_hover;
+    }
+
+    .hover-table .table-row > div {
+        @apply transition-all;
+
+        &:first-child {
             @apply pl-2;
             @apply rounded-l-xl;
         }
-        
-        td:last-child {
-            @apply rounded-r-xl;
-        }
 
-        &:hover td {
-            @apply bg-table_hover;
+        &:last-child {
+            @apply rounded-r-xl;
         }
     }
 
     .table-center {
-        @apply flex;
+        @apply !flex;
         @apply gap-2;
         @apply items-center;
         @apply h-full;
@@ -1126,6 +1151,12 @@
 }
 
 @layer utilities {
+    @media (max-width: 1800px) and (min-width: 1700px) {
+        html {
+            font-size: 15px;
+        }
+    }
+
     @media (max-width: 1700px) {
         html {
             font-size: 14px;
@@ -1147,7 +1178,7 @@
 
     @media (max-width: 1440px) {
         .sidebar {
-            @apply w-14;
+            @apply w-[5.5rem];
         }
 
         .sidebar .mini-logo {
@@ -1167,6 +1198,10 @@
             @apply pl-8;
         }
 
+        .sidebar:not(:hover) .navbar-button {
+            @apply rounded-[3.5rem];
+        }
+
         .navbar-dropdown-list {
             @apply pl-0;
         }
@@ -1174,10 +1209,11 @@
         .navbar-list {
             @apply absolute;
             @apply overflow-hidden;
-            @apply left-0;
+            @apply left-8;
             @apply right-0;
             @apply top-32;
             @apply bottom-0;
+            @apply w-14;
         }
 
         .navbar-button,

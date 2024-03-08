@@ -10,7 +10,7 @@
     <title>Future events - MonkeyBusiness</title>
 </head>
 
-<body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
+<body class="body">
     <nav class="sidebar">
         <div class="flex items-center w-72 max-w-full h-32">
             <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
@@ -146,7 +146,7 @@
                     <div class="table-container h-full">
                         <table class="table-component">
                             <thead class="labels-table">
-                                <td></td>
+                                <td class="w-16"></td>
                                 <td>Event</td>
                                 <td>Product</td>
                                 <td class="w-32">Sold</td>
@@ -196,34 +196,31 @@
                 <article class="component col-span-full">
                     <h3 class="title-component">Products</h3>
                     <div class="table-container">
-                        <table class="table-component hover-table">
-                            <thead class="labels-table">
-                                <tr>
-                                    <th class="w-20"></th>
-                                    <td>Name</td>
-                                    <td>Start date</td>
-                                    <td>Total amount of tickets</td>
-                                    <td class="w-32">Number of invited</td>
-                                    <td>Age</td>
-                                    <td>Location</td>
-                                    <td class="w-32">Actions</td>
-                                </tr>
-
-                            </thead>
-                            <tbody>
-                                <tr class="table-row">
-                                    <td>
+                        <div class="table-component hover-table">
+                            <div class="labels-table">
+                                <div class="w-20"></div>
+                                <div>Name</div>
+                                <div>Start date</div>
+                                <div>Total amount of tickets</div>
+                                <div class="w-36">Number of invited</div>
+                                <div>Age</div>
+                                <div>Location</div>
+                                <div class="w-32">Actions</div>
+                            </div>
+                            <div class="table-body">
+                                <a href="./event-details.html" class="table-row">
+                                    <div>
                                         <img src="./assets/event_img.svg" class="w-10 rounded-md" alt="Event logo">
-                                    </td>
-                                    <td>Lorem ipsum</td>
-                                    <td>4/13/2024</td>
-                                    <td>
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>
                                         <div id="bar-chart1" class="h-full w-full py-2 pr-4"></div>
-                                    </td>
-                                    <td>52</td>
-                                    <td>17-29</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>
+                                    </div>
+                                    <div>52</div>
+                                    <div>17-29</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>
                                         <div class="flex items-center gap-4">
                                             <div class="table-center dropdown-container">
                                                 <button class="add-btn">
@@ -241,25 +238,25 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="./event-details.html" class="-rotate-90 p-2">
+                                            <button class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
-                                            </a>
+                                            </button>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>
+                                    </div>
+                                </a>
+                                <a href="./event-details.html" class="table-row">
+                                    <div>
                                         <img src="./assets/event_img.svg" class="w-10 rounded-md" alt="Event logo">
-                                    </td>
-                                    <td>Lorem ipsum</td>
-                                    <td>4/13/2024</td>
-                                    <td>
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>
                                         <div id="bar-chart2" class="h-full w-full py-2 pr-4"></div>
-                                    </td>
-                                    <td>40</td>
-                                    <td>17-29</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>
+                                    </div>
+                                    <div>40</div>
+                                    <div>17-29</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>
                                         <div class="flex items-center gap-4">
                                             <div class="table-center dropdown-container">
                                                 <button class="add-btn">
@@ -277,25 +274,25 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="./event-details.html" class="-rotate-90 p-2">
+                                            <button class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
-                                            </a>
+                                            </button>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>
+                                    </div>
+                                </a>
+                                <a href="./event-details.html" class="table-row">
+                                    <div>
                                         <img src="./assets/event_img.svg" class="w-10 rounded-md" alt="Event logo">
-                                    </td>
-                                    <td>Lorem ipsum</td>
-                                    <td>4/13/2024</td>
-                                    <td>
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>
                                         <div id="bar-chart3" class="h-full w-full py-2 pr-4"></div>
-                                    </td>
-                                    <td>52</td>
-                                    <td>17-29</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>
+                                    </div>
+                                    <div>52</div>
+                                    <div>17-29</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>
                                         <div class="flex items-center gap-4">
                                             <div class="table-center dropdown-container">
                                                 <button class="add-btn">
@@ -313,25 +310,25 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="./event-details.html" class="-rotate-90 p-2">
+                                            <button class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
-                                            </a>
+                                            </button>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>
+                                    </div>
+                                </a>
+                                <a href="./event-details.html" class="table-row">
+                                    <div>
                                         <img src="./assets/event_img.svg" class="w-10 rounded-md" alt="Event logo">
-                                    </td>
-                                    <td>Lorem ipsum</td>
-                                    <td>4/13/2024</td>
-                                    <td>
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>
                                         <div id="bar-chart4" class="h-full w-full py-2 pr-4"></div>
-                                    </td>
-                                    <td>40</td>
-                                    <td>17-29</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>
+                                    </div>
+                                    <div>40</div>
+                                    <div>17-29</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>
                                         <div class="flex items-center gap-4">
                                             <div class="table-center dropdown-container">
                                                 <button class="add-btn">
@@ -349,32 +346,32 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="./event-details.html" class="-rotate-90 p-2">
+                                            <button class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
-                                            </a>
+                                            </button>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>
+                                    </div>
+                                </a>
+                                <a href="./event-details.html" class="table-row">
+                                    <div>
                                         <img src="./assets/event_img.svg" class="w-10 rounded-md" alt="Event logo">
-                                    </td>
-                                    <td>Lorem ipsum</td>
-                                    <td>4/13/2024</td>
-                                    <td>
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>
                                         <div id="bar-chart5" class="h-full w-full py-2 pr-4"></div>
-                                    </td>
-                                    <td>52</td>
-                                    <td>17-29</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>
+                                    </div>
+                                    <div>52</div>
+                                    <div>17-29</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>
                                         <div class="flex items-center gap-4">
                                             <div class="table-center dropdown-container">
                                                 <button class="add-btn">
                                                     Add
                                                     <span class="base-icon icon-arrowD bg-primary_black"></span>
                                                 </button>
-                                                <ul class="dropdown-list min-w-40 bottom-full top-auto">
+                                                <ul class="dropdown-list min-w-40 top-auto bottom-full">
                                                     <li class="dropdown-item">
                                                         <img src="./assets/group.svg" alt="Group icon">
                                                         Guest
@@ -385,32 +382,32 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="./event-details.html" class="-rotate-90 p-2">
+                                            <button class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
-                                            </a>
+                                            </button>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>
+                                    </div>
+                                </a>
+                                <a href="./event-details.html" class="table-row">
+                                    <div>
                                         <img src="./assets/event_img.svg" class="w-10 rounded-md" alt="Event logo">
-                                    </td>
-                                    <td>Lorem ipsum</td>
-                                    <td>4/13/2024</td>
-                                    <td>
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>
                                         <div id="bar-chart6" class="h-full w-full py-2 pr-4"></div>
-                                    </td>
-                                    <td>40</td>
-                                    <td>17-29</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>
+                                    </div>
+                                    <div>40</div>
+                                    <div>17-29</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>
                                         <div class="flex items-center gap-4">
                                             <div class="table-center dropdown-container">
                                                 <button class="add-btn">
                                                     Add
                                                     <span class="base-icon icon-arrowD bg-primary_black"></span>
                                                 </button>
-                                                <ul class="dropdown-list min-w-40 bottom-full top-auto">
+                                                <ul class="dropdown-list min-w-40 top-auto bottom-full">
                                                     <li class="dropdown-item">
                                                         <img src="./assets/group.svg" alt="Group icon">
                                                         Guest
@@ -421,14 +418,14 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="./event-details.html" class="-rotate-90 p-2">
+                                            <button class="-rotate-90 p-2">
                                                 <span class="base-icon icon-arrowD"></span>
-                                            </a>
+                                            </button>
                                         </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </section>
