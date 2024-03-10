@@ -38,7 +38,7 @@ class BarChart {
 
         const chartLabel = document.createElement('span');
 
-        chartLabel.setAttribute('style', `z-index: 10; color: ${this.colors[2]}; font-weight:700; font-size: 16px;`);
+        chartLabel.setAttribute('style', `z-index: 10; color: ${this.colors[2]}; font-weight:700; font-size: 1rem;`);
         chartLabel.innerText = `${this.value}% ${this.label}`;
 
         chartContainer.append(chartValueBar, chartLabel);

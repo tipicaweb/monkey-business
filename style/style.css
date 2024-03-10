@@ -1136,7 +1136,7 @@
         @apply btn;
         @apply bg-transparent;
         @apply text-primary_green;
-        @apply w-[120px];
+        @apply w-[7.5rem];
         @apply h-10;
     }
 
@@ -1144,7 +1144,7 @@
         @apply btn;
         @apply bg-primary_red;
         @apply text-white;
-        @apply w-[120px];
+        @apply w-[7.5rem];
         @apply h-10;
     }
 
