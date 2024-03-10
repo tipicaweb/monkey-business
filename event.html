@@ -7,15 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/output.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>MonkeyBusiness TEST</title>
+    <title>Event - MonkeyBusiness</title>
 </head>
 
-<body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
+<body class="body">
     <nav class="sidebar">
-        <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
-        <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
+        <div class="flex items-center w-72 max-w-full h-32">
+            <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
+            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
+        </div>
+        <ul class="navbar-list">
             <li class="navbar-item">
-                <a href="#" class="navbar-button">
+                <a href="./index.html" class="navbar-button">
                     <span class="navbar-icon icon-grid"></span>Home
                 </a>
             </li>
@@ -25,11 +28,11 @@
                 </a>
             </li>
             <li class="navbar-item flex-col gap-1">
-                <a href="./event.html" class="navbar-button active gap-0">
-                    <div class="flex gap-3 w-full">
+                <a href="./event.html" class="navbar-button gap-0 active">
+                    <div class="dropdown-button">
                         <span class="navbar-icon icon-event"></span>Event
                     </div>
-                    <div class="pointer-events-auto" id="events-arrow">
+                    <div class="" id="events-arrow">
                         <span class="navbar-icon icon-arrowD"></span>
                     </div>
                 </a>
@@ -121,10 +124,13 @@
                 <article class="component">
                     <div class="flex title-component justify-between">
                         Age distribution
-                        <select name="age-select" class="component-select" id="age-select">
-                            <option selected value="monthly">Monthly</option>
-                            <option value="weekly">Weekly</option>
-                        </select>
+                        <div class="select-container">
+                            <select name="age-select" class="component-select" id="age-select">
+                                <option selected value="monthly">Monthly</option>
+                                <option value="weekly">Weekly</option>
+                            </select>
+                            <span class="base-icon icon-arrowD"></span>
+                        </div>
                     </div>
                     <div class="flex justify-end gap-6" id="column-labels"></div>
                     <div id="column-chart" class="w-full h-full"></div>
@@ -145,7 +151,7 @@
                 <article class="component">
                     <div class="flex justify-between w-full title-component">
                         <h3>Trend</h3>
-                        <h3 class="w-16 h-8 rounded-lg bg-primary_green bg-opacity-20 text-primary_green text-base flex justify-center items-center">+12%</h3>
+                        <h3 class="chart-info increase">+12%</h3>
                     </div>
                     <div class="flex justify-between gap-4">
                         <span class="text-primary_green text-5xl" id="area-total"></span>
@@ -153,13 +159,146 @@
                     </div>
                     <div id="area-chart" class="w-full h-full flex justify-center items-center"></div>
                 </article>
+
+                <article class="flex gap-6 col-span-full">
+                    <article class="component w-1/3">
+                        <div class="flex title-component justify-between">
+                            Past events
+                            <div class="flex gap-4">
+                                <div class="select-container">
+                                    <select name="past-select" class="component-select" id="past-select">
+                                        <option selected value="month">Last month</option>
+                                        <option value="week">Last week</option>
+                                    </select>
+                                    <span class="base-icon icon-arrowD"></span>
+                                </div>
+                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <div class="info-item">
+                                <h4 class="text-2xl font-bold">6</h4>
+                                <span class="text-sm text-white opacity-60 font-medium">Total events</span>
+                            </div>
+                            <div class="info-item">
+                                <h4 class="text-2xl font-bold">3</h4>
+                                <span class="text-sm text-white opacity-60 font-medium">Events 90% sold</span>
+                            </div>
+                            <div class="info-item">
+                                <h4 class="text-2xl font-bold">$12.500</h4>
+                                <span class="text-sm text-white opacity-60 font-medium">Total revenue</span>
+                            </div>
+                        </div>
+                        <h3 class="text-center text-xl">Tickets Distribution</h3>
+                        <div class="flex gap-3">
+                            <div class="distribution-item green">
+                                <h4 class="text-2xl font-bold">3200</h4>
+                                <span class="text-sm font-normal">Total tickets</span>
+                            </div>
+                            <div class="distribution-item orange">
+                                <h4 class="text-2xl font-bold">2800</h4>
+                                <span class="text-sm font-normal">Tickets sold</span>
+                            </div>
+                            <div class="distribution-item red">
+                                <h4 class="text-2xl font-bold">400</h4>
+                                <span class="text-sm font-normal">Available</span>
+                            </div>
+                        </div>
+                        <h3 class="text-center text-xl">Sold avg %</h3>
+                        <div id="bar-chart1" class="h-10 w-full"></div>
+                    </article>
+                    <article class="component w-1/3">
+                        <div class="flex title-component justify-between">
+                            Present events
+                            <div class="flex gap-4">
+                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <div class="info-item">
+                                <h4 class="text-2xl font-bold">3</h4>
+                                <span class="text-sm text-white opacity-60 font-medium">Total events</span>
+                            </div>
+                            <div class="info-item">
+                                <h4 class="text-2xl font-bold">3</h4>
+                                <span class="text-sm text-white opacity-60 font-medium">Events 90% sold</span>
+                            </div>
+                            <div class="info-item">
+                                <h4 class="text-2xl font-bold">96%</h4>
+                                <span class="text-sm text-white opacity-60 font-medium">Scanned avg.</span>
+                            </div>
+                        </div>
+                        <h3 class="text-center text-xl">Tickets Distribution</h3>
+                        <div class="flex gap-3">
+                            <div class="distribution-item green">
+                                <h4 class="text-2xl font-bold">3200</h4>
+                                <span class="text-sm font-normal">Total tickets</span>
+                            </div>
+                            <div class="distribution-item orange">
+                                <h4 class="text-2xl font-bold">2800</h4>
+                                <span class="text-sm font-normal">Tickets sold</span>
+                            </div>
+                            <div class="distribution-item red">
+                                <h4 class="text-2xl font-bold">400</h4>
+                                <span class="text-sm font-normal">Available</span>
+                            </div>
+                        </div>
+                        <h3 class="text-center text-xl">Sold avg %</h3>
+                        <div id="bar-chart2" class="h-10 w-full"></div>
+                    </article>
+                    <article class="component w-1/3">
+                        <div class="flex title-component justify-between">
+                            Future events
+                            <div class="flex gap-4">
+                                <div class="select-container">
+                                    <select name="future-select" class="component-select" id="future-select">
+                                        <option selected value="month">Next month</option>
+                                        <option value="week">Next week</option>
+                                    </select>
+                                    <span class="base-icon icon-arrowD"></span>
+                                </div>
+                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <div class="info-item">
+                                <h4 class="text-2xl font-bold">6</h4>
+                                <span class="text-sm text-white opacity-60 font-medium">Total events</span>
+                            </div>
+                            <div class="info-item">
+                                <h4 class="text-2xl font-bold">3</h4>
+                                <span class="text-sm text-white opacity-60 font-medium">Events 90% sold</span>
+                            </div>
+                            <div class="info-item">
+                                <h4 class="text-2xl font-bold">$15.4</h4>
+                                <span class="text-sm text-white opacity-60 font-medium">Avg. ticketprice</span>
+                            </div>
+                        </div>
+                        <h3 class="text-center text-xl">Tickets Distribution</h3>
+                        <div class="flex gap-3">
+                            <div class="distribution-item green">
+                                <h4 class="text-2xl font-bold">3200</h4>
+                                <span class="text-sm font-normal">Total tickets</span>
+                            </div>
+                            <div class="distribution-item orange">
+                                <h4 class="text-2xl font-bold">2800</h4>
+                                <span class="text-sm font-normal">Tickets sold</span>
+                            </div>
+                            <div class="distribution-item red">
+                                <h4 class="text-2xl font-bold">400</h4>
+                                <span class="text-sm font-normal">Available</span>
+                            </div>
+                        </div>
+                        <h3 class="text-center text-xl">Sold avg %</h3>
+                        <div id="bar-chart3" class="h-10 w-full"></div>
+                    </article>
+                </article>
             </section>
         </main>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./charts.js"></script>
-    <script src="./script.js"></script>
+    <script src="./event.js"></script>
 </body>
-
 </html>

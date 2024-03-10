@@ -10,12 +10,15 @@
     <title>[Product name] - MonkeyBusiness</title>
 </head>
 
-<body class="min-w-[992px] flex min-h-full bg-primary_black px-8 gap-8">
+<body class="body">
     <nav class="sidebar">
-        <div class="flex items-center min-w-72 max-w-full h-32"><img src="./assets/vip_monkey.svg" alt="Monkey business Logo"></div>
-        <ul class="flex flex-col items-center min-w-72 max-w-full max-h-full text-white gap-1">
+        <div class="flex items-center w-72 max-w-full h-32">
+            <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
+            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
+        </div>
+        <ul class="navbar-list">
             <li class="navbar-item">
-                <a href="#" class="navbar-button">
+                <a href="./index.html" class="navbar-button">
                     <span class="navbar-icon icon-grid"></span>Home
                 </a>
             </li>
@@ -26,7 +29,7 @@
             </li>
             <li class="navbar-item flex-col gap-1">
                 <a href="./event.html" class="navbar-button gap-0">
-                    <div class="flex gap-3 w-full">
+                    <div class="dropdown-button">
                         <span class="navbar-icon icon-event"></span>Event
                     </div>
                     <div class="active" id="events-arrow">
@@ -121,395 +124,463 @@
             </div>
         </header>
         <main class="main">
-            <section class="components-container grid-cols-6 grid-rows-1 h-full">
-                <article class="component col-start-1 col-end-5 gap-6">
-                    <div class="items-container">
-                        <ul class="details-list">
-                            <li class="details-item active" aria-valuetext="info-tab">
-                                <button class="list-btn">
+            <section class="components-container grid-rows-1 h-full">
+                <div class="flex gap-6">
+                    <article class="component gap-6 w-full">
+                        <div class="items-container">
+                            <ul class="details-list">
+                                <li class="details-item active" aria-valuetext="info-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-info"></span>
+                                        Basic information
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="economy-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-payments"></span>
+                                        Economy
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="availability-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-avaible"></span>
+                                        Availability
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="visibility-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-visibility"></span>
+                                        Visibility
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="validity-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-task"></span>
+                                        Validity
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="text-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-playlist"></span>
+                                        Additional text fields
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="info-tab" class="details-tab active">
+                            <div class="w-1/2 flex flex-col gap-6">
+                                <div class="input-container">
+                                    <input placeholder=" " id="product_name" class="component-input" value="Lorem" type="text">
+                                    <label for="product_name" class="component-label">Name</label>
+                                </div>
+                                <div class="input-container h-full">
+                                    <textarea class="component-input" id="product_description" rows="5">daadgsdagsadgds</textarea>
+                                    <label for="product_description" class="component-label">Description</label>
+                                </div>
+                                <div class="input-container">
+                                    <input placeholder=" " id="product_location" class="component-input" value="Lorem" type="text">
+                                    <label for="product_location" class="component-label">Location</label>
+                                </div>
+                                <div class="flex gap-6">
+                                    <div class="input-container">
+                                        <input placeholder=" " id="product_ageForm" class="component-input" value="21" type="number" min="0">
+                                        <label for="product_ageForm" class="component-label">Age form</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon rotate-180"></span>
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="input-container">
+                                        <input placeholder=" " id="product_ageTo" class="component-input" value="29" type="number" min="0">
+                                        <label for="product_ageTo" class="component-label">Age to</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon rotate-180"></span>
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 flex flex-col justify-start gap-8 items-center">
+                                <div class="productImg-container rounded-3xl overflow-hidden flex justify-center border-2 border-img_border w-full max-w-96 max-h-96">
+                                    <img src="./assets/event_img.svg" class="w-full" alt="">
+                                </div>
+
+                                <button class="btn-secondary">Change image</button>
+                            </div>
+                        </div>
+                        
+                        <div id="economy-tab" class="details-tab">
+                            <div class="w-1/2 flex flex-col gap-6">
+                                <div class="input-container">
+                                    <input placeholder=" " id="product_tickets" class="component-input" value="157" type="number" min="0">
+                                    <label for="product_tickets" class="component-label">Number of tickets</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <input placeholder=" " id="product_goal" class="component-input" value="333" type="number" min="0">
+                                    <label for="product_goal" class="component-label">What do we want to get paid? (incl. VAT)</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <input placeholder=" " id="product_charge" class="component-input" value="40" type="number" min="0">
+                                    <label for="product_charge" class="component-label">Charge</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
+                                </div>
+                                <div class="input-container select-container">     
+                                    <select id="product_tax" class="component-input">
+                                        <option value="0%" selected>0%</option>
+                                        <option value="10%">10%</option>
+                                        <option value="20%">20%</option>
+                                        <option value="30%">30%</option>
+                                        <option value="40%">40%</option>
+                                    </select>
+                                    <div class="input-icon">
+                                        <span class="base-icon icon-arrowD"></span>
+                                    </div>
+                                    <label for="product_tax" class="component-label">Sales tax</label>
+                                </div>
+                            </div>
+                            <div class="w-1/2 bg-secondary_black px-6 py-4 rounded-3xl flex flex-col gap-4">
+                                <h3 class="title-component">Compilation</h3>
+                                <table class="table-component compilation">
+                                    <thead class="labels-table font-medium">
+                                        <td>Item</td>
+                                        <th>Per ticket</th>
+                                        <th>For 157 tickets</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-row h-10">
+                                            <td>What we want (incl. VAT)</td>
+                                            <th>333 kr</th>
+                                            <th>52281 kr</th>
+                                        </tr>
+                                        <tr class="table-row h-10">
+                                            <td>Charge</td>
+                                            <th>40 kr</th>
+                                            <th>6280 kr</th>
+                                        </tr>
+                                        <tr class="component-line"></tr>
+                                        <tr class="table-row">
+                                            <td class="text-2xl font-bold">Total</td>
+                                            <th class="text-2xl font-bold">373 kr</th>
+                                            <th class="text-primary_green text-2xl font-bold">58561 kr</th>
+                                        </tr>
+                                        <tr class="table-row h-10">
+                                            <td>Includes 0% VAT</td>
+                                            <th>0 kr</th>
+                                            <th>0 kr</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="availability-tab" class="details-tab">
+                            <div class="w-1/2 flex flex-col gap-6">
+                                <div class="flex gap-6">
+                                    <div class="input-container">
+                                        <input placeholder=" " id="product_available-from" class="component-input" value="2024-03-24" type="date">
+                                        <label for="product_available-from" class="component-label">Avaible from</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="input-container w-2/5">
+                                        <input placeholder=" " id="product_time-start" class="component-input" value="00:00" type="time">
+                                        <label for="product_time-start" class="component-label">Start time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6">
+                                    <div class="input-container">
+                                        <input placeholder=" " id="product_available-until" class="component-input" value="2024-03-24" type="date">
+                                        <label for="product_available-until" class="component-label">Avaible until</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="input-container w-2/5">
+                                        <input placeholder=" " id="product_time-end" class="component-input" value="00:00" type="time">
+                                        <label for="product_time-end" class="component-label">End time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <input placeholder=" " id="product_max-guest" class="component-input" value="8" type="number" min="0">
+                                    <label for="product_max-guest" class="component-label">Max purchase per guest</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 component-btn">
+                                <span class="text-3xl font-bold">1d 05hs</span>
+                                <span>Product availability</span>
+                            </div>
+                        </div>
+
+                        <div id="visibility-tab" class="details-tab">
+                            <div class="flex flex-col gap-6 w-full">
+                                <h4 class="tab-title">Select where it will be visible</h4>
+
+                                <div class="flex gap-6">
+                                    <div class="device-container">
+                                        <input placeholder=" " type="checkbox" class="device-input">
+                                        <div class="device-check">
+                                            <span class="check-icon"></span>
+                                        </div>
+                                        <div class="device_icon-container">
+                                            <span class="base-icon icon-smartphone pointer-events-none w-full h-full"></span>
+                                        </div>
+                                        <h5 class="text-base font-normal">VIP Monkey App</h5>
+                                    </div>
+                                    <div class="device-container">
+                                        <input placeholder=" " type="checkbox" class="device-input">
+                                        <div class="device-check">
+                                            <span class="check-icon"></span>
+                                        </div>
+                                        <div class="device_icon-container">
+                                            <span class="base-icon icon-computer pointer-events-none w-full h-full"></span>
+                                        </div>
+                                        <h5 class="text-base font-normal">VIP Monkey's webshop</h5>
+                                    </div>
+                                    <div class="device-container">
+                                        <input placeholder=" " type="checkbox" class="device-input">
+                                        <div class="device-check">
+                                            <span class="check-icon"></span>
+                                        </div>
+                                        <div class="device_icon-container">
+                                            <span class="base-icon icon-computer pointer-events-none w-full h-full"></span>
+                                        </div>
+                                        <h5 class="text-base font-normal">Express buy</h5>
+                                    </div>
+                                </div>
+
+                                <div class="flex w-full gap-6">
+                                    <div class="input-container">
+                                        <input placeholder=" " id="product_max-guest" class="component-input" value="8" type="number" min="0">
+                                        <label for="product_max-guest" class="component-label">Max purchase per guest</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon rotate-180"></span>
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="input-container w-3/5">
+                                        <input placeholder=" " id="product_available-to" class="component-input" value="2024-03-24" type="date">
+                                        <label for="product_available-to" class="component-label">Available to</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="py-2">
+                                        <a href="#" class="btn px-6 text-sm font-medium">
+                                            <span class="btn-icon icon-add"></span>
+                                            Add
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="component-line"></div>
+
+                                <div class="h-full bg-secondary_black px-6 py-4 rounded-3xl flex flex-col gap-4">
+                                    <h3 class="title-component">Whom list</h3>
+                                    <table class="table-component">
+                                        <thead class="labels-table">
+                                            <td>Type</td>
+                                            <td>Target group</td>
+                                            <td class="w-10"></td>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-row h-10">
+                                                <td>Lorem ipsum</td>
+                                                <td>Lorem ipsum</td>
+                                                <th>
+                                                    <button class="btn-trash">
+                                                        <img src="./assets/trash.svg" alt="Delete icon">
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                            <tr class="table-row h-10">
+                                                <td>Lorem ipsum</td>
+                                                <td>Lorem ipsum</td>
+                                                <th>
+                                                    <button class="btn-trash">
+                                                        <img src="./assets/trash.svg" alt="Delete icon">
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="validity-tab" class="details-tab">
+                            <div class="w-1/2 flex flex-col gap-6">
+                                <div class="flex gap-6">
+                                    <div class="input-container">
+                                        <input placeholder=" " id="product_available-from" class="component-input" value="2024-03-24" type="date">
+                                        <label for="product_available-from" class="component-label">Valid and may be scanned from</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="input-container w-2/5">
+                                        <input placeholder=" " id="product_time-start" class="component-input" value="00:00" type="time">
+                                        <label for="product_time-start" class="component-label">Start time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6">
+                                    <div class="input-container">
+                                        <input placeholder=" " id="product_available-until" class="component-input" value="2024-03-24" type="date">
+                                        <label for="product_available-until" class="component-label">Avaible until</label>
+                                        <div class="input-icon">
+                                            <span class="icon-calendar base-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="input-container w-2/5">
+                                        <input placeholder=" " id="product_time-end" class="component-input" value="00:00" type="time">
+                                        <label for="product_time-end" class="component-label">End time</label>
+                                        <div class="input-icon">
+                                            <span class="icon-schedule base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 component-btn">
+                                <span class="text-3xl font-bold">1d 05hs</span>
+                                <span>Product validity</span>
+                            </div>
+                        </div>
+
+                        <div id="text-tab" class="details-tab">
+                            <div class="flex flex-col h-full w-full gap-6">
+                                <h5 class="tab-title">Add text to the product</h5>
+                                <div class="flex w-full gap-6">
+                                    <div class="input-container w-3/5">
+                                        <input placeholder=" " id="product_max-guest" class="component-input" value="Lorem" type="text">
+                                        <label for="product_max-guest" class="component-label">Header</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input placeholder=" " id="product_available-to" class="component-input" value="Lorem" type="text">
+                                        <label for="product_available-to" class="component-label">Text</label>
+                                    </div>
+                                    <div class="py-2">
+                                        <a href="#" class="btn px-6 text-sm font-medium">
+                                            <span class="btn-icon icon-add"></span>
+                                            Add
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="component-line"></div>
+
+                                <div class="h-full bg-secondary_black px-6 py-4 rounded-3xl flex flex-col gap-4">
+                                    <h3 class="title-component">Added list</h3>
+                                    <table class="table-component">
+                                        <thead class="labels-table">
+                                            <td>Header</td>
+                                            <td>Text</td>
+                                            <td class="w-10"></td>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-row h-10">
+                                                <td>Lorem ipsum</td>
+                                                <td>Lorem ipsum</td>
+                                                <th>
+                                                    <button class="btn-trash">
+                                                        <img src="./assets/trash.svg" alt="Delete icon">
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                            <tr class="table-row h-10">
+                                                <td>Lorem ipsum</td>
+                                                <td>Lorem ipsum</td>
+                                                <th>
+                                                    <button class="btn-trash">
+                                                        <img src="./assets/trash.svg" alt="Delete icon">
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="component min-w-[360px] h-full">
+                        <h3 class="title-component">Summary</h3>
+                        <div class="summary-container">
+                            <div class="summary-item">
+                                <h5 class="item-title">
                                     <span class="base-icon icon-info"></span>
                                     Basic information
-                                </button>
-                            </li>
-                            <li class="details-item" aria-valuetext="economy-tab">
-                                <button class="list-btn">
+                                </h5>
+                                <h6 class="item-info">[Product name]</h6>
+                                <h6 class="item-info">[Location]</h6>
+                                <h6 class="item-info">Age from 21 to 29</h6>
+                            </div>
+                            <div class="summary-item">
+                                <h5 class="item-title">
                                     <span class="base-icon icon-payments"></span>
                                     Economy
-                                </button>
-                            </li>
-                            <li class="details-item" aria-valuetext="availability-tab">
-                                <button class="list-btn">
+                                </h5>
+                                <h6 class="item-info">157 tickets</h6>
+                                <h6 class="item-info">373 kr ticket price</h6>
+                            </div>
+                            <div class="summary-item">
+                                <h5 class="item-title">
                                     <span class="base-icon icon-avaible"></span>
                                     Availability
-                                </button>
-                            </li>
-                            <li class="details-item" aria-valuetext="visibility-tab">
-                                <button class="list-btn">
+                                </h5>
+                                <h6 class="item-info">From 2024-03-24 at 18:00</h6>
+                                <h6 class="item-info">To 2024-03-24 at 23:00</h6>
+                            </div>
+                            <div class="summary-item">
+                                <h5 class="item-title">
                                     <span class="base-icon icon-visibility"></span>
                                     Visibility
-                                </button>
-                            </li>
-                            <li class="details-item" aria-valuetext="validity-tab">
-                                <button class="list-btn">
-                                    <span class="base-icon icon-task"></span>
-                                    Validity
-                                </button>
-                            </li>
-                            <li class="details-item" aria-valuetext="text-tab">
-                                <button class="list-btn">
+                                </h5>
+                                <h6 class="item-info">Visible in the VIP Monkey app</h6>
+                                <h6 class="item-info">Visible in the VIP Monkey's website</h6>
+                            </div>
+                            <div class="summary-item">
+                                <h5 class="item-title">
                                     <span class="base-icon icon-playlist"></span>
-                                    Additional text fields
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
+                                    Validity
+                                </h5>
+                                <h6 class="item-info">From 2024-03-24 at 17:00</h6>
+                                <h6 class="item-info">To 2024-03-24 at 21:00</h6>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
 
-                    <div id="info-tab" class="details-tab active">
-                        <div class="w-1/2 flex flex-col gap-6">
-                            <div class="input-container">
-                                <input id="product_name" class="component-input" value="Lorem" type="text">
-                                <label for="product_name" class="component-label">Name</label>
-                            </div>
-                            <div class="input-container h-full">
-                                <textarea class="component-input" id="product_description" rows="5">daadgsdagsadgds</textarea>
-                                <label for="product_description" class="component-label">Description</label>
-                            </div>
-                            <div class="input-container">
-                                <input id="product_location" class="component-input" value="Lorem" type="text">
-                                <label for="product_location" class="component-label">Location</label>
-                            </div>
-                            <div class="flex gap-6">
-                                <div class="input-container">
-                                    <input id="product_ageForm" class="component-input" value="21" type="number">
-                                    <label for="product_ageForm" class="component-label">Age form</label>
-                                </div>
-                                <div class="input-container">
-                                    <input id="product_ageTo" class="component-input" value="29" type="number">
-                                    <label for="product_ageTo" class="component-label">Age to</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-1/2 flex flex-col justify-start gap-8 px-14 items-center">
-                            <div class="productImg-container rounded-3xl flex justify-center border-2 border-img_border w-full max-w-96 max-h-96">
-                                <img src="./assets/event_img-xl.svg" class="w-full" alt="">
-                            </div>
-
-                            <button class="bg-secondary_green text-secondary_blue py-2.5 text-sm rounded-full w-36">
-                                Change image
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div id="economy-tab" class="details-tab">
-                        <div class="w-1/2 flex flex-col gap-6">
-                            <div class="input-container">
-                                <input id="product_tickets" class="component-input" value="157" type="number">
-                                <label for="product_tickets" class="component-label">Number of tickets</label>
-                            </div>
-                            <div class="input-container">
-                                <input id="product_goal" class="component-input" value="333" type="number">
-                                <label for="product_goal" class="component-label">What do we want to get paid? (incl. VAT)</label>
-                            </div>
-                            <div class="input-container">
-                                <input id="product_charge" class="component-input" value="40" type="number">
-                                <label for="product_charge" class="component-label">Charge</label>
-                            </div>
-                            <div class="input-container">
-                                <select id="product_tax" class="component-input">
-                                    <option value="0%" selected>0%</option>
-                                    <option value="10%">10%</option>
-                                    <option value="20%">20%</option>
-                                    <option value="30%">30%</option>
-                                    <option value="40%">40%</option>
-                                </select>
-                                <label for="product_tax" class="component-label">Sales tax</label>
-                            </div>
-                        </div>
-                        <div class="w-1/2 bg-secondary_black px-6 py-4 rounded-3xl flex flex-col gap-4">
-                            <h3 class="title-component">Compilation</h3>
-                            <table class="table-component">
-                                <thead class="labels-table">
-                                    <td>Item</td>
-                                    <th>Per ticket</th>
-                                    <th>For 157 tickets</th>
-                                </thead>
-                                <tbody>
-                                    <tr class="table-row h-10">
-                                        <td>What we want (incl. VAT)</td>
-                                        <th>333 kr</th>
-                                        <th>52281 kr</th>
-                                    </tr>
-                                    <tr class="table-row h-10">
-                                        <td>Charge</td>
-                                        <th>40 kr</th>
-                                        <th>6280 kr</th>
-                                    </tr>
-                                    <tr class="component-line"></tr>
-                                    <tr class="table-row text-2xl font-bold">
-                                        <td>Total</td>
-                                        <th>373 kr</th>
-                                        <th class="text-primary_green">58561 kr</th>
-                                    </tr>
-                                    <tr class="table-row h-10">
-                                        <td>Includes 0% VAT</td>
-                                        <th>0 kr</th>
-                                        <th>0 kr</th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div id="availability-tab" class="details-tab">
-                        <div class="w-1/2 flex flex-col gap-6">
-                            <div class="flex gap-6">
-                                <div class="input-container">
-                                    <input id="product_available-from" class="component-input" value="2024-03-24" type="date">
-                                    <label for="product_available-from" class="component-label">Avaible from</label>
-                                </div>
-                                <div class="input-container w-2/5">
-                                    <input id="product_time-start" class="component-input" value="00:00" type="time">
-                                    <label for="product_time-start" class="component-label">Start time</label>
-                                </div>
-                            </div>
-                            <div class="flex gap-6">
-                                <div class="input-container">
-                                    <input id="product_available-until" class="component-input" value="2024-03-24" type="date">
-                                    <label for="product_available-until" class="component-label">Avaible until</label>
-                                </div>
-                                <div class="input-container w-2/5">
-                                    <input id="product_time-end" class="component-input" value="00:00" type="time">
-                                    <label for="product_time-end" class="component-label">End time</label>
-                                </div>
-                            </div>
-                            <div class="input-container">
-                                <input id="product_max-guest" class="component-input" value="8" type="number">
-                                <label for="product_max-guest" class="component-label">Max purchase per guest</label>
-                            </div>
-                        </div>
-                        <div class="w-1/2 component-btn">
-                            <span class="text-3xl font-bold">1d 05hs</span>
-                            <span>Product availability</span>
-                        </div>
-                    </div>
-
-                    <div id="visibility-tab" class="details-tab">
-                        <div class="flex flex-col gap-6 w-full">
-                            <h4 class="tab-title">Select where it will be visible</h4>
-
-                            <div class="flex gap-6">
-                                <div class="device-container">
-                                    <input type="checkbox" class="absolute top-0 bottom-0 left-0 right-0 opacity-0">
-                                    <div class="device_icon-container">
-                                        <span class="base-icon icon-smartphone pointer-events-none w-full h-full"></span>
-                                    </div>
-                                    <h5 class="text-base font-normal">VIP Monkey App</h5>
-                                </div>
-                                <div class="device-container">
-                                    <input type="checkbox" class="absolute top-0 bottom-0 left-0 right-0 opacity-0">
-                                    <div class="device_icon-container">
-                                        <span class="base-icon icon-computer pointer-events-none w-full h-full"></span>
-                                    </div>
-                                    <h5 class="text-base font-normal">VIP Monkey's webshop</h5>
-                                </div>
-                                <div class="device-container">
-                                    <input type="checkbox" class="absolute top-0 bottom-0 left-0 right-0 opacity-0">
-                                    <div class="device_icon-container">
-                                        <span class="base-icon icon-computer pointer-events-none w-full h-full"></span>
-                                    </div>
-                                    <h5 class="text-base font-normal">Express buy</h5>
-                                </div>
-                            </div>
-
-                            <div class="flex w-full gap-6">
-                                <div class="input-container">
-                                    <input id="product_max-guest" class="component-input" value="8" type="number">
-                                    <label for="product_max-guest" class="component-label">Max purchaste per guest</label>
-                                </div>
-                                <div class="input-container w-3/5">
-                                    <input id="product_available-to" class="component-input" value="2024-03-24" type="date">
-                                    <label for="product_available-to" class="component-label">Available to</label>
-                                </div>
-                                <div class="py-2">
-                                    <a href="#" class="btn px-6 text-sm font-medium">
-                                        <span class="btn-icon icon-add"></span>
-                                        Add
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="component-line"></div>
-
-                            <div class="h-full bg-secondary_black px-6 py-4 rounded-3xl flex flex-col gap-4">
-                                <h3 class="title-component">Whom list</h3>
-                                <table class="table-component">
-                                    <thead class="labels-table">
-                                        <td>Type</td>
-                                        <td>Target group</td>
-                                        <td class="w-10"></td>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="table-row h-10">
-                                            <td>Lorem ipsum</td>
-                                            <td>Lorem ipsum</td>
-                                            <th>
-                                                <button class="table-button">
-                                                    <img src="./assets/trash.svg" alt="Delete icon">
-                                                </button>
-                                            </th>
-                                        </tr>
-                                        <tr class="table-row h-10">
-                                            <td>Lorem ipsum</td>
-                                            <td>Lorem ipsum</td>
-                                            <th>
-                                                <button class="table-button">
-                                                    <img src="./assets/trash.svg" alt="Delete icon">
-                                                </button>
-                                            </th>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="validity-tab" class="details-tab">
-                        <div class="w-1/2 flex flex-col gap-6">
-                            <div class="flex gap-6">
-                                <div class="input-container">
-                                    <input id="product_available-from" class="component-input" value="2024-03-24" type="date">
-                                    <label for="product_available-from" class="component-label">Valid and may be scanned from</label>
-                                </div>
-                                <div class="input-container w-2/5">
-                                    <input id="product_time-start" class="component-input" value="00:00" type="time">
-                                    <label for="product_time-start" class="component-label">Start time</label>
-                                </div>
-                            </div>
-                            <div class="flex gap-6">
-                                <div class="input-container">
-                                    <input id="product_available-until" class="component-input" value="2024-03-24" type="date">
-                                    <label for="product_available-until" class="component-label">Avaible until</label>
-                                </div>
-                                <div class="input-container w-2/5">
-                                    <input id="product_time-end" class="component-input" value="00:00" type="time">
-                                    <label for="product_time-end" class="component-label">End time</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-1/2 component-btn">
-                            <span class="text-3xl font-bold">1d 05hs</span>
-                            <span>Product validity</span>
-                        </div>
-                    </div>
-
-                    <div id="text-tab" class="details-tab">
-                        <div class="flex flex-col h-full w-full gap-6">
-                            <h5 class="tab-title">Add text to the product</h5>
-                            <div class="flex w-full gap-6">
-                                <div class="input-container w-3/5">
-                                    <input id="product_max-guest" class="component-input" value="Lorem" type="text">
-                                    <label for="product_max-guest" class="component-label">Header</label>
-                                </div>
-                                <div class="input-container">
-                                    <input id="product_available-to" class="component-input" value="Lorem" type="text">
-                                    <label for="product_available-to" class="component-label">Text</label>
-                                </div>
-                                <div class="py-2">
-                                    <a href="#" class="btn px-6 text-sm font-medium">
-                                        <span class="btn-icon icon-add"></span>
-                                        Add
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div class="component-line"></div>
-
-                            <div class="h-full bg-secondary_black px-6 py-4 rounded-3xl flex flex-col gap-4">
-                                <h3 class="title-component">Added list</h3>
-                                <table class="table-component">
-                                    <thead class="labels-table">
-                                        <td>Header</td>
-                                        <td>Text</td>
-                                        <td class="w-10"></td>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="table-row h-10">
-                                            <td>Lorem ipsum</td>
-                                            <td>Lorem ipsum</td>
-                                            <th>
-                                                <button class="table-button">
-                                                    <img src="./assets/trash.svg" alt="Delete icon">
-                                                </button>
-                                            </th>
-                                        </tr>
-                                        <tr class="table-row h-10">
-                                            <td>Lorem ipsum</td>
-                                            <td>Lorem ipsum</td>
-                                            <th>
-                                                <button class="table-button">
-                                                    <img src="./assets/trash.svg" alt="Delete icon">
-                                                </button>
-                                            </th>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="component col-start-5 col-end-7 h-full">
-                    <h3 class="title-component">Summary</h3>
-                    <div class="summary-container">
-                        <div class="summary-item">
-                            <h5 class="item-title">
-                                <span class="base-icon icon-info"></span>
-                                Basic information
-                            </h5>
-                            <h6 class="item-info">[Product name]</h6>
-                            <h6 class="item-info">[Location]</h6>
-                            <h6 class="item-info">Age from 21 to 29</h6>
-                        </div>
-                        <div class="summary-item">
-                            <h5 class="item-title">
-                                <span class="base-icon icon-payments"></span>
-                                Economy
-                            </h5>
-                            <h6 class="item-info">157 tickets</h6>
-                            <h6 class="item-info">373 kr ticket price</h6>
-                        </div>
-                        <div class="summary-item">
-                            <h5 class="item-title">
-                                <span class="base-icon icon-avaible"></span>
-                                Availability
-                            </h5>
-                            <h6 class="item-info">From 2024-03-24 at 18:00</h6>
-                            <h6 class="item-info">To 2024-03-24 at 23:00</h6>
-                        </div>
-                        <div class="summary-item">
-                            <h5 class="item-title">
-                                <span class="base-icon icon-visibility"></span>
-                                Visibility
-                            </h5>
-                            <h6 class="item-info">Visible in the VIP Monkey app</h6>
-                            <h6 class="item-info">Visible in the VIP Monkey's website</h6>
-                        </div>
-                        <div class="summary-item">
-                            <h5 class="item-title">
-                                <span class="base-icon icon-playlist"></span>
-                                Validity
-                            </h5>
-                            <h6 class="item-info">From 2024-03-24 at 17:00</h6>
-                            <h6 class="item-info">To 2024-03-24 at 21:00</h6>
-                        </div>
-                    </div>
-                </article>
-
-                <div class="flex gap-4 justify-center items-center text-sm font-medium col-span-full">
+                <div class="flex gap-4 justify-center items-center text-sm font-medium">
                     <button class="text-primary_green py-2.5 w-32">
                         Cancel
                     </button>
-                    <button class="btn py-2.5 rounded-full w-32">
+                    <button class="btn py-2.5 w-32">
                         Save
                     </button>
                 </div>

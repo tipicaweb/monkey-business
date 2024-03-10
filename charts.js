@@ -11,15 +11,34 @@ class BarChart {
 
         const chartContainer = document.createElement('div');
 
-        chartContainer.setAttribute('style', `width: 100%; background: ${this.colors[0]};height: 100%; overflow: hidden; border-radius: 10px; position: relative; display: flex; justify-content: center; align-items: center`);
+        chartContainer.style.cssText = `
+            width: 100%;
+            background: ${this.colors[0]};
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            justify-content:
+            center;
+            align-items: center
+        `;
 
         const chartValueBar = document.createElement('div');
 
-        chartValueBar.setAttribute('style', `width: ${this.value}%; position: absolute; left: 0; top: 0; height: 100%; background: ${this.colors[1]}; transition: all 0.3s ease 0s;`);
+        chartValueBar.style.cssText = `
+            width: ${this.value}%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: ${this.colors[1]};
+            transition: all 0.3s ease 0s;
+        `;
 
         const chartLabel = document.createElement('span');
 
-        chartLabel.setAttribute('style', `z-index: 10; color: ${this.colors[2]}; font-weight:700;`);
+        chartLabel.setAttribute('style', `z-index: 10; color: ${this.colors[2]}; font-weight:700; font-size: 16px;`);
         chartLabel.innerText = `${this.value}% ${this.label}`;
 
         chartContainer.append(chartValueBar, chartLabel);
@@ -62,6 +81,8 @@ class DonutChart {
 
         const donutEl = document.createElement('div');
         donutEl.style.cssText = `
+            max-height: 250px;
+            max-width: 250px;
             width: 100%;
             padding: 0;
             aspect-ratio: 1 / 1;
@@ -151,13 +172,13 @@ class DonutChart {
 // COLUMN CHART
 //
 
-const createColumn = (categories = [""], namesValues = [{}], colors = [""], elementId = "") => {
+const createColumn = (categories = [""], namesValues = [{}], colors = [""], elementId = "", height = "") => {
     const options = {
         series: namesValues,
         colors: colors,
         chart: {
             type: "bar",
-            height: "75%",
+            height: height,
             width: "100%",
             parentHeightOffset: 0,
             toolbar: {
@@ -199,7 +220,8 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
             labels: {
                 show: true,
                 style: {
-                    cssClass: 'text-xs fill-white dark:fill-white opacity-85'
+                    cssClass: 'text-xs fill-white dark:fill-white opacity-85',
+                    fontFamily: "CircularStd"
                 }
             },
             axisBorder: {
@@ -214,7 +236,8 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
             labels: {
                 show: true,
                 style: {
-                    cssClass: 'text-xs fill-white dark:fill-white opacity-85'
+                    cssClass: 'text-xs fill-white dark:fill-white opacity-85',
+                    fontFamily: "CircularStd"
                 },
                 offsetX: -15
             },

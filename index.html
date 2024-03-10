@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Home - MonkeyBusiness</title>
+</head>
+
+<body class="body">
+    <nav class="sidebar">
+        <div class="flex items-center w-72 max-w-full h-32">
+            <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
+            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
+        </div>
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="./index.html" class="navbar-button active">
+                    <span class="navbar-icon icon-grid"></span>Home
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-bolt"></span>Create express ticket
+                </a>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./event.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-event"></span>Event
+                    </div>
+                    <div class="" id="events-arrow">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul id="events-dropdown" class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Present
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./future-events.html" class="navbar-button">
+                            <span class="navbar-icon icon-future"></span>Future
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Past
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-list"></span>Products
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-map"></span>Map
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-group"></span>Guest lists
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-campaign"></span>Marketing
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-fact"></span>My guests
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-settings"></span>Settings
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-logout"></span>Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex flex-col w-full">
+        <header class="header">
+            <h2 class="header-title">Home</h2>
+            <div class="header-navbar">
+                <a href="#" class="btn">
+                    <span class="btn-icon icon-add"></span>
+                    Create
+                </a>
+                <a href="#" class="flex justify-center items-center gap-10 px-1 rounded-full h-full bg-secondary_black text-white font-normal">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
+                    </div>
+                    <img src="./assets/arrow_down_w.svg" alt="Arrow down">
+                </a>
+
+                <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
+                    <img src="./assets/user_img.png" alt="User image">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="components-container grid-cols-4">
+                <article class="component">
+                    <div class="flex justify-between w-full title-component">
+                        <div class="logo-component">
+                            <span class="logo-icon icon-groups"></span>
+                        </div>
+                        <div class="flex items-end flex-col gap-2">
+                            <h3 class="chart-info increase">+12%</h3>
+                            <span class="text-sm font-medium opacity-85">from last month</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <h3 class="text-5xl font-bold">193</h3>
+                        <h3 class="text-primary_green text-2xl font-bold">New guests</h3>
+                    </div>
+                </article>
+                <article class="component">
+                    <div class="flex justify-between w-full title-component">
+                        <div class="logo-component">
+                            <span class="logo-icon icon-event"></span>
+                        </div>
+                        <div class="flex items-end flex-col gap-2">
+                            <h3 class="chart-info increase">+12%</h3>
+                            <span class="text-sm font-medium opacity-85">from last month</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <h3 class="text-5xl font-bold">7</h3>
+                        <h3 class="text-primary_green text-2xl font-bold">New events</h3>
+                    </div>
+                </article>
+                <article class="component">
+                    <div class="flex justify-between w-full title-component">
+                        <div class="logo-component">
+                            <span class="logo-icon icon-campaign"></span>
+                        </div>
+                        <div class="flex items-end flex-col gap-2">
+                            <h3 class="chart-info decrease">-3%</h3>
+                            <span class="text-sm font-medium opacity-85">from last month</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <h3 class="text-5xl font-bold">26</h3>
+                        <h3 class="text-primary_green text-2xl font-bold">New campaigns</h3>
+                    </div>
+                </article>
+                <article class="component">
+                    <div class="flex justify-between w-full title-component">
+                        <div class="logo-component">
+                            <span class="logo-icon icon-ticket"></span>
+                        </div>
+                        <div class="flex items-end flex-col gap-2">
+                            <h3 class="chart-info increase">+12%</h3>
+                            <span class="text-sm font-medium opacity-85">from last month</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <h3 class="text-5xl font-bold">1540</h3>
+                        <h3 class="text-primary_green text-2xl font-bold">Tickets sold</h3>
+                    </div>
+                </article>
+
+                <article class="component col-start-1 col-end-3">
+                    <div class="flex justify-between w-full title-component">
+                        Income & profit
+                        <div class="flex justify-end gap-6" id="income-labels"></div>
+                    </div>
+                    <div id="income-chart" class="w-full"></div>
+                </article>
+
+                <article class="component col-start-3 col-end-5">
+                    <div class="flex justify-between w-full title-component">
+                        Call-to-action
+                    </div>
+                    <div class="action-list">
+                        <div class="action-item">
+                            <div class="action-logo red">
+                                <span class="base-icon icon-info"></span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="action-event">[Event name]</span>
+                                <span class="text-base font-normal">Event with missing information. Please go to the event details to complete it.</span>
+                            </div>
+                            <button class="btn-secondary">Event details</button>
+                        </div>
+                        <div class="action-item">
+                            <div class="action-logo orange">
+                                <span class="base-icon icon-campaign"></span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="action-event">[Event name]</span>
+                                <span class="text-base font-normal">This event has no marketing campaign. Create a campaign to boost ticket sales.</span>
+                            </div>
+                            <button class="btn-secondary">Create</button>
+                        </div>
+                        <div class="action-item">
+                            <div class="action-logo green">
+                                <span class="base-icon icon-campaign"></span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="action-event">[Event name]</span>
+                                <span class="text-base font-normal">This event is getting closer, there are still 35% tickets left to sell. Create marketing campaign.</span>
+                            </div>
+                            <button class="btn-secondary">Create</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./charts.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
