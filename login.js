@@ -1,36 +1,45 @@
-let resetPassEl = document.getElementById('reset-password');
+let btnsList = document.querySelectorAll('.tab-button');
+let tabsList = document.querySelectorAll('.login-tab');
 
-resetPassEl.addEventListener('click', (event) => {
-    event.preventDefault();
-
-
-    document.getElementById('login-start-tab').classList.add('hidden');
-    document.getElementById('reset-password-tab').classList.remove('hidden');
+btnsList.forEach(btn => {
+    btn.addEventListener('click', setBtn)
 })
 
-let sendPassEl = document.getElementById('send-password');
+function setBtn(event) {
+    setTab(event.target.ariaValueText);
+}
 
-sendPassEl.addEventListener('click', (event) => {
+function setTab(targetId) {
+    tabsList.forEach(tab => tab.classList.add('hidden'));
+
+    document.querySelector(`#${targetId}`).classList.remove('hidden');
+}
+
+let formLogin = document.getElementById('login-form');
+
+formLogin.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    document.getElementById('reset-password-tab').classList.add('hidden');
-    document.getElementById('confirm-password-tab').classList.remove('hidden');
+    window.location.pathname = '/';
 })
 
-let changePassEl = document.getElementById('change-password');
+let passwordForm = document.getElementById('password-form');
 
-changePassEl.addEventListener('click', (event) => {
+passwordForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    document.getElementById('confirm-password-tab').classList.add('hidden');
-    document.getElementById('change-password-tab').classList.remove('hidden');
+    setTab('change_password-tab');
 })
 
-let backLoginEl = document.getElementById('back-login');
+let passwordBtns = document.querySelectorAll('.input-icon.view-icon');
 
-backLoginEl.addEventListener('click', (event) => {
-    event.preventDefault();
+passwordBtns.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+        event.preventDefault();
+    
+        event.target.classList.toggle('active');
 
-    document.getElementById('change-password-tab').classList.add('hidden');
-    document.getElementById('login-start-tab').classList.remove('hidden');
+        if(event.target.classList.contains('active')) event.target.nextElementSibling.type = "text";
+        else event.target.nextElementSibling.type = "password";
+    })
 })

@@ -29,6 +29,7 @@ export default {
           input_border_disabled: '#49454F',
           input_bg_disabled: '#E6E0E90A',
           input_focus: '#00ECAE',
+          input_invalid: '#F2B8B5',
           img_border: '#D9D9D9',
           table_hover: "#E6E0E914"
         }

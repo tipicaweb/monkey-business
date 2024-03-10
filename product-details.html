@@ -184,7 +184,7 @@
                                 </div>
                                 <div class="flex gap-6">
                                     <div class="input-container">
-                                        <input placeholder=" " id="product_ageForm" class="component-input" value="21" type="number">
+                                        <input placeholder=" " id="product_ageForm" class="component-input" value="21" type="number" min="0">
                                         <label for="product_ageForm" class="component-label">Age form</label>
                                         <div class="input-icon">
                                             <span class="icon-arrowD base-icon rotate-180"></span>
@@ -192,7 +192,7 @@
                                         </div>
                                     </div>
                                     <div class="input-container">
-                                        <input placeholder=" " id="product_ageTo" class="component-input" value="29" type="number">
+                                        <input placeholder=" " id="product_ageTo" class="component-input" value="29" type="number" min="0">
                                         <label for="product_ageTo" class="component-label">Age to</label>
                                         <div class="input-icon">
                                             <span class="icon-arrowD base-icon rotate-180"></span>
@@ -213,7 +213,7 @@
                         <div id="economy-tab" class="details-tab">
                             <div class="w-1/2 flex flex-col gap-6">
                                 <div class="input-container">
-                                    <input placeholder=" " id="product_tickets" class="component-input" value="157" type="number">
+                                    <input placeholder=" " id="product_tickets" class="component-input" value="157" type="number" min="0">
                                     <label for="product_tickets" class="component-label">Number of tickets</label>
                                     <div class="input-icon">
                                         <span class="icon-arrowD base-icon rotate-180"></span>
@@ -221,7 +221,7 @@
                                     </div>
                                 </div>
                                 <div class="input-container">
-                                    <input placeholder=" " id="product_goal" class="component-input" value="333" type="number">
+                                    <input placeholder=" " id="product_goal" class="component-input" value="333" type="number" min="0">
                                     <label for="product_goal" class="component-label">What do we want to get paid? (incl. VAT)</label>
                                     <div class="input-icon">
                                         <span class="icon-arrowD base-icon rotate-180"></span>
@@ -229,14 +229,14 @@
                                     </div>
                                 </div>
                                 <div class="input-container">
-                                    <input placeholder=" " id="product_charge" class="component-input" value="40" type="number">
+                                    <input placeholder=" " id="product_charge" class="component-input" value="40" type="number" min="0">
                                     <label for="product_charge" class="component-label">Charge</label>
                                     <div class="input-icon">
                                         <span class="icon-arrowD base-icon rotate-180"></span>
                                         <span class="icon-arrowD base-icon"></span>
                                     </div>
                                 </div>
-                                <div class="input-container">
+                                <div class="input-container select-container">     
                                     <select id="product_tax" class="component-input">
                                         <option value="0%" selected>0%</option>
                                         <option value="10%">10%</option>
@@ -244,6 +244,9 @@
                                         <option value="30%">30%</option>
                                         <option value="40%">40%</option>
                                     </select>
+                                    <div class="input-icon">
+                                        <span class="base-icon icon-arrowD"></span>
+                                    </div>
                                     <label for="product_tax" class="component-label">Sales tax</label>
                                 </div>
                             </div>
@@ -317,7 +320,7 @@
                                     </div>
                                 </div>
                                 <div class="input-container">
-                                    <input placeholder=" " id="product_max-guest" class="component-input" value="8" type="number">
+                                    <input placeholder=" " id="product_max-guest" class="component-input" value="8" type="number" min="0">
                                     <label for="product_max-guest" class="component-label">Max purchase per guest</label>
                                     <div class="input-icon">
                                         <span class="icon-arrowD base-icon rotate-180"></span>
@@ -370,8 +373,8 @@
 
                                 <div class="flex w-full gap-6">
                                     <div class="input-container">
-                                        <input placeholder=" " id="product_max-guest" class="component-input" value="8" type="number">
-                                        <label for="product_max-guest" class="component-label">Max purchaste per guest</label>
+                                        <input placeholder=" " id="product_max-guest" class="component-input" value="8" type="number" min="0">
+                                        <label for="product_max-guest" class="component-label">Max purchase per guest</label>
                                         <div class="input-icon">
                                             <span class="icon-arrowD base-icon rotate-180"></span>
                                             <span class="icon-arrowD base-icon"></span>

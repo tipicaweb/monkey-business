@@ -12,7 +12,7 @@
 
 <body class="min-w-[992px] h-screen bg-secondary_black">
     <main class="w-full h-screen flex justify-center items-center">
-        <div class="login-tab" id="login-start-tab">
+        <div class="login-tab" id="login_start-tab">
             <img class="w-20" src="./assets/mini_logo.svg" alt="Mini MonkeyBusiness logo">
             <div class="flex flex-col text-center text-white">
                 <h1 class="text-[45px] font-bold mb-2">Welcome Back</h1>
@@ -20,22 +20,25 @@
                 <h3 class="text-base font-normal">Please enter your credentials below to proceed.</h3>
             </div>
 
-            <div class="flex flex-col gap-8 my-3 w-full">
+            <form action="" id="login-form" class="flex flex-col gap-8 my-3 w-full">
                 <div class="input-container">
-                    <input id="login_email" class="component-input" value="test@monkeybusiness.com" type="email">
+                    <input id="login_email" class="component-input" placeholder=" " type="email" required>
                     <label for="login_email" class="component-label">Email</label>
                 </div>
                 <div class="input-container">
-                    <input id="login_password" class="component-input" value="aaaaaaa" type="password">
+                    <div class="input-icon view-icon">
+                        <span class="icon-visibility base-icon"></span>
+                    </div>
+                    <input id="login_password" class="component-input" placeholder=" " type="password" required>
                     <label for="login_password" class="component-label">Password</label>
                 </div>
-            </div>
+            </form>
 
-            <button class="btn h-10 w-[120px] text-sm">Login</button>
-            <button class="text-base font-normal text-white" id="reset-password">Forgot password?</button>
+            <button type="submit" form="login-form" class="btn h-10 w-[120px] text-sm">Login</button>
+            <button class="text-base font-normal text-white tab-button" aria-valuetext="reset_password-tab">Forgot password?</button>
         </div>
 
-        <div class="login-tab hidden" id="reset-password-tab">
+        <div class="login-tab hidden" id="reset_password-tab">
             <div class="flex flex-col text-white">
                 <h2 class="text-4xl font-bold mb-2">Reset password</h2>
                 <h3 class="text-base font-normal">Enter your email address and we'll send you a link to reset your password.</h3>
@@ -43,35 +46,41 @@
 
             <div class="flex flex-col gap-8 my-3 w-full">
                 <div class="input-container">
-                    <input id="login_email" class="component-input" value="test@monkeybusiness.com" type="email">
-                    <label for="login_email" class="component-label">Email</label>
+                    <input id="recover_email" class="component-input" value="test@monkeybusiness.com" type="email">
+                    <label for="recover_email" class="component-label">Email</label>
                 </div>
             </div>
 
-            <button class="btn h-10 w-[120px] text-sm" id="send-password">Send</button>
+            <button class="btn h-10 w-[120px] text-sm tab-button" aria-valuetext="confirm_password-tab">Send</button>
         </div>
 
-        <div class="login-tab hidden" id="confirm-password-tab">
+        <div class="login-tab hidden" id="confirm_password-tab">
             <div class="flex flex-col text-white">
                 <h2 class="text-4xl font-bold mb-2">Change password</h2>
                 <h3 class="text-base font-normal">Enter and confirm a new password. It must be at least 8 characters.</h3>
             </div>
 
-            <div class="flex flex-col gap-8 my-3 w-full">
+            <form id="password-form" class="flex flex-col gap-8 my-3 w-full">
                 <div class="input-container">
-                    <input id="login_password" class="component-input" value="aaaaaaa" type="password">
-                    <label for="login_password" class="component-label">New password</label>
+                    <div class="input-icon view-icon">
+                        <span class="icon-visibility base-icon"></span>
+                    </div>
+                    <input id="recover_password" class="component-input" value="aaaaaaa" type="password" required>
+                    <label for="recover_password" class="component-label">New password</label>
                 </div>
                 <div class="input-container">
-                    <input id="login_password-confirm" class="component-input" value="aaaaaaa" type="password">
-                    <label for="login_password-confirm" class="component-label">Confirm password</label>
+                    <div class="input-icon view-icon">
+                        <span class="icon-visibility base-icon"></span>
+                    </div>
+                    <input id="recover_password-confirm" class="component-input" value="aaaaaaa" type="password" required>
+                    <label for="recover_password-confirm" class="component-label">Confirm password</label>
                 </div>
-            </div>
+            </form>
 
-            <button class="btn h-10 w-[165px] text-sm" id="change-password">Change password</button>
+            <button type="submit" form="password-form" class="btn h-10 w-[165px] text-sm">Change password</button>
         </div>
 
-        <div class="login-tab hidden" id="change-password-tab">
+        <div class="login-tab hidden" id="change_password-tab">
             <div class="bg-primary_green bg-opacity-15 p-8 rounded-[50px]">
                 <span class="flex w-20 h-20 bg-primary_green icon-task"></span>
             </div>
@@ -80,7 +89,7 @@
                 <h3 class="text-base font-normal">Your password was changed successfully.</h3>
             </div>
 
-            <button class="btn h-10 w-[165px] text-sm" id="back-login">Back to login</button>
+            <button class="btn h-10 w-[165px] text-sm tab-button" aria-valuetext="login_start-tab">Back to login</button>
         </div>
     </main>
 

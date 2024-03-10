@@ -363,6 +363,45 @@
         @apply text-2xl; 
         @apply font-bold;
     }
+    
+    .select-container {
+        @apply relative;
+        @apply h-8;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply min-w-24;
+
+        &:not(:has(.input-icon)) {
+            .base-icon {
+                @apply absolute;
+                @apply top-0;
+                @apply right-3;
+                @apply h-full;
+                @apply bg-primary_gray;
+                @apply w-2.5;
+                mask-size: 16px;
+                @apply pointer-events-none;
+            }
+        }
+
+        select {
+            appearance: none;
+        }
+    }
+    
+    .select-container:hover {
+        .component-select {
+            @apply text-white;
+            @apply border-white;
+        }
+
+        &:not(:has(.input-icon)) {
+            .base-icon {
+                @apply bg-white;
+            }
+        }
+    }
 
     .component-select { 
         @apply border;
@@ -372,7 +411,12 @@
         @apply text-primary_gray; 
         @apply font-normal;
         @apply text-sm;
-        @apply px-3;
+        @apply px-2;
+        @apply pr-6;
+        @apply h-full;
+        @apply w-full;
+        @apply transition-all;
+        @apply appearance-none;
     }
 
     .donut-component {
@@ -601,6 +645,14 @@
             @apply text-terciary_gray;
             @apply bg-input_bg_disabled;
         }
+
+        &:invalid {
+            @apply border-input_invalid;
+
+            & ~ .component-label {
+                @apply text-input_invalid;
+            }
+        }
     }
 
     .component-label {
@@ -614,6 +666,7 @@
         @apply text-terciary_gray;
         @apply transition-all;
         @apply cursor-text;
+        @apply pointer-events-none;
         transition: all .3s ease 0s;
     }
 
@@ -653,11 +706,19 @@
         @apply flex;
         @apply flex-col;
         @apply justify-center;
-        @apply mr-3;
+        @apply pr-3;
         @apply pointer-events-none;
 
         .base-icon {
             @apply bg-terciary_gray;
+        }
+    }
+
+    .input-icon.view-icon {
+        pointer-events: all;
+
+        .base-icon {
+            @apply pointer-events-none;
         }
     }
 

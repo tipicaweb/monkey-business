@@ -138,10 +138,13 @@
                 <article class="component gap-8 col-start-2">
                     <div class="flex title-component justify-between">
                         <h3>Best selling products</h3>
-                        <select name="products-select" class="component-select" id="products-select">
-                            <option selected value="monthly">Monthly</option>
-                            <option value="weekly">Weekly</option>
-                        </select>
+                        <div class="select-container">
+                            <select name="products-select" class="component-select" id="products-select">
+                                <option selected value="monthly">Monthly</option>
+                                <option value="weekly">Weekly</option>
+                            </select>
+                            <span class="base-icon icon-arrowD"></span>
+                        </div>
                     </div>
                     <div class="table-container h-full">
                         <table class="table-component">

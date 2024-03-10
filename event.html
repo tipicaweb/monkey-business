@@ -124,10 +124,13 @@
                 <article class="component">
                     <div class="flex title-component justify-between">
                         Age distribution
-                        <select name="age-select" class="component-select" id="age-select">
-                            <option selected value="monthly">Monthly</option>
-                            <option value="weekly">Weekly</option>
-                        </select>
+                        <div class="select-container">
+                            <select name="age-select" class="component-select" id="age-select">
+                                <option selected value="monthly">Monthly</option>
+                                <option value="weekly">Weekly</option>
+                            </select>
+                            <span class="base-icon icon-arrowD"></span>
+                        </div>
                     </div>
                     <div class="flex justify-end gap-6" id="column-labels"></div>
                     <div id="column-chart" class="w-full h-full"></div>
@@ -162,10 +165,13 @@
                         <div class="flex title-component justify-between">
                             Past events
                             <div class="flex gap-4">
-                                <select name="past-select" class="component-select" id="past-select">
-                                    <option selected value="month">Last month</option>
-                                    <option value="week">Last week</option>
-                                </select>
+                                <div class="select-container">
+                                    <select name="past-select" class="component-select" id="past-select">
+                                        <option selected value="month">Last month</option>
+                                        <option value="week">Last week</option>
+                                    </select>
+                                    <span class="base-icon icon-arrowD"></span>
+                                </div>
                                 <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
                             </div>
                         </div>
@@ -244,10 +250,13 @@
                         <div class="flex title-component justify-between">
                             Future events
                             <div class="flex gap-4">
-                                <select name="future-select" class="component-select" id="future-select">
-                                    <option selected value="month">Next month</option>
-                                    <option value="week">Next week</option>
-                                </select>
+                                <div class="select-container">
+                                    <select name="future-select" class="component-select" id="future-select">
+                                        <option selected value="month">Next month</option>
+                                        <option value="week">Next week</option>
+                                    </select>
+                                    <span class="base-icon icon-arrowD"></span>
+                                </div>
                                 <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
                             </div>
                         </div>
