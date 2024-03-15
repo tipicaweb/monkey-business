@@ -245,6 +245,38 @@ const createColumn = (categories = [""], namesValues = [{}], colors = [""], elem
         fill: {
             opacity: 1,
         },
+        responsive: [
+            {
+              breakpoint: 1750,
+              options: {
+                plotOptions: {
+                  bar: {
+                    borderRadius: 6,
+                  }
+                }
+              }
+            },
+            {
+                breakpoint: 1600,
+                options: {
+                  plotOptions: {
+                    bar: {
+                      borderRadius: 5,
+                    }
+                  }
+                }
+            },
+            {
+                breakpoint: 1440,
+                options: {
+                  plotOptions: {
+                    bar: {
+                      borderRadius: 15,
+                    }
+                  }
+                }
+            }
+        ]
     }
 
     let newChart = new ApexCharts(document.getElementById(elementId), options);

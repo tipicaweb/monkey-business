@@ -12,7 +12,7 @@
 
 <body class="body">
     <nav class="sidebar">
-        <div class="flex items-center w-72 max-w-full h-32">
+        <div class="sidebar-logo">
             <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
             <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
         </div>
@@ -136,77 +136,65 @@
                             <textarea id="event_description" class="component-input" rows="5" placeholder=" "></textarea>
                             <label for="event_description" class="component-label">Description</label>
                         </div>
-                        <div class="flex gap-6">
-                            <div class="input-container w-2/4">
+                        <div class="inputs-grid">
+                            <div class="input-container" style="grid-area: location;">
                                 <input id="event_location" class="component-input" type="text" placeholder=" ">
                                 <label for="event_location" class="component-label">Location</label>
                             </div>
-                            <div class="flex gap-6 w-2/4">
-                                <div class="input-container">
-                                    <input id="product_ageForm" class="component-input" type="number" placeholder=" " min="0">
-                                    <label for="product_ageForm" class="component-label">Age form</label>
-                                    <div class="input-icon">
-                                        <span class="icon-arrowD base-icon rotate-180"></span>
-                                        <span class="icon-arrowD base-icon"></span>
-                                    </div>
-                                </div>
-                                <div class="input-container">
-                                    <input id="product_ageTo" class="component-input" type="number" placeholder=" " min="0">
-                                    <label for="product_ageTo" class="component-label">Age to</label>
-                                    <div class="input-icon">
-                                        <span class="icon-arrowD base-icon rotate-180"></span>
-                                        <span class="icon-arrowD base-icon"></span>
-                                    </div>
+                            <div class="input-container" style="grid-area: age-from;">
+                                <input id="product_ageForm" class="component-input" type="number" placeholder=" " min="0">
+                                <label for="product_ageForm" class="component-label">Age from</label>
+                                <div class="input-icon">
+                                    <span class="icon-arrowD base-icon rotate-180"></span>
+                                    <span class="icon-arrowD base-icon"></span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="flex flex-col gap-6">
-                            <div class="flex gap-6 w-full">
-                                <div class="input-container w-2/4">
-                                    <input id="event_startDate" class="component-input" type="date" placeholder=" ">
-                                    <label for="event_startDate" class="component-label">Start date</label>
-                                    <div class="input-icon">
-                                        <span class="icon-calendar base-icon"></span>
-                                    </div>
-                                </div>
-                                <div class="flex gap-6 w-2/4">
-                                    <div class="input-container">
-                                        <input id="event_startTime" class="component-input" type="time" placeholder=" ">
-                                        <label for="event_startTime" class="component-label">Start time</label>
-                                        <div class="input-icon">
-                                            <span class="icon-schedule base-icon"></span>
-                                        </div>
-                                    </div>
-                                    <div class="input-container">
-                                        <input id="event_endTime" class="component-input" type="time" placeholder=" ">
-                                        <label for="event_endTime" class="component-label">End time</label>
-                                        <div class="input-icon">
-                                            <span class="icon-schedule base-icon"></span>
-                                        </div>
-                                    </div>
+                            <div class="input-container" style="grid-area: age-to;">
+                                <input id="product_ageTo" class="component-input" type="number" placeholder=" " min="0">
+                                <label for="product_ageTo" class="component-label">Age to</label>
+                                <div class="input-icon">
+                                    <span class="icon-arrowD base-icon rotate-180"></span>
+                                    <span class="icon-arrowD base-icon"></span>
                                 </div>
                             </div>
-                            <div class="flex gap-6">
-                                <div class="flex flex-col gap-6 w-2/4">
-                                    <div class="input-container">
-                                        <input id="event_endDate" class="component-input" type="date" placeholder=" ">
-                                        <label for="event_endDate" class="component-label">End date</label>
-                                        <div class="input-icon">
-                                            <span class="icon-calendar base-icon"></span>
-                                        </div>
-                                    </div>
-                                    <div class="input-container">
-                                        <input id="event_marketable" class="component-input" type="date" placeholder=" ">
-                                        <label for="event_marketable" class="component-label">Marketable from</label>
-                                        <div class="input-icon">
-                                            <span class="icon-calendar base-icon"></span>
-                                        </div>
-                                    </div>
+                            <div class="input-container" style="grid-area: start-date;">
+                                <input id="event_startDate" class="component-input" type="date" placeholder=" ">
+                                <label for="event_startDate" class="component-label">Start date</label>
+                                <div class="input-icon">
+                                    <span class="icon-calendar base-icon"></span>
                                 </div>
-                                <div class="component-btn h-full w-2/4">
-                                    <span class="text-3xl font-bold">1d 05hs</span>
-                                    <span>Event duration</span>
+                            </div>
+                            <div class="input-container" style="grid-area: start-time;">
+                                <input id="event_startTime" class="component-input" type="time" placeholder=" ">
+                                <label for="event_startTime" class="component-label">Start time</label>
+                                <div class="input-icon">
+                                    <span class="icon-schedule base-icon"></span>
                                 </div>
+                            </div>
+                            <div class="input-container" style="grid-area: end-date;">
+                                <input id="event_endDate" class="component-input" type="date" placeholder=" ">
+                                <label for="event_endDate" class="component-label">End date</label>
+                                <div class="input-icon">
+                                    <span class="icon-calendar base-icon"></span>
+                                </div>
+                            </div>
+                            <div class="input-container" style="grid-area: end-time;">
+                                <input id="event_endTime" class="component-input" type="time" placeholder=" ">
+                                <label for="event_endTime" class="component-label">End time</label>
+                                <div class="input-icon">
+                                    <span class="icon-schedule base-icon"></span>
+                                </div>
+                            </div>
+                            <div class="input-container" style="grid-area: marketable-from;">
+                                <input id="event_marketable" class="component-input" type="date" placeholder=" ">
+                                <label for="event_marketable" class="component-label">Marketable from</label>
+                                <div class="input-icon">
+                                    <span class="icon-calendar base-icon"></span>
+                                </div>
+                            </div>
+                            <div class="component-btn h-full" style="grid-area: event-btn;">
+                                <span class="text-3xl font-bold">1d 05hs</span>
+                                <span>Event duration</span>
                             </div>
                         </div>
                     </div>

@@ -2,12 +2,10 @@ let btnsList = document.querySelectorAll('.tab-button');
 let tabsList = document.querySelectorAll('.login-tab');
 
 btnsList.forEach(btn => {
-    btn.addEventListener('click', setBtn)
+    btn.addEventListener('click', (event) => {
+        setTab(event.target.ariaValueText);
+    })
 })
-
-function setBtn(event) {
-    setTab(event.target.ariaValueText);
-}
 
 function setTab(targetId) {
     tabsList.forEach(tab => tab.classList.add('hidden'));
@@ -16,7 +14,6 @@ function setTab(targetId) {
 }
 
 let formLogin = document.getElementById('login-form');
-
 formLogin.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -24,7 +21,6 @@ formLogin.addEventListener('submit', (event) => {
 })
 
 let passwordForm = document.getElementById('password-form');
-
 passwordForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -34,9 +30,7 @@ passwordForm.addEventListener('submit', (event) => {
 let passwordBtns = document.querySelectorAll('.input-icon.view-icon');
 
 passwordBtns.forEach(btn => {
-    btn.addEventListener('click', (event) => {
-        event.preventDefault();
-    
+    btn.addEventListener('click', (event) => {    
         event.target.classList.toggle('active');
 
         if(event.target.classList.contains('active')) event.target.nextElementSibling.type = "text";
