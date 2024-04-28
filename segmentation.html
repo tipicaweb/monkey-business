@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Segmentation - MonkeyBusiness</title>
+</head>
+
+<body class="body">
+    <nav class="sidebar">
+        <div class="sidebar-logo">
+            <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
+            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
+        </div>
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="./index.html" class="navbar-button">
+                    <span class="navbar-icon icon-grid"></span>Home
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-bolt"></span>Create express ticket
+                </a>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./event.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-event"></span>Event
+                    </div>
+                    <div class="navbar-dropdown-btn" id="events-arrow">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul id="events-dropdown" class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Present
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./future-events.html" class="navbar-button">
+                            <span class="navbar-icon icon-future"></span>Future
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Past
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./guests.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-person-outline"></span>Guests
+                    </div>
+                    <div class="navbar-dropdown-btn active">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Support
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./segmentation.html" class="navbar-button active">
+                            <span class="navbar-icon icon-future"></span>Segmentation
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Statistics
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Search
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-list"></span>Products
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-map"></span>Map
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-group"></span>Guest lists
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-campaign"></span>Marketing
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-fact"></span>My guests
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-settings"></span>Settings
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-logout"></span>Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex flex-col w-full">
+        <header class="header">
+            <div>
+                <span class="flex gap-4 text-secondary_gray font-normal">
+                    Guests
+                    <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
+                    <span class="text-primary_orange font-normal">Segmentation</span>
+                </span>
+                <h2 class="header-title">Segmentation</h2>
+            </div>
+            <div class="header-navbar">
+                <a href="#" class="btn">
+                    <span class="btn-icon icon-add"></span>
+                    Create
+                </a>
+                <a href="#" class="flex justify-center items-center gap-10 pl-1 pr-3 rounded-full h-full bg-secondary_black text-white font-normal">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
+                    </div>
+                    <img src="./assets/arrow_down_w.svg" alt="Arrow down">
+                </a>
+
+                <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
+                    <img src="./assets/user_img.png" alt="User image">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="components-container grid-cols-3">
+                <article class="col-span-full flex justify-center items-center gap-6">
+                    <div class="input-container">
+                        <input placeholder=" " id="segmentation-search" class="component-input" type="text">
+                        <label for="segmentation-search" class="component-label">Search</label>
+                        <div class="input-icon">
+                            <span class="base-icon icon-search"></span>
+                        </div>
+                    </div>
+                    <div class="input-container select-container w-1/4">
+                        <select id="sort_by" class="component-input">
+                            <option value="a-z">A - Z</option>
+                            <option value="z-a">Z - A</option>
+                            <option value="created" selected>Created</option>
+                            <option value="updated">Updated</option>
+                            <option value="hits-asc">Hits asc.</option>
+                            <option value="hits-dsc">Hits dsc.</option>
+                        </select>
+                        <div class="input-icon">
+                            <span class="base-icon icon-arrowD"></span>
+                        </div>
+                        <label for="sort_by" class="component-label">Sort by</label>
+                    </div>
+                </article>
+                <article class="component justify-center items-center p-16" id="create-segmentation">
+                    <div class="bg-primary_green bg-opacity-15 w-24 h-24 flex justify-center items-center rounded-[40px]">
+                        <span class="base-icon icon-add bg-primary_green w-16 h-16"></span>
+                    </div>
+                    <h3 class="text-2xl">Create segmentation</h3>
+                </article>
+                <article class="component">
+                    <div>
+                        <div class="flex justify-between w-full title-component items-center">
+                            [Segmentation name]
+                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                                <button class="table-dropdown">
+                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                </button>
+                                <ul class="dropdown-list text-base min-w-48">
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-pencil"></span>
+                                        Edit
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-refresh"></span>
+                                        Refresh
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-trash"></span>
+                                        Delete / Archive
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle-component text-base font-normal text-primary_orange">Created on 5/5/2024 10:20 AM</div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap text-sm font-medium text-input_border">
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Gender: Lorem</span>
+                        <span class="segmentation-filter">Age from: 18</span>
+                        <span class="segmentation-filter">Age to: 40</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h3 class="hits-title">Total hits</h3>
+                            <h3 class="hits-value text-primary_green">540</h3>
+                        </div>
+                        <div class="flex gap-4 text-right">
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Men</h3>
+                                <h3 class="hits-value text-primary_red">46%</h3>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Women</h3>
+                                <h3 class="hits-value text-primary_orange">54%</h3>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="component">
+                    <div>
+                        <div class="flex justify-between w-full title-component items-center">
+                            [Segmentation name]
+                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                                <button class="table-dropdown">
+                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                </button>
+                                <ul class="dropdown-list text-base min-w-48">
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-pencil"></span>
+                                        Edit
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-refresh"></span>
+                                        Refresh
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-trash"></span>
+                                        Delete / Archive
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle-component text-base font-normal text-primary_orange">Last run on 5/5/2024 10:20 AM</div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap text-sm font-medium text-input_border">
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Gender: Lorem</span>
+                        <span class="segmentation-filter">Age from: 18</span>
+                        <span class="segmentation-filter">Age to: 40</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h3 class="hits-title">Total hits</h3>
+                            <h3 class="hits-value text-primary_green">540</h3>
+                        </div>
+                        <div class="flex gap-4 text-right">
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Men</h3>
+                                <h3 class="hits-value text-primary_red">46%</h3>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Women</h3>
+                                <h3 class="hits-value text-primary_orange">54%</h3>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="component">
+                    <div>
+                        <div class="flex justify-between w-full title-component items-center">
+                            [Segmentation name]
+                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                                <button class="table-dropdown">
+                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                </button>
+                                <ul class="dropdown-list text-base min-w-48">
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-pencil"></span>
+                                        Edit
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-refresh"></span>
+                                        Refresh
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-trash"></span>
+                                        Delete / Archive
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle-component text-base font-normal text-primary_orange">Created on 5/5/2024 10:20 AM</div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap text-sm font-medium text-input_border">
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Gender: Lorem</span>
+                        <span class="segmentation-filter">Age from: 18</span>
+                        <span class="segmentation-filter">Age to: 40</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h3 class="hits-title">Total hits</h3>
+                            <h3 class="hits-value text-primary_green">540</h3>
+                        </div>
+                        <div class="flex gap-4 text-right">
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Men</h3>
+                                <h3 class="hits-value text-primary_red">46%</h3>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Women</h3>
+                                <h3 class="hits-value text-primary_orange">54%</h3>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="component">
+                    <div>
+                        <div class="flex justify-between w-full title-component items-center">
+                            [Segmentation name]
+                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                                <button class="table-dropdown">
+                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                </button>
+                                <ul class="dropdown-list text-base min-w-48">
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-pencil"></span>
+                                        Edit
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-refresh"></span>
+                                        Refresh
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-trash"></span>
+                                        Delete / Archive
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle-component text-base font-normal text-primary_orange">Last run on 5/5/2024 10:20 AM</div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap text-sm font-medium text-input_border">
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Gender: Lorem</span>
+                        <span class="segmentation-filter">Age from: 18</span>
+                        <span class="segmentation-filter">Age to: 40</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h3 class="hits-title">Total hits</h3>
+                            <h3 class="hits-value text-primary_green">540</h3>
+                        </div>
+                        <div class="flex gap-4 text-right">
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Men</h3>
+                                <h3 class="hits-value text-primary_red">46%</h3>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Women</h3>
+                                <h3 class="hits-value text-primary_orange">54%</h3>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="component">
+                    <div>
+                        <div class="flex justify-between w-full title-component items-center">
+                            [Segmentation name]
+                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                                <button class="table-dropdown">
+                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                </button>
+                                <ul class="dropdown-list text-base min-w-48">
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-pencil"></span>
+                                        Edit
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-refresh"></span>
+                                        Refresh
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-trash"></span>
+                                        Delete / Archive
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle-component text-base font-normal text-primary_orange">Last run on 5/5/2024 10:20 AM</div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap text-sm font-medium text-input_border">
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Gender: Lorem</span>
+                        <span class="segmentation-filter">Age from: 18</span>
+                        <span class="segmentation-filter">Age to: 40</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h3 class="hits-title">Total hits</h3>
+                            <h3 class="hits-value text-primary_green">540</h3>
+                        </div>
+                        <div class="flex gap-4 text-right">
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Men</h3>
+                                <h3 class="hits-value text-primary_red">46%</h3>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Women</h3>
+                                <h3 class="hits-value text-primary_orange">54%</h3>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="component">
+                    <div>
+                        <div class="flex justify-between w-full title-component items-center">
+                            [Segmentation name]
+                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                                <button class="table-dropdown">
+                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                </button>
+                                <ul class="dropdown-list text-base min-w-48">
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-pencil"></span>
+                                        Edit
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-refresh"></span>
+                                        Refresh
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-trash"></span>
+                                        Delete / Archive
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle-component text-base font-normal text-primary_orange">Created on 5/5/2024 10:20 AM</div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Gender: Lorem</span>
+                        <span class="segmentation-filter">Age from: 18</span>
+                        <span class="segmentation-filter">Age to: 40</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h3 class="hits-title">Total hits</h3>
+                            <h3 class="hits-value text-primary_green">540</h3>
+                        </div>
+                        <div class="flex gap-4 text-right">
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Men</h3>
+                                <h3 class="hits-value text-primary_red">46%</h3>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Women</h3>
+                                <h3 class="hits-value text-primary_orange">54%</h3>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="component">
+                    <div>
+                        <div class="flex justify-between w-full title-component items-center">
+                            [Segmentation name]
+                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                                <button class="table-dropdown">
+                                    <img src="./assets/dots.svg" alt="Dropdown menu">
+                                </button>
+                                <ul class="dropdown-list text-base min-w-48">
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-pencil"></span>
+                                        Edit
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-refresh"></span>
+                                        Refresh
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <span class="base-icon icon-trash"></span>
+                                        Delete / Archive
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle-component text-base font-normal text-primary_orange">Last run on 5/5/2024 10:20 AM</div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap text-sm font-medium text-input_border">
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Text: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Product: Lorem</span>
+                        <span class="segmentation-filter">Gender: Lorem</span>
+                        <span class="segmentation-filter">Age from: 18</span>
+                        <span class="segmentation-filter">Age to: 40</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h3 class="hits-title">Total hits</h3>
+                            <h3 class="hits-value text-primary_green">540</h3>
+                        </div>
+                        <div class="flex gap-4 text-right">
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Men</h3>
+                                <h3 class="hits-value text-primary_red">46%</h3>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Women</h3>
+                                <h3 class="hits-value text-primary_orange">54%</h3>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./charts.js"></script>
+    <script src="./segmentation.js"></script>
+</body>
+
+</html>

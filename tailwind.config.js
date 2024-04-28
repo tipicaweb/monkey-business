@@ -31,7 +31,8 @@ export default {
           input_focus: '#00ECAE',
           input_invalid: '#F2B8B5',
           img_border: '#D9D9D9',
-          table_hover: "#E6E0E914"
+          table_hover: "#E6E0E914",
+          btn_border: '#79747E',
         }
       }
     },

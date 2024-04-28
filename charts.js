@@ -374,10 +374,12 @@ function renderColumnLabels(elementId, chart) {
     })
 }
 
-let events_dropdownBtn = document.getElementById('events-arrow');
+let navbar_dropdownBtns = document.querySelectorAll('.navbar-dropdown-btn');
 
-events_dropdownBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    
-    events_dropdownBtn.classList.toggle('active');
+navbar_dropdownBtns.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        btn.classList.toggle('active');
+    })
 })
