@@ -200,7 +200,7 @@
                         </div>
 
                         <div id="text-tab" class="details-tab active">
-                            <div class="w-1/2 flex gap-4 items-center">
+                            <div class="min-w-[50%] flex gap-4 items-center">
                                 <div class="input-container">
                                     <input placeholder=" " id="text_segmentation" class="component-input" value="[Text]" type="text">
                                     <label for="text_segmentation" class="component-label">Text segmentation</label>
@@ -210,7 +210,7 @@
                         </div>
 
                         <div id="age-tab" class="details-tab">
-                            <div class="w-1/2 flex gap-4 items-center">
+                            <div class="min-w-[50%] flex gap-4 items-center">
                                 <div class="input-container">
                                     <input placeholder=" " id="segmentation_ageFrom" class="component-input" value="21" type="number" min="0">
                                     <label for="segmentation_ageFrom" class="component-label">Age from</label>
@@ -233,11 +233,50 @@
                             </div>
                         </div>
                         
-                        <div id="city-tab" class="details-tab"></div>
+                        <div id="city-tab" class="details-tab">
+                            <div class="min-w-[50%] flex gap-4 items-center">
+                                <div id="selector-city" class="selector-container">
+                                    <div class="input-container">
+                                        <input type="text" placeholder=" " class="component-input" id="selector-input" autocomplete="off">
+                                        <label for="selector-input" class="component-label">City</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn bg-secondary_green h-10 min-w-20">Add</button>
+                            </div>
+                        </div>
                         
-                        <div id="municipality-tab" class="details-tab"></div>
+                        <div id="municipality-tab" class="details-tab">
+                            <div class="min-w-[50%] flex gap-4 items-center">
+                                <div id="selector-municipality" class="selector-container">
+                                    <div class="input-container">
+                                        <input type="text" placeholder=" " class="component-input" id="selector-input" autocomplete="off">
+                                        <label for="selector-input" class="component-label">Municipality</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn bg-secondary_green h-10 min-w-20">Add</button>
+                            </div>
+                        </div>
                         
-                        <div id="product-tab" class="details-tab"></div>
+                        <div id="product-tab" class="details-tab">
+                            <div class="min-w-[50%] flex gap-4 items-center">
+                                <div id="selector-product" class="selector-container">
+                                    <div class="input-container">
+                                        <input type="text" placeholder=" " class="component-input" id="selector-input" autocomplete="off">
+                                        <label for="selector-input" class="component-label">Product</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn bg-secondary_green h-10 min-w-20">Add</button>
+                            </div>
+                        </div>
                         
                         <div id="gender-tab" class="details-tab h-14 items-center">
                             <button class="btn h-10 px-6 active bg-transparent border border-btn_border text-primary_green">Men Added</button>

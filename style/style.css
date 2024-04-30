@@ -1091,6 +1091,24 @@
         }
     }
 
+    .option .device-check {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .option.active .device-check {
+        @apply bg-primary_green;
+        @apply border-0;
+        @apply h-5;
+        @apply w-5;
+
+        .check-icon {
+            @apply opacity-100;
+            @apply h-5;
+            @apply bg-[#3D4241];
+        }
+    }
 
 
     .device-check {
@@ -1426,6 +1444,44 @@
     .hits-value {
         @apply font-bold;
         @apply text-[1.75rem];
+    }
+    
+    .selector-container {
+        @apply relative;
+        @apply w-full;
+    }
+
+    .selector-container:has(.options.open) .input-icon .base-icon {
+        @apply -rotate-180;
+    }
+    
+    .options {
+        @apply w-full;
+        @apply bg-[#3D4241];
+        @apply text-terciary_gray;
+        @apply absolute;
+        z-index: 1;
+        @apply hidden;
+        @apply flex-col;
+        @apply py-2;
+        transition: all .3s ease 0s;
+    }
+    
+    .options.open {
+        @apply flex;
+    }
+    
+    .option {
+        @apply py-4;
+        @apply px-3;
+        @apply pl-4;
+        @apply cursor-pointer;
+        @apply flex;
+        @apply items-center;
+        @apply gap-3;
+        @apply text-base;
+        @apply font-normal;
+        @apply leading-none;
     }
 }
 
