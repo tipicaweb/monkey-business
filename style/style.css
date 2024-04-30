@@ -283,6 +283,7 @@
 
     .icon-add {
         mask: url('../assets/add_b.svg') center no-repeat;
+        mask-size: cover;
     }
 
     .icon-arrowD {
@@ -303,6 +304,7 @@
 
     .icon-payments {
         mask: url('../assets/payments.svg') center no-repeat;
+        mask-size: cover;
     }
 
     .icon-playlist {
@@ -329,6 +331,71 @@
 
     .icon-calendar {
         mask: url('../assets/calendar.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-person-outline {
+        mask: url('../assets/person_outline.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-search {
+        mask: url('../assets/search.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-dots {
+        mask: url('../assets/dots.svg') center no-repeat;
+        mask-size: cover;
+    }
+    
+    .icon-support {
+        mask: url('../assets/support.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-chart {
+        mask: url('../assets/insert_chart.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-person-search {
+        mask: url('../assets/person_search.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-refresh {
+        mask: url('../assets/refresh.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-pencil {
+        mask: url('../assets/border_color.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-trash {
+        mask: url('../assets/trash.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-close {
+        mask: url('../assets/close.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-ai {
+        mask: url('../assets/text_fields_alt.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-calendar-clock {
+        mask: url('../assets/calendar_clock.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-pin {
+        mask: url('../assets/pin_drop.svg') center no-repeat;
         mask-size: cover;
     }
 
@@ -360,6 +427,13 @@
         @apply w-10;
         @apply h-10;
         @apply bg-primary_green;
+    }
+
+    .filter-icon {
+        @apply base-icon;
+        @apply w-4;
+        @apply h-4;
+        @apply bg-input_border;
     }
 
     .main {
@@ -714,6 +788,10 @@
         }
     }
 
+    select.component-input {
+        cursor: pointer;
+    }
+
     .component-label {
         @apply absolute;
         @apply top-0;
@@ -944,6 +1022,8 @@
         @apply text-input_border;
         @apply pointer-events-none;
         @apply leading-normal;
+        @apply border-b-2;
+        @apply border-transparent;
 
         span {
             @apply bg-input_border;
@@ -952,7 +1032,6 @@
 
     .details-item.active .list-btn {
         @apply text-input_focus;
-        @apply border-b-2;
         @apply border-input_focus;
 
         span {
@@ -1012,6 +1091,24 @@
         }
     }
 
+    .option .device-check {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .option.active .device-check {
+        @apply bg-primary_green;
+        @apply border-0;
+        @apply h-5;
+        @apply w-5;
+
+        .check-icon {
+            @apply opacity-100;
+            @apply h-5;
+            @apply bg-[#3D4241];
+        }
+    }
 
 
     .device-check {
@@ -1323,6 +1420,69 @@
             "end-date end-date end-time event-btn"
             "marketable-from marketable-from marketable-from none";
     }
+
+    .segmentation-filter {
+        @apply border-primary_gray;
+        @apply flex;
+        @apply gap-2;
+        @apply items-center;
+        @apply border;
+        @apply px-4;
+        @apply py-1.5;
+        @apply rounded-lg;
+        @apply text-sm;
+        @apply font-medium; 
+        @apply text-input_border;
+    }
+
+    .hits-title {
+        @apply text-sm;
+        @apply opacity-85;
+        @apply font-medium;
+    }
+
+    .hits-value {
+        @apply font-bold;
+        @apply text-[1.75rem];
+    }
+    
+    .selector-container {
+        @apply relative;
+        @apply w-full;
+    }
+
+    .selector-container:has(.options.open) .input-icon .base-icon {
+        @apply -rotate-180;
+    }
+    
+    .options {
+        @apply w-full;
+        @apply bg-[#3D4241];
+        @apply text-terciary_gray;
+        @apply absolute;
+        z-index: 1;
+        @apply hidden;
+        @apply flex-col;
+        @apply py-2;
+        transition: all .3s ease 0s;
+    }
+    
+    .options.open {
+        @apply flex;
+    }
+    
+    .option {
+        @apply py-4;
+        @apply px-3;
+        @apply pl-4;
+        @apply cursor-pointer;
+        @apply flex;
+        @apply items-center;
+        @apply gap-3;
+        @apply text-base;
+        @apply font-normal;
+        @apply leading-none;
+    }
 }
 
 @layer utilities {
@@ -1361,6 +1521,10 @@
         }
         .sidebar {
             @apply w-[88px];
+        }
+
+        .sidebar-logo {
+            @apply justify-end;
         }
 
         .sidebar .mini-logo {

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Create segmentation - MonkeyBusiness</title>
+</head>
+
+<body class="body">
+    <nav class="sidebar">
+        <div class="sidebar-logo">
+            <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
+            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
+        </div>
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="./index.html" class="navbar-button">
+                    <span class="navbar-icon icon-grid"></span>Home
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-bolt"></span>Create express ticket
+                </a>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./event.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-event"></span>Event
+                    </div>
+                    <div class="navbar-dropdown-btn" id="events-arrow">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul id="events-dropdown" class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Present
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./future-events.html" class="navbar-button">
+                            <span class="navbar-icon icon-future"></span>Future
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Past
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./guests.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-person-outline"></span>Guests
+                    </div>
+                    <div class="navbar-dropdown-btn active">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-support"></span>Support
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./segmentation.html" class="navbar-button active">
+                            <span class="navbar-icon icon-groups"></span>Segmentation
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-chart"></span>Statistics
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-person-search"></span>Search
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-list"></span>Products
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-map"></span>Map
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-group"></span>Guest lists
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-campaign"></span>Marketing
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-fact"></span>My guests
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-settings"></span>Settings
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-logout"></span>Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex flex-col w-full">
+        <header class="header">
+            <div>
+                <span class="flex gap-4 text-secondary_gray font-normal">
+                    Guests
+                    <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
+                    Segmentation
+                    <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
+                    <span class="text-primary_orange font-normal">Create segmentation</span>
+                </span>
+                <h2 class="header-title">[Segmentation name]</h2>
+            </div>
+            <div class="header-navbar">
+                <a href="#" class="btn">
+                    <span class="btn-icon icon-add"></span>
+                    Create
+                </a>
+                <a href="#" class="flex justify-center items-center gap-10 pl-1 pr-3 rounded-full h-full bg-secondary_black text-white font-normal">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
+                    </div>
+                    <img src="./assets/arrow_down_w.svg" alt="Arrow down">
+                </a>
+
+                <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
+                    <img src="./assets/user_img.png" alt="User image">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="components-container flex flex-row">
+                <div class="flex flex-col gap-6 w-full">
+                    <article class="component col-span-3">
+                        <h3 class="title-component">Filters</h3>
+                        <div class="items-container">
+                            <ul class="details-list">
+                                <li class="details-item active" aria-valuetext="text-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-ai"></span>
+                                        Text segmentation
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="age-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-calendar-clock"></span>
+                                        Age
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="city-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-pin"></span>
+                                        City
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="municipality-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-map"></span>
+                                        Municipality
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="product-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-list"></span>
+                                        Product
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="gender-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-group"></span>
+                                        Gender
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="text-tab" class="details-tab active">
+                            <div class="min-w-[50%] flex gap-4 items-center">
+                                <div class="input-container">
+                                    <input placeholder=" " id="text_segmentation" class="component-input" value="[Text]" type="text">
+                                    <label for="text_segmentation" class="component-label">Text segmentation</label>
+                                </div>
+                                <button class="btn bg-secondary_green h-10 min-w-20">Add</button>
+                            </div>
+                        </div>
+
+                        <div id="age-tab" class="details-tab">
+                            <div class="min-w-[50%] flex gap-4 items-center">
+                                <div class="input-container">
+                                    <input placeholder=" " id="segmentation_ageFrom" class="component-input" value="21" type="number" min="0">
+                                    <label for="segmentation_ageFrom" class="component-label">Age from</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-secondary_green h-10 min-w-20">Add</button>
+
+                                <div class="input-container">
+                                    <input placeholder=" " id="segmentation_ageTo" class="component-input" value="40" type="number" min="0">
+                                    <label for="segmentation_ageTo" class="component-label">Age to</label>
+                                    <div class="input-icon">
+                                        <span class="icon-arrowD base-icon rotate-180"></span>
+                                        <span class="icon-arrowD base-icon"></span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-secondary_green h-10 min-w-20">Add</button>
+                            </div>
+                        </div>
+                        
+                        <div id="city-tab" class="details-tab">
+                            <div class="min-w-[50%] flex gap-4 items-center">
+                                <div id="selector-city" class="selector-container">
+                                    <div class="input-container">
+                                        <input type="text" placeholder=" " class="component-input" id="selector-input" autocomplete="off">
+                                        <label for="selector-input" class="component-label">City</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn bg-secondary_green h-10 min-w-20">Add</button>
+                            </div>
+                        </div>
+                        
+                        <div id="municipality-tab" class="details-tab">
+                            <div class="min-w-[50%] flex gap-4 items-center">
+                                <div id="selector-municipality" class="selector-container">
+                                    <div class="input-container">
+                                        <input type="text" placeholder=" " class="component-input" id="selector-input" autocomplete="off">
+                                        <label for="selector-input" class="component-label">Municipality</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn bg-secondary_green h-10 min-w-20">Add</button>
+                            </div>
+                        </div>
+                        
+                        <div id="product-tab" class="details-tab">
+                            <div class="min-w-[50%] flex gap-4 items-center">
+                                <div id="selector-product" class="selector-container">
+                                    <div class="input-container">
+                                        <input type="text" placeholder=" " class="component-input" id="selector-input" autocomplete="off">
+                                        <label for="selector-input" class="component-label">Product</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn bg-secondary_green h-10 min-w-20">Add</button>
+                            </div>
+                        </div>
+                        
+                        <div id="gender-tab" class="details-tab h-14 items-center">
+                            <button class="btn h-10 px-6 active bg-transparent border border-btn_border text-primary_green">Men Added</button>
+                            <button class="btn h-10 px-6 bg-secondary_green text-secondary_blue">Add Women</button>
+                        </div>
+                    </article>
+                    <article class="component col-span-3">
+                        <div class="flex justify-between items-center w-full title-component">
+                            Segmentation
+                            <div class="flex items-center justify-end gap-4">
+                                <button id="btn-cancel" class="btn-cancel">Cancel</button>
+                                <button id="btn-confirm" class="btn-confirm bg-primary_green text-text_hover">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="filters-list flex gap-2 mb-4 flex-wrap">
+                            <span class="segmentation-filter">Text: Lorem <span class="filter-icon icon-close"></span></span>
+                            <span class="segmentation-filter">Age from: 18 <span class="filter-icon icon-close"></span></span>
+                            <span class="segmentation-filter">Age to: 40 <span class="filter-icon icon-close"></span></span>
+                            <span class="segmentation-filter">City: Lorem <span class="filter-icon icon-close"></span></span>
+                            <span class="segmentation-filter">Product: Lorem <span class="filter-icon icon-close"></span></span>
+                            <span class="segmentation-filter">Gender: Men <span class="filter-icon icon-close"></span></span>
+                        </div>
+                        <div class="table-container bg-secondary_black bg-opacity-60 rounded-xl p-6">
+                            <div id="entries-found" class="entries-found flex flex-col justify-center items-center p-4 py-16">
+                                <h4 class="mb-2 text-4xl font-bold">432 entries</h4>
+                                <h6 class="mb-8 font-normal text-base">432 entries were found with your filters.</h6>
+
+                                <button id="show-entries" class="btn bg-primary_green h-10">Show entries</button>
+                            </div>
+
+                            <div id="no-entries" class="entries-found flex flex-col justify-center items-center p-4 py-16 hidden">
+                                <h4 class="mb-2 text-4xl font-bold">No entries</h4>
+                                <h6 class="mb-8 font-normal text-base">Try changing the filters to search for entries.</h6>
+                            </div>
+
+                            <div id="entries-list" class="table-component hidden">
+                                <div class="labels-table">
+                                    <div>Name</div>
+                                    <div>Gender</div>
+                                    <div>Age</div>
+                                    <div>Municipality</div>
+                                    <div>City</div>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>Lorem</div>
+                                        <div>48</div>
+                                        <div>Lorem</div>
+                                        <div>Lorem</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>Lorem</div>
+                                        <div>48</div>
+                                        <div>Lorem</div>
+                                        <div>Lorem</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>Lorem</div>
+                                        <div>48</div>
+                                        <div>Lorem</div>
+                                        <div>Lorem</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>Lorem</div>
+                                        <div>48</div>
+                                        <div>Lorem</div>
+                                        <div>Lorem</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>Lorem</div>
+                                        <div>48</div>
+                                        <div>Lorem</div>
+                                        <div>Lorem</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>Lorem</div>
+                                        <div>48</div>
+                                        <div>Lorem</div>
+                                        <div>Lorem</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>Lorem</div>
+                                        <div>48</div>
+                                        <div>Lorem</div>
+                                        <div>Lorem</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <article class="component min-w-[355px] max-h-96">
+                    <h3 class="title-component">Distribution</h3>
+                    <div class="flex justify-between items-end">
+                        <div class="flex flex-col">
+                            <h3 class="hits-title">Total hits</h3>
+                            <h3 class="hits-value text-primary_green text-6xl">540</h3>
+                        </div>
+                        <div class="flex gap-4 text-right">
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Men</h3>
+                                <h3 class="hits-value text-primary_red">46%</h3>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Women</h3>
+                                <h3 class="hits-value text-primary_orange">54%</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="distribution-chart"></div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./charts.js"></script>
+    <script src="./product-details.js"></script>
+    <script src="create-segmentation.js"></script>
+</body>
+
+</html>

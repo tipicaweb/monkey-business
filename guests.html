@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/output.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>Home - MonkeyBusiness</title>
+    <title>Guests - MonkeyBusiness</title>
 </head>
 
 <body class="body">
@@ -18,7 +18,7 @@
         </div>
         <ul class="navbar-list">
             <li class="navbar-item">
-                <a href="./index.html" class="navbar-button active">
+                <a href="./index.html" class="navbar-button">
                     <span class="navbar-icon icon-grid"></span>Home
                 </a>
             </li>
@@ -55,7 +55,7 @@
                 </ul>
             </li>
             <li class="navbar-item flex-col gap-1">
-                <a href="./guests.html" class="navbar-button gap-0">
+                <a href="./guests.html" class="navbar-button active gap-0">
                     <div class="dropdown-button">
                         <span class="navbar-icon icon-person-outline"></span>Guests
                     </div>
@@ -125,15 +125,8 @@
     </nav>
     <div class="flex flex-col w-full">
         <header class="header">
-            <h2 class="header-title">Home</h2>
+            <h2 class="header-title">Guests</h2>
             <div class="header-navbar">
-                <div class="select-container h-full">
-                    <span class="base-icon icon-calendar"></span>
-                    <select name="home-select" class="header-select" id="home-select">
-                        <option selected value="this-month">This month</option>
-                    </select>
-                    <span class="base-icon icon-arrowD"></span>
-                </div>
                 <a href="#" class="btn">
                     <span class="btn-icon icon-add"></span>
                     Create
@@ -152,53 +145,8 @@
             </div>
         </header>
         <main class="main">
-            <section class="components-container grid-cols-4">
-                <article class="component-with-icon">
-                    <div class="flex justify-between w-full title-component">
-                        <div class="logo-component">
-                            <span class="logo-icon icon-groups"></span>
-                        </div>
-                        <div class="flex items-end flex-col gap-2">
-                            <h3 class="chart-info increase">+12%</h3>
-                            <span class="text-sm font-medium opacity-85 text-right">from last month</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-start">
-                        <h3 class="text-5xl font-bold">193</h3>
-                        <h3 class="text-primary_green text-2xl font-bold">New guests</h3>
-                    </div>
-                </article>
-                <article class="component-with-icon">
-                    <div class="flex justify-between w-full title-component">
-                        <div class="logo-component">
-                            <span class="logo-icon icon-event"></span>
-                        </div>
-                        <div class="flex items-end flex-col gap-2">
-                            <h3 class="chart-info increase">+12%</h3>
-                            <span class="text-sm font-medium opacity-85 text-right">from last month</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-start">
-                        <h3 class="text-5xl font-bold">7</h3>
-                        <h3 class="text-primary_green text-2xl font-bold">New events</h3>
-                    </div>
-                </article>
-                <article class="component-with-icon">
-                    <div class="flex justify-between w-full title-component">
-                        <div class="logo-component">
-                            <span class="logo-icon icon-campaign"></span>
-                        </div>
-                        <div class="flex items-end flex-col gap-2">
-                            <h3 class="chart-info decrease">-3%</h3>
-                            <span class="text-sm font-medium opacity-85 text-right">from last month</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-start">
-                        <h3 class="text-5xl font-bold">26</h3>
-                        <h3 class="text-primary_green text-2xl font-bold">New campaigns</h3>
-                    </div>
-                </article>
-                <article class="component-with-icon">
+            <section class="components-container grid-cols-8">
+                <article class="component-with-icon col-start-1 col-end-3">
                     <div class="flex justify-between w-full title-component">
                         <div class="logo-component">
                             <span class="logo-icon icon-ticket"></span>
@@ -209,53 +157,125 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-start">
+                        <h3 class="text-5xl font-bold">15</h3>
+                        <h3 class="text-primary_green text-2xl font-bold">New tickets</h3>
+                    </div>
+                </article>
+                <article class="component-with-icon col-start-3 col-end-5">
+                    <div class="flex justify-between w-full title-component">
+                        <div class="logo-component">
+                            <span class="logo-icon icon-payments"></span>
+                        </div>
+                        <div class="flex items-end flex-col gap-2">
+                            <h3 class="chart-info increase">+12%</h3>
+                            <span class="text-sm font-medium opacity-85 text-right">from last month</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <h3 class="text-5xl font-bold">$545</h3>
+                        <h3 class="text-primary_green text-2xl font-bold">Average per guest</h3>
+                    </div>
+                </article>
+                <article class="component-with-icon col-start-5 col-end-7">
+                    <div class="flex justify-between w-full title-component">
+                        <div class="logo-component">
+                            <span class="logo-icon icon-ticket"></span>
+                        </div>
+                        <div class="flex items-end flex-col gap-2">
+                            <h3 class="chart-info decrease">-3%</h3>
+                            <span class="text-sm font-medium opacity-85 text-right">from last month</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <h3 class="text-5xl font-bold">591</h3>
+                        <h3 class="text-primary_green text-2xl font-bold">Avg. support tickets</h3>
+                    </div>
+                </article>
+                <article class="component-with-icon col-start-7 col-end-9">
+                    <div class="flex justify-between w-full title-component">
+                        <div class="logo-component">
+                            <span class="logo-icon icon-groups"></span>
+                        </div>
+                        <div class="flex items-end flex-col gap-2">
+                            <h3 class="chart-info increase">+12%</h3>
+                            <span class="text-sm font-medium opacity-85 text-right">from last month</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start">
                         <h3 class="text-5xl font-bold">1540</h3>
-                        <h3 class="text-primary_green text-2xl font-bold">Tickets sold</h3>
+                        <h3 class="text-primary_green text-2xl font-bold">VIP Monkey guest</h3>
                     </div>
                 </article>
 
-                <article class="component col-start-1 col-end-3">
+                <article class="component col-start-1 col-end-6">
                     <div class="flex justify-between w-full title-component">
-                        Income & profit
-                        <div class="flex justify-end gap-6" id="income-labels"></div>
+                        Statistics
+                        <div class="flex items-center justify-end gap-6">
+                            <span class="base-icon icon-arrowD -rotate-90"></span>
+                        </div>
                     </div>
-                    <div id="income-chart" class="w-full"></div>
+                    <div class="w-full h-full flex justify-center items-center">Pending</div>
                 </article>
 
-                <article class="component col-start-3 col-end-5">
+                <article class="component col-start-6 col-end-9">
                     <div class="flex justify-between w-full title-component">
-                        Call-to-action
+                        Segmentation
+                        <div class="flex items-center justify-end gap-6">
+                            <span class="base-icon icon-arrowD -rotate-90"></span>
+                        </div>
                     </div>
-                    <div class="action-list">
-                        <div class="action-item">
-                            <div class="action-logo red">
-                                <span class="base-icon icon-info"></span>
+                    <div class="table-container">
+                        <div class="table-component">
+                            <div class="labels-table">
+                                <div>Name</div>
+                                <div>Hits</div>
+                                <div>Men</div>
+                                <div class="w-16">Women</div>
                             </div>
-                            <div class="flex flex-col w-full">
-                                <span class="action-event">[Event name]</span>
-                                <span class="text-base font-normal">Event with missing information. Please go to the event details to complete it.</span>
+                            <div class="table-body">
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                    <div>Hits</div>
+                                    <div>46%</div>
+                                    <div>54%</div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                    <div>Hits</div>
+                                    <div>46%</div>
+                                    <div>54%</div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                    <div>Hits</div>
+                                    <div>46%</div>
+                                    <div>54%</div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                    <div>Hits</div>
+                                    <div>46%</div>
+                                    <div>54%</div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                    <div>Hits</div>
+                                    <div>46%</div>
+                                    <div>54%</div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                    <div>Hits</div>
+                                    <div>46%</div>
+                                    <div>54%</div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                    <div>Hits</div>
+                                    <div>46%</div>
+                                    <div>54%</div>
+                                </div>
                             </div>
-                            <button class="btn-secondary">Event details</button>
-                        </div>
-                        <div class="action-item">
-                            <div class="action-logo orange">
-                                <span class="base-icon icon-campaign"></span>
-                            </div>
-                            <div class="flex flex-col w-full">
-                                <span class="action-event">[Event name]</span>
-                                <span class="text-base font-normal">This event has no marketing campaign. Create a campaign to boost ticket sales.</span>
-                            </div>
-                            <button class="btn-secondary">Create</button>
-                        </div>
-                        <div class="action-item">
-                            <div class="action-logo green">
-                                <span class="base-icon icon-campaign"></span>
-                            </div>
-                            <div class="flex flex-col w-full">
-                                <span class="action-event">[Event name]</span>
-                                <span class="text-base font-normal">This event is getting closer, there are still 35% tickets left to sell. Create marketing campaign.</span>
-                            </div>
-                            <button class="btn-secondary">Create</button>
                         </div>
                     </div>
                 </article>
@@ -265,7 +285,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./charts.js"></script>
-    <script src="./index.js"></script>
 </body>
 
 </html>
