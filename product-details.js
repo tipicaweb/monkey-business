@@ -18,3 +18,18 @@ function setTab(targetId) {
 
     document.querySelector(`#${targetId}`).classList.add('active');
 }
+
+const switchInput = document.querySelector('#switch-input');
+
+const ageFrom = document.querySelector('#product_ageForm');
+const ageTo = document.querySelector('#product_ageTo');
+
+switchInput.addEventListener('click', (e) => {
+    if(switchInput.checked) {
+        ageFrom.disabled = true;
+        ageTo.disabled = true;
+    } else {
+        ageFrom.disabled = false;
+        ageTo.disabled = false;
+    }
+})

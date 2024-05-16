@@ -2506,10 +2506,22 @@ select.component-input {
   gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: 
-            "location location age-from age-to"
+            "age-restriction age-restriction age-from age-to"
             "start-date start-date start-time event-btn"
             "end-date end-date end-time event-btn"
             "marketable-from marketable-from marketable-from none";
+}
+
+.create-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: 
+            "name name name name description description description description"
+            "location location location location description description description description"
+            "age-restriction age-restriction age-from age-to description description description description"
+            "start-date start-date start-time event-btn none none none none"
+            "end-date end-date end-time event-btn none none none none";
 }
 
 .segmentation-filter {
@@ -4363,6 +4375,11 @@ select.component-input {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-primary_red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 105 135 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-15 {
