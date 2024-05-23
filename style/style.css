@@ -91,7 +91,7 @@
         }
 
         &.active {
-            @apply bg-secondary_green;
+            @apply bg-primary_green;
             @apply text-text_hover;
     
             .navbar-icon {
@@ -174,7 +174,6 @@
         @apply border-none;
         @apply text-[#FEF7FF]; 
         @apply font-normal;
-        @apply text-sm;
         @apply px-12;
         @apply pr-8;
         @apply h-full;
@@ -183,6 +182,10 @@
         @apply outline-none;
         @apply leading-normal;
         @apply min-w-44;
+
+        &:hover {
+            @apply bg-secondary_black_hover;
+        }
     }
 
     .btn {
@@ -203,11 +206,19 @@
             @apply bg-[#E0E9E71F];
             @apply text-[#E0E9E761];
         }
+        &:disabled:hover {
+            @apply bg-[#E0E9E71F];
+            @apply text-[#E0E9E761];
+        }
+
+        &:hover {
+            @apply bg-[#00FFBF];
+        }
     }
 
     .btn-secondary {
-        @apply bg-secondary_green;
-        @apply text-secondary_blue;
+        @apply bg-btn_secondary_bg;
+        @apply text-btn_secondary;
         @apply py-2.5;
         @apply text-sm;
         @apply rounded-full;
@@ -215,6 +226,10 @@
         @apply text-nowrap;
         @apply h-10;
         @apply text-center;
+    }
+
+    .btn-secondary:hover {
+        @apply bg-btn_secondary_bg_hover;
     }
 
     .icon-grid {
@@ -753,6 +768,7 @@
         @apply text-white;
         @apply bg-input_bg;
         @apply text-base;
+        @apply !leading-4;
         @apply px-4;
         @apply pt-7;
         @apply pb-2;
@@ -1181,8 +1197,8 @@
         @apply flex;
         @apply justify-center;
         @apply items-center;
-        @apply bg-secondary_green;
-        @apply text-primary_black;
+        @apply bg-btn_secondary_bg;
+        @apply text-btn_secondary;
         @apply h-10;
         @apply pl-6;
         @apply pr-4;
@@ -1194,12 +1210,17 @@
         @apply leading-normal;
     }
 
+    .add-btn:hover {
+        @apply bg-btn_secondary_bg_hover;
+    }
+
     .add-btn .base-icon {
         @apply pointer-events-none;
+        @apply bg-btn_secondary;
     }
 
     .add-btn.active {
-        @apply bg-primary_green;
+        @apply bg-btn_secondary_bg_active;
 
         .base-icon {
             @apply -rotate-180;
@@ -1303,7 +1324,7 @@
     .modal-container {
         @apply bg-primary_black;
         @apply w-96;
-        @apply rounded-lg;
+        @apply rounded-3xl;
         @apply p-6;
         @apply text-white;
         @apply flex;
@@ -1329,21 +1350,29 @@
         @apply gap-2;
     }
 
-    .btn-cancel {
+    .btn-text {
         @apply btn;
         @apply bg-transparent;
         @apply text-primary_green;
         @apply w-[7.5rem];
         @apply h-10;
         @apply text-sm;
+
+        &:hover {
+            @apply bg-terciary_black;
+        }
     }
 
-    .btn-confirm {
+    .btn-delete {
         @apply btn;
         @apply bg-primary_red;
         @apply w-[7.5rem];
         @apply h-10;
         @apply text-sm;
+
+        &:hover {
+            @apply bg-[#E86987];
+        }
     }
 
     .event-info {
@@ -1400,6 +1429,7 @@
         @apply border-2;
         @apply border-dashed;
         @apply border-img_border;
+        @apply border-opacity-35;
         @apply w-full;
         @apply h-full;
         @apply max-w-[518px];
@@ -1500,11 +1530,11 @@
 @layer utilities {
     @media (max-width: 1800px) and (min-width: 1700px) {
         html {
-            font-size: 15px;
+            font-size: 16px;
         }
     }
 
-    @media (max-width: 1700px) {
+    @media (max-width: 1280px) {
         html {
             font-size: 14px;
         }

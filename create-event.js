@@ -12,7 +12,7 @@ saveBtn.addEventListener('click', event => {
         title: 'Event created!',
         text: 'The event was created successfully.',
         background: '#181A19',
-        backdrop: '#262928',
+        backdrop: '#FFFFFF1a',
         customClass: {
             icon: '!border-0 !p-8',
             title: '!text-white !text-2xl !font-bold',
@@ -38,7 +38,7 @@ cancelBtn.addEventListener('click', event => {
         title: 'An error ocurred!',
         text: 'This event was not created. Please try again.',
         background: '#181A19',
-        backdrop: '#262928',
+        backdrop: '#FFFFFF1a',
         customClass: {
             icon: '!border-0 !p-8',
             title: '!text-white !text-2xl !font-bold',
