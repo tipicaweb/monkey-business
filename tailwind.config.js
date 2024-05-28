@@ -39,6 +39,7 @@ export default {
           btn_secondary_bg_hover: '#516A60',
           btn_secondary_bg_active: '#67887B',
           btn_secondary: '#DEF8EE',
+          dropdown_hover: '#4A5452'
         }
       }
     },

@@ -125,14 +125,14 @@
     </nav>
     <div class="flex flex-col w-full">
         <header class="header">
-            <div>
-                <span class="flex gap-4 text-secondary_gray font-normal">
-                    Event
+            <div class="flex flex-col gap-1">
+                <div class="flex gap-4">
+                    <a href="./event.html" class="breadcrumb-tag">Event</a>
                     <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
-                    Future events
+                    <a href="./future-events.html" class="breadcrumb-tag">Future events</a>
                     <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
-                    <strong class="text-primary_orange font-normal">[Event name]</strong>
-                </span>
+                    <h6 class="breadcrumb-main">[Event name]</h6>
+                </div>
                 <h2 class="header-title">[Event name]</h2>
             </div>
             <div class="header-navbar">
@@ -160,7 +160,7 @@
                     <div class="event-component">
                         <div class="input-container h-full">                                   
                             <label for="event_description" class="component-label">Description</label>
-                            <textarea class="component-input" name="event_description" id="event_description" rows="5" disabled>daadgsdagsadgds</textarea>
+                            <textarea class="component-input" name="event_description" id="event_description" rows="5" disabled>[Event description]</textarea>
                         </div>
                         <div class="flex gap-8 w-full h-full">
                             <div class="flex flex-col w-1/2 h-full gap-8">

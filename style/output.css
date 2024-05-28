@@ -907,7 +907,8 @@ th,
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   border-radius: 9999px;
-  height: 100%;
+  height: 2.5rem;
+  width: 7.5rem;
   --tw-text-opacity: 1;
   color: rgb(41 41 38 / var(--tw-text-opacity));
   font-weight: 500;
@@ -1870,6 +1871,7 @@ select.component-input {
   left: 0px;
   top: 0px;
   opacity: 0;
+  cursor: pointer;
 }
 
 .switch-span {
@@ -1898,6 +1900,16 @@ select.component-input {
   pointer-events: none;
   margin: 0.5rem;
   transition: all .3s ease 0s;
+}
+
+.switch-input:hover ~ .switch-span {
+  --tw-border-opacity: 1;
+  border-color: rgb(191 201 194 / var(--tw-border-opacity));
+}
+
+.switch-input:hover ~ .switch-span::after {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 201 194 / var(--tw-bg-opacity));
 }
 
 .switch-input:checked ~ .switch-span {
@@ -2420,7 +2432,6 @@ select.component-input {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   border-radius: 9999px;
-  height: 100%;
   color: rgb(41 41 38 / var(--tw-text-opacity));
   font-weight: 500;
   line-height: 1.5;
@@ -2445,7 +2456,6 @@ select.component-input {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   border-radius: 9999px;
-  height: 100%;
   --tw-text-opacity: 1;
   color: rgb(41 41 38 / var(--tw-text-opacity));
   font-weight: 500;
@@ -2526,9 +2536,9 @@ select.component-input {
   border-color: rgb(217 217 217 / var(--tw-border-opacity));
   --tw-border-opacity: 0.35;
   width: 100%;
-  height: 100%;
   max-width: 518px;
   max-height: 518px;
+  aspect-ratio: 1 / 1;
   &:has(img) {
     border-style: solid;
   }
@@ -2773,6 +2783,87 @@ select.component-input {
 
 .option {
   line-height: 1;
+}
+
+.\!option {
+  transition: all .3s ease 0s !important;
+   {
+    --tw-bg-opacity: 1;
+    background-color: rgb(74 84 82 / var(--tw-bg-opacity));
+  }
+}
+
+.option {
+  transition: all .3s ease 0s;
+  &:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(74 84 82 / var(--tw-bg-opacity));
+  }
+}
+
+.btn-gender {
+  --tw-bg-opacity: 1;
+  background-color: rgb(68 88 80 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(222 248 238 / var(--tw-text-opacity));
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 9999px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-wrap: nowrap;
+  height: 2.5rem;
+  text-align: center;
+}
+
+.btn-gender:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(81 106 96 / var(--tw-bg-opacity));
+}
+
+.btn-gender {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(68 88 80 / var(--tw-border-opacity));
+  height: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  &.active {
+    background-color: transparent;
+  }
+  &.active {
+    --tw-border-opacity: 1;
+    border-color: rgb(121 116 126 / var(--tw-border-opacity));
+  }
+  &.active {
+    --tw-text-opacity: 1;
+    color: rgb(0 235 176 / var(--tw-text-opacity));
+  }
+}
+
+.breadcrumb-tag {
+  --tw-text-opacity: 1;
+  color: rgb(191 201 194 / var(--tw-text-opacity));
+  font-weight: 400;
+  transition: all .3s ease 0s;
+  &:hover {
+    --tw-text-opacity: 1;
+    color: rgb(224 233 231 / var(--tw-text-opacity));
+  }
+}
+
+.breadcrumb-main {
+  --tw-text-opacity: 1;
+  color: rgb(255 166 94 / var(--tw-text-opacity));
+  font-weight: 400;
+  cursor: default;
+  transition: all .3s ease 0s;
+  &:hover {
+    --tw-text-opacity: 1;
+    color: rgb(253 186 116 / var(--tw-text-opacity));
+  }
 }
 
 .sr-only {
@@ -3835,10 +3926,6 @@ select.component-input {
 
 .gap-2 {
   gap: 0.5rem;
-}
-
-.gap-24 {
-  gap: 6rem;
 }
 
 .gap-3 {
@@ -5223,6 +5310,17 @@ select.component-input {
   html {
     font-size: 14px;
   }
+
+  .create-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+                "name name name name"
+                "description description description description"
+                "location location location location"
+                "age-restriction age-restriction age-from age-to"
+                "start-date start-date start-time event-btn"
+                "end-date end-date end-time event-btn";
+  }
 }
 
 @media (max-width: 1540px) {
@@ -5235,7 +5333,8 @@ select.component-input {
   .component.col-start-1,
         .component.col-start-2,
         .component.col-start-3,
-        .component.col-start-5 {
+        .component.col-start-5,
+        .component.col-start-6 {
     grid-column: 1 / -1;
   }
 
@@ -5296,16 +5395,12 @@ select.component-input {
   }
 
   .inputs-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-                "location location"
-                "age-from age-to"
-                "start-date start-time"
-                "end-date end-time"
-                "marketable-from marketable-from"
-                "event-btn event-btn"
-                "event-btn event-btn";
+                "age-restriction age-restriction age-from age-to"
+                "start-date start-date start-time event-btn"
+                "end-date end-date end-time event-btn"
+                "marketable-from marketable-from marketable-from none";
   }
 }
 

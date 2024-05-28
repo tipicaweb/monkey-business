@@ -188,3 +188,13 @@ const selectorProduct = new Selector(document.getElementById('selector-product')
 ]);
 
 selectorProduct.renderSelector();
+
+const btnsGender = document.querySelectorAll('.btn-gender');
+
+btnsGender.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        e.target.classList.toggle('active');
+    })
+})

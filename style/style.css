@@ -196,7 +196,8 @@
         @apply bg-primary_green;
         @apply px-5;
         @apply rounded-full;
-        @apply h-full;
+        @apply h-10;
+        @apply w-[7.5rem];
         @apply text-text_hover;
         @apply font-medium;
         @apply text-sm;
@@ -739,7 +740,7 @@
         @apply transition-all;
 
         &:hover {
-            @apply bg-[#4A5452];
+            @apply bg-dropdown_hover;
         }
     }
 
@@ -927,6 +928,7 @@
         @apply left-0;
         @apply top-0;
         @apply opacity-0;
+        @apply cursor-pointer;
     }
     
     .switch-span {
@@ -952,6 +954,14 @@
         @apply pointer-events-none;
         @apply m-2;
         transition: all .3s ease 0s;
+    }
+
+    .switch-input:hover ~ .switch-span {
+        @apply border-secondary_gray;
+    }
+
+    .switch-input:hover ~ .switch-span::after {
+        @apply bg-secondary_gray;
     }
     
     .switch-input:checked ~ .switch-span {
@@ -1431,9 +1441,9 @@
         @apply border-img_border;
         @apply border-opacity-35;
         @apply w-full;
-        @apply h-full;
         @apply max-w-[518px];
         @apply max-h-[518px];
+        @apply aspect-square;
 
         &:has(img) {
             @apply border-solid;
@@ -1524,6 +1534,46 @@
         @apply text-base;
         @apply font-normal;
         @apply leading-none;
+        transition: all .3s ease 0s;
+
+        &:hover {
+            @apply bg-dropdown_hover;
+        }
+    }
+
+    .btn-gender {
+        @apply btn-secondary;
+        @apply border;
+        @apply border-btn_secondary_bg;
+        @apply h-10;
+        @apply px-6;
+
+        &.active {
+            @apply bg-transparent;
+            @apply border-btn_border;
+            @apply text-primary_green;
+        }
+    }
+
+    .breadcrumb-tag {
+        @apply text-secondary_gray;
+        @apply font-normal;
+        transition: all .3s ease 0s;
+
+        &:hover {
+            @apply text-terciary_gray;
+        }
+    }
+
+    .breadcrumb-main {
+        @apply text-primary_orange;
+        @apply font-normal;
+        @apply cursor-default;
+        transition: all .3s ease 0s;
+
+        &:hover {
+            @apply text-orange-300;
+        }
     }
 }
 
@@ -1538,6 +1588,17 @@
         html {
             font-size: 14px;
         }
+
+        .create-grid {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: 
+                "name name name name"
+                "description description description description"
+                "location location location location"
+                "age-restriction age-restriction age-from age-to"
+                "start-date start-date start-time event-btn"
+                "end-date end-date end-time event-btn";
+        }
     }
 
     @media (max-width: 1540px) {
@@ -1550,7 +1611,8 @@
         .component.col-start-1,
         .component.col-start-2,
         .component.col-start-3,
-        .component.col-start-5 {
+        .component.col-start-5,
+        .component.col-start-6 {
             @apply col-span-full;
         }
 
@@ -1610,16 +1672,12 @@
         }
 
         .inputs-grid {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(7, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-template-areas: 
-                "location location"
-                "age-from age-to"
-                "start-date start-time"
-                "end-date end-time"
-                "marketable-from marketable-from"
-                "event-btn event-btn"
-                "event-btn event-btn";
+                "age-restriction age-restriction age-from age-to"
+                "start-date start-date start-time event-btn"
+                "end-date end-date end-time event-btn"
+                "marketable-from marketable-from marketable-from none";
         }
     }
 }

@@ -125,14 +125,14 @@
     </nav>
     <div class="flex flex-col w-full">
         <header class="header">
-            <div>
-                <span class="flex gap-4 text-secondary_gray font-normal">
-                    Guests
+            <div class="flex flex-col gap-1">
+                <div class="flex gap-4">
+                    <a href="./guests.html" class="breadcrumb-tag">Guests</a>
                     <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
-                    Segmentation
+                    <a href="./segmentation.html" class="breadcrumb-tag">Segmentation</a>
                     <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
-                    <span class="text-primary_orange font-normal">Create segmentation</span>
-                </span>
+                    <h6 class="breadcrumb-main">Create segmentation</h6>
+                </div>
                 <h2 class="header-title">[Segmentation name]</h2>
             </div>
             <div class="header-navbar">
@@ -279,8 +279,8 @@
                         </div>
                         
                         <div id="gender-tab" class="details-tab h-14 items-center">
-                            <button class="btn h-10 px-6 active">Men Added</button>
-                            <button class="btn-secondary h-10 px-6 ">Add Women</button>
+                            <button class="btn-gender active">Men Added</button>
+                            <button class="btn-gender">Add Women</button>
                         </div>
                     </article>
                     <article class="component col-span-3">

@@ -125,12 +125,12 @@
     </nav>
     <div class="flex flex-col w-full">
         <header class="header">
-            <div>
-                <span class="flex gap-4 text-secondary_gray font-normal">
-                    Event
+            <div class="flex flex-col gap-1">
+                <div class="flex gap-4">
+                    <a href="./event.html" class="breadcrumb-tag">Event</a>
                     <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
-                    <span class="text-primary_orange font-normal">Create event</span>
-                </span>
+                    <h6 class="breadcrumb-main">Create event</h6>
+                </div>
                 <h2 class="header-title">Create event</h2>
             </div>
             <div class="header-navbar">
@@ -152,8 +152,8 @@
             </div>
         </header>
         <main class="main">
-            <section class="components-container">
-                <article class="component">
+            <section class="components-container flex flex-col h-full">
+                <article class="component h-full">
                     <h3 class="title-component">Event details</h3>
                     <div class="create-grid">
                         <div class="input-container" style="grid-area: name;">
@@ -225,7 +225,7 @@
                         </div>
                     </div>
                 </article>
-                <div class="flex gap-4 justify-center items-center text-sm font-medium col-span-full">
+                <div class="flex gap-4 justify-center items-center text-sm font-medium col-span-full h-10">
                     <button class="btn-text py-2.5 w-32" id="cancel-btn">Cancel</button>
                     <button class="btn py-2.5 w-32" id="save-btn">Create</button>
                 </div>
