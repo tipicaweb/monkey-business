@@ -415,6 +415,11 @@
         mask-size: cover;
     }
 
+    .icon-check-circle {
+        mask: url('../assets/check_circle.svg') center no-repeat;
+        mask-size: cover;
+    }
+
     .navbar-icon {
         @apply flex;
         @apply w-[24px];
@@ -511,7 +516,7 @@
                 @apply top-0;
                 @apply right-3;
                 @apply h-full;
-                @apply bg-[#FEF7FF];
+                @apply bg-primary_gray;
                 @apply w-2.5;
                 mask-size: 16px;
                 @apply pointer-events-none;
@@ -535,7 +540,8 @@
         }
     }
     
-    .select-container:hover {
+    .select-container:hover,
+    .select-container:has(.component-select:focus) {
         .component-select {
             @apply text-white;
             @apply border-white;
@@ -911,6 +917,7 @@
         @apply rounded-3xl;
         @apply text-sm;
         @apply font-medium;
+        @apply p-4;
     }
 
     .switch-container {
@@ -1029,6 +1036,7 @@
         @apply flex;
         @apply justify-center;
         @apply items-center;
+        @apply break-keep;
 
         &:hover .list-btn {
             @apply text-white;
@@ -1050,7 +1058,8 @@
         @apply leading-normal;
         @apply border-b-2;
         @apply border-transparent;
-
+        white-space: nowrap;
+        
         span {
             @apply bg-input_border;
         }
@@ -1575,6 +1584,22 @@
             @apply text-orange-300;
         }
     }
+
+    .modal-success_container {
+        @apply bg-primary_green;
+        @apply bg-opacity-15;
+        @apply p-8;
+        @apply my-8;
+        @apply rounded-[50px];
+    }
+
+    .modal-success_icon {
+        @apply flex;
+        @apply w-20;
+        @apply h-20;
+        @apply bg-primary_green;
+        @apply icon-check-circle;
+    }
 }
 
 @layer utilities {
@@ -1598,6 +1623,14 @@
                 "age-restriction age-restriction age-from age-to"
                 "start-date start-date start-time event-btn"
                 "end-date end-date end-time event-btn";
+        }
+
+        #validity-tab {
+            @apply flex-col;
+
+            & > div {
+                @apply w-full;
+            }
         }
     }
 

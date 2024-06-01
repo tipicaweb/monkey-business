@@ -1367,7 +1367,7 @@ th,
     }
     .base-icon {
       --tw-bg-opacity: 1;
-      background-color: rgb(254 247 255 / var(--tw-bg-opacity));
+      background-color: rgb(143 153 151 / var(--tw-bg-opacity));
     }
     .base-icon {
       width: 0.625rem;
@@ -1407,7 +1407,8 @@ th,
   }
 }
 
-.select-container:hover {
+.select-container:hover,
+    .select-container:has(.component-select:focus) {
   .component-select {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1854,6 +1855,7 @@ select.component-input {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
+  padding: 1rem;
 }
 
 .switch-container {
@@ -1982,6 +1984,7 @@ select.component-input {
   display: flex;
   justify-content: center;
   align-items: center;
+  word-break: keep-all;
   &:hover .list-btn {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2007,6 +2010,7 @@ select.component-input {
   line-height: 1.5;
   border-bottom-width: 2px;
   border-color: transparent;
+  white-space: nowrap;
   span {
     --tw-bg-opacity: 1;
     background-color: rgb(196 208 205 / var(--tw-bg-opacity));
@@ -2866,6 +2870,27 @@ select.component-input {
   }
 }
 
+.modal-success_container {
+  background-color: rgb(0 235 176 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.15;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 50px;
+}
+
+.modal-success_icon {
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 235 176 / var(--tw-bg-opacity));
+  -webkit-mask: url('../assets/check_circle.svg') center no-repeat;
+          mask: url('../assets/check_circle.svg') center no-repeat;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -3312,6 +3337,10 @@ select.component-input {
 
 .w-\[weird-and-invalid\] {
   width: weird-and-invalid;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .w-full {
@@ -4261,6 +4290,10 @@ select.component-input {
   word-break: keep-all;
 }
 
+.\!rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
 .\!rounded-full {
   border-radius: 9999px !important;
 }
@@ -4618,6 +4651,10 @@ select.component-input {
      object-fit: scale-down;
 }
 
+.\!p-10 {
+  padding: 2.5rem !important;
+}
+
 .\!p-8 {
   padding: 2rem !important;
 }
@@ -4943,11 +4980,6 @@ select.component-input {
   color: rgb(232 148 168 / var(--tw-text-opacity));
 }
 
-.text-secondary_gray {
-  --tw-text-opacity: 1;
-  color: rgb(191 201 194 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -5239,6 +5271,12 @@ select.component-input {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.\!backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px) !important;
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia) !important;
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia) !important;
+}
+
 .backdrop-grayscale {
   --tw-backdrop-grayscale: grayscale(100%);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -5320,6 +5358,13 @@ select.component-input {
                 "age-restriction age-restriction age-from age-to"
                 "start-date start-date start-time event-btn"
                 "end-date end-date end-time event-btn";
+  }
+
+  #validity-tab {
+    flex-direction: column;
+    & > div {
+      width: 100%;
+    }
   }
 }
 
