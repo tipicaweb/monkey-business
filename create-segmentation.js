@@ -1,3 +1,5 @@
+import Modal from './modals.js';
+
 const distributionChart = createColumn(['0-17', '18-24', '25-34', '35-49', '50-64', '+65'], [
     {
         name: "Men",
@@ -9,52 +11,34 @@ const distributionChart = createColumn(['0-17', '18-24', '25-34', '35-49', '50-6
     }
 ], ["#E86987", "#FFA65E"], "distribution-chart", '60%');
 
-let cancelBtn = document.getElementById('btn-cancel');
 
-cancelBtn.addEventListener('click', (event) => {
-    event.preventDefault();
+const cancelModal = new Modal("Cancel segmentation?",
+                              "Are you sure you want to cancel this segmentation?",
+                              "",
+                              "Cancel",
+                              "Back",
+                              false,
+                              "",
+                              "red",
+                              navigateToSegmentation);
+cancelModal.createModal();
+cancelModal.addListener('#btn-cancel');
 
-    Swal.fire({
-        title: 'Cancel segmentation?',
-        cancelButtonText: 'Back',
-        confirmButtonText: 'Cancel',
-        showCancelButton: true,
-        reverseButtons: true,
-        text: 'Are you sure you want to cancel this segmentation?',
-        background: '#181A19',
-        backdrop: '#262928',
-        customClass: {
-            title: '!text-left !text-white !text-2xl !font-bold',
-            htmlContainer: '!text-white !opacity-85 !text-md !m-0 !p-[21px] !text-left',
-            confirmButton: '!py-2.5 !w-32 !bg-primary_red !text-text_hover !rounded-full !border-none !bg-none !shadow-none',
-            cancelButton: '!appearance-none !text-primary_green !bg-transparent !py-2.5 !w-32 !rounded-full'
-        },
-    })
-})
+const createModal = new Modal("Segmentation created!",
+                               "Your segmentation was created successfully.",
+                               "",
+                               "Continue",
+                               "",
+                               true,
+                               "success",
+                               "green",
+                               navigateToSegmentation);
+createModal.createModal();
+createModal.addListener('#btn-confirm');
 
-let confirmBtn = document.getElementById('btn-confirm');
-
-confirmBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    Swal.fire({
-        iconHtml: `<div class="bg-primary_green bg-opacity-15 p-8 my-8 rounded-[50px]">
-                        <span class="flex w-20 h-20 bg-primary_green icon-task"></span>
-                    </div>`,
-        confirmButtonText: 'Continue',
-        showCancelButton: false,
-        title: 'Segmentation created!',
-        text: 'Your segmentation was created successfully.',
-        background: '#181A19',
-        backdrop: '#262928',
-        customClass: {
-            icon: '!border-0 !p-8',
-            title: '!text-white !text-2xl !font-bold',
-            htmlContainer: '!text-white !opacity-85 !text-md !m-0 !p-[21px] !pt-1',
-            confirmButton: '!py-2.5 !w-32 !bg-primary_green !text-text_hover !rounded-full !border-none !bg-none !shadow-none',
-        },
-    })
-})
+function navigateToSegmentation(result) {
+    if(result.isConfirmed) window.location = 'segmentation.html'
+}
 
 let entriesFound = document.getElementById('entries-found');
 let showEntries = document.getElementById('show-entries');

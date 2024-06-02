@@ -9,55 +9,27 @@ const distributionChart = createColumn(['0-17', '18-24', '25-34', '35-49', '50-6
     }
 ], ["#E86987", "#FFA65E"], "distribution-chart", '60%');
 
-let cancelBtn = document.getElementById('btn-cancel');
+const cancelModal = new Modal("Cancel segmentation?",
+                              "Are you sure you want to cancel this segmentation?",
+                              "",
+                              "Cancel",
+                              "Back",
+                              false,
+                              "",
+                              "red");
+cancelModal.createModal();
+cancelModal.addListener('#btn-cancel');
 
-cancelBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    Swal.fire({
-        title: 'Cancel segmentation?',
-        cancelButtonText: 'Back',
-        confirmButtonText: 'Cancel',
-        showCancelButton: true,
-        reverseButtons: true,
-        text: 'Are you sure you want to cancel this segmentation?',
-        background: '#181A19',
-        backdrop: '#ffffff16',
-        customClass: {
-            container: '!backdrop-blur-sm',
-            title: '!text-left !text-white !text-2xl !font-bold',
-            htmlContainer: '!text-white !opacity-85 !text-md !m-0 !p-[21px] !text-left',
-            confirmButton: '!py-2.5 !w-32 !bg-primary_red !text-text_hover !rounded-full !border-none !bg-none !shadow-none',
-            cancelButton: '!appearance-none !text-primary_green !bg-transparent !py-2.5 !w-32 !rounded-full'
-        },
-    })
-})
-
-let confirmBtn = document.getElementById('btn-confirm');
-
-confirmBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    Swal.fire({
-        iconHtml: `<div class="modal-success_container">
-                        <span class="modal-success_icon"></span>
-                    </div>`,
-        confirmButtonText: 'Continue',
-        showCancelButton: false,
-        title: 'Segmentation edited!',
-        text: 'Your segmentation was edited successfully.',
-        background: '#181A19',
-        backdrop: '#ffffff16',
-        customClass: {
-            container: '!backdrop-blur-sm',
-            icon: '!border-0 !p-8',
-            popup: '!rounded-3xl !p-10',
-            title: '!text-white !text-2xl !font-bold',
-            htmlContainer: '!text-white !opacity-85 !text-md !m-0 !p-[21px] !pt-1',
-            confirmButton: '!py-2.5 !w-32 !bg-primary_green !text-text_hover !rounded-full !border-none !bg-none !shadow-none',
-        },
-    })
-})
+const createModal = new Modal("Segmentation edited!",
+                               "Your segmentation was edited successfully.",
+                               "",
+                               "Continue",
+                               "",
+                               true,
+                               "success",
+                               "green");
+createModal.createModal();
+createModal.addListener('#btn-confirm');
 
 let entriesFound = document.getElementById('entries-found');
 let showEntries = document.getElementById('show-entries');

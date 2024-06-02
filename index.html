@@ -12,10 +12,10 @@
 
 <body class="body">
     <nav class="sidebar">
-        <div class="sidebar-logo">
+        <a href="./index.html" class="sidebar-logo">
             <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
             <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
-        </div>
+        </a>
         <ul class="navbar-list">
             <li class="navbar-item">
                 <a href="./index.html" class="navbar-button active">
@@ -134,12 +134,26 @@
                     </select>
                     <span class="base-icon icon-arrowD"></span>
                 </div>
-                <a href="#" class="btn">
-                    <span class="btn-icon icon-add"></span>
-                    Create
-                </a>
-                <a href="#" class="flex justify-center items-center gap-10 pl-1 pr-3 rounded-full h-full bg-secondary_black text-white font-normal hover:bg-secondary_black_hover">
-                    <div class="flex justify-center items-center gap-2 max-w-60">
+                <span class="btn dropdown-container">
+                    <h5 class="flex items-center gap-2">
+                        <span class="btn-icon icon-add"></span>
+                        Create
+                    </h5>
+                    <ul class="dropdown-list text-base min-w-48">
+                        <li class="dropdown-item">
+                            <a class="flex gap-3 items-center" href="./create-event.html">
+                                <span class="base-icon icon-event"></span>
+                                Create event
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <span class="base-icon icon-campaign"></span>
+                            Create campaign
+                        </li>
+                    </ul>
+                </span>
+                <a href="#" class="client-container">
+                    <div class="client-name">
                         <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
                         VIP Monkey
                     </div>

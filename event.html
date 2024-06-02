@@ -12,10 +12,10 @@
 
 <body class="body">
     <nav class="sidebar">
-        <div class="sidebar-logo">
+        <a href="./index.html" class="sidebar-logo">
             <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
             <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
-        </div>
+        </a>
         <ul class="navbar-list">
             <li class="navbar-item">
                 <a href="./index.html" class="navbar-button">
@@ -127,10 +127,24 @@
         <header class="header">
             <h2 class="header-title">Event</h2>
             <div class="header-navbar">
-                <a href="#" class="btn">
-                    <span class="btn-icon icon-add"></span>
-                    Create
-                </a>
+                <span class="btn dropdown-container">
+                    <h5 class="flex items-center gap-2">
+                        <span class="btn-icon icon-add"></span>
+                        Create
+                    </h5>
+                    <ul class="dropdown-list text-base min-w-48">
+                        <li class="dropdown-item">
+                            <a class="flex gap-3 items-center" href="./create-event.html">
+                                <span class="base-icon icon-event"></span>
+                                Create event
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <span class="base-icon icon-campaign"></span>
+                            Create campaign
+                        </li>
+                    </ul>
+                </span>
                 <a href="#" class="flex justify-center items-center gap-10 pl-1 pr-3 rounded-full h-full bg-secondary_black text-white font-normal hover:bg-secondary_black_hover">
                     <div class="flex justify-center items-center gap-2 max-w-60">
                         <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
@@ -168,7 +182,12 @@
                     <div id="column-chart" class="w-full h-full"></div>
                 </article>
                 <article class="component">
-                    <h3 class="title-component">Locations future events</h3>
+                    <div class="flex justify-between items-center title-component">
+                        Locations future events
+                        <a href="#" class="btn-hover">
+                            <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                        </a>
+                    </div>
                     <div class="h-full">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6567.748435051549!2d-58.445537073137935!3d-34.60734202521839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1707485798623!5m2!1ses-419!2sar" width="100%" height="100%" style="border-radius: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -194,9 +213,9 @@
 
                 <article class="events-container">
                     <article class="component w-full">
-                        <div class="flex title-component justify-between">
+                        <div class="flex title-component justify-between items-center">
                             Past events
-                            <div class="flex gap-4">
+                            <div class="flex gap-4 items-center">
                                 <div class="select-container">
                                     <select name="past-select" class="component-select" id="past-select">
                                         <option selected value="month">Last month</option>
@@ -204,7 +223,9 @@
                                     </select>
                                     <span class="base-icon icon-arrowD"></span>
                                 </div>
-                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                <a href="./past-events.html" class="btn-hover">
+                                    <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                </a>
                             </div>
                         </div>
                         <div class="event-info">
@@ -240,11 +261,11 @@
                         <div id="bar-chart1" class="h-10 w-full"></div>
                     </article>
                     <article class="component w-full">
-                        <div class="flex title-component justify-between">
+                        <div class="flex title-component justify-between items-center">
                             Present events
-                            <div class="flex gap-4">
+                            <a href="./present-events.html" class="btn-hover">
                                 <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
-                            </div>
+                            </a>
                         </div>
                         <div class="event-info">
                             <div class="info-item">
@@ -279,9 +300,9 @@
                         <div id="bar-chart2" class="h-10 w-full"></div>
                     </article>
                     <article class="component w-full">
-                        <div class="flex title-component justify-between">
+                        <div class="flex title-component justify-between items-center">
                             Future events
-                            <div class="flex gap-4">
+                            <div class="flex gap-4 items-center">
                                 <div class="select-container">
                                     <select name="future-select" class="component-select" id="future-select">
                                         <option selected value="month">Next month</option>
@@ -289,7 +310,9 @@
                                     </select>
                                     <span class="base-icon icon-arrowD"></span>
                                 </div>
-                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                <a href="./future-events.html" class="btn-hover">
+                                    <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                </a>
                             </div>
                         </div>
                         <div class="event-info">

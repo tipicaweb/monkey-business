@@ -12,10 +12,10 @@
 
 <body class="body">
     <nav class="sidebar">
-        <div class="sidebar-logo">
+        <a href="./index.html" class="sidebar-logo">
             <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
             <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
-        </div>
+        </a>
         <ul class="navbar-list">
             <li class="navbar-item">
                 <a href="./index.html" class="navbar-button">
@@ -134,10 +134,24 @@
                 <h2 class="header-title">Segmentation</h2>
             </div>
             <div class="header-navbar">
-                <a href="#" class="btn">
-                    <span class="btn-icon icon-add"></span>
-                    Create
-                </a>
+                <span class="btn dropdown-container">
+                    <h5 class="flex items-center gap-2">
+                        <span class="btn-icon icon-add"></span>
+                        Create
+                    </h5>
+                    <ul class="dropdown-list text-base min-w-48">
+                        <li class="dropdown-item">
+                            <a class="flex gap-3 items-center" href="./create-event.html">
+                                <span class="base-icon icon-event"></span>
+                                Create event
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <span class="base-icon icon-campaign"></span>
+                            Create campaign
+                        </li>
+                    </ul>
+                </span>
                 <a href="#" class="flex justify-center items-center gap-10 pl-1 pr-3 rounded-full h-full bg-secondary_black text-white font-normal hover:bg-secondary_black_hover">
                     <div class="flex justify-center items-center gap-2 max-w-60">
                         <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
@@ -154,7 +168,7 @@
         <main class="main">
             <section class="components-container grid-cols-3">
                 <article class="col-span-full flex justify-center items-center gap-6">
-                    <div class="input-container">
+                    <div class="input-container icon-left">
                         <input placeholder=" " id="segmentation-search" class="component-input" type="text">
                         <label for="segmentation-search" class="component-label">Search</label>
                         <div class="input-icon">
@@ -186,7 +200,7 @@
                     <div>
                         <div class="flex justify-between w-full title-component items-center">
                             [Segmentation name]
-                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                            <div class="flex items-center justify-end dropdown-container">
                                 <button class="table-dropdown">
                                     <img src="./assets/dots.svg" alt="Dropdown menu">
                                 </button>
@@ -202,8 +216,10 @@
                                         Refresh
                                     </li>
                                     <li class="dropdown-item">
-                                        <span class="base-icon icon-trash"></span>
-                                        Delete / Archive
+                                        <button class="delete-segmentation flex gap-3 items-center">
+                                            <span class="base-icon icon-trash"></span>
+                                            Delete / Archive
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -240,7 +256,7 @@
                     <div>
                         <div class="flex justify-between w-full title-component items-center">
                             [Segmentation name]
-                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                            <div class="flex items-center justify-end dropdown-container">
                                 <button class="table-dropdown">
                                     <img src="./assets/dots.svg" alt="Dropdown menu">
                                 </button>
@@ -256,8 +272,10 @@
                                         Refresh
                                     </li>
                                     <li class="dropdown-item">
-                                        <span class="base-icon icon-trash"></span>
-                                        Delete / Archive
+                                        <button class="delete-segmentation flex gap-3 items-center">
+                                            <span class="base-icon icon-trash"></span>
+                                            Delete / Archive
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -294,7 +312,7 @@
                     <div>
                         <div class="flex justify-between w-full title-component items-center">
                             [Segmentation name]
-                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                            <div class="flex items-center justify-end dropdown-container">
                                 <button class="table-dropdown">
                                     <img src="./assets/dots.svg" alt="Dropdown menu">
                                 </button>
@@ -310,8 +328,10 @@
                                         Refresh
                                     </li>
                                     <li class="dropdown-item">
-                                        <span class="base-icon icon-trash"></span>
-                                        Delete / Archive
+                                        <button class="delete-segmentation flex gap-3 items-center">
+                                            <span class="base-icon icon-trash"></span>
+                                            Delete / Archive
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -348,7 +368,7 @@
                     <div>
                         <div class="flex justify-between w-full title-component items-center">
                             [Segmentation name]
-                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                            <div class="flex items-center justify-end dropdown-container">
                                 <button class="table-dropdown">
                                     <img src="./assets/dots.svg" alt="Dropdown menu">
                                 </button>
@@ -364,8 +384,10 @@
                                         Refresh
                                     </li>
                                     <li class="dropdown-item">
-                                        <span class="base-icon icon-trash"></span>
-                                        Delete / Archive
+                                        <button class="delete-segmentation flex gap-3 items-center">
+                                            <span class="base-icon icon-trash"></span>
+                                            Delete / Archive
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -402,7 +424,7 @@
                     <div>
                         <div class="flex justify-between w-full title-component items-center">
                             [Segmentation name]
-                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                            <div class="flex items-center justify-end dropdown-container">
                                 <button class="table-dropdown">
                                     <img src="./assets/dots.svg" alt="Dropdown menu">
                                 </button>
@@ -418,8 +440,10 @@
                                         Refresh
                                     </li>
                                     <li class="dropdown-item">
-                                        <span class="base-icon icon-trash"></span>
-                                        Delete / Archive
+                                        <button class="delete-segmentation flex gap-3 items-center">
+                                            <span class="base-icon icon-trash"></span>
+                                            Delete / Archive
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -456,7 +480,7 @@
                     <div>
                         <div class="flex justify-between w-full title-component items-center">
                             [Segmentation name]
-                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                            <div class="flex items-center justify-end dropdown-container">
                                 <button class="table-dropdown">
                                     <img src="./assets/dots.svg" alt="Dropdown menu">
                                 </button>
@@ -472,8 +496,10 @@
                                         Refresh
                                     </li>
                                     <li class="dropdown-item">
-                                        <span class="base-icon icon-trash"></span>
-                                        Delete / Archive
+                                        <button class="delete-segmentation flex gap-3 items-center">
+                                            <span class="base-icon icon-trash"></span>
+                                            Delete / Archive
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -510,7 +536,7 @@
                     <div>
                         <div class="flex justify-between w-full title-component items-center">
                             [Segmentation name]
-                            <div class="flex items-center justify-end gap-6r dropdown-container">
+                            <div class="flex items-center justify-end dropdown-container">
                                 <button class="table-dropdown">
                                     <img src="./assets/dots.svg" alt="Dropdown menu">
                                 </button>
@@ -526,8 +552,10 @@
                                         Refresh
                                     </li>
                                     <li class="dropdown-item">
-                                        <span class="base-icon icon-trash"></span>
-                                        Delete / Archive
+                                        <button class="delete-segmentation flex gap-3 items-center">
+                                            <span class="base-icon icon-trash"></span>
+                                            Delete / Archive
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -567,7 +595,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./charts.js"></script>
-    <script src="./segmentation.js"></script>
+    <script type="module" src="./segmentation.js"></script>
 </body>
 
 </html>

@@ -181,11 +181,47 @@
         @apply transition-all;
         @apply outline-none;
         @apply leading-normal;
-        @apply min-w-44;
+        @apply min-w-[180px];
+        @apply text-[16px];
 
         &:hover {
             @apply bg-secondary_black_hover;
         }
+    }
+
+    .header-navbar .btn {
+        @apply text-[16px];
+        @apply px-[24px];
+        @apply w-auto;
+
+        .btn-icon {
+            @apply w-[16px];
+            @apply h-[16px];
+        }
+    }
+
+    .client-container {
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply gap-10;
+        @apply pl-1;
+        @apply pr-3;
+        @apply rounded-full;
+        @apply h-full;
+        @apply bg-secondary_black;
+        @apply text-white;
+        @apply font-normal;
+        @apply hover:bg-secondary_black_hover;
+    }
+
+    .client-name {
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply gap-2;
+        @apply max-w-60;
+        @apply text-[16px];
     }
 
     .btn {
@@ -202,6 +238,7 @@
         @apply font-medium;
         @apply text-sm;
         @apply leading-normal;
+        @apply cursor-pointer;
 
         &:disabled {
             @apply bg-[#E0E9E71F];
@@ -227,6 +264,7 @@
         @apply text-nowrap;
         @apply h-10;
         @apply text-center;
+        @apply cursor-pointer;
     }
 
     .btn-secondary:hover {
@@ -420,6 +458,11 @@
         mask-size: cover;
     }
 
+    .icon-close-circle {
+        mask: url('../assets/close_circle.svg') center no-repeat;
+        mask-size: cover;
+    }
+
     .navbar-icon {
         @apply flex;
         @apply w-[24px];
@@ -454,7 +497,8 @@
         @apply base-icon;
         @apply w-4;
         @apply h-4;
-        @apply bg-input_border;
+        @apply bg-primary_gray;
+        transition: all .3s ease 0s;
     }
 
     .main {
@@ -621,6 +665,10 @@
 
     .table-container {
         @apply w-full;
+        @apply bg-secondary_black;
+        @apply bg-opacity-60;
+        @apply rounded-xl;
+        @apply p-6;
     }
 
     .table-component {
@@ -693,12 +741,17 @@
         @apply w-10;
         @apply h-10;
         @apply justify-center;
+        @apply btn-hover;
+        @apply cursor-pointer;
+    }
+
+    .btn-hover {
         @apply rounded-full;
         @apply transition-all;
-
-        &:hover {
-            @apply bg-table_hover;
-        }
+        @apply p-2;
+        @apply h-10;
+        @apply hover:bg-[#CAC4D01F];
+        @apply cursor-pointer;
     }
 
     .dropdown-container {
@@ -744,6 +797,7 @@
         @apply gap-3;
         @apply cursor-pointer;
         @apply transition-all;
+        @apply text-terciary_gray;
 
         &:hover {
             @apply bg-dropdown_hover;
@@ -762,6 +816,19 @@
         @apply relative;
         @apply h-14;
         @apply w-full;
+    }
+
+    .input-container.icon-left {
+        .component-input,
+        .component-label {
+            @apply pl-12;
+        }
+
+        .input-icon {
+            @apply right-auto;
+            @apply left-0;
+            @apply pl-3;
+        }
     }
 
     .component-input {
@@ -1027,11 +1094,11 @@
         @apply text-sm;
         @apply border-b-2;
         @apply border-secondary_black;
+        @apply flex-wrap;
     }
 
     .details-item {
         @apply px-4;
-        @apply h-full;
         @apply cursor-pointer;
         @apply flex;
         @apply justify-center;
@@ -1326,49 +1393,6 @@
         @apply transition-all;
     }
 
-    .delete-modal {
-        @apply fixed;
-        @apply right-0;
-        @apply left-0;
-        @apply h-screen;
-        @apply flex;
-        @apply justify-center;
-        @apply items-center;
-        @apply bg-white;
-        @apply bg-opacity-10;
-        @apply backdrop-blur-sm;
-        @apply z-50;
-    }
-
-    .modal-container {
-        @apply bg-primary_black;
-        @apply w-96;
-        @apply rounded-3xl;
-        @apply p-6;
-        @apply text-white;
-        @apply flex;
-        @apply flex-col;
-        @apply gap-6;
-    }
-
-    .modal-title {
-        @apply text-2xl;
-        @apply font-medium;
-        @apply mb-2;
-    }
-
-    .modal-subtitle {
-        @apply opacity-85;
-        @apply text-sm;
-        @apply font-normal;
-    }
-
-    .modal-btns {
-        @apply flex;
-        @apply justify-end;
-        @apply gap-2;
-    }
-
     .btn-text {
         @apply btn;
         @apply bg-transparent;
@@ -1376,6 +1400,7 @@
         @apply w-[7.5rem];
         @apply h-10;
         @apply text-sm;
+        @apply cursor-pointer;
 
         &:hover {
             @apply bg-terciary_black;
@@ -1493,7 +1518,18 @@
         @apply rounded-lg;
         @apply text-sm;
         @apply font-medium; 
-        @apply text-input_border;
+        @apply cursor-pointer;
+        @apply text-primary_gray;
+        transition: all .3s ease 0s;
+
+        &:hover {
+            @apply border-white;
+            @apply text-white;
+
+            .filter-icon {
+                @apply bg-white;
+            }
+        }
     }
 
     .hits-title {
@@ -1585,20 +1621,145 @@
         }
     }
 
-    .modal-success_container {
-        @apply bg-primary_green;
-        @apply bg-opacity-15;
+    .modal-icon_container {
+        @apply !bg-opacity-15;
         @apply p-8;
-        @apply my-8;
+        @apply mb-8;
         @apply rounded-[50px];
     }
 
-    .modal-success_icon {
+    .container-icon {
         @apply flex;
         @apply w-20;
         @apply h-20;
+    }
+
+    .modal-icon_container.success {
         @apply bg-primary_green;
-        @apply icon-check-circle;
+
+        .container-icon {
+            @apply bg-primary_green;
+            @apply icon-check-circle;
+        }
+    }
+
+    .modal-icon_container.error {
+        @apply bg-primary_red;
+
+        .container-icon {
+            @apply bg-primary_red;
+            @apply icon-close-circle;
+        }
+    }
+
+    .modal-title {
+        @apply !text-center;
+        @apply !text-white;
+        @apply !text-4xl;
+        @apply !font-bold;
+        @apply !m-0;
+        @apply !p-0;
+        @apply !pb-4;
+    }
+
+    .modal-popup {
+        @apply !rounded-3xl;
+        @apply !p-10;
+    }
+
+    .modal-icon {
+        @apply !border-0;
+        @apply !p-0;
+        @apply !m-0;
+        @apply !flex;
+        @apply !justify-center;
+        @apply !items-center;
+        @apply !w-full;
+        @apply !h-auto;
+    }
+
+    .modal-htmlContainer {
+        @apply !text-white;
+        @apply !p-0;
+        @apply !opacity-85;
+        @apply !m-0;
+        @apply !text-center;
+        @apply !text-sm;
+    }
+
+    .modal-btn {
+        @apply !appearance-none;
+        @apply !py-2.5;
+        @apply !w-32;
+        @apply !rounded-full;
+        @apply !m-0;
+        @apply !bg-none;
+        @apply !shadow-none;
+        @apply !border-none;
+        @apply !text-text_hover;
+        @apply !text-sm;
+        @apply !font-medium;
+        @apply !bg-transparent;
+
+        &.cancel {
+            @apply !text-primary_green;
+            @apply !bg-transparent;
+        }
+
+        &.red {
+            @apply !bg-primary_red;
+        }
+
+        &.green {
+            @apply !bg-primary_green;
+        }
+    }
+
+    .modal-actions {
+        @apply !flex;
+        @apply !justify-center;
+        @apply !gap-2;
+        @apply !m-0;
+        @apply !mt-7;
+    }
+
+    .modal-container {
+        @apply !backdrop-blur-sm;
+    }
+
+    .modal-container.no-icon {
+        .modal-title {
+            @apply !text-left;
+            @apply !text-2xl;
+        }
+
+        .modal-htmlContainer {
+            @apply !text-left;
+        }
+
+        .modal-popup {
+            @apply !p-6;
+        }
+
+        .modal-actions {
+            @apply !justify-end;
+        }
+    }
+
+    .filters-list {
+        @apply flex;
+        @apply gap-2;
+        @apply mb-4;
+        @apply flex-wrap;
+    }
+
+    .entries-found {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-center;
+        @apply p-4;
+        @apply py-16;
     }
 }
 
@@ -1631,12 +1792,6 @@
             & > div {
                 @apply w-full;
             }
-        }
-    }
-
-    @media (max-width: 1540px) {
-        .list-btn span {
-            @apply hidden;
         }
     }
 

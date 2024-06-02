@@ -12,10 +12,10 @@
 
 <body class="body">
     <nav class="sidebar">
-        <div class="sidebar-logo">
+        <a href="./index.html" class="sidebar-logo">
             <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
             <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
-        </div>
+        </a>
         <ul class="navbar-list">
             <li class="navbar-item">
                 <a href="./index.html" class="navbar-button">
@@ -389,9 +389,9 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="-rotate-90 p-2">
-                                                <span class="base-icon icon-arrowD"></span>
-                                            </div>
+                                            <button class="btn-hover mr-2">
+                                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </a>
@@ -451,9 +451,9 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="-rotate-90 p-2">
-                                                <span class="base-icon icon-arrowD"></span>
-                                            </div>
+                                            <button class="btn-hover mr-2">
+                                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </a>
@@ -513,9 +513,9 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="-rotate-90 p-2">
-                                                <span class="base-icon icon-arrowD"></span>
-                                            </div>
+                                            <button class="btn-hover mr-2">
+                                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </a>
@@ -575,9 +575,9 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="-rotate-90 p-2">
-                                                <span class="base-icon icon-arrowD"></span>
-                                            </div>
+                                            <button class="btn-hover mr-2">
+                                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </a>
@@ -638,9 +638,9 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="-rotate-90 p-2">
-                                                <span class="base-icon icon-arrowD"></span>
-                                            </div>
+                                            <button class="btn-hover mr-2">
+                                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </a>
@@ -700,9 +700,9 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="-rotate-90 p-2">
-                                                <span class="base-icon icon-arrowD"></span>
-                                            </div>
+                                            <button class="btn-hover mr-2">
+                                                <span class="base-icon icon-arrowD -rotate-90 h-full"></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </a>
@@ -833,22 +833,10 @@
         </main>
     </div>
 
-    <div class="delete-modal hidden" id="delete-modal">
-        <div class="modal-container">
-            <div>
-                <h3 class="modal-title">Delete item?</h3>
-                <h4 class="modal-subtitle">Are you sure you want to delete this item?</h4>
-            </div>
-            <div class="modal-btns">
-                <button class="btn-text" id="modal-cancel">Cancel</button>
-                <button class="btn-delete" id="modal-confirm">Delete</button>
-            </div>
-        </div>
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./charts.js"></script>
-    <script src="./modal.js"></script>
+    <script type="module" src="./modals.js"></script>
 </body>
 
 </html>
