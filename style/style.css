@@ -72,12 +72,12 @@
     }
 
     .navbar-button {
-        @apply gap-[12px];
-        @apply text-[16px];
-        @apply p-[16px];
-        @apply h-[56px];
+        @apply gap-3;
+        @apply text-base;
+        @apply p-4;
+        @apply h-14;
         @apply w-full;
-        @apply rounded-[16px];
+        @apply rounded-2xl;
         @apply flex;
         @apply justify-start; 
         @apply items-center; 
@@ -110,7 +110,7 @@
 
     .dropdown-button {
         @apply flex;
-        @apply gap-[12px];
+        @apply gap-3;
         @apply w-full;
         @apply transition-all;
     }
@@ -124,7 +124,7 @@
         @apply overflow-hidden;
         @apply pl-8;
         @apply text-white;
-        @apply gap-[4px];
+        @apply gap-1;
         @apply transition-all;
     }
 
@@ -136,7 +136,7 @@
         @apply max-h-full;
         @apply text-white;
         @apply bg-primary_black;
-        @apply gap-[4px];
+        @apply gap-1;
         @apply transition-all;
     }
 
@@ -182,7 +182,7 @@
         @apply outline-none;
         @apply leading-normal;
         @apply min-w-[180px];
-        @apply text-[16px];
+        @apply text-base;
 
         &:hover {
             @apply bg-secondary_black_hover;
@@ -190,13 +190,14 @@
     }
 
     .header-navbar .btn {
-        @apply text-[16px];
-        @apply px-[24px];
+        @apply text-sm;
+        @apply pr-6;
+        @apply pl-5;
         @apply w-auto;
 
         .btn-icon {
-            @apply w-[16px];
-            @apply h-[16px];
+            @apply w-4;
+            @apply h-4;
         }
     }
 
@@ -221,7 +222,7 @@
         @apply items-center;
         @apply gap-2;
         @apply max-w-60;
-        @apply text-[16px];
+        @apply text-base;
     }
 
     .btn {
@@ -230,7 +231,7 @@
         @apply items-center;
         @apply gap-2;
         @apply bg-primary_green;
-        @apply px-5;
+        @apply px-6;
         @apply rounded-full;
         @apply h-10;
         @apply w-[7.5rem];
@@ -255,6 +256,10 @@
     }
 
     .btn-secondary {
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply gap-2;
         @apply bg-btn_secondary_bg;
         @apply text-btn_secondary;
         @apply py-2.5;
@@ -265,6 +270,8 @@
         @apply h-10;
         @apply text-center;
         @apply cursor-pointer;
+        @apply font-medium;
+        @apply leading-normal;
     }
 
     .btn-secondary:hover {
@@ -465,9 +472,9 @@
 
     .navbar-icon {
         @apply flex;
-        @apply w-[24px];
-        @apply min-w-[24px];
-        @apply h-[24px];
+        @apply w-6;
+        @apply min-w-6;
+        @apply h-6;
         @apply bg-white;
         @apply transition-all;
     }
@@ -476,6 +483,13 @@
         @apply h-4;
         @apply w-4;
         @apply bg-text_hover;
+    }
+
+    .btn-icon-secondary {
+        @apply h-4;
+        @apply w-4;
+        @apply ml-[-0.25rem];
+        @apply bg-btn_secondary;;
     }
 
     .base-icon {
@@ -1035,7 +1049,7 @@
     }
 
     .switch-input:hover ~ .switch-span::after {
-        @apply bg-secondary_gray;
+        @apply bg-secondary_white;
     }
     
     .switch-input:checked ~ .switch-span {
@@ -1051,8 +1065,12 @@
         @apply m-1;
     }
 
+    .switch-input:checked:hover ~ .switch-span {
+        @apply bg-secondary_green;
+    }
+
     .component-line {
-        @apply h-[2px];
+        @apply h-0.5;
         @apply w-full;
         @apply border-white;
         @apply border-b-2;
@@ -1606,7 +1624,7 @@
         transition: all .3s ease 0s;
 
         &:hover {
-            @apply text-terciary_gray;
+            @apply text-secondary_white;
         }
     }
 
@@ -1739,6 +1757,7 @@
 
         .modal-popup {
             @apply !p-6;
+            @apply !w-[380px];
         }
 
         .modal-actions {
@@ -1772,7 +1791,7 @@
 
     @media (max-width: 1280px) {
         html {
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .create-grid {
@@ -1828,12 +1847,12 @@
         }
 
         .sidebar:hover .navbar-list {
-            @apply w-[20rem];
-            @apply pr-[16px];
+            @apply w-80;
+            @apply pr-4;
         }
 
         .sidebar:hover .navbar-dropdown-list {
-            @apply pl-[32px];
+            @apply pl-8;
         }
 
         .sidebar:not(:hover) .navbar-button {
@@ -1851,12 +1870,12 @@
             @apply right-0;
             @apply top-[112px];
             @apply bottom-0;
-            @apply w-[56px];
+            @apply w-14;
         }
 
         .navbar-button,
         .dropdown-button {
-            @apply gap-[16px];
+            @apply gap-4;
         }
 
         .inputs-grid {
