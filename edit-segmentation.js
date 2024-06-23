@@ -1,3 +1,5 @@
+import Modal from './modals.js';
+
 const distributionChart = createColumn(['0-17', '18-24', '25-34', '35-49', '50-64', '+65'], [
     {
         name: "Men",
@@ -16,7 +18,8 @@ const cancelModal = new Modal("Cancel segmentation?",
                               "Back",
                               false,
                               "",
-                              "red");
+                              "red",
+                              navigateToSegmentation);
 cancelModal.createModal();
 cancelModal.addListener('#btn-cancel');
 
@@ -27,9 +30,14 @@ const createModal = new Modal("Segmentation edited!",
                                "",
                                true,
                                "success",
-                               "green");
+                               "green",
+                               navigateToSegmentation);
 createModal.createModal();
 createModal.addListener('#btn-confirm');
+
+function navigateToSegmentation(result) {
+    if(result.isConfirmed) window.location = 'segmentation.html'
+}
 
 let entriesFound = document.getElementById('entries-found');
 let showEntries = document.getElementById('show-entries');
@@ -171,5 +179,10 @@ btnsGender.forEach(btn => {
         e.preventDefault();
 
         e.target.classList.toggle('active');
+
+        if(e.target.classList.contains('active'))
+            e.target.textContent = `${e.target.value} Added`;
+        else
+            e.target.textContent = `Add ${e.target.value}`;
     })
 })

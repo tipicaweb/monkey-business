@@ -463,6 +463,11 @@
         mask-size: cover;
     }
 
+    .icon-error {
+        mask: url('../assets/error.svg') center no-repeat;
+        mask-size: cover;
+    }
+
     .navbar-icon {
         @apply flex;
         @apply w-[24px];
@@ -816,6 +821,21 @@
         @apply relative;
         @apply h-14;
         @apply w-full;
+
+        &:hover:not(:has(.component-input:focus)):not(:has(.component-input.error)):not(:has(.component-input:disabled)) {
+            .component-input {
+                @apply bg-table_hover;
+                @apply border-terciary_gray;
+            }
+
+            .component-label {
+                @apply text-input_border;
+            }
+        }
+
+        &:has(.component-input:disabled) {
+            @apply opacity-40;
+        }
     }
 
     .input-container.icon-left {
@@ -846,10 +866,39 @@
         @apply px-4;
         @apply pt-7;
         @apply pb-2;
+        @apply pr-10;
         @apply outline-none;
         @apply cursor-text;
+        @apply caret-input_focus;
         color-scheme: dark;
         transition: all .3s ease 0s;
+
+        &:disabled {
+            @apply border-terciary_gray;
+            @apply text-terciary_gray;
+            @apply bg-secondary_black;
+        }
+
+        &:disabled ~ .input-icon {
+            @apply hidden;
+        }
+
+        &.error {
+            @apply border-input_invalid;
+
+            & ~ .component-label {
+                @apply text-input_invalid;
+            }
+
+            & ~ .input-icon {
+                @apply opacity-0;
+            }
+
+            & ~ .input-error,
+            & ~ .error-icon {
+                @apply opacity-100;
+            }
+        }
 
         &:focus {
             @apply border-input_focus;
@@ -857,24 +906,6 @@
 
         &:focus ~ .component-label {
             @apply text-input_focus;
-        }
-
-        &:disabled {
-            @apply border-input_border_disabled;
-            @apply text-terciary_gray;
-            @apply bg-input_bg_disabled;
-        }
-
-        &:disabled ~ .input-icon {
-            @apply hidden;
-        }
-
-        &:invalid {
-            @apply border-input_invalid;
-
-            & ~ .component-label {
-                @apply text-input_invalid;
-            }
         }
     }
 
@@ -921,10 +952,6 @@
         opacity: 0;
     }
 
-    .component-input:has(~ .input-icon) {
-        @apply pr-10;
-    }
-
     .input-icon {
         @apply right-0;
         @apply top-0;
@@ -965,6 +992,29 @@
         .icon-visibility-off {
             @apply flex;
         }
+    }
+
+    .input-error {
+        @apply absolute;
+        @apply right-0;
+        @apply top-full;
+        @apply left-4;
+        @apply text-xs;
+        @apply text-primary_red;
+        @apply h-5;
+        @apply pt-1;
+        @apply font-normal;
+        @apply opacity-0;
+    }
+
+    .error-icon {
+        @apply base-icon;
+        @apply input-icon;
+        @apply p-0;
+        @apply my-auto;
+        @apply right-3;
+        @apply bg-primary_red;
+        @apply opacity-0;
     }
 
     .component-note {
@@ -1486,7 +1536,7 @@
 
     .inputs-grid {
         @apply grid;
-        @apply gap-6;
+        @apply gap-8;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
             "age-restriction age-restriction age-from age-to"
@@ -1497,7 +1547,7 @@
 
     .create-grid {
         @apply grid;
-        @apply gap-6;
+        @apply gap-8;
         grid-template-columns: repeat(8, 1fr);
         grid-template-areas: 
             "name name name name description description description description"
@@ -1517,17 +1567,21 @@
         @apply py-1.5;
         @apply rounded-lg;
         @apply text-sm;
-        @apply font-medium; 
-        @apply cursor-pointer;
+        @apply font-medium;
+        @apply cursor-default;
         @apply text-primary_gray;
         transition: all .3s ease 0s;
 
-        &:hover {
-            @apply border-white;
-            @apply text-white;
+        &:has(span) {
+            @apply cursor-pointer;
 
-            .filter-icon {
-                @apply bg-white;
+            &:hover {
+                @apply border-white;
+                @apply text-white;
+    
+                .filter-icon {
+                    @apply bg-white;
+                }
             }
         }
     }
@@ -1592,6 +1646,7 @@
         @apply border-btn_secondary_bg;
         @apply h-10;
         @apply px-6;
+        transition: all .3s ease 0s;
 
         &.active {
             @apply bg-transparent;
@@ -1760,6 +1815,14 @@
         @apply items-center;
         @apply p-4;
         @apply py-16;
+    }
+
+    .input-age {
+        @apply flex;
+        @apply justify-between;
+        @apply items-center;
+        @apply text-base;
+        @apply font-normal;
     }
 }
 
