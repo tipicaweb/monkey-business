@@ -1,5 +1,5 @@
 class Modal {
-    constructor (title = "", subtitle = "", html = ``, confirmBtn = "", cancelBtn = "", hasIcon = false, icon = "", confirmBtnColor = "", callback = function() {}) {
+    constructor (title = "", subtitle = "", html = ``, confirmBtn = "", cancelBtn = "", hasIcon = false, icon = "", confirmBtnColor = "", callback = function() {}, closeBtn = false) {
         this.title = title;
         this.subtitle = subtitle;
         this.html = html;
@@ -15,10 +15,15 @@ class Modal {
 
     createModal() {
         const modalSettings = {
+            title: `${this.title}`,
+            text: `${this.subtitle}`,
+            html: `${this.html}`,
+            confirmButtonText: `${this.confirmBtn}`,
             background: '#181A19',
             backdrop: '#ffffff16',
             reverseButtons: true,
             showCancelButton: false,
+            showCloseButton: `${this.closeBtn}`,
             customClass: {
                 container: `modal-container ${!this.hasIcon && 'no-icon'}`,
                 title: 'modal-title',
@@ -28,15 +33,9 @@ class Modal {
                 cancelButton: 'modal-btn cancel',
                 actions: 'modal-actions',
                 confirmButton: `modal-btn ${this.confirmBtnColor}`,
-            },
+                closeButton: 'modal-close'
+            }
         };
-
-        console.log(modalSettings);
-
-        modalSettings.title = this.title;
-        modalSettings.text = this.subtitle;
-        modalSettings.html = this.html;
-        modalSettings.confirmButtonText = this.confirmBtn;
 
         if(this.cancelBtn) {
             modalSettings.showCancelButton = true;
@@ -52,18 +51,20 @@ class Modal {
         this.modalSettings = modalSettings;
     }
 
-    showModal() {
+    showModal(target, fText, sText) {
         Swal.fire(this.modalSettings).then(result => this.callback(result));
+
+        toggleActive(target, fText, sText);
     }
 
-    addListener(query) {
+    addListener(query = "", target = "", fText = "", sText = "") {
         const targetsEl = document.querySelectorAll(query);
 
         targetsEl.forEach(el => {
             el.addEventListener('click', (e) => {
                 e.preventDefault();
     
-                this.showModal();
+                this.showModal(target, fText, sText);
             })
         })
     }
@@ -79,5 +80,19 @@ const trashModal = new Modal("Delete item?",
                              "red");
 trashModal.createModal();
 trashModal.addListener('.btn-trash');
+
+
+function toggleActive(target, fText, sText) {
+    let assignBtns = document.querySelectorAll(target);
+
+    assignBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.target.classList.toggle('active');
+
+            if(e.target.classList.contains('active')) e.target.innerText = fText;
+            else e.target.innerText = sText;
+        })
+    })
+}
 
 export default Modal;

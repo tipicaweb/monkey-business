@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Guest details - MonkeyBusiness</title>
+</head>
+
+<body class="body">
+    <nav class="sidebar">
+        <a href="./index.html" class="sidebar-logo">
+            <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
+            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
+        </a>
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="./index.html" class="navbar-button">
+                    <span class="navbar-icon icon-grid"></span>Home
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-bolt"></span>Create express ticket
+                </a>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./event.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-event"></span>Event
+                    </div>
+                    <div class="navbar-dropdown-btn" id="events-arrow">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul id="events-dropdown" class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Present
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./future-events.html" class="navbar-button">
+                            <span class="navbar-icon icon-future"></span>Future
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Past
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./guests.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-person-outline"></span>Guests
+                    </div>
+                    <div class="navbar-dropdown-btn active">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-support"></span>Support
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./segmentation.html" class="navbar-button">
+                            <span class="navbar-icon icon-groups"></span>Segmentation
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-chart"></span>Statistics
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./guests-search.html" class="navbar-button active">
+                            <span class="navbar-icon icon-person-search"></span>Search
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-list"></span>Products
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-map"></span>Map
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-group"></span>Guest lists
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-campaign"></span>Marketing
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-fact"></span>My guests
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-settings"></span>Settings
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-logout"></span>Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex flex-col w-full">
+        <header class="header">
+            <div class="flex flex-col gap-1">
+                <div class="flex gap-4">
+                    <a href="./guests.html" class="breadcrumb-tag">Guests</a>
+                    <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
+                    <a href="./guests-search.html" class="breadcrumb-tag">Search</a>
+                    <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
+                    <h6 class="breadcrumb-main">[User name]</h6>
+                </div>
+                <h2 class="header-title">[User name]</h2>
+            </div>
+            <div class="header-navbar">
+                <span class="btn dropdown-container">
+                    <h5 class="flex items-center gap-2">
+                        <span class="btn-icon icon-add"></span>
+                        Create
+                    </h5>
+                    <ul class="dropdown-list text-base min-w-48">
+                        <li class="dropdown-item">
+                            <a class="flex gap-3 items-center" href="./create-event.html">
+                                <span class="base-icon icon-event"></span>
+                                Create event
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <span class="base-icon icon-campaign"></span>
+                            Create campaign
+                        </li>
+                    </ul>
+                </span>
+                <a href="#" class="flex justify-center items-center gap-10 pl-1 pr-3 rounded-full h-full bg-secondary_black text-white font-normal hover:bg-secondary_black_hover">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
+                    </div>
+                    <img src="./assets/arrow_down_w.svg" alt="Arrow down">
+                </a>
+
+                <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
+                    <img src="./assets/user_img.png" alt="User image">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="components-container grid grid-cols-3">
+                <div class="flex flex-col gap-6 col-start-1 col-end-3">
+                    <article class="component">
+                        <h3 class="title-component">Current event</h3>
+                        <div class="table-component">
+                            <div class="labels-table">
+                                <div class="w-16"></div>
+                                <div>Event</div>
+                                <div>End date</div>
+                                <div>Location</div>
+                                <div>Guest list(s)</div>
+                                <div class="w-28">Status</div>
+                            </div>
+                            <div class="table-body">
+                                <div class="table-row">
+                                    <div>
+                                        <img src="./assets/event_img.svg" class="w-10 rounded-xl" alt="Event logo">
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>Club Zebra</div>
+                                    <div>
+                                        <span class="status-tag ongoing">Ongoing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-container flex flex-col gap-6">
+                            <div class="flex title-component justify-between">
+                                <h3>Products</h3>
+                                <button class="btn-secondary" id="products-modal">Assign</button>
+                            </div>
+                            <div class="table-component">
+                                <div class="labels-table">
+                                    <div class="w-16"></div>
+                                    <div>Name</div>
+                                    <div>Quantity</div>
+                                    <div>Price</div>
+                                    <div>Total</div>
+                                    <div class="w-28">Status</div>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-row">
+                                        <div>
+                                            <img src="./assets/event_img.svg" class="w-10 rounded-xl" alt="Event logo">
+                                        </div>
+                                        <div>Lorem ipsum</div>
+                                        <div>52</div>
+                                        <div>52 sek</div>
+                                        <div>1000 sek</div>
+                                        <div>
+                                            <span class="status-tag scanned">Scanned</span>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>
+                                            <img src="./assets/event_img.svg" class="w-10 rounded-xl" alt="Event logo">
+                                        </div>
+                                        <div>Lorem ipsum</div>
+                                        <div>40</div>
+                                        <div>52 sek</div>
+                                        <div>1000 sek</div>
+                                        <div>
+                                            <span class="status-tag scanned">Scanned</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="component">
+                        <h3 class="title-component">All event</h3>
+                        <div class="table-component">
+                            <div class="labels-table">
+                                <div class="w-16"></div>
+                                <div>Event</div>
+                                <div>Date</div>
+                                <div>Location</div>
+                                <div>Product</div>
+                                <div class="w-28">Status</div>
+                            </div>
+                            <div class="table-body">
+                                <div class="table-row">
+                                    <div>
+                                        <img src="./assets/event_img.svg" class="w-10 rounded-xl" alt="Event logo">
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>Lorem</div>
+                                    <div>
+                                        <span class="status-tag future">Future</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div>
+                                        <img src="./assets/event_img.svg" class="w-10 rounded-xl" alt="Event logo">
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>Lorem</div>
+                                    <div>
+                                        <span class="status-tag ongoing">Ongoing</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div>
+                                        <img src="./assets/event_img.svg" class="w-10 rounded-xl" alt="Event logo">
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>Lorem</div>
+                                    <div>
+                                        <span class="status-tag past">Past</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div>
+                                        <img src="./assets/event_img.svg" class="w-10 rounded-xl" alt="Event logo">
+                                    </div>
+                                    <div>Lorem ipsum</div>
+                                    <div>4/13/2024</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>Lorem</div>
+                                    <div>
+                                        <span class="status-tag past">Past</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="component">
+                        <h3 class="title-component">Activity Log</h3>
+                        <div class="table-component">
+                            <div class="labels-table">
+                                <div class="w-16"></div>
+                                <div>Activity</div>
+                                <div>Date</div>
+                                <div class="w-96">Description</div>
+                            </div>
+                            <div class="table-body">
+                                <div class="table-row">
+                                    <div>
+                                        <div class="activity-icon">
+                                            <span class="base-icon icon-support"></span>
+                                        </div>
+                                    </div>
+                                    <div>Support ticket</div>
+                                    <div>4/13/2024</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing...</div>
+                                </div>
+                                <div class="table-row">
+                                    <div>
+                                        <div class="activity-icon">
+                                            <span class="base-icon icon-cart"></span>
+                                        </div>
+                                    </div>
+                                    <div>Bought product</div>
+                                    <div>4/13/2024</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing...</div>
+                                </div>
+                                <div class="table-row">
+                                    <div>
+                                        <div class="activity-icon">
+                                            <span class="base-icon icon-flip"></span>
+                                        </div>
+                                    </div>
+                                    <div>Ticket scanned</div>
+                                    <div>4/13/2024</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <article class="component">
+                        <div class="flex title-component justify-between">
+                            <h3>About</h3>
+                            <button class="btn-secondary" id="about-modal">Edit</button>
+                        </div>
+                        <div class="about-grid">
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-person-outline bg-primary_orange"></span>
+                                    Name
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">[User name]</h5>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-email bg-primary_orange"></span>
+                                    Email
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">lorem@gmail.com</h5>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-call bg-primary_orange"></span>
+                                    Phone
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">(000) 000-0000</h5>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-campaign bg-primary_orange"></span>
+                                    Lorem
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">Market</h5>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-calendar-clock bg-primary_orange"></span>
+                                    Age
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">34 years</h5>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-group bg-primary_orange"></span>
+                                    Gender
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">Man</h5>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-avaible bg-primary_orange"></span>
+                                    Customer since
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">2020-04-04</h5>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-pin bg-primary_orange"></span>
+                                    Hometown
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">Lorem</h5>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-payments bg-primary_orange"></span>
+                                    Totally spent
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">12.000 sek</h5>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
+                                    <span class="base-icon icon-past bg-primary_orange"></span>
+                                    Last purchase
+                                </div>
+                                <h5 class="pl-8 text-base font-normal">2020-04-04</h5>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="component">
+                        <div class="flex title-component justify-between">
+                            <h3>Guest lists</h3>
+                            <button class="btn-secondary" id="guests-modal">Edit</button>
+                        </div>
+                        <div class="table-component">
+                            <div class="labels-table">
+                                <div>Name</div>
+                            </div>
+                            <div class="table-body">
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="component">
+                        <div class="flex title-component justify-between">
+                            <h3>Groups</h3>
+                            <button class="btn-secondary" id="groups-modal">Edit</button>
+                        </div>
+                        <div class="table-component">
+                            <div class="labels-table">
+                                <div>Name</div>
+                            </div>
+                            <div class="table-body">
+                                <div class="table-row">
+                                    <div>Lorem ipsum</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="component">
+                        <div class="flex title-component justify-between">
+                            <h3>Tags</h3>
+                            <button class="btn-secondary" id="tags-modal">Edit</button>
+                        </div>
+                        <div class="flex gap-2 flex-wrap text-sm font-medium text-input_border">
+                            <span class="segmentation-filter">Lorem ipsum</span>
+                            <span class="segmentation-filter">Lorem</span>
+                            <span class="segmentation-filter">Lorem ipsum</span>
+                            <span class="segmentation-filter">Lorem</span>
+                            <span class="segmentation-filter">Lorem</span>
+                            <span class="segmentation-filter">Lorem</span>
+                            <span class="segmentation-filter">Lorem ipsum</span>
+                            <span class="segmentation-filter">Lorem</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./charts.js"></script>
+    <script type="module" src="./guest-details.js"></script>
+</body>
+
+</html>

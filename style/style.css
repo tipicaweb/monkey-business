@@ -265,10 +265,43 @@
         @apply h-10;
         @apply text-center;
         @apply cursor-pointer;
+        @apply leading-normal;
     }
 
     .btn-secondary:hover {
         @apply bg-btn_secondary_bg_hover;
+    }
+
+    .assign-btn {
+        @apply btn-secondary;
+        @apply float-end;
+        transition: all .3s ease 0s;
+    }
+
+    .assign-btn.active {
+        @apply bg-[#E0E9E7];
+        @apply bg-opacity-10;
+        @apply text-[#E0E9E7];
+        @apply text-opacity-40;
+        
+        &:hover {
+            @apply bg-opacity-30;
+        }
+    }
+
+    .remove-btn {
+        @apply btn-secondary;
+        @apply float-end;
+        transition: all .3s ease 0s;
+    }
+
+    .remove-btn.active {
+        @apply bg-[#633B48];
+        @apply text-[#FFD8E4];
+
+        &:hover {
+            @apply bg-[#885263];
+        }
     }
 
     .icon-grid {
@@ -465,6 +498,26 @@
 
     .icon-error {
         mask: url('../assets/error.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-cart {
+        mask: url('../assets/shopping_cart.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-flip {
+        mask: url('../assets/flip.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-email {
+        mask: url('../assets/alternate_email.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-call {
+        mask: url('../assets/call.svg') center no-repeat;
         mask-size: cover;
     }
 
@@ -673,7 +726,8 @@
         @apply bg-secondary_black;
         @apply bg-opacity-60;
         @apply rounded-xl;
-        @apply p-6;
+        @apply py-4;
+        @apply px-6;
     }
 
     .table-component {
@@ -698,6 +752,7 @@
 
     .labels-table div {
         @apply table-cell;
+        @apply pb-2;
     }
 
     .table-body {
@@ -732,6 +787,10 @@
         &:last-child {
             @apply rounded-r-xl;
         }
+    }
+
+    .hover-table .labels-table div:first-child {
+        @apply pl-2;
     }
 
     .table-center {
@@ -1720,6 +1779,8 @@
     .modal-popup {
         @apply !rounded-3xl;
         @apply !p-10;
+        @apply w-[920px];
+        @apply max-w-[90%];
     }
 
     .modal-icon {
@@ -1739,7 +1800,7 @@
         @apply !opacity-85;
         @apply !m-0;
         @apply !text-center;
-        @apply !text-sm;
+        @apply !text-base;
     }
 
     .modal-btn {
@@ -1793,7 +1854,8 @@
         }
 
         .modal-popup {
-            @apply !p-6;
+            @apply !px-10;
+            @apply !py-8;
         }
 
         .modal-actions {
@@ -1823,6 +1885,61 @@
         @apply items-center;
         @apply text-base;
         @apply font-normal;
+    }
+
+    .status-tag {
+        @apply py-3;
+        @apply px-4;
+        @apply rounded-lg;
+        @apply !bg-opacity-20;
+        @apply text-sm;
+        @apply font-medium;
+
+        &.ongoing {
+            @apply bg-status_ongoing;
+            @apply text-status_ongoing;
+        }
+
+        &.scanned {
+            @apply bg-status_scanned;
+            @apply text-status_scanned;
+        }
+
+        &.future {
+            @apply bg-status_future;
+            @apply text-status_future;
+        }
+
+        &.past {
+            @apply bg-status_past;
+            @apply text-status_past;
+        }
+    }
+
+    .activity-icon {
+        @apply bg-primary_green;
+        @apply bg-opacity-15;
+        @apply rounded-xl;
+        @apply w-10;
+        @apply h-10;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+
+        .base-icon {
+            @apply bg-primary_green;
+        }
+    }
+
+    .about-grid {
+        @apply grid;
+        @apply grid-cols-2;
+        @apply gap-6;
+    }
+
+    .modal-close {
+        @apply !w-6;
+        @apply !h-6;
     }
 }
 

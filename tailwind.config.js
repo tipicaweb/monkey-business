@@ -39,7 +39,11 @@ export default {
           btn_secondary_bg_hover: '#516A60',
           btn_secondary_bg_active: '#67887B',
           btn_secondary: '#DEF8EE',
-          dropdown_hover: '#4A5452'
+          dropdown_hover: '#4A5452',
+          status_ongoing: '#85A7FF',
+          status_scanned: '#00EBB0',
+          status_future: '#FFA65E',
+          status_past: '#E894A8',
         }
       }
     },
