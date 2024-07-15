@@ -72,12 +72,12 @@
     }
 
     .navbar-button {
-        @apply gap-3;
-        @apply text-base;
-        @apply p-4;
-        @apply h-14;
+        @apply gap-[12px];
+        @apply text-[16px];
+        @apply p-[16px];
+        @apply h-[56px];
         @apply w-full;
-        @apply rounded-2xl;
+        @apply rounded-[16px];
         @apply flex;
         @apply justify-start; 
         @apply items-center; 
@@ -110,7 +110,7 @@
 
     .dropdown-button {
         @apply flex;
-        @apply gap-3;
+        @apply gap-[12px];
         @apply w-full;
         @apply transition-all;
     }
@@ -124,7 +124,7 @@
         @apply overflow-hidden;
         @apply pl-8;
         @apply text-white;
-        @apply gap-1;
+        @apply gap-[4px];
         @apply transition-all;
     }
 
@@ -136,7 +136,7 @@
         @apply max-h-full;
         @apply text-white;
         @apply bg-primary_black;
-        @apply gap-1;
+        @apply gap-[4px];
         @apply transition-all;
     }
 
@@ -182,7 +182,7 @@
         @apply outline-none;
         @apply leading-normal;
         @apply min-w-[180px];
-        @apply text-base;
+        @apply text-[16px];
 
         &:hover {
             @apply bg-secondary_black_hover;
@@ -190,14 +190,13 @@
     }
 
     .header-navbar .btn {
-        @apply text-sm;
-        @apply pr-6;
-        @apply pl-5;
+        @apply text-[16px];
+        @apply px-[24px];
         @apply w-auto;
 
         .btn-icon {
-            @apply w-4;
-            @apply h-4;
+            @apply w-[16px];
+            @apply h-[16px];
         }
     }
 
@@ -222,7 +221,7 @@
         @apply items-center;
         @apply gap-2;
         @apply max-w-60;
-        @apply text-base;
+        @apply text-[16px];
     }
 
     .btn {
@@ -231,7 +230,7 @@
         @apply items-center;
         @apply gap-2;
         @apply bg-primary_green;
-        @apply px-6;
+        @apply px-5;
         @apply rounded-full;
         @apply h-10;
         @apply w-[7.5rem];
@@ -256,10 +255,6 @@
     }
 
     .btn-secondary {
-        @apply flex;
-        @apply justify-center;
-        @apply items-center;
-        @apply gap-2;
         @apply bg-btn_secondary_bg;
         @apply text-btn_secondary;
         @apply py-2.5;
@@ -270,12 +265,43 @@
         @apply h-10;
         @apply text-center;
         @apply cursor-pointer;
-        @apply font-medium;
         @apply leading-normal;
     }
 
     .btn-secondary:hover {
         @apply bg-btn_secondary_bg_hover;
+    }
+
+    .assign-btn {
+        @apply btn-secondary;
+        @apply float-end;
+        transition: all .3s ease 0s;
+    }
+
+    .assign-btn.active {
+        @apply bg-[#E0E9E7];
+        @apply bg-opacity-10;
+        @apply text-[#E0E9E7];
+        @apply text-opacity-40;
+        
+        &:hover {
+            @apply bg-opacity-30;
+        }
+    }
+
+    .remove-btn {
+        @apply btn-secondary;
+        @apply float-end;
+        transition: all .3s ease 0s;
+    }
+
+    .remove-btn.active {
+        @apply bg-[#633B48];
+        @apply text-[#FFD8E4];
+
+        &:hover {
+            @apply bg-[#885263];
+        }
     }
 
     .icon-grid {
@@ -470,11 +496,36 @@
         mask-size: cover;
     }
 
+    .icon-error {
+        mask: url('../assets/error.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-cart {
+        mask: url('../assets/shopping_cart.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-flip {
+        mask: url('../assets/flip.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-email {
+        mask: url('../assets/alternate_email.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-call {
+        mask: url('../assets/call.svg') center no-repeat;
+        mask-size: cover;
+    }
+
     .navbar-icon {
         @apply flex;
-        @apply w-6;
-        @apply min-w-6;
-        @apply h-6;
+        @apply w-[24px];
+        @apply min-w-[24px];
+        @apply h-[24px];
         @apply bg-white;
         @apply transition-all;
     }
@@ -483,13 +534,6 @@
         @apply h-4;
         @apply w-4;
         @apply bg-text_hover;
-    }
-
-    .btn-icon-secondary {
-        @apply h-4;
-        @apply w-4;
-        @apply ml-[-0.25rem];
-        @apply bg-btn_secondary;;
     }
 
     .base-icon {
@@ -682,7 +726,8 @@
         @apply bg-secondary_black;
         @apply bg-opacity-60;
         @apply rounded-xl;
-        @apply p-6;
+        @apply py-4;
+        @apply px-6;
     }
 
     .table-component {
@@ -707,6 +752,7 @@
 
     .labels-table div {
         @apply table-cell;
+        @apply pb-2;
     }
 
     .table-body {
@@ -741,6 +787,10 @@
         &:last-child {
             @apply rounded-r-xl;
         }
+    }
+
+    .hover-table .labels-table div:first-child {
+        @apply pl-2;
     }
 
     .table-center {
@@ -830,6 +880,21 @@
         @apply relative;
         @apply h-14;
         @apply w-full;
+
+        &:hover:not(:has(.component-input:focus)):not(:has(.component-input.error)):not(:has(.component-input:disabled)) {
+            .component-input {
+                @apply bg-table_hover;
+                @apply border-terciary_gray;
+            }
+
+            .component-label {
+                @apply text-input_border;
+            }
+        }
+
+        &:has(.component-input:disabled) {
+            @apply opacity-40;
+        }
     }
 
     .input-container.icon-left {
@@ -860,10 +925,39 @@
         @apply px-4;
         @apply pt-7;
         @apply pb-2;
+        @apply pr-10;
         @apply outline-none;
         @apply cursor-text;
+        @apply caret-input_focus;
         color-scheme: dark;
         transition: all .3s ease 0s;
+
+        &:disabled {
+            @apply border-terciary_gray;
+            @apply text-terciary_gray;
+            @apply bg-secondary_black;
+        }
+
+        &:disabled ~ .input-icon {
+            @apply hidden;
+        }
+
+        &.error {
+            @apply border-input_invalid;
+
+            & ~ .component-label {
+                @apply text-input_invalid;
+            }
+
+            & ~ .input-icon {
+                @apply opacity-0;
+            }
+
+            & ~ .input-error,
+            & ~ .error-icon {
+                @apply opacity-100;
+            }
+        }
 
         &:focus {
             @apply border-input_focus;
@@ -871,24 +965,6 @@
 
         &:focus ~ .component-label {
             @apply text-input_focus;
-        }
-
-        &:disabled {
-            @apply border-input_border_disabled;
-            @apply text-terciary_gray;
-            @apply bg-input_bg_disabled;
-        }
-
-        &:disabled ~ .input-icon {
-            @apply hidden;
-        }
-
-        &:invalid {
-            @apply border-input_invalid;
-
-            & ~ .component-label {
-                @apply text-input_invalid;
-            }
         }
     }
 
@@ -935,10 +1011,6 @@
         opacity: 0;
     }
 
-    .component-input:has(~ .input-icon) {
-        @apply pr-10;
-    }
-
     .input-icon {
         @apply right-0;
         @apply top-0;
@@ -979,6 +1051,29 @@
         .icon-visibility-off {
             @apply flex;
         }
+    }
+
+    .input-error {
+        @apply absolute;
+        @apply right-0;
+        @apply top-full;
+        @apply left-4;
+        @apply text-xs;
+        @apply text-primary_red;
+        @apply h-5;
+        @apply pt-1;
+        @apply font-normal;
+        @apply opacity-0;
+    }
+
+    .error-icon {
+        @apply base-icon;
+        @apply input-icon;
+        @apply p-0;
+        @apply my-auto;
+        @apply right-3;
+        @apply bg-primary_red;
+        @apply opacity-0;
     }
 
     .component-note {
@@ -1049,7 +1144,7 @@
     }
 
     .switch-input:hover ~ .switch-span::after {
-        @apply bg-secondary_white;
+        @apply bg-secondary_gray;
     }
     
     .switch-input:checked ~ .switch-span {
@@ -1065,12 +1160,8 @@
         @apply m-1;
     }
 
-    .switch-input:checked:hover ~ .switch-span {
-        @apply bg-secondary_green;
-    }
-
     .component-line {
-        @apply h-0.5;
+        @apply h-[2px];
         @apply w-full;
         @apply border-white;
         @apply border-b-2;
@@ -1504,7 +1595,7 @@
 
     .inputs-grid {
         @apply grid;
-        @apply gap-6;
+        @apply gap-8;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
             "age-restriction age-restriction age-from age-to"
@@ -1515,7 +1606,7 @@
 
     .create-grid {
         @apply grid;
-        @apply gap-6;
+        @apply gap-8;
         grid-template-columns: repeat(8, 1fr);
         grid-template-areas: 
             "name name name name description description description description"
@@ -1535,17 +1626,21 @@
         @apply py-1.5;
         @apply rounded-lg;
         @apply text-sm;
-        @apply font-medium; 
-        @apply cursor-pointer;
+        @apply font-medium;
+        @apply cursor-default;
         @apply text-primary_gray;
         transition: all .3s ease 0s;
 
-        &:hover {
-            @apply border-white;
-            @apply text-white;
+        &:has(span) {
+            @apply cursor-pointer;
 
-            .filter-icon {
-                @apply bg-white;
+            &:hover {
+                @apply border-white;
+                @apply text-white;
+    
+                .filter-icon {
+                    @apply bg-white;
+                }
             }
         }
     }
@@ -1610,6 +1705,7 @@
         @apply border-btn_secondary_bg;
         @apply h-10;
         @apply px-6;
+        transition: all .3s ease 0s;
 
         &.active {
             @apply bg-transparent;
@@ -1624,7 +1720,7 @@
         transition: all .3s ease 0s;
 
         &:hover {
-            @apply text-secondary_white;
+            @apply text-terciary_gray;
         }
     }
 
@@ -1683,6 +1779,8 @@
     .modal-popup {
         @apply !rounded-3xl;
         @apply !p-10;
+        @apply w-[920px];
+        @apply max-w-[90%];
     }
 
     .modal-icon {
@@ -1702,7 +1800,7 @@
         @apply !opacity-85;
         @apply !m-0;
         @apply !text-center;
-        @apply !text-sm;
+        @apply !text-base;
     }
 
     .modal-btn {
@@ -1756,8 +1854,8 @@
         }
 
         .modal-popup {
-            @apply !p-6;
-            @apply !w-[380px];
+            @apply !px-10;
+            @apply !py-8;
         }
 
         .modal-actions {
@@ -1780,6 +1878,69 @@
         @apply p-4;
         @apply py-16;
     }
+
+    .input-age {
+        @apply flex;
+        @apply justify-between;
+        @apply items-center;
+        @apply text-base;
+        @apply font-normal;
+    }
+
+    .status-tag {
+        @apply py-3;
+        @apply px-4;
+        @apply rounded-lg;
+        @apply !bg-opacity-20;
+        @apply text-sm;
+        @apply font-medium;
+
+        &.ongoing {
+            @apply bg-status_ongoing;
+            @apply text-status_ongoing;
+        }
+
+        &.scanned {
+            @apply bg-status_scanned;
+            @apply text-status_scanned;
+        }
+
+        &.future {
+            @apply bg-status_future;
+            @apply text-status_future;
+        }
+
+        &.past {
+            @apply bg-status_past;
+            @apply text-status_past;
+        }
+    }
+
+    .activity-icon {
+        @apply bg-primary_green;
+        @apply bg-opacity-15;
+        @apply rounded-xl;
+        @apply w-10;
+        @apply h-10;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+
+        .base-icon {
+            @apply bg-primary_green;
+        }
+    }
+
+    .about-grid {
+        @apply grid;
+        @apply grid-cols-2;
+        @apply gap-6;
+    }
+
+    .modal-close {
+        @apply !w-6;
+        @apply !h-6;
+    }
 }
 
 @layer utilities {
@@ -1791,7 +1952,7 @@
 
     @media (max-width: 1280px) {
         html {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .create-grid {
@@ -1847,12 +2008,12 @@
         }
 
         .sidebar:hover .navbar-list {
-            @apply w-80;
-            @apply pr-4;
+            @apply w-[20rem];
+            @apply pr-[16px];
         }
 
         .sidebar:hover .navbar-dropdown-list {
-            @apply pl-8;
+            @apply pl-[32px];
         }
 
         .sidebar:not(:hover) .navbar-button {
@@ -1870,12 +2031,12 @@
             @apply right-0;
             @apply top-[112px];
             @apply bottom-0;
-            @apply w-14;
+            @apply w-[56px];
         }
 
         .navbar-button,
         .dropdown-button {
-            @apply gap-4;
+            @apply gap-[16px];
         }
 
         .inputs-grid {
