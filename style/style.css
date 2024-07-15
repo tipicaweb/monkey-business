@@ -278,6 +278,38 @@
         @apply bg-btn_secondary_bg_hover;
     }
 
+    .assign-btn {
+        @apply btn-secondary;
+        @apply float-end;
+        transition: all .3s ease 0s;
+    }
+
+    .assign-btn.active {
+        @apply bg-[#E0E9E7];
+        @apply bg-opacity-10;
+        @apply text-[#E0E9E7];
+        @apply text-opacity-40;
+        
+        &:hover {
+            @apply bg-opacity-30;
+        }
+    }
+
+    .remove-btn {
+        @apply btn-secondary;
+        @apply float-end;
+        transition: all .3s ease 0s;
+    }
+
+    .remove-btn.active {
+        @apply bg-[#633B48];
+        @apply text-[#FFD8E4];
+
+        &:hover {
+            @apply bg-[#885263];
+        }
+    }
+
     .icon-grid {
         mask: url('../assets/grid_view.svg') center no-repeat;
     }
@@ -467,6 +499,31 @@
 
     .icon-close-circle {
         mask: url('../assets/close_circle.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-error {
+        mask: url('../assets/error.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-cart {
+        mask: url('../assets/shopping_cart.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-flip {
+        mask: url('../assets/flip.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-email {
+        mask: url('../assets/alternate_email.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-call {
+        mask: url('../assets/call.svg') center no-repeat;
         mask-size: cover;
     }
 
@@ -707,6 +764,7 @@
 
     .labels-table div {
         @apply table-cell;
+        @apply pb-2;
     }
 
     .table-body {
@@ -741,6 +799,10 @@
         &:last-child {
             @apply rounded-r-xl;
         }
+    }
+
+    .hover-table .labels-table div:first-child {
+        @apply pl-2;
     }
 
     .table-center {
@@ -830,6 +892,21 @@
         @apply relative;
         @apply h-14;
         @apply w-full;
+
+        &:hover:not(:has(.component-input:focus)):not(:has(.component-input.error)):not(:has(.component-input:disabled)) {
+            .component-input {
+                @apply bg-input_bg_hover;
+                @apply border-terciary_gray;
+            }
+
+            .component-label {
+                @apply text-input_border;
+            }
+        }
+
+        &:has(.component-input:disabled) {
+            @apply opacity-40;
+        }
     }
 
     .input-container.icon-left {
@@ -846,7 +923,7 @@
     }
 
     .component-input {
-        @apply border-b;
+        @apply border-b-2;
         @apply border-input_border;
         @apply rounded-t-[.25rem];
         @apply resize-none;
@@ -860,13 +937,16 @@
         @apply px-4;
         @apply pt-7;
         @apply pb-2;
+        @apply pr-10;
         @apply outline-none;
         @apply cursor-text;
+        @apply caret-input_focus;
         color-scheme: dark;
         transition: all .3s ease 0s;
 
         &:focus {
             @apply border-input_focus;
+            @apply border-b-2;
         }
 
         &:focus ~ .component-label {
@@ -883,12 +963,29 @@
             @apply hidden;
         }
 
-        &:invalid {
-            @apply border-input_invalid;
+        &.error {
+            @apply border-primary_red;
 
             & ~ .component-label {
-                @apply text-input_invalid;
+                @apply text-primary_red;
             }
+
+            & ~ .input-icon {
+                @apply opacity-0;
+            }
+
+            & ~ .input-error,
+            & ~ .error-icon {
+                @apply opacity-100;
+            }
+        }
+
+        &:focus {
+            @apply border-input_focus;
+        }
+
+        &:focus ~ .component-label {
+            @apply text-input_focus;
         }
     }
 
@@ -979,6 +1076,29 @@
         .icon-visibility-off {
             @apply flex;
         }
+    }
+
+    .input-error {
+        @apply absolute;
+        @apply right-0;
+        @apply top-full;
+        @apply left-4;
+        @apply text-xs;
+        @apply text-primary_red;
+        @apply h-5;
+        @apply pt-1;
+        @apply font-normal;
+        @apply opacity-0;
+    }
+
+    .error-icon {
+        @apply base-icon;
+        @apply input-icon;
+        @apply p-0;
+        @apply my-auto;
+        @apply right-3;
+        @apply bg-primary_red;
+        @apply opacity-0;
     }
 
     .component-note {
@@ -1543,9 +1663,18 @@
         &:hover {
             @apply border-white;
             @apply text-white;
+        }
 
-            .filter-icon {
-                @apply bg-white;
+        &:has(span) {
+            @apply cursor-pointer;
+
+            &:hover {
+                @apply border-white;
+                @apply text-white;
+    
+                .filter-icon {
+                    @apply bg-white;
+                }
             }
         }
     }
@@ -1610,6 +1739,7 @@
         @apply border-btn_secondary_bg;
         @apply h-10;
         @apply px-6;
+        transition: all .3s ease 0s;
 
         &.active {
             @apply bg-transparent;
@@ -1683,6 +1813,8 @@
     .modal-popup {
         @apply !rounded-3xl;
         @apply !p-10;
+        @apply w-[920px];
+        @apply max-w-[90%];
     }
 
     .modal-icon {
@@ -1757,7 +1889,6 @@
 
         .modal-popup {
             @apply !p-6;
-            @apply !w-[380px];
         }
 
         .modal-actions {
@@ -1779,6 +1910,69 @@
         @apply items-center;
         @apply p-4;
         @apply py-16;
+    }
+
+    .input-age {
+        @apply flex;
+        @apply justify-between;
+        @apply items-center;
+        @apply text-base;
+        @apply font-normal;
+    }
+
+    .status-tag {
+        @apply py-3;
+        @apply px-4;
+        @apply rounded-lg;
+        @apply !bg-opacity-20;
+        @apply text-sm;
+        @apply font-medium;
+
+        &.ongoing {
+            @apply bg-status_ongoing;
+            @apply text-status_ongoing;
+        }
+
+        &.scanned {
+            @apply bg-status_scanned;
+            @apply text-status_scanned;
+        }
+
+        &.future {
+            @apply bg-status_future;
+            @apply text-status_future;
+        }
+
+        &.past {
+            @apply bg-status_past;
+            @apply text-status_past;
+        }
+    }
+
+    .activity-icon {
+        @apply bg-primary_green;
+        @apply bg-opacity-15;
+        @apply rounded-xl;
+        @apply w-10;
+        @apply h-10;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+
+        .base-icon {
+            @apply bg-primary_green;
+        }
+    }
+
+    .about-grid {
+        @apply grid;
+        @apply grid-cols-2;
+        @apply gap-6;
+    }
+
+    .modal-close {
+        @apply !w-6;
+        @apply !h-6;
     }
 }
 
