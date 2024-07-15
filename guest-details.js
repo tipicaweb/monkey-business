@@ -144,7 +144,7 @@ const aboutModal = new Modal("Edit guest",
                                         </div>
                                     </div>
 
-                                    <div class="flex gap-6 items-center">
+                                    <div class="flex gap-12 items-center">
                                         <div class="flex flex-col gap-2">
                                             <div class="flex items-center gap-2 text-sm text-primary_orange font-medium">
                                                 <span class="base-icon icon-avaible bg-primary_orange"></span>
