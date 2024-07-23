@@ -76,6 +76,7 @@ const productsModal = new Modal("Manage products",
                             true);
 
 productsModal.createModal();
+productsModal.modalSettings.customClass.popup += ' modal-large'
 productsModal.addListener('#products-modal', '.assign-btn', "Assigned", "Assign");
 
 const aboutModal = new Modal("Edit guest",
@@ -178,6 +179,7 @@ const aboutModal = new Modal("Edit guest",
                             true);
 
 aboutModal.createModal();
+aboutModal.modalSettings.customClass.popup += ' modal-large'
 aboutModal.addListener('#about-modal');
 
 const guestsModal = new Modal("Manage guest lists",
@@ -232,6 +234,7 @@ const guestsModal = new Modal("Manage guest lists",
                                 true);
 
 guestsModal.createModal();
+guestsModal.modalSettings.customClass.popup += ' modal-large'
 guestsModal.addListener('#guests-modal', '.remove-btn', "Remove", "Restore");
 
 const groupsModal = new Modal("Manage groups",
@@ -276,6 +279,7 @@ const groupsModal = new Modal("Manage groups",
                             true);
 
 groupsModal.createModal();
+groupsModal.modalSettings.customClass.popup += ' modal-large'
 groupsModal.addListener('#groups-modal', '.remove-btn', "Remove", "Restore");
 
 const tagsModal = new Modal("Manage tags",
@@ -312,4 +316,5 @@ const tagsModal = new Modal("Manage tags",
                             true);
 
 tagsModal.createModal();
+tagsModal.modalSettings.customClass.popup += ' modal-large'
 tagsModal.addListener('#tags-modal');
