@@ -45,6 +45,7 @@ export default {
           status_scanned: '#00EBB0',
           status_future: '#FFA65E',
           status_past: '#E894A8',
+          modal_bg: '#29302E',
         }
       }
     },

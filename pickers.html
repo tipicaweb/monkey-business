@@ -7,72 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/output.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>Login - MonkeyBusiness</title>
+    <title>Pickers - MonkeyBusiness</title>
 </head>
 
 <body class="min-w-[992px] h-screen bg-secondary_black">
     <main class="w-full h-screen flex justify-center items-center bg-primary_black">
-        <div class="grid grid-cols-4 gap-y-20 gap-8">
-            <div class="input-container">
-                <input id="event_name" class="component-input" type="text" placeholder=" " required>
-                <label for="event_name" class="component-label">Event name*</label>
-                <span class="input-error">*Required</span>
-                <span class="icon-error error-icon"></span>
-            </div>
-            <div class="input-container">
-                <input id="event_name" class="component-input" type="number" placeholder=" " required>
-                <label for="event_name" class="component-label">Event count*</label>
-                <span class="input-error">*Required</span>
-                <span class="icon-error error-icon"></span>
-                <div class="input-icon">
-                    <span class="icon-arrowD base-icon rotate-180"></span>
-                    <span class="icon-arrowD base-icon"></span>
-                </div>
-            </div>
-            <div class="input-container">
-                <input id="event_name" class="component-input error" type="text" placeholder=" " required>
-                <label for="event_name" class="component-label">Event name*</label>
-                <span class="input-error">*Required</span>
-                <span class="icon-error error-icon"></span>
-            </div>
-            <div class="input-container">
-                <input id="event_name" class="component-input" type="text" placeholder=" " required disabled>
-                <label for="event_name" class="component-label">Event name*</label>
-                <span class="input-error">*Required</span>
-                <span class="icon-error error-icon"></span>
-            </div>
-
-            <div class="input-container">
-                <input id="event_name" class="component-input" value="[Event name]" type="text" placeholder=" " required>
-                <label for="event_name" class="component-label">Event name*</label>
-                <span class="input-error">*Required</span>
-                <span class="icon-error error-icon"></span>
-            </div>
-            <div class="input-container icon-left">
-                <input id="event_name" class="component-input" type="number" placeholder=" " required>
-                <label for="event_name" class="component-label">Event name*</label>
-                <span class="input-error">*Required</span>
-                <span class="icon-error error-icon"></span>
-                <div class="input-icon">
-                    <span class="base-icon icon-search"></span>
-                </div>
-            </div>
-            <div class="input-container">
-                <input id="event_name" class="component-input error" type="text" value="[Event name]" placeholder=" " required>
-                <label for="event_name" class="component-label">Event name*</label>
-                <span class="input-error">*Required</span>
-                <span class="icon-error error-icon"></span>
-            </div>
-            <div class="input-container">
-                <input id="event_name" class="component-input" type="text" value="[Event name]" placeholder=" " required disabled>
-                <label for="event_name" class="component-label">Event name*</label>
-                <span class="input-error">*Required</span>
-                <span class="icon-error error-icon"></span>
-            </div>
+        <div class="input-container">
+            <input id="start_date" class="component-input" type="date" placeholder=" " required>
+            <label for="start_date" class="component-label">Start date*</label>
+            <span class="input-error">*Required</span>
+            <span class="icon-error error-icon"></span>
         </div>
     </main>
 
+    <div id="date-container" class="date-container">
+        <div id="date-picker" class="date-picker">
+            <div id="date-picker-header" class="date-header">
+                <div class="date-header-title"></div>
+                <div class="date-header-info"></div>
+            </div>
+            <div id="date-picker-cal-month">
+                <p id="date-picker-cal-month-label"></p>
+                <div class="flex">
+                    <button id="date-picker-cal-month-prev" class="date-controls">
+                        <span class="base-icon icon-arrowD rotate-90"></span>
+                    </button>
+                    <button id="date-picker-cal-month-next" class="date-controls">
+                        <span class="base-icon icon-arrowD -rotate-90"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="date-picker-cal-wrapper">
+                <table id="date-picker-cal" class="table borderless">
+                    <thead>
+                        <tr>
+                            <td>S</td><td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="date-buttons">
+                <button id="date-picker-cancel-button" class="btn-text">Cancel</button>
+                <button id="date-picker-ok-button" class="btn">OK</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./charts.js"></script>
+    <script src="./pickers.js"></script>
+    <script>
+
+        var dp = DatePicker();
+
+        document.querySelector('#start_date').addEventListener('click', (event) => {
+            var date = new Date();
+            dp.show("Start date", date, function(selected) {
+                event.target.value = selected.toLocaleDateString("en-CA");
+            });
+        })
+    </script>
 </body>
 </html>
