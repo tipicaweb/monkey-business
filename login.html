@@ -15,7 +15,7 @@
         <div class="login-tab" id="login_start-tab">
             <img class="w-20" src="./assets/mini_logo.svg" alt="Mini MonkeyBusiness logo">
             <div class="flex flex-col text-center text-white">
-                <h1 class="text-[45px] font-bold">Welcome Back</h1>
+                <h1 class="text-5xl font-bold">Welcome Back</h1>
                 <h3 class="text-base font-normal">Welcome to Monkey Business!</h3>
                 <h3 class="text-base font-normal">Please enter your credentials below to proceed.</h3>
             </div>
@@ -35,7 +35,7 @@
                 </div>
             </form>
 
-            <button type="submit" form="login-form" class="btn h-10 w-[120px] text-sm">Login</button>
+            <button type="submit" form="login-form" class="btn">Login</button>
             <button class="font-normal text-white tab-button text-sm" aria-valuetext="reset_password-tab">Forgot password?</button>
         </div>
 
@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <button class="btn h-10 w-[120px] text-sm tab-button self-end" aria-valuetext="confirm_password-tab">Send</button>
+            <button class="btn tab-button self-end" aria-valuetext="confirm_password-tab">Send</button>
         </div>
 
         <div class="login-tab hidden" id="confirm_password-tab">
@@ -90,19 +90,19 @@
                 </div>
             </form>
 
-            <button type="submit" form="password-form" class="btn h-10 w-[165px] text-sm self-end">Change password</button>
+            <button type="submit" form="password-form" class="btn w-[165px] self-end">Change password</button>
         </div>
 
         <div class="login-tab hidden" id="change_password-tab">
-            <div class="bg-primary_green bg-opacity-15 p-8 my-8 rounded-[50px]">
-                <span class="flex w-20 h-20 bg-primary_green icon-task"></span>
+            <div class="modal-icon_container success">
+                <span class="container-icon"></span>
             </div>
             <div class="flex flex-col text-white mb-4">
-                <h2 class="text-4xl font-bold mb-2">Password changed</h2>
+                <h2 class="text-4xl font-bold mb-2">Password changed!</h2>
                 <h3 class="text-base font-normal">Your password was changed successfully.</h3>
             </div>
 
-            <button class="btn h-10 w-[165px] text-sm tab-button" aria-valuetext="login_start-tab">Back to login</button>
+            <button class="btn w-[135px] tab-button" aria-valuetext="login_start-tab">Back to login</button>
         </div>
     </main>
 

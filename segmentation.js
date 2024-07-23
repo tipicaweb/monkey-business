@@ -18,7 +18,7 @@ createModal.addListener('#create-segmentation');
 const deleteModal = new Modal("Delete segmentation?",
                               "Are you sure you want to delete this segmentation?",
                               ``,
-                              "Continue",
+                              "Delete",
                               "Cancel",
                               false,
                               "",

@@ -27,6 +27,7 @@ export default {
           secondary_gray: '#BFC9C2',
           terciary_gray: '#E0E9E7',
           input_bg: '#343B39',
+          input_bg_hover: '#464D4B',
           input_border: '#C4D0CD',
           input_border_disabled: '#49454F',
           input_bg_disabled: '#E6E0E90A',
