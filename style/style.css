@@ -183,6 +183,7 @@
         @apply leading-normal;
         @apply min-w-[180px];
         @apply text-base;
+        @apply cursor-pointer;
 
         &:hover {
             @apply bg-secondary_black_hover;
@@ -624,6 +625,7 @@
         @apply justify-center;
         @apply items-center;
         @apply min-w-24;
+        @apply cursor-pointer;
 
         &:not(:has(.input-icon)) {
             .base-icon {
@@ -683,6 +685,7 @@
         @apply w-full;
         @apply transition-all;
         @apply appearance-none;
+        @apply cursor-pointer;
     }
 
     .donut-component {
@@ -2007,13 +2010,8 @@
     }
 
 
-
-
-
-
     
-    /** DATE PICKER */
-    #date-container {
+    .date-container {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -2024,7 +2022,7 @@
         pointer-events: none;
     }
     
-    #date-picker {
+    .date-picker {
         position: fixed;
         left: 50%;
         top: 50%;
@@ -2040,7 +2038,7 @@
         transition: all .3s ease 0s;
     }
     
-    #date-picker.show {
+    .date-picker.show {
         opacity: 100;
         pointer-events: all;
     }

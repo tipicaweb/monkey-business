@@ -894,6 +894,7 @@ th,
   min-width: 180px;
   font-size: 1rem;
   line-height: 1.5rem;
+  cursor: pointer;
   &:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(54 58 57 / var(--tw-bg-opacity));
@@ -1602,6 +1603,7 @@ th,
   justify-content: center;
   align-items: center;
   min-width: 6rem;
+  cursor: pointer;
   &:not(:has(.input-icon)) {
     .base-icon {
       position: absolute;
@@ -1697,6 +1699,7 @@ th,
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  cursor: pointer;
 }
 
 .donut-component {
@@ -3650,9 +3653,7 @@ select.component-input {
   cursor: pointer;
 }
 
-/** DATE PICKER */
-
-#date-container {
+.date-container {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -3663,7 +3664,7 @@ select.component-input {
   pointer-events: none;
 }
 
-#date-picker {
+.date-picker {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -3681,7 +3682,7 @@ select.component-input {
   transition: all .3s ease 0s;
 }
 
-#date-picker.show {
+.date-picker.show {
   opacity: 100;
   pointer-events: all;
 }
@@ -4269,6 +4270,10 @@ select.component-input {
   width: 2rem;
 }
 
+.w-8\/12 {
+  width: 66.666667%;
+}
+
 .w-96 {
   width: 24rem;
 }
@@ -4299,6 +4304,18 @@ select.component-input {
 
 .w-full {
   width: 100%;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-52 {
+  width: 13rem;
 }
 
 .min-w-20 {
