@@ -180,5 +180,10 @@ btnsGender.forEach(btn => {
         e.preventDefault();
 
         e.target.classList.toggle('active');
+
+        if(e.target.classList.contains('active'))
+            e.target.textContent = `${e.target.value} Added`;
+        else
+            e.target.textContent = `Add ${e.target.value}`;
     })
 })

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Pickers - MonkeyBusiness</title>
+</head>
+
+<body class="min-w-[992px] h-screen bg-secondary_black">
+    <main class="w-full h-screen flex justify-center items-center bg-primary_black">
+        <section class="flex justify-center items-center gap-6 w-8/12">
+            <div class="input-container w-auto">
+                <input id="start_date" class="component-input" type="date" placeholder=" " required>
+                <label for="start_date" class="component-label">Start date*</label>
+                <span class="input-error">*Required</span>
+                <span class="icon-error error-icon"></span>
+                <div class="input-icon">
+                    <span class="icon-calendar base-icon"></span>
+                </div>
+            </div>
+            <div class="select-container h-10">
+                <span class="base-icon icon-calendar"></span>
+                <select name="home-select" class="header-select" id="home-select">
+                    <option selected value="this-month">This month</option>
+                </select>
+                <span class="base-icon icon-arrowD"></span>
+            </div>
+            <div class="select-container">
+                <select name="past-select" class="component-select" id="past-select">
+                    <option selected value="month">Last month</option>
+                    <option value="week">Last week</option>
+                </select>
+                <span class="base-icon icon-arrowD"></span>
+            </div>
+            <div class="input-container select-container w-52">     
+                <select id="product_tax" class="component-input">
+                    <option value="0%" selected>0%</option>
+                    <option value="10%">10%</option>
+                    <option value="20%">20%</option>
+                    <option value="30%">30%</option>
+                    <option value="40%">40%</option>
+                </select>
+                <div class="input-icon">
+                    <span class="base-icon icon-arrowD"></span>
+                </div>
+                <label for="product_tax" class="component-label">Sales tax</label>
+            </div>
+        </section>
+    </main>
+
+    <div id="date-container" class="date-container">
+        <div id="date-picker" class="date-picker">
+            <div id="date-picker-header" class="date-header">
+                <div class="date-header-title"></div>
+                <div class="date-header-info"></div>
+            </div>
+            <div id="date-picker-cal-month">
+                <p id="date-picker-cal-month-label"></p>
+                <div class="flex">
+                    <button id="date-picker-cal-month-prev" class="date-controls">
+                        <span class="base-icon icon-arrowD rotate-90"></span>
+                    </button>
+                    <button id="date-picker-cal-month-next" class="date-controls">
+                        <span class="base-icon icon-arrowD -rotate-90"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="date-picker-cal-wrapper">
+                <table id="date-picker-cal" class="table borderless">
+                    <thead>
+                        <tr>
+                            <td>S</td><td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="date-buttons">
+                <button id="date-picker-cancel-button" class="btn-text">Cancel</button>
+                <button id="date-picker-ok-button" class="btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./charts.js"></script>
+    <script src="./pickers.js"></script>
+    <script>
+
+        var dp = DatePicker();
+
+        document.querySelector('#start_date').addEventListener('click', (event) => {
+            let date = new Date();
+
+            dp.show("Start date", date, function(selected) {
+                event.target.value = selected.toLocaleDateString("en-CA");
+            });
+        })
+    </script>
+</body>
+</html>

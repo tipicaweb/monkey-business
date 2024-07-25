@@ -8,7 +8,8 @@ class Modal {
         this.hasIcon = hasIcon;
         this.icon = icon;
         this.confirmBtnColor = confirmBtnColor;
-        this.callback = callback;
+        this.callback = callback
+        this.closeBtn = closeBtn;
 
         this.modalSettings = {};
     }
@@ -23,7 +24,10 @@ class Modal {
             backdrop: '#ffffff16',
             reverseButtons: true,
             showCancelButton: false,
-            showCloseButton: `${this.closeBtn}`,
+            showCloseButton: this.closeBtn,
+            closeButtonHtml: `
+                <span class="base-icon icon-close"></span>
+            `,
             customClass: {
                 container: `modal-container ${!this.hasIcon && 'no-icon'}`,
                 title: 'modal-title',

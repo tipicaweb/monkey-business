@@ -183,6 +183,7 @@
         @apply leading-normal;
         @apply min-w-[180px];
         @apply text-base;
+        @apply cursor-pointer;
 
         &:hover {
             @apply bg-secondary_black_hover;
@@ -624,6 +625,7 @@
         @apply justify-center;
         @apply items-center;
         @apply min-w-24;
+        @apply cursor-pointer;
 
         &:not(:has(.input-icon)) {
             .base-icon {
@@ -683,6 +685,7 @@
         @apply w-full;
         @apply transition-all;
         @apply appearance-none;
+        @apply cursor-pointer;
     }
 
     .donut-component {
@@ -866,14 +869,25 @@
     }
 
     .dropdown-item {
-        @apply py-4;
-        @apply px-3;
         @apply flex;
         @apply items-center;
         @apply gap-3;
         @apply cursor-pointer;
         @apply transition-all;
         @apply text-terciary_gray;
+
+        &:not(:has(a)) {
+            @apply py-4;
+            @apply px-3;
+        }
+
+        a {
+            @apply w-full;
+            @apply py-4;
+            @apply px-3;
+            @apply flex;
+            @apply items-center;
+        }
 
         &:hover {
             @apply bg-dropdown_hover;
@@ -1813,8 +1827,12 @@
     .modal-popup {
         @apply !rounded-3xl;
         @apply !p-10;
-        @apply w-[920px];
+        @apply w-[520px];
         @apply max-w-[90%];
+
+        &.modal-large {
+            @apply w-[920px];
+        }
     }
 
     .modal-icon {
@@ -1895,6 +1913,23 @@
             @apply !justify-end;
         }
     }
+    
+    .modal-close {
+        @apply !w-6;
+        @apply !h-6;
+
+        &:hover .icon-close {
+            @apply bg-gray-300;
+        }
+    }
+
+    .modal-container.no-icon .modal-popup.modal-large {
+        @apply !p-10;
+
+        .modal-title {
+            @apply !text-4xl;
+        }
+    }
 
     .filters-list {
         @apply flex;
@@ -1970,10 +2005,170 @@
         @apply gap-6;
     }
 
-    .modal-close {
-        @apply !w-6;
-        @apply !h-6;
+    #create-segmentation {
+        @apply cursor-pointer;
     }
+
+
+    
+    .date-container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    
+    .date-picker {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        z-index: 2000;
+        max-width: 90%;
+        max-height: 85%;
+        @apply bg-modal_bg;
+        @apply text-terciary_gray;
+        @apply rounded-3xl;
+        pointer-events: none;
+        transition: all .3s ease 0s;
+    }
+    
+    .date-picker.show {
+        opacity: 100;
+        pointer-events: all;
+    }
+    
+    .date-header {
+        @apply flex;
+        @apply flex-col;
+        @apply pt-4;
+        @apply pb-3;
+        @apply px-6;
+        @apply items-start;
+        @apply gap-8;
+        @apply border-b;
+        @apply border-input_border_disabled;
+    }
+
+    .date-header-title {
+        @apply text-primary_green;
+        @apply text-sm;
+        @apply font-medium;
+    }
+
+    .date-header-info {
+        @apply text-3xl;
+        @apply font-bold;
+    }
+    
+    /* MONTH SELECTOR */
+    #date-picker-cal-month {
+        @apply w-full;
+        @apply flex;
+        @apply items-center;
+        @apply py-1;
+        @apply pr-3;
+        @apply pl-6;
+        @apply text-input_border;
+        @apply justify-between;
+    }
+    
+    #date-picker-cal-month-label {
+        @apply font-medium;
+        @apply text-sm;
+    }
+
+    .date-controls {
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply cursor-pointer;
+        @apply w-10;
+        @apply h-10;
+        @apply m-2;
+    }
+    
+    /* CALENDAR TABLE */
+    #date-picker-cal-wrapper {
+        @apply px-3;
+        @apply pb-3;
+    }
+    #date-picker-cal {
+        margin-bottom: 0;
+        @apply border-spacing-1;
+        @apply border-separate;
+    }
+    #date-picker-cal thead {
+        text-align: center;
+        font-weight: bold;
+    }
+    #date-picker-cal tbody {
+        text-align: center;
+    }
+    #date-picker-cal td {
+        @apply text-base;
+        @apply w-10;
+        @apply h-10;
+        @apply rounded-full;
+        @apply font-medium;
+        @apply p-0;
+    }
+    
+    #date-picker-cal td.selected {
+        @apply text-text_hover;
+        @apply bg-primary_green;
+    }
+    
+    #date-picker-cal td.enabled-date {
+        cursor: pointer;
+    }
+    
+    /* BUTTONS */
+    .date-buttons {
+        @apply flex;
+        @apply justify-end;
+        @apply p-3;
+        @apply pt-2;
+        @apply gap-4;
+    }
+    #date-picker-reset-button {
+        font-size: 125%;
+        width: 20%;
+        position: absolute;
+        left: 5px;
+        padding: 0;
+    }
+    #date-picker-cancel-button {
+        width: 30%;
+    }
+    #date-picker-ok-button {
+        width: 30%;
+    }
+    
+
+    #date-picker-cal {
+        @apply text-terciary_gray;
+    }
+
+    #date-picker-cal tbody {
+
+        td.enabled-date:hover {
+            &:not(.selected) {
+                @apply text-primary_green;
+                @apply border;
+                @apply border-primary_green;
+            }
+        }
+    }
+
+
+
+
 }
 
 @layer utilities {
