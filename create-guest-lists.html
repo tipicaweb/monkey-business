@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/output.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>Create event - MonkeyBusiness</title>
+    <title>Create guest lists - MonkeyBusiness</title>
 </head>
 
 <body class="body">
@@ -32,7 +32,7 @@
                     <div class="dropdown-button">
                         <span class="navbar-icon icon-event"></span>Event
                     </div>
-                    <div class="navbar-dropdown-btn active" id="events-arrow">
+                    <div class="navbar-dropdown-btn" id="events-arrow">
                         <span class="navbar-icon icon-arrowD"></span>
                     </div>
                 </a>
@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li class="navbar-item">
-                        <a href="./future-events.html" class="navbar-button active">
+                        <a href="./future-events.html" class="navbar-button">
                             <span class="navbar-icon icon-future"></span>Future
                         </a>
                     </li>
@@ -97,7 +97,7 @@
                 </a>
             </li>
             <li class="navbar-item">
-                <a href="#" class="navbar-button">
+                <a href="#" class="navbar-button active">
                     <span class="navbar-icon icon-group"></span>Guest lists
                 </a>
             </li>
@@ -127,11 +127,11 @@
         <header class="header">
             <div class="flex flex-col gap-1">
                 <div class="flex gap-4">
-                    <a href="./event.html" class="breadcrumb-tag">Event</a>
+                    <a href="./guest-details.html" class="breadcrumb-tag">Guest lists</a>
                     <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
-                    <h6 class="breadcrumb-main">Create event</h6>
+                    <h6 class="breadcrumb-main">Create guest lists</h6>
                 </div>
-                <h2 class="header-title">Create event</h2>
+                <h2 class="header-title">Create guest lists</h2>
             </div>
             <div class="header-navbar">
                 <span class="btn dropdown-container">
@@ -168,80 +168,46 @@
         <main class="main">
             <section class="components-container flex flex-col h-full">
                 <article class="component h-full">
-                    <h3 class="title-component">Event details</h3>
-                    <div class="create-grid">
-                        <div class="input-container" style="grid-area: name;">
-                            <input id="event_name" class="component-input" type="text" placeholder=" ">
-                            <label for="event_name" class="component-label">Event name</label>
-                        </div>
-                        <div class="input-container" style="grid-area: location;">
-                            <input id="event_location" class="component-input" type="text" placeholder=" ">
-                            <label for="event_location" class="component-label">Location</label>
-                        </div>
-                        <div class="input-age flex justify-between items-center text-base font-normal" style="grid-area: age-restriction;">
-                            <span>No age restriction</span>
-                            <div class="switch-container">
-                                <input type="checkbox" class="switch-input" id="switch-input">
-                                <span class="switch-span"></span>
+                    <h3 class="title-component">Guest lists details</h3>
+                    <div class="flex gap-6">
+                        <div class="flex flex-col gap-6 justify-center items-center w-1/2">
+                            <div class="input-container">
+                                <input id="lists_name" class="component-input" type="text" placeholder=" " value="[Guest lists name]">
+                                <label for="lists_name" class="component-label">Guest lists name</label>
+                            </div>
+                            <div class="input-container select-container">     
+                                <select id="list_type" class="component-input">
+                                    <option value="static" selected>Static</option>
+                                </select>
+                                <div class="input-icon">
+                                    <span class="base-icon icon-arrowD"></span>
+                                </div>
+                                <label for="list_type" class="component-label">Guest list type</label>
                             </div>
                         </div>
-                        <div class="input-container" style="grid-area: age-from;">
-                            <input id="product_ageForm" class="component-input" type="number" placeholder=" " min="0">
-                            <label for="product_ageForm" class="component-label">Age from</label>
-                            <div class="input-icon">
-                                <span class="icon-arrowD base-icon rotate-180"></span>
-                                <span class="icon-arrowD base-icon"></span>
+                        <div class="flex gap-6 w-1/2">
+                            <div class="input-container w-1/2">
+                                <input id="lists_free" class="component-input" type="number" placeholder=" " min="0" value="20">
+                                <label for="lists_free" class="component-label">Default amount of extras free</label>
+                                <div class="input-icon">
+                                    <span class="icon-arrowD base-icon rotate-180"></span>
+                                    <span class="icon-arrowD base-icon"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="input-container" style="grid-area: age-to;">
-                            <input id="product_ageTo" class="component-input" type="number" placeholder=" " min="0">
-                            <label for="product_ageTo" class="component-label">Age to</label>
-                            <div class="input-icon">
-                                <span class="icon-arrowD base-icon rotate-180"></span>
-                                <span class="icon-arrowD base-icon"></span>
+                            <div class="input-container w-1/2">
+                                <input id="lists_paid" class="component-input" type="number" placeholder=" " min="0" value="20">
+                                <label for="lists_paid" class="component-label">Default amount of extras paid</label>
+                                <div class="input-icon">
+                                    <span class="icon-arrowD base-icon rotate-180"></span>
+                                    <span class="icon-arrowD base-icon"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="input-container" style="grid-area: start-date;">
-                            <input id="event_startDate" class="component-input" type="date" placeholder=" ">
-                            <label for="event_startDate" class="component-label">Start date</label>
-                            <div class="input-icon">
-                                <span class="icon-calendar base-icon"></span>
-                            </div>
-                        </div>
-                        <div class="input-container" style="grid-area: start-time;">
-                            <input id="event_startTime" class="component-input" type="time" placeholder=" ">
-                            <label for="event_startTime" class="component-label">Start time</label>
-                            <div class="input-icon">
-                                <span class="icon-schedule base-icon"></span>
-                            </div>
-                        </div>
-                        <div class="input-container" style="grid-area: end-date;">
-                            <input id="event_endDate" class="component-input" type="date" placeholder=" ">
-                            <label for="event_endDate" class="component-label">End date</label>
-                            <div class="input-icon">
-                                <span class="icon-calendar base-icon"></span>
-                            </div>
-                        </div>
-                        <div class="input-container" style="grid-area: end-time;">
-                            <input id="event_endTime" class="component-input" type="time" placeholder=" ">
-                            <label for="event_endTime" class="component-label">End time</label>
-                            <div class="input-icon">
-                                <span class="icon-schedule base-icon"></span>
-                            </div>
-                        </div>
-                        <div class="component-btn h-full" style="grid-area: event-btn;">
-                            <span class="text-3xl font-bold">6hs</span>
-                            <span>Event duration</span>
-                        </div>
-                        <div class="input-container h-full" style="grid-area: description;">
-                            <textarea id="event_description" class="component-input" rows="5" placeholder=" "></textarea>
-                            <label for="event_description" class="component-label">Description</label>
                         </div>
                     </div>
                 </article>
                 <div class="flex gap-4 justify-center items-center text-sm font-medium col-span-full h-10">
-                    <a href="./event.html" class="btn-text py-2.5" id="cancel-btn">Cancel</a>
-                    <button class="btn py-2.5" id="save-btn">Create</button>
+                    <a href="./guest-lists.html" class="btn-text py-2.5" id="cancel-btn">Cancel</a>
+                    <a href="./create-lists.html" class="btn py-2.5" id="save-btn">Continue</a>
                 </div>
             </section>
         </main>
@@ -250,7 +216,5 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./charts.js"></script>
-    <script src="./product-details.js"></script>
-    <script type="module" src="./create-event.js"></script>
 </body>
 </html>

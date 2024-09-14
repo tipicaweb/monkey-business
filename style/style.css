@@ -528,6 +528,21 @@
         mask-size: cover;
     }
 
+    .icon-person-add {
+        mask: url('../assets/person_add.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-file {
+        mask: url('../assets/upload_file.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-attach {
+        mask: url('../assets/attach_file_24px.svg') center no-repeat;
+        mask-size: cover;
+    }
+
     .navbar-icon {
         @apply flex;
         @apply w-6;
@@ -828,9 +843,21 @@
         @apply rounded-full;
         @apply transition-all;
         @apply p-2;
+        @apply w-10;
         @apply h-10;
         @apply hover:bg-[#CAC4D01F];
         @apply cursor-pointer;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+    }
+
+    .btn-remove {
+        @apply btn-trash;
+    }
+
+    .btn-edit {
+        @apply btn-hover;
     }
 
     .dropdown-container {
@@ -1351,19 +1378,28 @@
         right: 0;
     }
 
-    .option.active .device-check {
-        @apply bg-primary_green;
-        @apply border-0;
-        @apply h-5;
-        @apply w-5;
-
-        .check-icon {
-            @apply opacity-100;
+    .option.active {
+        .device-check {
+            @apply bg-primary_green;
+            @apply border-0;
             @apply h-5;
-            @apply bg-[#3D4241];
+            @apply w-5;
+    
+            .check-icon {
+                @apply opacity-100;
+                @apply h-5;
+                @apply bg-[#3D4241];
+            }
+        }
+
+        .selector-icon {
+            @apply border-none;
+
+            .radio-icon {
+                @apply opacity-100;
+            }
         }
     }
-
 
     .device-check {
         @apply absolute;
@@ -1383,6 +1419,25 @@
         mask: url('../assets/check.svg') center no-repeat;
         mask-size: cover;
         @apply bg-primary_orange;
+        @apply w-full;
+        @apply h-full;
+        @apply flex;
+        @apply opacity-0;
+    }
+
+    .option .selector-icon {
+        @apply !w-5;
+        @apply !h-5;
+        @apply rounded-full;
+        @apply border-2;
+        @apply border-input_border;
+        @apply pointer-events-none;
+    }
+
+    .radio-icon {
+        mask: url('../assets/radio_button_checked.svg') center no-repeat;
+        mask-size: cover;
+        @apply bg-primary_green;
         @apply w-full;
         @apply h-full;
         @apply flex;
@@ -2167,8 +2222,65 @@
     }
 
 
+    .no-guest-icon {
+        @apply w-24;
+        @apply h-24;
+        @apply bg-primary_green;
+        @apply bg-opacity-15;
+        @apply rounded-[32px];
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply p-5;
 
+        .icon-person-add {
+            @apply bg-primary_green;
+            @apply w-full;
+            @apply h-full;
+        }
+    }
 
+    .upload-files {
+        @apply w-full;
+        @apply h-32;
+        @apply bg-modal_bg;
+        @apply rounded-2xl;
+        @apply border;
+        @apply border-dashed;
+        @apply border-primary_gray;
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-center;
+        @apply gap-2;
+    }
+
+    .file-icon {
+        @apply no-guest-icon;
+        @apply w-14;
+        @apply h-14;
+        @apply rounded-full;
+        @apply p-3;
+
+        .icon-file {
+            @apply w-full;
+            @apply h-full;
+            @apply bg-primary_green;
+        }
+    }
+
+    .uploaded-files {
+        @apply upload-files;
+        @apply flex-row;
+        @apply justify-between;
+        @apply px-6;
+
+        .icon-attach {
+            @apply w-full;
+            @apply h-full;
+            @apply bg-primary_green;
+        }
+    }
 }
 
 @layer utilities {
@@ -2257,7 +2369,7 @@
             @apply overflow-hidden;
             @apply left-[32px];
             @apply right-0;
-            @apply top-[112px];
+            @apply top-[128px];
             @apply bottom-0;
             @apply w-14;
         }

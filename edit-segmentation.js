@@ -1,4 +1,5 @@
 import Modal from './modals.js';
+import Selector from './selectors.js';
 
 const distributionChart = createColumn(['0-17', '18-24', '25-34', '35-49', '50-64', '+65'], [
     {
@@ -51,99 +52,6 @@ showEntries.addEventListener('click', (e) => {
 
     entriesList.classList.remove('hidden');
 })
-
-class Selector {
-    constructor (containerEl = {}, options = [{name: '', value: '', selected: false, optionEl: {}}]) {
-        this.containerEl =  containerEl;
-        this.options = options;
-        this.optionsEl = {};
-        this.inputEl = this.containerEl.querySelector('.component-input');
-    }
-
-    renderSelector() {
-        const optionsEl = document.createElement('div');
-        this.optionsEl = optionsEl;
-
-        optionsEl.classList.add('options');
-
-        this.containerEl.append(optionsEl);
-
-        this.renderOptions();
-    }
-
-    renderOptions() {
-        this.optionsEl.innerHTML = "";
-
-        this.options.forEach(option => {
-            const optionEl = document.createElement('div');
-
-            optionEl.classList.add('option');
-
-            if(option.selected) optionEl.classList.add('active');
-            optionEl.innerHTML = `
-                <div class="device-check">
-                    <span class="check-icon"></span>
-                </div>
-                ${option.name}
-            `;
-            optionEl.id = option.value;
-
-            this.optionsEl.append(optionEl);
-            option.optionEl = optionEl;
-        })
-
-        this.addEvents();
-    }
-
-    addEvents() {
-        this.optionsEl.addEventListener('click', event => {
-            this.optionsEl.classList.add('open');
-        })
-
-        this.options.forEach(option => {
-            option.optionEl.addEventListener('click', (event) => {
-                event.preventDefault();
-
-                option.selected = !option.selected;
-
-                option.optionEl.classList.toggle('active');
-            })
-        })
-
-        document.addEventListener('click', event => {
-            let children = [
-                ...this.optionsEl.childNodes
-            ];
-
-            if(children.some(child => event.target.id === child.id)) return this.optionsEl.classList.add('open');
-            
-            if(event.target !== this.optionsEl 
-            && event.target !== this.containerEl.querySelector('.input-container')
-            && event.target !== this.inputEl) this.optionsEl.classList.remove('open')
-
-        })
-
-        this.containerEl.querySelector('.input-container').addEventListener('click', event => {
-            this.optionsEl.classList.add('open');
-        })
-
-        this.inputEl.addEventListener('input', event => {
-            this.renderSearchOptions(event.target.value.toLowerCase());
-        })
-    }
-
-    renderSearchOptions(search) {
-        this.options.forEach(option => {
-            option.optionEl.classList.remove('hidden');
-
-            if(!option.name.trim().toLocaleLowerCase().includes(search)) return option.optionEl.classList.add('hidden');
-        })
-    }
-
-    getSelectedOptions() {
-        return this.options.filter(option => option.selected === true);
-    }
-}
 
 const selectorCity = new Selector(document.getElementById('selector-city'), [
     {name: 'Hagfors', value: 'hagfors', selected: false, optionEl: {}},

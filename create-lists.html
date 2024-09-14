@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Create guest lists - MonkeyBusiness</title>
+</head>
+
+<body class="body">
+    <nav class="sidebar">
+        <a href="./index.html" class="sidebar-logo">
+            <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
+            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
+        </a>
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="./index.html" class="navbar-button">
+                    <span class="navbar-icon icon-grid"></span>Home
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-bolt"></span>Create express ticket
+                </a>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./event.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-event"></span>Event
+                    </div>
+                    <div class="navbar-dropdown-btn" id="events-arrow">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul id="events-dropdown" class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Present
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./future-events.html" class="navbar-button">
+                            <span class="navbar-icon icon-future"></span>Future
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Past
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./guests.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-person-outline"></span>Guests
+                    </div>
+                    <div class="navbar-dropdown-btn">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-support"></span>Support
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./segmentation.html" class="navbar-button">
+                            <span class="navbar-icon icon-groups"></span>Segmentation
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-chart"></span>Statistics
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./guests-search.html" class="navbar-button">
+                            <span class="navbar-icon icon-person-search"></span>Search
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-list"></span>Products
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-map"></span>Map
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button active">
+                    <span class="navbar-icon icon-group"></span>Guest lists
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-campaign"></span>Marketing
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-fact"></span>My guests
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-settings"></span>Settings
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-logout"></span>Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex flex-col w-full">
+        <header class="header">
+            <div class="flex flex-col gap-1">
+                <div class="flex gap-4">
+                    <a href="./guest-lists.html" class="breadcrumb-tag">Guest lists</a>
+                    <span class="base-icon icon-arrowD -rotate-90 opacity-60"></span>
+                    <h6 class="breadcrumb-main">[Guest lists name]</h6>
+                </div>
+                <h2 class="header-title">[Guest lists name]</h2>
+            </div>
+            <div class="header-navbar">
+                <span class="btn dropdown-container">
+                    <h5 class="flex items-center gap-2">
+                        <span class="btn-icon icon-add"></span>
+                        Create
+                    </h5>
+                    <ul class="dropdown-list text-base min-w-48">
+                        <li class="dropdown-item">
+                            <a class="flex gap-3 items-center" href="./create-event.html">
+                                <span class="base-icon icon-event"></span>
+                                Create event
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <span class="base-icon icon-campaign"></span>
+                            Create campaign
+                        </li>
+                    </ul>
+                </span>
+                <a href="#" class="flex justify-center items-center gap-10 pl-1 pr-3 rounded-full h-full bg-secondary_black text-white font-normal hover:bg-secondary_black_hover">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
+                    </div>
+                    <img src="./assets/arrow_down_w.svg" alt="Arrow down">
+                </a>
+
+                <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
+                    <img src="./assets/user_img.png" alt="User image">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="components-container flex flex-row">
+                <div class="flex flex-col gap-6 w-full">
+                    <article class="component col-span-3">
+                        <h3 class="title-component">Add guest</h3>
+                        <div class="items-container">
+                            <ul class="details-list">
+                                <li class="details-item active" aria-valuetext="add-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-person-add"></span>
+                                        Add new guest
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="search-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-search"></span>
+                                        Search guest
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="import-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-file"></span>
+                                        Import guests
+                                    </button>
+                                </li>
+                                <li class="details-item" aria-valuetext="segmentation-tab">
+                                    <button class="list-btn">
+                                        <span class="base-icon icon-groups"></span>
+                                        Add from segmentation
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="add-tab" class="details-tab active">
+                            <div class="flex gap-6 items-center w-full">
+                                <div class="flex flex-col gap-6 w-full">
+                                    <div class="flex gap-6">
+                                        <div class="input-container w-3/5">
+                                            <input id="guest_name" class="component-input" type="text" placeholder=" " value="Lorem ipsum">
+                                            <label for="guest_name" class="component-label">Name / identifier*</label>
+                                        </div>
+                                        <div class="input-container w-1/5">
+                                            <input id="guest_free" class="component-input" type="number" placeholder=" " min="0" value="1">
+                                            <label for="guest_free" class="component-label">Extras free*</label>
+                                            <div class="input-icon">
+                                                <span class="icon-arrowD base-icon rotate-180"></span>
+                                                <span class="icon-arrowD base-icon"></span>
+                                            </div>
+                                        </div>
+                                        <div class="input-container w-1/5">
+                                            <input id="guest_paying" class="component-input" type="number" placeholder=" " min="0" value="2">
+                                            <label for="guest_paying" class="component-label">Extras paying*</label>
+                                            <div class="input-icon">
+                                                <span class="icon-arrowD base-icon rotate-180"></span>
+                                                <span class="icon-arrowD base-icon"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-container w-full">
+                                        <input id="guest_notes" class="component-input" type="text" placeholder=" " value="Lorem">
+                                        <label for="guest_notes" class="component-label">Notes</label>
+                                    </div>
+                                </div>
+                                <div class="flex items-end h-full pb-2">
+                                    <button class="btn-secondary">Add guest</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="search-tab" class="details-tab">
+                            <div class="flex gap-6 items-center w-full">
+                                <div class="flex flex-col gap-6 w-full">
+                                    <div class="flex gap-6">
+                                        <div class="input-container w-3/5">
+                                            <input id="guest_search" class="component-input" type="text" placeholder=" " value="Lorem ipsum">
+                                            <label for="guest_search" class="component-label">Search guest*</label>
+                                        </div>
+                                        <div class="input-container w-1/5">
+                                            <input id="guest_free" class="component-input" type="number" placeholder=" " min="0" value="1">
+                                            <label for="guest_free" class="component-label">Extras free*</label>
+                                            <div class="input-icon">
+                                                <span class="icon-arrowD base-icon rotate-180"></span>
+                                                <span class="icon-arrowD base-icon"></span>
+                                            </div>
+                                        </div>
+                                        <div class="input-container w-1/5">
+                                            <input id="guest_paying" class="component-input" type="number" placeholder=" " min="0" value="2">
+                                            <label for="guest_paying" class="component-label">Extras paying*</label>
+                                            <div class="input-icon">
+                                                <span class="icon-arrowD base-icon rotate-180"></span>
+                                                <span class="icon-arrowD base-icon"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-container w-full">
+                                        <input id="guest_notes" class="component-input" type="text" placeholder=" " value="Lorem">
+                                        <label for="guest_notes" class="component-label">Notes</label>
+                                    </div>
+                                </div>
+                                <div class="flex items-end h-full pb-2">
+                                    <button class="btn-secondary">Add guest</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="import-tab" class="details-tab">
+                            <div class="upload-files hidden">
+                                <div class="file-icon">
+                                    <span class="icon-file"></span>
+                                </div>
+
+                                <span class="text-base font-normal"><strong class="font-medium text-sm text-primary_green">Upload a file</strong> or drag and drop here</span>
+                            </div>
+
+                            <div class="uploaded-files">
+                                <div class="flex justify-center items-center gap-4">
+                                    <div class="file-icon">
+                                        <span class="icon-attach"></span>
+                                    </div>
+    
+                                    <div class="flex flex-col">
+                                        <h4 class="text-xl font-normal">File added successfully!</h4>
+                                        <span class="text-base font-normal">guest_list.csv</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <button class="btn-text">Remove</button>
+                                    <button class="btn-secondary">Add 85 guests</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="segmentation-tab" class="details-tab">
+                            <div class="min-w-[65%] flex gap-4 items-center">
+                                <div id="selector-segmentation" class="selector-container">
+                                    <div class="input-container">
+                                        <input type="text" placeholder=" " class="component-input" id="selector-input" autocomplete="off">
+                                        <label for="selector-input" class="component-label">Select segmentation*</label>
+                                        <div class="input-icon">
+                                            <span class="icon-arrowD base-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-secondary h-10">
+                                    <span class="btn-icon-secondary icon-add"></span>
+                                    Add</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="component col-span-3">
+                        <div class="flex justify-between items-center w-full title-component">
+                            Guest lists
+                            <div class="flex items-center justify-end gap-4">
+                                <button id="btn-cancel" class="btn-text">Cancel</button>
+                                <button id="btn-confirm" class="btn">Create</button>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <div class="entries-found hidden">
+                                <div class="no-guest-icon">
+                                    <span class="icon-person-add"></span>
+                                </div>
+                                <h4 class="mt-6 text-4xl font-bold">Guest lists empty!</h4>
+                                <h6 class="mt-4 font-normal text-base">Add guest to this guest list.</h6>
+                            </div>
+
+                            <div class="table-component">
+                                <div class="labels-table">
+                                    <div>Name / identifier</div>
+                                    <div>Extras free</div>
+                                    <div>Extras paying</div>
+                                    <div>Notes</div>
+                                    <div class="w-28"></div>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>Lorem</div>
+                                        <div>
+                                            <div class="table-center justify-end">
+                                                <button class="btn-edit">
+                                                    <span class="base-icon icon-pencil w-5 h-5"></span>
+                                                </button>
+
+                                                <button class="btn-remove">
+                                                    <img src="./assets/trash.svg" alt="Delete icon">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>Lorem</div>
+                                        <div>
+                                            <div class="table-center justify-end">
+                                                <button class="btn-edit">
+                                                    <span class="base-icon icon-pencil w-5 h-5"></span>
+                                                </button>
+
+                                                <button class="btn-remove">
+                                                    <img src="./assets/trash.svg" alt="Delete icon">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>Lorem</div>
+                                        <div class="table-center justify-end">
+                                            <button class="btn-edit">
+                                                <span class="base-icon icon-pencil w-5 h-5"></span>
+                                            </button>
+
+                                            <button class="btn-remove">
+                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>Lorem</div>
+                                        <div class="table-center justify-end">
+                                            <button class="btn-edit">
+                                                <span class="base-icon icon-pencil w-5 h-5"></span>
+                                            </button>
+
+                                            <button class="btn-remove">
+                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>Lorem</div>
+                                        <div class="table-center justify-end">
+                                            <button class="btn-edit">
+                                                <span class="base-icon icon-pencil w-5 h-5"></span>
+                                            </button>
+
+                                            <button class="btn-remove">
+                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>Lorem</div>
+                                        <div class="table-center justify-end">
+                                            <button class="btn-edit">
+                                                <span class="base-icon icon-pencil w-5 h-5"></span>
+                                            </button>
+
+                                            <button class="btn-remove">
+                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            </button>
+                                            </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div>Lorem ipsum</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>Lorem</div>
+                                        <div class="table-center justify-end">
+                                            <button class="btn-edit">
+                                                <span class="base-icon icon-pencil w-5 h-5"></span>
+                                            </button>
+
+                                            <button class="btn-remove">
+                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <article class="component min-w-[355px]">
+                        <h3 class="title-component">Details</h3>
+                        <div class="summary-container">
+                            <div class="summary-item">
+                                <h5 class="item-title">
+                                    <span class="base-icon icon-info"></span>
+                                    Guest lists name
+                                </h5>
+                                <h6 class="item-info">[Guest lists name]</h6>
+                            </div>
+                            <div class="summary-item">
+                                <h5 class="item-title">
+                                    <span class="base-icon icon-payments"></span>
+                                    Default amounts
+                                </h5>
+                                <h6 class="item-info">20 kr for extras free</h6>
+                                <h6 class="item-info">20 kr for extras paid</h6>
+                            </div>
+                            <div class="summary-item">
+                                <h5 class="item-title">
+                                    <span class="base-icon icon-fact"></span>
+                                    Guest list type
+                                </h5>
+                                <h6 class="item-info">Static</h6>
+                            </div>
+                        </div>
+    
+                        <button id="edit-btn" class="btn-secondary self-end">Edit</button>
+                    </article>
+    
+                    <article class="component">
+                        <h3 class="title-component">Statistics</h3>
+                        <div class="flex justify-between items-end">
+                            <div class="flex flex-col">
+                                <h3 class="hits-title">Total guests</h3>
+                                <h3 class="hits-value text-primary_green text-6xl">0</h3>
+                            </div>
+                            <div class="flex gap-4 text-right">
+                                <div class="flex flex-col">
+                                    <h3 class="hits-title">Free</h3>
+                                    <h3 class="hits-value text-primary_red">0</h3>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="hits-title">Paying</h3>
+                                    <h3 class="hits-value text-primary_orange">0</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./charts.js"></script>
+    <script src="./product-details.js"></script>
+    <script type="module" src="./create-lists.js"></script>
+</body>
+
+</html>
