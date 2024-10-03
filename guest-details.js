@@ -82,8 +82,8 @@ productsModal.addListener('#products-modal', '.assign-btn', "Assigned", "Assign"
 const aboutModal = new Modal("Edit guest",
                             "",
                             `
-                                <div class="flex flex-col gap-6">
-                                    <div class="flex gap-6">
+                                <div class="flex flex-col gap-8 pt-6">
+                                    <div class="flex gap-8">
                                         <div class="input-container w-1/2">
                                             <input id="guest_name" class="component-input" type="text" placeholder=" " value="[User name]" required>
                                             <label for="guest_name" class="component-label">Name*</label>
@@ -97,7 +97,7 @@ const aboutModal = new Modal("Edit guest",
                                             <span class="icon-error error-icon"></span>
                                         </div>
                                     </div>
-                                    <div class="flex gap-6">
+                                    <div class="flex gap-8">
                                         <div class="input-container w-1/2">
                                             <input id="guest_name" class="component-input" type="text" placeholder=" " value="(000) 000-0000" required>
                                             <label for="guest_name" class="component-label">Phone*</label>
@@ -114,7 +114,7 @@ const aboutModal = new Modal("Edit guest",
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex gap-6">
+                                    <div class="flex gap-8">
                                         <div class="flex gap-6 w-1/2">
                                             <div class="input-container w-1/2">
                                                 <input id="guest_name" class="component-input" type="text" placeholder=" " value="34 years" required>

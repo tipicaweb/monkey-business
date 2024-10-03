@@ -1,5 +1,5 @@
 class Modal {
-    constructor (title = "", subtitle = "", html = ``, confirmBtn = "", cancelBtn = "", hasIcon = false, icon = "", confirmBtnColor = "", callback = function() {}, closeBtn = false) {
+    constructor (title = "", subtitle = "", html = ``, confirmBtn = "", cancelBtn = "", hasIcon = false, icon = "", confirmBtnColor = "", callback = function() {}) {
         this.title = title;
         this.subtitle = subtitle;
         this.html = html;
@@ -9,7 +9,6 @@ class Modal {
         this.icon = icon;
         this.confirmBtnColor = confirmBtnColor;
         this.callback = callback
-        this.closeBtn = closeBtn;
 
         this.modalSettings = {};
     }
@@ -24,10 +23,6 @@ class Modal {
             backdrop: '#ffffff16',
             reverseButtons: true,
             showCancelButton: false,
-            showCloseButton: this.closeBtn,
-            closeButtonHtml: `
-                <span class="base-icon icon-close"></span>
-            `,
             customClass: {
                 container: `modal-container ${!this.hasIcon && 'no-icon'}`,
                 title: 'modal-title',
@@ -37,7 +32,6 @@ class Modal {
                 cancelButton: 'modal-btn cancel',
                 actions: 'modal-actions',
                 confirmButton: `modal-btn ${this.confirmBtnColor}`,
-                closeButton: 'modal-close'
             }
         };
 

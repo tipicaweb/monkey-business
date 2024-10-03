@@ -15,8 +15,8 @@ selectorSegmentation.renderSelector();
 const detailsModal = new Modal("Edit guest",
     "",
     `
-        <div class="flex flex-col gap-6">
-            <div class="flex gap-6">
+        <div class="flex flex-col gap-8 pt-6">
+            <div class="flex gap-8">
                 <div class="input-container w-1/2">
                     <input id="guest_name" class="component-input" type="text" placeholder=" " value="[User name]" required>
                     <label for="guest_name" class="component-label">Name</label>
@@ -30,7 +30,7 @@ const detailsModal = new Modal("Edit guest",
                     <span class="icon-error error-icon"></span>
                 </div>
             </div>
-            <div class="flex gap-6">
+            <div class="flex gap-8">
                 <div class="input-container w-1/2">
                     <input id="guest_phone" class="component-input" type="text" placeholder=" " required>
                     <label for="guest_phone" class="component-label">Phone</label>
@@ -44,7 +44,7 @@ const detailsModal = new Modal("Edit guest",
                     <span class="icon-error error-icon"></span>
                 </div>
             </div>
-            <div class="flex gap-6">
+            <div class="flex gap-8">
                 <div class="input-container w-1/4">
                     <input id="guest_age" class="component-input" type="text" placeholder=" " required>
                     <label for="guest_age" class="component-label">Age</label>
