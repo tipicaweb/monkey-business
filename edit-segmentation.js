@@ -28,7 +28,7 @@ const createModal = new Modal("Segmentation edited!",
                                "Your segmentation was edited successfully.",
                                "",
                                "Continue",
-                               "",
+                               "Cancel",
                                true,
                                "success",
                                "green",
@@ -57,7 +57,7 @@ const selectorCity = new Selector(document.getElementById('selector-city'), [
     {name: 'Hagfors', value: 'hagfors', selected: false, optionEl: {}},
     {name: 'Halmstad', value: 'halmstad', selected: false, optionEl: {}},
     {name: 'Haparanda', value: 'haparanda', selected: true, optionEl: {}}
-]);
+], true);
 
 selectorCity.renderSelector();
 
@@ -68,7 +68,7 @@ const selectorMunicipality = new Selector(document.getElementById('selector-muni
     {name: 'Municipality 4', value: 'municipality4', selected: false, optionEl: {}},
     {name: 'Municipality 5', value: 'municipality5', selected: false, optionEl: {}},
     {name: 'Municipality 6', value: 'municipality6', selected: true, optionEl: {}}
-]);
+], true);
 
 selectorMunicipality.renderSelector();
 
@@ -76,7 +76,7 @@ const selectorProduct = new Selector(document.getElementById('selector-product')
     {name: 'Product 1', value: 'product1', selected: false, optionEl: {}},
     {name: 'Product 2', value: 'product2', selected: false, optionEl: {}},
     {name: 'Product 3', value: 'product3', selected: true, optionEl: {}}
-]);
+], true);
 
 selectorProduct.renderSelector();
 

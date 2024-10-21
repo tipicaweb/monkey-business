@@ -133,11 +133,19 @@
         @apply flex-col;
         @apply items-center;
         @apply w-full;
-        @apply max-h-full;
+        @apply max-h-[83.5%];
         @apply text-white;
         @apply bg-primary_black;
         @apply gap-1;
         @apply transition-all;
+        @apply overflow-y-auto;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
 
     .header {
@@ -542,6 +550,26 @@
         mask-size: cover;
     }
 
+    .icon-organization {
+        mask: url('../assets/manage_organization.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-places {
+        mask: url('../assets/manage_places.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-users {
+        mask: url('../assets/manage_users.svg') center no-repeat;
+        mask-size: cover;
+    }
+
+    .icon-add-location {
+        mask: url('../assets/add_location_alt.svg') center no-repeat;
+        mask-size: cover;
+    }
+
     .navbar-icon {
         @apply flex;
         @apply w-6;
@@ -938,10 +966,6 @@
                 @apply bg-input_bg_hover;
                 @apply border-terciary_gray;
             }
-
-            .component-label {
-                @apply text-primary_orange;
-            }
         }
 
         &:has(.component-input:disabled) {
@@ -953,7 +977,6 @@
         .component-input,
         .component-label {
             @apply pl-12;
-            @apply text-primary_orange;
         }
 
         .input-icon {
@@ -984,15 +1007,6 @@
         @apply caret-input_focus;
         color-scheme: dark;
         transition: all .3s ease 0s;
-
-        &:focus {
-            @apply border-input_focus;
-            @apply border-b-2;
-        }
-
-        &:focus ~ .component-label {
-            @apply text-input_focus;
-        }
 
         &:disabled {
             @apply border-input_border_disabled;
@@ -1026,7 +1040,7 @@
         }
 
         &:focus ~ .component-label {
-            @apply text-input_focus;
+            @apply !text-input_focus;
         }
     }
 
@@ -1052,6 +1066,7 @@
     .component-input:placeholder-shown:not(:focus) ~ .component-label {
         @apply text-base;
         @apply pt-4;
+        @apply text-input_border;
     }
 
     .component-input::-webkit-inner-spin-button {
@@ -1722,15 +1737,10 @@
         @apply py-1.5;
         @apply rounded-lg;
         @apply text-sm;
-        @apply font-medium; 
-        @apply cursor-pointer;
+        @apply font-medium;
+        @apply cursor-default;
         @apply text-primary_gray;
         transition: all .3s ease 0s;
-
-        &:hover {
-            @apply border-white;
-            @apply text-white;
-        }
 
         &:has(span) {
             @apply cursor-pointer;
@@ -1762,7 +1772,7 @@
         @apply w-full;
     }
 
-    .selector-container:has(.options.open) .input-icon .base-icon {
+    .selector-container:has(.options.open) .input-container:not(.icon-left) .input-icon .base-icon {
         @apply -rotate-180;
     }
     
@@ -1882,6 +1892,11 @@
         @apply !p-10;
         @apply w-[400px];
         @apply max-w-[90%];
+
+        &.modal-medium,
+        &:has(.modal-icon) {
+            @apply w-[520px];
+        }
 
         &.modal-large {
             @apply w-[920px];
@@ -2248,7 +2263,8 @@
         @apply items-center;
         @apply p-5;
 
-        .icon-person-add {
+        .icon-person-add,
+        .icon-add-location {
             @apply bg-primary_green;
             @apply w-full;
             @apply h-full;

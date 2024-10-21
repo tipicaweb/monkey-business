@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Create guest lists - MonkeyBusiness</title>
+</head>
+
+<body class="body">
+    <nav class="sidebar">
+        <a href="./index.html" class="sidebar-logo">
+            <img src="./assets/medium_logo.svg" alt="Monkey business Logo" class="mini-logo">
+            <img src="./assets/vip_monkey.svg" alt="Monkey business Logo" class="big-logo">
+        </a>
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="./index.html" class="navbar-button">
+                    <span class="navbar-icon icon-grid"></span>Home
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-bolt"></span>Create express ticket
+                </a>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./event.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-event"></span>Event
+                    </div>
+                    <div class="navbar-dropdown-btn" id="events-arrow">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul id="events-dropdown" class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-avaible"></span>Present
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./future-events.html" class="navbar-button">
+                            <span class="navbar-icon icon-future"></span>Future
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-past"></span>Past
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="./guests.html" class="navbar-button gap-0">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-person-outline"></span>Guests
+                    </div>
+                    <div class="navbar-dropdown-btn">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-support"></span>Support
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./segmentation.html" class="navbar-button">
+                            <span class="navbar-icon icon-groups"></span>Segmentation
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-chart"></span>Statistics
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./guests-search.html" class="navbar-button">
+                            <span class="navbar-icon icon-person-search"></span>Search
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-list"></span>Products
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-map"></span>Map
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-group"></span>Guest lists
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-campaign"></span>Marketing
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-fact"></span>My guests
+                </a>
+            </li>
+            <li class="navbar-item flex-col gap-1">
+                <a href="#" class="navbar-button">
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-settings"></span>Settings
+                    </div>
+                    <div class="navbar-dropdown-btn active">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
+                </a>
+                <ul class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-organization"></span>Organization Settings
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-users"></span>Organization Personnel
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./organization-places.html" class="navbar-button active">
+                            <span class="navbar-icon icon-places"></span>Organization Places
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-button">
+                    <span class="navbar-icon icon-logout"></span>Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex flex-col w-full">
+        <header class="header">
+            <div class="flex flex-col gap-1">
+                <h2 class="header-title">Organization Places</h2>
+            </div>
+            <div class="header-navbar">
+                <span class="btn dropdown-container">
+                    <h5 class="flex items-center gap-2">
+                        <span class="btn-icon icon-add"></span>
+                        Create
+                    </h5>
+                    <ul class="dropdown-list text-base min-w-48">
+                        <li class="dropdown-item">
+                            <a class="flex gap-3 items-center" href="./create-event.html">
+                                <span class="base-icon icon-event"></span>
+                                Create event
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <span class="base-icon icon-campaign"></span>
+                            Create campaign
+                        </li>
+                    </ul>
+                </span>
+                <a href="#" class="flex justify-center items-center gap-10 pl-1 pr-3 rounded-full h-full bg-secondary_black text-white font-normal hover:bg-secondary_black_hover">
+                    <div class="flex justify-center items-center gap-2 max-w-60">
+                        <img src="./assets/client_logo.svg" alt="Client logo" class="h-8 w-8">
+                        VIP Monkey
+                    </div>
+                    <img src="./assets/arrow_down_w.svg" alt="Arrow down">
+                </a>
+
+                <a href="#" class="flex justify-center rounded-full h-10 w-10 text-white">
+                    <img src="./assets/user_img.png" alt="User image">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="components-container h-full">
+                <article class="component h-full">
+                    <div class="flex justify-between items-center w-full title-component">
+                        Places list
+                        <div class="flex items-center justify-center">
+                            <button id="title-btn" class="btn-secondary btn-add hidden">Add place</button>
+                        </div>
+                    </div>
+                    <div class="table-container h-full">
+                        <div class="entries-found h-full">
+                            <div class="no-guest-icon">
+                                <span class="icon-add-location"></span>
+                            </div>
+                            <h4 class="mt-6 text-4xl font-bold">Places list empty!</h4>
+                            <h6 class="mt-4 font-normal text-base">Add a new place to this list.</h6>
+                            <button class="mt-8 btn btn-add">Add place</button>
+                        </div>
+
+                        <div class="table-component h-auto hidden">
+                            <div class="labels-table">
+                                <div>Address</div>
+                                <div>Name</div>
+                                <div>Description</div>
+                                <div>Default</div>
+                                <div class="w-28"></div>
+                            </div>
+                            <div class="table-body">
+                                <div class="table-row">
+                                    <div>Linnegatan, 114 47 Stockholm, Suecia</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                                    <div>No</div>
+                                    <div>
+                                        <div class="table-center justify-end">
+                                            <button class="btn-edit">
+                                                <span class="base-icon icon-pencil w-5 h-5"></span>
+                                            </button>
+
+                                            <button class="btn-remove">
+                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Upplandsgatan 28-32, 113 28 Stockholm, Suecia</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                                    <div>No</div>
+                                    <div>
+                                        <div class="table-center justify-end">
+                                            <button class="btn-edit">
+                                                <span class="base-icon icon-pencil w-5 h-5"></span>
+                                            </button>
+
+                                            <button class="btn-remove">
+                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Pilgatan 21, 721 30 Västerås, Suecia</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                                    <div>Yes</div>
+                                    <div>
+                                        <div class="table-center justify-end">
+                                            <button class="btn-edit">
+                                                <span class="base-icon icon-pencil w-5 h-5"></span>
+                                            </button>
+
+                                            <button class="btn-remove">
+                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div>Södermalmsallén, 702 25 Örebro, Suecia</div>
+                                    <div>Lorem ipsum</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                                    <div>No</div>
+                                    <div>
+                                        <div class="table-center justify-end">
+                                            <button class="btn-edit">
+                                                <span class="base-icon icon-pencil w-5 h-5"></span>
+                                            </button>
+
+                                            <button class="btn-remove">
+                                                <img src="./assets/trash.svg" alt="Delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./charts.js"></script>
+    <script src="./product-details.js"></script>
+    <script type="module" src="./organization-places.js"></script>
+</body>
+
+</html>

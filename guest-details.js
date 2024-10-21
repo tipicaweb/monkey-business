@@ -68,7 +68,7 @@ const productsModal = new Modal("Manage products",
                                 </div>
                             `,
                             "Save",
-                            "",
+                            "Cancel",
                             false,
                             "",
                             "green",
@@ -171,7 +171,7 @@ const aboutModal = new Modal("Edit guest",
                                 </div>
                             `,
                             "Save",
-                            "",
+                            "Cancel",
                             false,
                             "",
                             "green",
@@ -185,7 +185,7 @@ aboutModal.addListener('#about-modal');
 const guestsModal = new Modal("Manage guest lists",
                                 "",
                                 `
-                                    <div class="flex flex-col gap-8">
+                                    <div class="flex flex-col gap-8 min-h-[663px]">
                                         <h4 class="modal-htmlContainer">Manage guest lists for this user.</h4>
                                         <div class="table-component">
                                             <div class="labels-table">
@@ -226,7 +226,7 @@ const guestsModal = new Modal("Manage guest lists",
                                     </div>
                                 `,
                                 "Save",
-                                "",
+                                "Cancel",
                                 false,
                                 "",
                                 "green",
@@ -240,7 +240,7 @@ guestsModal.addListener('#guests-modal', '.remove-btn', "Remove", "Restore");
 const groupsModal = new Modal("Manage groups",
                             "",
                             `
-                                <div class="flex flex-col gap-8">
+                                <div class="flex flex-col gap-8 min-h-[663px]">
                                     <h4 class="modal-htmlContainer">Manage the groups assigned to this user.</h4>
                                     <div class="table-component">
                                         <div class="labels-table">
@@ -271,7 +271,7 @@ const groupsModal = new Modal("Manage groups",
                                 </div>
                             `,
                             "Save",
-                            "",
+                            "Cancel",
                             false,
                             "",
                             "green",
@@ -285,7 +285,7 @@ groupsModal.addListener('#groups-modal', '.remove-btn', "Remove", "Restore");
 const tagsModal = new Modal("Manage tags",
                             "",
                             `
-                                <div class="flex flex-col gap-8">
+                                <div class="flex flex-col gap-8 min-h-[663px]">
                                     <h4 class="modal-htmlContainer">Manage the tags assigned to this user.</h4>
                                     <div class="flex gap-4 items-center">
                                         <div class="input-container">
@@ -308,7 +308,7 @@ const tagsModal = new Modal("Manage tags",
                                 </div>
                             `,
                             "Save",
-                            "",
+                            "Cancel",
                             false,
                             "",
                             "green",

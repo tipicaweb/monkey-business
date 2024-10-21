@@ -239,9 +239,17 @@
                             <div class="flex gap-6 items-center w-full">
                                 <div class="flex flex-col gap-6 w-full">
                                     <div class="flex gap-6">
-                                        <div class="input-container w-3/5">
-                                            <input id="guest_search" class="component-input" type="text" placeholder=" " value="Lorem ipsum">
-                                            <label for="guest_search" class="component-label">Search guest*</label>
+                                        <div id="selector-guest" class="selector-container w-3/5" data-icon="true" data-iconID="selected-guest">
+                                            <div class="input-container icon-left">
+                                                <input type="text" placeholder=" " class="component-input" id="selector-input" autocomplete="off">
+                                                <label for="selector-guest" class="component-label">Search guest*</label>
+                                                <div class="input-icon">
+                                                    <span class="base-icon icon-search"></span>
+                                                </div>
+                                                <div class="input-icon !left-auto !right-0 !pl-0 !pr-3 hidden" id="selected-guest">
+                                                    <span class="base-icon icon-check-circle !bg-primary_green"></span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="input-container w-1/5">
                                             <input id="guest_free" class="component-input" type="number" placeholder=" " min="0" value="1">

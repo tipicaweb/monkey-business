@@ -12,6 +12,15 @@ const selectorSegmentation = new Selector(document.getElementById('selector-segm
 
 selectorSegmentation.renderSelector();
 
+const selectorGuest = new Selector(document.getElementById('selector-guest'), [
+    {name: 'Lorem Ipsum | 48 y/o | Haparanda', value: 'lorem', selected: false, optionEl: {}},
+    {name: 'Lorem Ipsum | 48 y/o | Haparanda', value: 'lorem', selected: false, optionEl: {}},
+    {name: 'Lorem Ipsum | 48 y/o | Haparanda', value: 'lorem', selected: false, optionEl: {}},
+    {name: 'Lorem Ipsum | 48 y/o | Haparanda', value: 'lorem', selected: false, optionEl: {}}
+], false);
+
+selectorGuest.renderSelector();
+
 const detailsModal = new Modal("Edit guest",
     "",
     `
@@ -106,7 +115,7 @@ const detailsModal = new Modal("Edit guest",
 
 detailsModal.createModal();
 detailsModal.modalSettings.customClass.popup += ' modal-large'
-detailsModal.addListener('.btn-edit');
+detailsModal.addListener('#edit-btn');
 
 
 const cancelModal = new Modal("Cancel guest lists?",
@@ -125,7 +134,7 @@ const createModal = new Modal("Guest lists created!",
                                 "Your guest lists was created successfully.",
                                 "",
                                 "Continue",
-                                "",
+                                "Cancel",
                                 true,
                                 "success",
                                 "green",

@@ -111,10 +111,32 @@
                     <span class="navbar-icon icon-fact"></span>My guests
                 </a>
             </li>
-            <li class="navbar-item">
+            <li class="navbar-item flex-col gap-1">
                 <a href="#" class="navbar-button">
-                    <span class="navbar-icon icon-settings"></span>Settings
+                    <div class="dropdown-button">
+                        <span class="navbar-icon icon-settings"></span>Settings
+                    </div>
+                    <div class="navbar-dropdown-btn">
+                        <span class="navbar-icon icon-arrowD"></span>
+                    </div>
                 </a>
+                <ul class="navbar-dropdown-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-organization"></span>Organization Settings
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-button">
+                            <span class="navbar-icon icon-users"></span>Organization Personnel
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./organization-places.html" class="navbar-button">
+                            <span class="navbar-icon icon-places"></span>Organization Places
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="navbar-item">
                 <a href="#" class="navbar-button">
@@ -187,12 +209,12 @@
                         </div>
                     </div>
                 </article>
-                <article class="component justify-center items-center p-0 py-6 cursor-pointer" id="create-lists">
+                <a href="./create-guest-lists.html" class="component justify-center items-center p-0 py-6 cursor-pointer" id="create-lists">
                     <div class="bg-primary_green bg-opacity-15 w-20 h-20 flex justify-center items-center rounded-[32px]">
                         <span class="base-icon icon-add bg-primary_green w-12 h-12"></span>
                     </div>
                     <h3 class="text-2xl text-center">Create guest lists</h3>
-                </article>
+                </a>
                 <article class="component justify-between">
                     <div>
                         <div class="flex justify-between w-full title-component items-center">

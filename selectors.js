@@ -1,10 +1,11 @@
 class Selector {
-    constructor (containerEl = {}, options = [{name: '', value: '', selected: false, optionEl: {}}], multiple = false) {
+    constructor (containerEl = {}, options = [{name: '', value: '', selected: false, optionEl: {}}], multiple = false, renderText = false) {
         this.containerEl =  containerEl;
         this.options = options;
         this.optionsEl = {};
         this.inputEl = this.containerEl.querySelector('.component-input');
         this.multiple = multiple;
+        this.renderText = renderText;
     }
 
     renderSelector() {
@@ -55,6 +56,12 @@ class Selector {
             this.optionsEl.append(optionEl);
             option.optionEl = optionEl;
         })
+
+        if(this.containerEl.getAttribute('data-icon') === 'true')
+            this.renderIcon();
+
+        if(this.renderText)
+            this.renderSelectedText();
 
         this.addEvents();
     }
@@ -117,6 +124,26 @@ class Selector {
 
             if(!option.name.trim().toLocaleLowerCase().includes(search)) return option.optionEl.classList.add('hidden');
         })
+    }
+
+    renderSelectedText() {
+        let sOptions = this.getSelectedOptions();
+
+        if(sOptions.length === this.options.length)
+            this.inputEl.value = "All";
+        else
+            this.inputEl.value = sOptions.map(obj => obj.name).join(', ');
+    }
+
+    renderIcon() {
+        let iconEl = document.getElementById(this.containerEl.getAttribute('data-iconID'));
+
+        console.log(iconEl)
+        
+        if(this.getSelectedOptions().length > 0)
+            iconEl.classList.remove('hidden');
+        else
+            iconEl.classList.add('hidden');
     }
 
     sortOptions() {
